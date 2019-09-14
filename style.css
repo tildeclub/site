@@ -33,6 +33,18 @@ h1 {text-transform:uppercase;font-weight:bold;
 	animation-iteration-count: infinite;
 }
 
+input[type="text"], textarea {
+	background-color : #333; 
+	color: darkorange;
+}
+
+div.alert-warning {
+	background-color: darkred;
+}
+div.alert-success {
+	background-color: darkgreen;
+}
+
 @-moz-keyframes blinker {  
 	0% { opacity: 1.0; }
 	50% { opacity: 0.75; }
