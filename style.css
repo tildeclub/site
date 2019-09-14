@@ -1,0 +1,52 @@
+* {font-size:13pt;font-weight:normal;}
+
+table {border-collapse:collapse;}
+td {border:6px double darkorange;padding:10px;}
+ol {margin-left:1em;}
+body {
+	margin:1em;
+	background:000;
+	font-family:'courier new';
+	color:darkorange;
+	background:#000400;
+}
+a {background:darkorange;color:#223;font-weight:bold;padding-right:.25em;}
+.advisory {background:darkorange;color:#223;font-weight:bold;padding-right:.25em;}
+h1 {text-transform:uppercase;font-weight:bold;
+	color:#000400; background:darkorange;
+}
+
+.advisory {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 8s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: 8s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: 8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+	0% { opacity: 1.0; }
+	50% { opacity: 0.75; }
+	100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+	0% { opacity: 1.0; }
+	50% { opacity: 0.75; }
+	100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+	0% { opacity: 1.0; }
+	50% { opacity: 0.75; }
+	100% { opacity: 1.0; }
+}
