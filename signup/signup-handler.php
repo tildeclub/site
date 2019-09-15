@@ -97,18 +97,20 @@ if (isset($_REQUEST["username"]) && isset($_REQUEST["email"])) {
 
     // no validation errors
     if ($message == "") { 
+        $makeuser = "makeuser {$_REQUEST["username"]} {$_REQUEST["email"]} \"{$_REQUEST["sshkey"]}\"";
         $msgbody = "
 username: {$_REQUEST["username"]}
 email: {$_REQUEST["email"]}
 reason: {$_REQUEST["interest"]}
 
-makeuser {$_REQUEST["username"]} {$_REQUEST["email"]} \"{$_REQUEST["sshkey"]}\"
+$makeuser
 ";
 
         if (mail('root', 'new tilde.club signup', $msgbody)) {
             echo '<div class="alert alert-success" role="alert">
                     email sent! we\'ll get back to you soon (usually within a day) with login instructions! <a href="/">back to tilde.club home</a>
                   </div>';
+            file_put_contents("/var/signups", $makeuser.PHP_EOL, FILE_APPEND);
         } else {
             echo '<div class="alert alert-danger" role="alert">
                     something went wrong... please send an email to <a href="mailto:root@tilde.club">root@tilde.club</a> with details of what happened

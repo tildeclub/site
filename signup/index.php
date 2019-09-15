@@ -27,12 +27,12 @@ include __DIR__."/../header.php";
 
 			    <div>
 				<p>what interests you about tilde.club? we want to make sure you're a real human being :)</p>
-				<textarea class="form-control" name="interest" id="" cols="30" rows="10"><?=$_REQUEST["interest"] ?? ""?></textarea>
+				<textarea required class="form-control" name="interest" id="" cols="40" rows="7"><?=$_REQUEST["interest"] ?? ""?></textarea>
 			    </div>
 
 			    <div>
 				<p>SSH public key</p>
-				<textarea required class="form-control" name="sshkey" id="" cols="30" rows="10"><?=$_REQUEST["sshkey"] ?? ""?></textarea>
+				<textarea required class="form-control" name="sshkey" id="" cols="40" rows="10"><?=$_REQUEST["sshkey"] ?? ""?></textarea>
 				<p>if you don't have a key, don't worry! <a href="https://tilde.club/wiki/ssh.html">check out our guide to ssh keys</a> and make sure that you only put your pubkey here</p>
 			    </div>
 

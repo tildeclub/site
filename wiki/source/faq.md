@@ -1,6 +1,6 @@
 ---
 title: faq
-author: paul ford
+author: ford
 ---
 
       _______________________________________
