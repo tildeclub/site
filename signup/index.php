@@ -3,7 +3,6 @@ $title = "sign up for the tilde.club!";
 include __DIR__."/../header.php";
 ?>
 
-<h1>devmode!! please do not use yet!!</h1>
 <h1>sign up to join tilde.club</h1>
 
 <p>we're excited you're here! let's get you signed up!</p>

@@ -1,9 +1,9 @@
 <?php include "header.php"; ?>
 
 	<h1>$ welcome to tilde.club</h1>
-	<p><a href="/~faq">Questions? See the official FAQ.</a></p>
+	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome!. The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE and will match the SSHFP records in DNS. You can use ssh -o "VerifyHostKeyDNS yes" user@tilde.club to verify that the key matches DNS.</p>
+	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome!. The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
 
 	<table>
 		<tr>
@@ -38,30 +38,30 @@
 				gave. Here's who has donated! When you're on the server, THANK
 				THEM.</p>
 
-				<pre>
-				10/5/2014 | <a href="/~beau">~beau</a>
-				10/5/2014 | <a href="/~skk">~skk</a>
-				10/5/2014 | <a href="/~joeld">~joeld</a>
-				10/5/2014 | <a href="/~john">~john</a>
-				10/5/2014 | <a href="/~brendn">~brendn</a>
-				10/5/2014 | <a href="/~droob">~droob</a>
-				10/5/2014 | <a href="/~delfuego">~delfuego</a>
-				10/5/2014 | <a href="/~jonathan">~jonathan</a>
-				10/5/2014 | <a href="/~coldmode">~coldmode</a>
-				10/5/2014 | <a href="/~jemal">~jemal</a>
-				10/5/2014 | <a href="/~jonbell">~jonbell</a>
-				10/5/2014 | <a href="/~_">~_</a>
-				10/5/2014 | <a href="/~dvd">~dvd</a>
-				10/5/2014 | <a href="/~whitneymcn">~whitneymcn</a>
-				10/5/2014 | <a href="/~jimray">~jimray</a>
-				10/5/2014 | <a href="/~schussat">~schussat</a>
-				10/5/2014 | <a href="/~macdiva">~macdiva</a>
-				10/3/2014 | <a href="/~extraface">~extraface</a>
-				10/3/2014 | <a href="/~joshuag">~joshuag</a>
-				10/3/2014 | <a href="/~zarate">~zarate</a>
-				10/3/2014 | <a href="/~englishm">~englishm</a>
-				10/3/2014 | <a href="/~danbri">~danbri</a>
-				</pre>
+				<ul>
+					<li>10/5/2014 | <a href="/~beau">~beau</a></li>
+					<li>10/5/2014 | <a href="/~skk">~skk</a></li>
+					<li>10/5/2014 | <a href="/~joeld">~joeld</a></li>
+					<li>10/5/2014 | <a href="/~john">~john</a></li>
+					<li>10/5/2014 | <a href="/~brendn">~brendn</a></li>
+					<li>10/5/2014 | <a href="/~droob">~droob</a></li>
+					<li>10/5/2014 | <a href="/~delfuego">~delfuego</a></li>
+					<li>10/5/2014 | <a href="/~jonathan">~jonathan</a></li>
+					<li>10/5/2014 | <a href="/~coldmode">~coldmode</a></li>
+					<li>10/5/2014 | <a href="/~jemal">~jemal</a></li>
+					<li>10/5/2014 | <a href="/~jonbell">~jonbell</a></li>
+					<li>10/5/2014 | <a href="/~_">~_</a></li>
+					<li>10/5/2014 | <a href="/~dvd">~dvd</a></li>
+					<li>10/5/2014 | <a href="/~whitneymcn">~whitneymcn</a></li>
+					<li>10/5/2014 | <a href="/~jimray">~jimray</a></li>
+					<li>10/5/2014 | <a href="/~schussat">~schussat</a></li>
+					<li>10/5/2014 | <a href="/~macdiva">~macdiva</a></li>
+					<li>10/3/2014 | <a href="/~extraface">~extraface</a></li>
+					<li>10/3/2014 | <a href="/~joshuag">~joshuag</a></li>
+					<li>10/3/2014 | <a href="/~zarate">~zarate</a></li>
+					<li>10/3/2014 | <a href="/~englishm">~englishm</a></li>
+					<li>10/3/2014 | <a href="/~danbri">~danbri</a></li>
+				</ul>
 			</td>
 		</tr>
 	</table>

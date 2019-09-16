@@ -68,7 +68,7 @@ if (isset($_REQUEST["username"]) && isset($_REQUEST["email"])) {
     if (strlen($name) > 32)
         $message .= "<li>username too long (32 character max)</li>";
 
-    if (!preg_match('/^[a-z][a-z0-9]{2,31}$/', $name))
+    if (!preg_match('/^[a-z][a-z0-9]{1,30}$/', $name))
         $message .= "<li>username contains invalid characters (lowercase only, must start with a letter)</li>";
 
     if ($_REQUEST["sshkey"] == "" || mb_substr($_REQUEST["sshkey"], 0, 4) !== "ssh-")
@@ -97,7 +97,8 @@ if (isset($_REQUEST["username"]) && isset($_REQUEST["email"])) {
 
     // no validation errors
     if ($message == "") { 
-        $makeuser = "makeuser {$_REQUEST["username"]} {$_REQUEST["email"]} \"{$_REQUEST["sshkey"]}\"";
+	$sshkey = trim($_REQUEST["sshkey"]);
+        $makeuser = "makeuser {$_REQUEST["username"]} {$_REQUEST["email"]} \"{$sshkey}\"";
         $msgbody = "
 username: {$_REQUEST["username"]}
 email: {$_REQUEST["email"]}
