@@ -3,7 +3,7 @@
 	<h1>$ welcome to tilde.club</h1>
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome!. The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
+	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome!.<br> The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
 
 	<table>
 		<tr>
@@ -14,7 +14,7 @@
 					in their shared quest to build awesome web pages
 				</p>
 
-				<h2>tilde.club is rebuilding and will be accepting new members soon!</h2>
+				<h2>Public sign-ups will re-open on September 20th 2019!</h2>
 				<p>
 					If you would like a list of <a href="http://tilde.club/~delfuego/tilde.24h.html">
 					RECENTLY CHANGED PAGES</a> you can see that too
