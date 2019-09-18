@@ -16,13 +16,10 @@ author: ford
 Looking to join? We can\'t wait to meet you!
 --------------------------------------------
 
+Sign-ups will be re-launching on September 20th, 2019.  Can't wait to meet you all!
+
 [Several alternate sites have sprouted
-up](http://tilde.club/%7Epfhawkins/othertildes.html) and they have no
-waiting list. Feel free to join one and we can start working on ways to
-get everyone connected into one happy hyperlinked network of shared
-interests. [Here is a \"where we are at now\"
-statement](http://tilde.club/~ford/index.html#journal-2014-12-03) that
-explains some things.
+up](http://tilde.club/%7Epfhawkins/othertildes.html)
 
 How did this accidentally awesome thing get started?
 ----------------------------------------------------
