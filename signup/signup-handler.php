@@ -69,7 +69,7 @@ if (isset($_REQUEST["username"]) && isset($_REQUEST["email"])) {
         $message .= "<li>username too long (32 character max)</li>";
 
     if (!preg_match('/^[a-z][a-z0-9]{1,31}$/', $name))
-        $message .= "<li>username contains invalid characters (lowercase only, must start with a letter)</li>";
+        $message .= "<li>username contains invalid characters (lowercase ascii only, must start with a letter)</li>";
 
     if ($_REQUEST["sshkey"] == "" || mb_substr($_REQUEST["sshkey"], 0, 4) !== "ssh-")
         $message .= '<li>ssh key required: please create one and submit the public key. '
