@@ -14,7 +14,6 @@
 					in their shared quest to build awesome web pages
 				</p>
 
-				<h2>Public sign-ups will re-open on September 20th 2019!</h2>
 				<p>
 					If you would like a list of <a href="http://tilde.club/~delfuego/tilde.24h.html">
 					RECENTLY CHANGED PAGES</a> you can see that too
