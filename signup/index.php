@@ -36,7 +36,7 @@ include __DIR__."/../header.php";
 			    </div>
 
 			    <p>
-				<em>signing up implies that you agree to abide by the rule of NO DRAMA</em>
+				<em>signing up implies that you agree to abide by <a href="/wiki/code-of-conduct.html">our code of conduct</a></em>
 				<br>
 				no drama. be respectful. have fun. we're all trying, and we're all in this together :)
 			    </p>
