@@ -21,6 +21,7 @@
 
 				<h3>here are the home pages of our users</h3>
 				<p>if you're not seeing yourself listed here, change your page from the default.</p>
+				<p><a href="/users/">list all users</a></p>
 
 				<ol>
 					<?php foreach (glob("/home/*") as $user) {
