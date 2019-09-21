@@ -3,7 +3,7 @@
 	<h1>$ welcome to tilde.club</h1>
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome!.<br> The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
+	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome back ~clubbers!!.<br> The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
 
 	<table>
 		<tr>
@@ -20,9 +20,18 @@
 				</p>
 
 				<h3>here are the home pages of our users</h3>
+				<p>if you're not seeing yourself listed here, change your page from the default.</p>
 
 				<ol>
 					<?php foreach (glob("/home/*") as $user) {
+						$index = "$user/public_html/index.html";
+						if (!file_exists($index) || 
+							in_array(sha1_file($index), 
+							// these are the hashes of previous and current default pages
+							["0eb53dab435e2e6e401921146bed85a80e9ad3a1", 
+							"61eff8202777bae134ac4b11f1e16ec23dfc97d3",
+							"e9d41eab6edb7cd375c63ecb4a23bca928992547",
+							"13af6898f536265af7dbbe2935b591f5e2ee0d7d"])) continue;
 						$user = basename($user); ?>
 						<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
 					<?php } ?>

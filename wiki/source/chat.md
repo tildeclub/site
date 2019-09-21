@@ -1,5 +1,5 @@
 ---
-title: Socializing
+title: Socializing and chat
 author: 
   - emv
   - benharri

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="pandoc" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+								<title>git usage</title>
+		<link rel="stylesheet" href="/style.css">
+		<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+		</style>
+								<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+			</head>
+	<body>
+		<a href="/wiki/">&lt; back to wiki home</a>
+						<header>
+			<h1 class="title">git usage</h1>
+			
+			
+					</header>
+						<p><code>git</code> is a version control system. It’s pretty confusing at first, but once you sort out what it can do and can’t do, it starts to get better.</p>
+<p>This tutorial is pretty good: http://git-scm.com/docs/gittutorial</p>
+<p>The best way to learn <code>git</code> is to find someone who knows <code>git</code> really well and sort out issues with them. Ask on [[IRC]] if you get stuck. (There should be a better buddy system for this, but until there is, we do what we can.)</p>
+<p>A good introduction to <code>git</code> is to create a repository for your <code>public_html</code> directory. This will allow you to back up your public web directory.</p>
+<p>First thing you will want to do is set up git.</p>
+<p>If you don’t have a <a href="http://github.com">GitHub</a> account, you will want one for this exercise. If you choose another Git host, you will need to work out some parts of this setup on your own.</p>
+<p>Once you have a git account, you will want to set up <code>git</code> for your tilde.club account. Use the email address that you used to create your GitHub account. You can register multiple accounts with GitHub if needed.</p>
+<pre><code>git config --global user.name &quot;Your Name Here&quot;
+git config --global user.email youremail@example.org</code></pre>
+<p>You will also want to create a <code>.gitignore</code> file. This file defines what things you want git to ignore, such as editor temporary files or directories you may not want to keep in <code>git</code> such as generated files or private files you upload to a public repository. The <code>.gitignore</code> file can be created in your home directory, but I like to create it in the project directory.</p>
+<p>Here is an example <code>.gitignore</code> file:</p>
+<pre><code># files being edited
+*~
+*swp
+# Generated files
+tilde_graphs
+# Private files
+diary.txt</code></pre>
+<p>Now go create a repository on GitHub. In our examples we are using mytildeweb as the repo name, but you can choose whatever name works for you. If you do change the repository name be sure to update the commands with the proper one.</p>
+<p>Now we should be ready to create and upload the repository.</p>
+<pre><code>cd public_html/
+# This will initialize public_html as a repository
+git init
+# Adds all files to the repo. &quot;.&quot; means &quot;the current directory&quot; (public_html, in this case)
+# Note: you can also add files one at a time
+git add .
+# Commits files to local repo
+git commit -m &quot;first commit of tildeweb&quot;
+# Tells git where your remote repo is
+git remote add origin https://github.com/&lt;yourgithubuser&gt;/mytildeweb.git
+# Uploads to the remote repo
+git push -u origin master</code></pre>
+<p>Your files should now be on GitHub. If you make a change and you want to update, do the following after making your edits:</p>
+<pre><code>git add index.html
+git commit -m &quot;updated blog&quot;
+git push origin master</code></pre>
+			</body>
+</html>
+
