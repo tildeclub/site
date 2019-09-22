@@ -53,6 +53,10 @@ h1 {
   animation-iteration-count: infinite;
 }
 
+.sourceCode {
+ color:#06287e;
+}
+
  /* Style the navbar */
 #navbar {
   overflow: hidden;

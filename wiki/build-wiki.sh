@@ -1,10 +1,10 @@
 #!/bin/sh
 
 for page in source/*.md; do
-	pagename=$(basename $page ".md")
+    pagename=$(basename $page ".md")
     printf "building %s wiki article\n" "$pagename"
 
-	pandoc \
+    pandoc \
         --template wiki.tmpl \
         --lua-filter header-permalinks.lua \
         -T "tilde.club wiki | " \
