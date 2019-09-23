@@ -3,15 +3,19 @@ title: how to contribute to this wiki
 author: benharri
 ---
 
+## got a topic you want to write about?
+
+or maybe you just found a typo on one of the existing pages!
+
+follow these steps to submit a change.
+
 1. grab a copy of the site's source code
 
     git clone https://github.com/tildeclub/site tilde.club && cd tilde.club/wiki
 
-1. make a new article or update an existing one (only change the markdown
-   source)
-
-1. generate the wiki pages. you need to be in the wiki directory.
-   run `./build-wiki.sh` to create the html.
+1. make a new article or update an existing one. make sure that you create the
+   title and author keys in the yaml frontmatter (see an existing article for
+   an example)
 
 1. submit the code via a PR on github or with git-send-email(1) to root@tilde.chat
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
