@@ -43,13 +43,13 @@ $highlighting-css$
 		$endfor$
 	</head>
 	<body>
-		<a href="/wiki/">&lt; back to wiki home</a>
 		$for(include-before)$
 		$include-before$
 		$endfor$
 		$if(title)$
 		<header>
 			<h1 class="title">$title$</h1>
+			<a href="/wiki/">&lt; back to wiki home</a>
 			$if(subtitle)$
 			<p class="subtitle">$subtitle$</p>
 			$endif$
@@ -59,6 +59,7 @@ $highlighting-css$
 				$for(author)$
 				<p class="author"><a href="/~$author$/">~$author$</a></p>
 				$endfor$
+			<hr>
 			$endif$
 
 			$if(date)$

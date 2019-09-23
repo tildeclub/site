@@ -17,6 +17,7 @@ alternatively, you can use the [webmail](https://webmail.tilde.club/) or standar
 some clients will automatically detect the right settings (tested with thunderbird).
 
 connection settings:
+
 - imap.tilde.club port 993 with ssl
 - pop3.tilde.club port 995 with ssl
 - smtp.tilde.club port 587 with starttls
