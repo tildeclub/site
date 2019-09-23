@@ -8,10 +8,11 @@
 
 	</head>
 <body>
- <div id="navbar">
-  <a href="/">~TILDE.CLUB~</a>
-  <a href="/">HOME</a>
-  <a href="/wiki/">WIKI</a>
-  <a href="/signup/">SIGN-UP</a>
-</div> 
+	<div id="navbar">
+		<a href="/">~TILDE.CLUB~</a>
+		<a href="/">HOME</a>
+		<a href="/wiki/">WIKI</a>
+		<a href="/signup/">SIGN-UP</a>
+	</div>
 
+	<div class="content">

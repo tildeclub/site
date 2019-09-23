@@ -23,6 +23,9 @@ a {
   font-weight: bold;
   padding-right: 0.25em;
 }
+hr {
+  border-color: darkorange;
+}
 .advisory {
   background: darkorange;
   color: #223;
@@ -61,6 +64,11 @@ h1 {
 #navbar {
   overflow: hidden;
   background-color: darkorange;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* Navbar links */
@@ -75,20 +83,8 @@ h1 {
 
 /* Page content */
 .content {
-  padding: 16px;
+  padding-top: 30px;
 }
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-} 
 
 input[type="text"],
 textarea {

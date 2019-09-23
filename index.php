@@ -40,6 +40,27 @@
 			</td>
 
 			<td valign="top">
+				<h2>UPDATE: September 2019:</h2>
+				<p>
+					tilde.club is back!! as of september 20th, we're now accepting
+					signups and operating as normal!
+				</p>
+				<p>
+					your new admins are: <a href="/~deepend/">~deepend</a> and
+					<a href="/~benharri/">~benharri</a>. if you need anything,
+					reach out via email (root AT tilde DOT club) or on irc.
+				</p>
+				<p>so what's new?</p>
+				<ul>
+					<li>~club is joining the <a href="https://tildeverse.org">
+					tildeverse</a>, a collective of like-minded tilde communities with a <a href="https://tilde.chat">shared irc network</a></li>
+					<li>we now have a <a href="https://lists.tildeverse.org/postorius/lists/tildeclub.lists.tildeverse.org/">mailing list</a> and a full-fledged <a href="/wiki/email.html">mailserver</a>. new users are automatically subscribed to the list with their @tilde.club address.</li>
+					<li>we're on a new vm with more ram and disk space to grow. check the expected ssh hostkey at the top of the page.</li>
+					<li>to keep up with updates, stop by irc (via <a href="https://web.tilde.chat/?join=club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
+					<li>most of the info from previous wiki iterations are now consolidated on our new <a href="/wiki/">wiki</a></li>
+				</ul>
+				<hr>
+
 				<h2>tilde.club gold star supporters</h2>
 
 				<p>Tilde.Club is supported by a global community of good people. We
@@ -74,5 +95,7 @@
 			</td>
 		</tr>
 	</table>
+
+	<p>big kudos and thanks to the people who built the original tilde.club!</p>
 
 <?php include "footer.php";
