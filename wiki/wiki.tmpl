@@ -68,9 +68,13 @@ $highlighting-css$
 		</header>
 		$endif$
 		$if(toc)$
+        $if(toc-title)$
+        <h2>$toc-title$</h2>
+        $endif$
 		<nav id="$idprefix$TOC">
 			$table-of-contents$
 		</nav>
+        <hr>
 		$endif$
 		$body$
 		$for(include-after)$

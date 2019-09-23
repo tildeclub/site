@@ -10,6 +10,7 @@ all: $(DST_HTML_FILES)
 		--template wiki.tmpl \
 		--lua-filter header-permalinks.lua \
 		--title-prefix "tilde.club wiki" \
+		--variable toc-title:"table of contents" \
 		--standalone \
 		--table-of-contents \
 		--output $@ \
