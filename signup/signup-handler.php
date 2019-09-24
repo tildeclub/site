@@ -109,7 +109,7 @@ $makeuser
 
         if (mail('root', 'new tilde.club signup', $msgbody)) {
             echo '<div class="alert alert-success" role="alert">
-                    email sent! we\'ll get back to you soon (usually within a day) with login instructions! <a href="/">back to tilde.club home</a>
+                    email sent! we\'ll get back to you soon (usually within a day) with login instructions! be sure to check your spam folder as we\'ve had several reports of being marked as spam! <a href="/">back to tilde.club home</a>
                   </div>';
             file_put_contents("/var/signups", $makeuser.PHP_EOL, FILE_APPEND);
         } else {
