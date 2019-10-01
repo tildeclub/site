@@ -3,10 +3,10 @@ DST_HTML_FILES := $(SRC_MD_FILES:source/%.md=%.html)
 
 PANDOC != command -v pandoc 2> /dev/null
 
-all: $(DST_HTML_FILES)
+all: dep-pandoc $(DST_HTML_FILES)
 
 %.html: source/%.md
-	@echo "building $@"
+	$(info building $@)
 	@$(PANDOC) \
 		--template wiki.tmpl \
 		--lua-filter header-permalinks.lua \
@@ -18,8 +18,13 @@ all: $(DST_HTML_FILES)
 		$<
 
 clean:
-	@echo "removing generated files"
+	$(info removing generated files)
 	@rm $(DST_HTML_FILES)
 
-.PHONY: clean
+dep-pandoc:
+ifndef PANDOC
+	$(error missing dependency 'pandoc'. please install and try again)
+endif
+
+.PHONY: clean dep-pandoc
 
