@@ -20,6 +20,7 @@
 				</p>
 
 				<h3>here are the home pages of our users</h3>
+				<p>this list does not include people who haven't changed their page yet</p>
 				<p>if you're not seeing yourself listed here, change your page from the default.</p>
 				<p><a href="/users/">list all users</a></p>
 
@@ -32,6 +33,7 @@
 							["0eb53dab435e2e6e401921146bed85a80e9ad3a1", 
 							"61eff8202777bae134ac4b11f1e16ec23dfc97d3",
 							"e9d41eab6edb7cd375c63ecb4a23bca928992547",
+							"cb2ce535ab34edebc225e88a321f972ba55763c3",
 							"13af6898f536265af7dbbe2935b591f5e2ee0d7d"])) continue;
 						$user = basename($user); ?>
 						<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
@@ -48,7 +50,7 @@
 				<p>
 					your new admins are: <a href="/~deepend/">~deepend</a> and
 					<a href="/~benharri/">~benharri</a>. if you need anything,
-					reach out via email (root AT tilde DOT club) or on irc.
+					reach out via email (root AT tilde DOT club) or on <a href="/wiki/chat.html#irc">irc</a>.
 				</p>
 				<p>so what's new?</p>
 				<ul>
@@ -58,6 +60,7 @@
 					<li>we're on a new vm with more ram and disk space to grow. check the expected ssh hostkey at the top of the page.</li>
 					<li>to keep up with updates, stop by irc (via <a href="https://web.tilde.chat/?join=club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
 					<li>most of the info from previous wiki iterations are now consolidated on our new <a href="/wiki/">wiki</a></li>
+					<li>we have a new donation page set up on <a href="https://liberapay.com/tilde.club">liberapay</a></li>
 				</ul>
 				<hr>
 

@@ -7,13 +7,19 @@ author:
 
 ## irc
 
+we're members of the [tildeverse](https://tildeverse.org) and host a server
+in the [tildeverse irc network](https://tilde.chat). the official channel for
+~club is `#chat`. stop by and say hello!
+
 run `chat` to open [weechat](https://weechat.org) auto-connected to our irc
-server.
+server. try launching [tmux](tmux.html) or [byobu](https://superuser.com/a/423397)
+to keep your chat session running.
 
 other clients like irssi are available as well! just connect to localhost on
 port 6667 and `/join #club`.
 
-feel free to use tilde.chat's [webchat](https://web.tilde.chat/?join=club) too
+feel free to use tilde.chat's [webchat](https://web.tilde.chat/?join=club) if
+you prefer.
 
 
 ## mailing list
