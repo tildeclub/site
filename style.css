@@ -15,6 +15,7 @@ body {
   font-family: "courier new", monospace;
   color: darkorange;
   background: #000400;
+  word-wrap: break-word;
 }
 a {
   background: darkorange;
@@ -131,5 +132,12 @@ div.alert-success {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (min-width: 768px) {
+  td {
+    display: block;
   }
 }
