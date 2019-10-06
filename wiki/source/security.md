@@ -88,7 +88,7 @@ There are three major types of permissions (and a hand full of others)
     - `-` means that the permission for that place isn't set. If it's at the beginning of the line, it means it's a normal file.
     - `d` at the start of a line isn't a permission really. It just denotes a directory.
     - `b` or `c` isn't a permission either, it probably means you did an `ls -l` of the `/dev` directory as those indicate block or character devices.
-    - `s` is a setuid/setgid permission. It's a special setting that allows you to run a script file or program as a user or a group. It can be used on a directory to make sure files are written as a user/group It's rare to see.
+    - `s` is a setuid/setgid permission. It's a special setting that allows you to run a script file or program as a user or a group. It can be used on a directory to make sure files are written as a user/group. It's rare to see, and in general should be used only if the proper precautions are taken. Serious consequences can come about if a shell script/program is poorly written and given setuid permissions, as it could lead to an escalation to root privileges or a more privileged user.
 
 #### Three classes of access permissions
 
@@ -151,3 +151,5 @@ The `id` command is a tool to show us how the system keeps track of us. From thi
         - Run `id` in your own directory, then run
         - Run `id -u root`
         - use the `grep` command to find your uid in the `/etc/passwd` file
+        
+As noted above, we can obtain our group id using the `id` command. Try locating your group in `/etc/group` using the commands that were specified above; your group name will probably be the same as your user (although at times this might not be true depending on the configuration of the system).
