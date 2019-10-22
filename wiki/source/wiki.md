@@ -17,7 +17,7 @@ follow these steps to submit a change.
    title and author keys in the yaml frontmatter (see an existing article for
    an example)
 
-1. submit the code via a PR on github or with git-send-email(1) to root@tilde.chat
+1. submit the code via a PR on github or with git-send-email(1) to root@tilde.club
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
    it. if you're working locally on tilde.club, you won't have to configure
    anything; git will use the system's sendmail to handle the email.
