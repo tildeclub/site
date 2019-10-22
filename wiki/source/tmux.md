@@ -1,5 +1,5 @@
 ---
-title: tmux
+title: terminal multiplexers - tmux
 ---
 
 TMUX IS THE BEST. Here's a super basic primer.
@@ -39,3 +39,5 @@ I not the best writer or teacher. Just google anything that doesn't make sense.
 [Or take a look at this tmux guide](http://robots.thoughtbot.com/a-tmux-crash-course)
 
 But definitely use tmux.
+
+Or, if you don't like it - try [screen](screen.html)
