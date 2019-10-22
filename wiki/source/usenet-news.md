@@ -7,7 +7,7 @@ title: usenet news
 We're working on it. You'll need a news server to read news, and it's up; 
 it's `news.tilde.club`.
 
-[[slrn]] is a newsreader; see http://slrn.sourceforge.net/ for details.
+[slrn](slrn.html) is a newsreader; see http://slrn.sourceforge.net/ for details.
 
 [[pine]] can read news; this
 [http://www.chebucto.ns.ca/Help/News/PineNews.html](tutorial) might help.
@@ -22,3 +22,4 @@ A for add, ^t for list
 
 [[lynx]] reads news, a la `lynx news://news.tilde.club/tilde.general`. It can even post news, but you have to design your own headers.
 
+There is also [tin](tin.html).

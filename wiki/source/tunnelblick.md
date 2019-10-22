@@ -10,4 +10,4 @@ truckin.
 
 https://code.google.com/p/tunnelblick/
 
-To find a VPN endpoint, see the [[VPN Gate]] project.
+To find a VPN endpoint, see the [VPN Gate](vpn-gate.html) project.

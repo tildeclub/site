@@ -8,5 +8,5 @@ designed with the Great Firewall of China in mind.
 
 http://www.vpngate.net/en/
 
-You may need client side software to make this work; [[tunnelblick]] is one
+You may need client side software to make this work; [tunnelblick](tunnelblick.html) is one
 such service on the Mac.
