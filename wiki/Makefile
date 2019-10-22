@@ -1,9 +1,15 @@
 SRC_MD_FILES != find source -name '*.md'
-DST_HTML_FILES := $(SRC_MD_FILES:source/%.md=%.html)
+DST_HTML_FILES := index.html $(SRC_MD_FILES:source/%.md=%.html)
 
 PANDOC != command -v pandoc 2> /dev/null
+PHP != command -v php 2> /dev/null
 
 all: dep-pandoc $(DST_HTML_FILES)
+
+index.html: index.php
+
+%.html: %.php dep-php
+	php $< > $@
 
 %.html: source/%.md
 	$(info building $@)
@@ -19,11 +25,16 @@ all: dep-pandoc $(DST_HTML_FILES)
 
 clean:
 	$(info removing generated files)
-	@rm $(DST_HTML_FILES)
+	-rm $(DST_HTML_FILES)
 
-dep-pandoc:
+dep-pandoc::
 ifndef PANDOC
 	$(error missing dependency 'pandoc'. please install and try again)
+endif
+
+dep-php::
+ifndef PHP
+	$(error missing dependency 'php'. please install and try again)
 endif
 
 .PHONY: clean dep-pandoc
