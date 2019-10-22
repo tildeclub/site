@@ -9,7 +9,7 @@ author:
 
 we're members of the [tildeverse](https://tildeverse.org) and host a server
 in the [tildeverse irc network](https://tilde.chat). the official channel for
-~club is `#chat`. stop by and say hello!
+~club is `#club`. stop by and say hello!
 
 run `chat` to open [weechat](https://weechat.org) auto-connected to our irc
 server. try launching [tmux](tmux.html) or [byobu](https://superuser.com/a/423397)
