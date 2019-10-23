@@ -16,7 +16,7 @@ author: ford
 Looking to join? We can\'t wait to meet you!
 --------------------------------------------
 
-Sign-ups will be re-launching on September 20th, 2019.  Can't wait to meet you all!
+Sign-ups have re-launched as of September 20th, 2019. Sign up on our main page [https://tilde.club/signup](https://tilde.club/signup)!
 
 [Several alternate sites have sprouted
 up](http://tilde.club/%7Epfhawkins/othertildes.html)
