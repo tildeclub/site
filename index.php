@@ -3,7 +3,7 @@
 	<h1>$ welcome to tilde.club</h1>
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory">SERVICE ADVISORY: New Server, New Owners, New lease on life for tilde.club.  Welcome back ~clubbers!!.<br> The Expected SSH Hostkey is SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE.</p>
+	<p class="advisory"></p>
 
 	<table>
 		<tr>
