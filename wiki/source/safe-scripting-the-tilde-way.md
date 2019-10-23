@@ -17,9 +17,7 @@ What does that mean with respect to scripting and programming on a shared host?
 
 - DOs
     - Respect shared CPU/Disk/Network resources
-    - Keep things that require a tilde.club login local to the server (don't post publicly) :
-        - Finger info
-        - local home directory files such as `~/.plan` and `~/.profile` files
+    - Keep things that require a tilde.club login local to the server (don't post publicly), like home directory files:
         - Note that exceptions could include an opt-in file or special permissions from the user.
     - Respect `robots.txt` when writing web crawlers
 
