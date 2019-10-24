@@ -251,4 +251,4 @@ where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
 ---
 
-this tutorial is based on and uses parts of [the tilde.club ssh primer](https://github.com/tildeclub/tilde.club/blob/master/docs/ssh.md) and [the tilde.town ssh guide](https://tilde.town/wiki/ssh.html).
+this tutorial is based on and uses parts of [the tilde.club ssh primer](https://github.com/tildeclub/tilde.club/blob/master/docs/ssh.md) and [the tilde.town ssh guide](https://tilde.town/wiki/getting-started/ssh.html).
