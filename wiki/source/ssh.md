@@ -20,6 +20,13 @@ ssh user@tilde.club
 mosh user@tilde.club
 ```
 
+ssh is also available on port 443 using the address `ssh.tilde.club`:
+
+    ssh -p 443 user@ssh.tilde.club
+
+this is useful if you're on a limited public network that blocks non-http
+ports.
+
 ---
 
 ## intro
