@@ -3,7 +3,7 @@
 	<h1>$ welcome to tilde.club</h1>
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory"></p>
+	<p class="advisory">Password authentication is now disabled.  SSH key is now required for login.  Email root if you have troubles logging in.</p>
 
 	<table>
 		<tr>
