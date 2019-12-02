@@ -15,7 +15,7 @@
 				</p>
 
 				<p>
-					If you would like a list of <a href="http://tilde.club/~delfuego/tilde.24h.html">
+					If you would like a list of <a href="http://tilde.club/tilde.24h.php">
 					RECENTLY CHANGED PAGES</a> you can see that too
 				</p>
 
