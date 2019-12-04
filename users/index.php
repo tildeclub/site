@@ -11,7 +11,7 @@ include __DIR__.'/../header.php';
 
 <p>here's a full list of users (including those who haven't updated their page from the default)</p>
 
-<p>see <a href="/~delfuego/tilde.24h.html">users who have updated their page in the last 24 hours</a></p>
+<p>see <a href="http://tilde.club/tilde.24h.php">users who have updated their page in the last 24 hours</a></p>
 
 <ol>
 <?php foreach (glob("/home/*") as $user) {
