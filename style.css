@@ -65,7 +65,7 @@ h1 {
   overflow: hidden;
   background-color: darkorange;
   z-index: 99;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -83,7 +83,7 @@ h1 {
 
 /* Page content */
 .content {
-  padding-top: 30px;
+  padding-top: 5px;
 }
 
 input[type="text"],
