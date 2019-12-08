@@ -1,3 +1,9 @@
+--- 
+title: bashblog 
+author: deepend / benharri
+---
+
+
 ## Usage
 
 1. To show the available commands type `bb`
