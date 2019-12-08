@@ -1,0 +1,30 @@
+---
+kind: pipeline
+type: ssh
+name: deploy
+
+server:
+    host:
+        from_secret: host
+    user:
+        from_secret: username
+    ssh_key:
+        from_secret: ssh_key
+
+clone:
+    disable: true
+
+trigger:
+    branch:
+        - master
+
+steps:
+    - name: deploy
+      commands:
+          - cd /usr/share/www/html
+          - git pull origin master
+    - name: build-wiki
+      commands:
+          - cd /usr/share/www/html/wiki
+          - make
+
