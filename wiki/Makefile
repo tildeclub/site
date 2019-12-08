@@ -1,11 +1,12 @@
 SRC_MD_FILES != find source -name '*.md'
-DST_HTML_FILES := index.html $(SRC_MD_FILES:source/%.md=%.html)
+DST_HTML_FILES := $(SRC_MD_FILES:source/%.md=%.html)
 
 PANDOC != command -v pandoc 2> /dev/null
 PHP != command -v php 2> /dev/null
 
-all: dep-pandoc dep-php $(DST_HTML_FILES)
+all: dep-pandoc $(DST_HTML_FILES)
 
+index: dep-php index.html
 %.html: %.php
 	php $< > $@
 
