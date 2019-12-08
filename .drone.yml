@@ -21,10 +21,10 @@ trigger:
 steps:
     - name: deploy
       commands:
-          - cd /usr/share/www/html
+          - cd /usr/share/nginx/html
           - git pull origin master
     - name: build-wiki
       commands:
-          - cd /usr/share/www/html/wiki
-          - make
+          - cd /usr/share/nginx/html
+          - make -C wiki
 
