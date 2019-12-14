@@ -70,7 +70,6 @@ Other links
 
 -   [Github](https://github.com/tildeclub/tilde.club)
 -   [Webring](http://tilde.club/~harper/link.html?action=join)
--   [Skillswap](http://goo.gl/forms/LT2bDgtmwH)
 
 How do you pronounce \"tilde\"?
 -------------------------------
