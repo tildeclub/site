@@ -1,6 +1,50 @@
 <?php include "header.php"; ?>
 
 	<h1>$ welcome to tilde.club</h1>
+<ul class="lightrope">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
 	<p class="advisory">SERVICE ADVISORY: Password authentication is now disabled.  SSH key is now required for login.  Email root if you have troubles logging in.</p>
