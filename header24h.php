@@ -12,7 +12,7 @@
 		<a href="/">~TILDE.CLUB~</a>
 		<a href="/">HOME</a>
 		<a href="/wiki/">WIKI</a>
-		<a href="https://liberapay.com/tilde.club" target="_blank">DONATE</a>
+		<a href="/wiki/donate.html">DONATE</a>
 		<a href="https://web.tilde.chat/?join=club" target="_blank">CHAT</a>
 		<a href="/signup/">SIGN-UP</a>
 	</div>
