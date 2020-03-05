@@ -1,3 +1,9 @@
+---
+title: Using Google Authenticator on tilde.club
+author: deepend
+---
+
+
 # Using Google Authenticator.
 
 To get started with google authenticator run the following command
