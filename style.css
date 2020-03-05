@@ -13,13 +13,12 @@ ol {
 body {
   margin: 1em;
   font-family: "courier new", monospace;
-  color: darkorange;
+  color: #d46700;
   background: #000400;
   word-wrap: break-word;
 }
 a {
-  background: darkorange;
-  color: #223;
+  color: #d46700;
   font-weight: bold;
   padding-right: 0.25em;
 }
@@ -88,8 +87,9 @@ h1 {
 
 input[type="text"],
 textarea {
-  background-color: #333;
-  color: darkorange;
+  background-color: #191919;
+  border: 0px;
+  color: #d46700;
 }
 
 div.alert-warning {
