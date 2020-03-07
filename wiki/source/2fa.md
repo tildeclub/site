@@ -69,6 +69,6 @@ still require your password before letting you in.
 
 4. [FreeOTP Authenticator](https://freeotp.github.io/)
 
-5.[Aegis Authenticator](https://getaegis.app/)
+5. [Aegis Authenticator](https://getaegis.app/)
 
 More suggestions welcome.
