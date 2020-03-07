@@ -71,4 +71,6 @@ still require your password before letting you in.
 
 5. [Aegis Authenticator](https://getaegis.app/)
 
+6. [Tofu for IOS](https://www.tofuauth.com/)
+
 More suggestions welcome.
