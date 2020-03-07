@@ -61,12 +61,14 @@ still require your password before letting you in.
 
 # 2FA Mobile Applications
 
-1. Google Authenticator
+1. [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA)
 
-2. Authy
+2. [Authy](https://authy.com/)
 
-3. Microsoft Authenticator
+3. [Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
 
-4. FreeOTP Authenticator
+4. [FreeOTP Authenticator](https://freeotp.github.io/)
+
+5.[Aegis Authenticator](https://getaegis.app/)
 
 More suggestions welcome.
