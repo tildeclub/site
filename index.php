@@ -43,6 +43,19 @@
 			</td>
 
 			<td valign="top">
+                                <h2>UPDATE: March 2020:</h2>
+                                <p>
+                                        Things at tilde.club are going well, Thank you to all our new and existing users.
+                                        Lets make 2020 a great one for ~club and the wider tildeverse!
+                                </p>
+                                <p>so what's new?</p>
+                                <ul>
+                                    	<li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
+                                        <li>Users can now utilize more to make their pages unique, such as PHP.</li>
+                                        <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
+                                        <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
+                                </ul>
+				<hr>
 				<h2>UPDATE: September 2019:</h2>
 				<p>
 					tilde.club is back!! as of september 20th, we're now accepting

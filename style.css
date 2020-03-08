@@ -13,12 +13,12 @@ ol {
 body {
   margin: 1em;
   font-family: "courier new", monospace;
-  color: #d46700;
+  color: #f89406;
   background: #000400;
   word-wrap: break-word;
 }
 a {
-  color: #d46700;
+  color: #f89406;
   font-weight: bold;
   padding-right: 0.25em;
 }
