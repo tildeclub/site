@@ -4,55 +4,42 @@ table {
   border-collapse: collapse;
 }
 td {
-  border: 6px double darkorange;
-  padding: 10px;
+  border: 6px double #fb5;
+  padding: 1em;
 }
 ol {
   margin-left: 1em;
 }
 body {
-  margin: 1em;
+  margin: auto;
+  padding: 1em;
+  max-width: 64em;
   font-family: "courier new", monospace;
-  color: #f89406;
-  background: #000400;
+  color: #fb5;
+  background: #111;
   word-wrap: break-word;
 }
 a {
-  color: #f89406;
+  text-decoration: none;
+  color: #f70;
   font-weight: bold;
   padding-right: 0.25em;
 }
+a:hover {color: #f20;}
 hr {
-  border-color: darkorange;
+  border-color: #fb5;
 }
 .advisory {
-  background: darkorange;
-  color: #223;
+  background: #fc4;
+  color: #222;
   font-weight: bold;
-  padding-right: 0.25em;
+  padding: 1em;
+  border-radius: 0.25em;
 }
 h1 {
   text-transform: uppercase;
-  font-weight: bold;
-  color: #000400;
-  background: darkorange;
-}
-
-.advisory {
-  -webkit-animation-name: blinker;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-
-  -moz-animation-name: blinker;
-  -moz-animation-duration: 8s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
-
-  animation-name: blinker;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+    color: #fb5;
+    font-family: monospace;
 }
 
 .sourceCode {
@@ -62,12 +49,18 @@ h1 {
  /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: darkorange;
+  background-color: #fb5;
+  color: #222;
   z-index: 99;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  border-radius: 0.25em;
+}
+
+#navbar a:hover {
+  background-color: #f93;
 }
 
 /* Navbar links */
@@ -87,9 +80,8 @@ h1 {
 
 input[type="text"],
 textarea {
-  background-color: #191919;
-  border: 0px;
-  color: #d46700;
+  background-color: #333;
+  color: darkorange;
 }
 
 div.alert-warning {
@@ -97,42 +89,6 @@ div.alert-warning {
 }
 div.alert-success {
   background-color: darkgreen;
-}
-
-@-moz-keyframes blinker {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes blinker {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blinker {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /* Mobile */
