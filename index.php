@@ -6,9 +6,9 @@
 
 	<p class="advisory"></p>
 
-	<table>
-		<tr>
-			<td>
+	<div class="grid">
+		<div class="row">
+			<div class="col">
 				<p>
 					tilde.club is not a social network it is one tiny totally 
 					standard unix computer that people respectfully use together 
@@ -40,9 +40,9 @@
 						<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
 					<?php } ?>
 				</ol>
-			</td>
+			</div>
 
-			<td valign="top">
+			<div class="col">
                                 <h2>UPDATE: March 2020:</h2>
                                 <p>
                                         Things at tilde.club are going well, Thank you to all our new and existing users.
@@ -110,9 +110,9 @@
 					<li>10/3/2014 | <a href="/~englishm">~englishm</a></li>
 					<li>10/3/2014 | <a href="/~danbri">~danbri</a></li>
 				</ul>
-			</td>
-		</tr>
-	</table>
+			</div>
+		</div>
+	</div>
 
 	<p>big kudos and thanks to the people who built the original tilde.club!</p>
 
