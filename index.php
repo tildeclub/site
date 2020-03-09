@@ -8,39 +8,6 @@
 
 	<div class="grid">
 		<div class="row">
-			<div class="col">
-				<p>
-					tilde.club is not a social network it is one tiny totally 
-					standard unix computer that people respectfully use together 
-					in their shared quest to build awesome web pages
-				</p>
-
-				<p>
-					If you would like a list of <a href="http://tilde.club/tilde.24h.php">
-					RECENTLY CHANGED PAGES</a> you can see that too
-				</p>
-
-				<h3>here are the home pages of our users</h3>
-				<p>this list does not include people who haven't changed their page yet</p>
-				<p>if you're not seeing yourself listed here, change your page from the default.</p>
-				<p><a href="/users/">list all users</a></p>
-
-				<ol>
-					<?php foreach (glob("/home/*") as $user) {
-						$index = "$user/public_html/index.html";
-						if (!file_exists($index) || 
-							in_array(sha1_file($index), 
-							// these are the hashes of previous and current default pages
-							["0eb53dab435e2e6e401921146bed85a80e9ad3a1", 
-							"61eff8202777bae134ac4b11f1e16ec23dfc97d3",
-							"e9d41eab6edb7cd375c63ecb4a23bca928992547",
-							"cb2ce535ab34edebc225e88a321f972ba55763c3",
-							"13af6898f536265af7dbbe2935b591f5e2ee0d7d"])) continue;
-						$user = basename($user); ?>
-						<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
-					<?php } ?>
-				</ol>
-			</div>
 
 			<div class="col">
                                 <h2>UPDATE: March 2020:</h2>
@@ -110,6 +77,40 @@
 					<li>10/3/2014 | <a href="/~englishm">~englishm</a></li>
 					<li>10/3/2014 | <a href="/~danbri">~danbri</a></li>
 				</ul>
+			</div>
+			
+			<div class="col">
+				<p>
+					tilde.club is not a social network it is one tiny totally 
+					standard unix computer that people respectfully use together 
+					in their shared quest to build awesome web pages
+				</p>
+
+				<p>
+					If you would like a list of <a href="http://tilde.club/tilde.24h.php">
+					RECENTLY CHANGED PAGES</a> you can see that too
+				</p>
+
+				<h3>here are the home pages of our users</h3>
+				<p>this list does not include people who haven't changed their page yet</p>
+				<p>if you're not seeing yourself listed here, change your page from the default.</p>
+				<p><a href="/users/">list all users</a></p>
+
+				<ol>
+					<?php foreach (glob("/home/*") as $user) {
+						$index = "$user/public_html/index.html";
+						if (!file_exists($index) || 
+							in_array(sha1_file($index), 
+							// these are the hashes of previous and current default pages
+							["0eb53dab435e2e6e401921146bed85a80e9ad3a1", 
+							"61eff8202777bae134ac4b11f1e16ec23dfc97d3",
+							"e9d41eab6edb7cd375c63ecb4a23bca928992547",
+							"cb2ce535ab34edebc225e88a321f972ba55763c3",
+							"13af6898f536265af7dbbe2935b591f5e2ee0d7d"])) continue;
+						$user = basename($user); ?>
+						<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
+					<?php } ?>
+				</ol>
 			</div>
 		</div>
 	</div>
