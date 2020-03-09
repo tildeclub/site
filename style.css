@@ -1,7 +1,7 @@
 /* {font-size:13pt;font-weight:normal;} */
 
 @media (min-width: 30em) {
-    .row { display: flex; flex-wrap: nowrap; }
+    .row { display: flex; flex-wrap: nowrap; flex-direction: row-reverse; }
     .col { flex-grow: 1; }
 }
 
