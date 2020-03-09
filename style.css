@@ -1,9 +1,14 @@
 /* {font-size:13pt;font-weight:normal;} */
 
-table {
+@media (min-width: 30em) {
+    .row { display: flex; flex-wrap: nowrap; flex-direction: row-reverse; }
+    .col { flex-grow: 1; }
+}
+
+.grid {
   border-collapse: collapse;
 }
-td {
+.col {
   border: 6px double #fb5;
   padding: 1em;
 }
