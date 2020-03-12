@@ -4,8 +4,6 @@
 
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-<! ––	<p class="advisory"></p> -- !>
-
 	<div class="grid">
 		<div class="row">
 
