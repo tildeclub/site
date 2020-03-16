@@ -39,11 +39,13 @@ together to learn, to teach, and to delight in one another's creations.
 the following behaviors are expected and requested of all community members:
 
   * participate in an authentic and active way. in doing so, you contribute
-  to the health and longevity of this community.  * exercise consideration and
-  respect in your speech and actions.  * attempt collaboration before conflict.
+  to the health and longevity of this community.  
+  * exercise consideration and
+  respect in your speech and actions.  
+  * attempt collaboration before conflict.
   * refrain from demeaning, discriminatory, or harassing behavior and speech.
-  * be mindful of your surroundings and of your fellow participants.  *
-  teach when people need help. don't do it for them.
+  * be mindful of your surroundings and of your fellow participants.  
+  * teach when people need help. don't do it for them.
 
 
 ## 4. unacceptable behavior
