@@ -51,6 +51,10 @@ h1 {
  color:#008000;
 }
 
+code > span.fl { 
+ color: #008000; 
+}
+
  /* Style the navbar */
 #navbar {
   overflow: hidden;
