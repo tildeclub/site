@@ -14,7 +14,7 @@ include __DIR__."/../header.php";
 		$title = preg_match("/title: (.*)/i", file_get_contents($file), $matches) ? $matches[1] : $article;
                 $article_to_title[$article] = $title;
               }
-              sort($article_to_title);
+              asort($article_to_title);
         ?>
 	<?php foreach ($article_to_title as $article => $title)	{ ?>
 		<li><a href="/wiki/<?=$article?>.html"><?=$title?></a></li>
