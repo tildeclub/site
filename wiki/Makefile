@@ -15,6 +15,7 @@ index: dep-php index.html
 	@$(PANDOC) \
 		--template wiki.tmpl \
 		--lua-filter header-permalinks.lua \
+		--highlight-style=custom.theme \
 		--title-prefix "tilde.club wiki" \
 		--variable toc-title:"table of contents" \
 		--standalone \
