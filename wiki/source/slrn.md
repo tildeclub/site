@@ -1,5 +1,6 @@
 ---
 title: slrn
+category: links
 ---
 
 ``slrn`` is a news reader for [Usenet](usenet-news.html).

@@ -1,6 +1,7 @@
 ---
 title: how to contribute to this wiki
 author: benharri
+category: tilde.club
 ---
 
 ## got a topic you want to write about?

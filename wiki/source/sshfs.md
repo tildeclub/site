@@ -1,6 +1,7 @@
 ---
 author: jeffbonhag
 title: SSHFS
+category: software
 ---
 
 On OS X:

@@ -1,6 +1,7 @@
 ---
 title: donate to tilde.club
 author: deepend
+category: tilde.club
 ---
 
 ## Methods you can donate to tilde.club.

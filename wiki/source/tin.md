@@ -1,5 +1,6 @@
 ---
 title: tin
+category: software
 ---
 
 tin is a threaded NNTP and spool based [UseNet](usenet-news.html) newsreader for a variety of platforms.

@@ -1,5 +1,6 @@
 ---
 title: Tunnelblick
+category: links
 ---
 
 `tunnelblick` is an application for your Mac that allows you to configure
