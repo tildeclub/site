@@ -12,8 +12,8 @@ in the [tildeverse irc network](https://tilde.chat). the official channel for
 ~club is `#club`. stop by and say hello!
 
 run `chat` to open [weechat](https://weechat.org) auto-connected to our irc
-server. try launching [tmux](tmux.html) or [byobu](https://superuser.com/a/423397)
-to keep your chat session running.
+server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
+ or [screen](screen.html) to keep your chat session running.
 
 other clients like irssi are available as well! just connect to localhost on
 port 6667 and `/join #club`.
