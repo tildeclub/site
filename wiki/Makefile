@@ -13,6 +13,7 @@ index: dep-php index.html
 %.html: source/%.md
 	$(info building $@)
 	@$(PANDOC) \
+		--from markdown+backtick_code_blocks \
 		--template wiki.tmpl \
 		--lua-filter header-permalinks.lua \
 		--highlight-style=custom.theme \
