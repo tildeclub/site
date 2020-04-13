@@ -1,5 +1,6 @@
 ---
 title: terminal multiplexers - tmux
+category: software
 ---
 
 TMUX IS THE BEST. Here's a super basic primer.

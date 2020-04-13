@@ -1,5 +1,6 @@
 ---
 title: tilde.club netiquette
+category: tilde.club
 ---
 
 ## Two phrases we use a lot

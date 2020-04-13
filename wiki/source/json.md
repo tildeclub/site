@@ -1,5 +1,6 @@
 ---
 title: JSON
+category: software
 ---
 
 JSON is the "Javascript Object Notation", basically a file format for

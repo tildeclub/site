@@ -1,5 +1,6 @@
 ---
 title: VPN Gate
+category: links
 ---
 
 `VPN Gate` is a project from U Tsukuba in Japan that allows you to 

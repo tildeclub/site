@@ -3,6 +3,7 @@ title: bashblog
 author: 
   - deepend 
   - benharri
+category: software
 ---
 
 
