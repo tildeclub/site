@@ -76,7 +76,9 @@ $highlighting-css$
 		</nav>
         <hr>
 		$endif$
-		$body$
+<!-- unindent body so that code blocks don't have extra indents. See
+     https://stackoverflow.com/questions/42773587/code-block-formatting-issues-with-bootstrap-and-pandoc -->
+$body$
 		$for(include-after)$
 		$include-after$
 		$endfor$
