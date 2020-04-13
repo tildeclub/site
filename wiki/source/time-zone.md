@@ -11,5 +11,5 @@ to find the correct timezone name that you'll need to export as the `TZ` environ
 for example, if you're in eastern time, add something like this
 `export TZ="America/Detroit"`
 
-to your `.bashrc` .
+to your `.bashrc`
 

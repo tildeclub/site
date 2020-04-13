@@ -20,5 +20,4 @@ develop software using the many tools available to you on tilde.club.
 
 Tilde.club does cost money to run, however it all makes it worth it if the community is active and enjoying what we offer.
 
-
 ask on irc if you have questions!
