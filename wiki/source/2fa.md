@@ -1,13 +1,14 @@
 ---
 title: USING Two-Factor Authentication (2FA) ON TILDE.CLUB
 author: deepend
+category: tilde.club
 ---
 
 # Using Two-Factor Authentication (2FA).
 
 To get started, run the following command:
 
-   setup-2fa
+    setup-2fa
   
 Allow the command to update your Two-Factor Authentication. After running the
 command, you’ll be asked a couple of questions, the first one being:
@@ -24,7 +25,7 @@ only be used once, so they really are in case of emergency.
 You’ll then be prompted with several questions,  The choices are all
 about balancing security with ease-of-use. It begins with:
 
-   Do you want me to update your "~/.google_authenticator" file (y/n)
+    Do you want me to update your "~/.google_authenticator" file (y/n)
 
 You will need to answer 'yes'(y) for two-factor authentication to work with your login.
 

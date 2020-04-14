@@ -1,5 +1,6 @@
 ---
 title: .vimrc file
+category: tutorial
 ---
 
 The file `.vimrc` in your home directory has instructions for [[vim]]

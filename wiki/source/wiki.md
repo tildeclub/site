@@ -8,9 +8,9 @@ category: tilde.club
 
 # Want to contribute to this wiki?
 
-There are N ways to contribute to this wiki:
+There are at least 5 ways to contribute to this wiki:
 
-## The super ultra easy way
+## The super ultra easy 
 
 Send an email to [~audiodude](../~audiodude), audiodude@tilde.club. Put the
 proposed contents in the email in markdown format. You don't have to worry
@@ -71,12 +71,17 @@ You can do this right from the Github GUI!
 1. Make a new article or update an existing one. Make sure that you create the
    title, author, and category keys in the yaml frontmatter (see an existing
     article for an example).
+1. grab a copy of the site's source code
+    git clone https://github.com/tildeclub/site tilde.club && cd tilde.club/wiki
 
-1. submit the code via a PR on github or with git-send-email(1) to root@tilde.club
+2. make a new article or update an existing one. make sure that you create the
+   title and author keys in the yaml frontmatter (see an existing article for
+   an example)
+
+3. submit the code via a PR on github or with git-send-email(1) to root@tilde.club
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
    it. if you're working locally on tilde.club, you won't have to configure
    anything; git will use the system's sendmail to handle the email.
-
 
 # Most importantly
 

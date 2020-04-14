@@ -1,5 +1,6 @@
 ---
 title: usenet news
+category: tutorial
 ---
 
 ## this is out of date and the netnews server is down

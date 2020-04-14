@@ -1,11 +1,12 @@
 ---
 title: how to use git
+category: tutorial
 ---
 
 `git` is a version control system. It's pretty confusing at first, but
 once you sort out what it can do and can't do, it starts to get better.
 
-This tutorial is pretty good: http://git-scm.com/docs/gittutorial
+This tutorial is pretty good: [http://git-scm.com/docs/gittutorial](http://git-scm.com/docs/gittutorial)
 
 The best way to learn `git` is to find someone who knows `git` really
 well and sort out issues with them. Ask on [IRC](chat.html) if you get

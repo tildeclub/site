@@ -1,5 +1,6 @@
 ---
 title: time zones
+category: tutorial
 ---
 
 The timezone by default on the server is UTC.
@@ -10,5 +11,5 @@ to find the correct timezone name that you'll need to export as the `TZ` environ
 for example, if you're in eastern time, add something like this
 `export TZ="America/Detroit"`
 
-to your `.bashrc` .
+to your `.bashrc`
 

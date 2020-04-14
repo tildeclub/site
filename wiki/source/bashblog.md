@@ -1,6 +1,9 @@
 --- 
 title: bashblog 
-author: deepend / benharri
+author: 
+  - deepend 
+  - benharri
+category: software
 ---
 
 

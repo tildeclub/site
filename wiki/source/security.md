@@ -1,6 +1,7 @@
 ---
 title: Editing Basic UNIX Security the Tilde way
 author: michaelcoyote
+category: tutorial
 ---
 
 
@@ -147,9 +148,9 @@ Back at our command line, lets type the command `id`:
 
 The `id` command is a tool to show us how the system keeps track of us. From this we can see that according to the system, our user ID (or uid) is 501, and our group id is also 501.
 
-    - Homework
-        - Run `id` in your own directory, then run
-        - Run `id -u root`
-        - use the `grep` command to find your uid in the `/etc/passwd` file
+- Homework
+    - Run `id` in your own directory, then run
+    - Run `id -u root`
+    - use the `grep` command to find your uid in the `/etc/passwd` file
         
 As noted above, we can obtain our group id using the `id` command. Try locating your group in `/etc/group` using the commands that were specified above; your group name will probably be the same as your user (although at times this might not be true depending on the configuration of the system).

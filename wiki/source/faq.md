@@ -1,6 +1,7 @@
 ---
 title: faq
 author: ford
+category: tilde.club
 ---
 
       _______________________________________

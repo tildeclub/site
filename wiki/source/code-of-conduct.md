@@ -1,6 +1,7 @@
 --- 
 title: code of conduct 
-author: benharri 
+author: benharri
+category: tilde.club
 ---
 
 > **tl;dr** learn by doing and helping. be excellent to each other. have fun!

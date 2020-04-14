@@ -1,5 +1,6 @@
 ---
 title: Tunnelblick
+category: links
 ---
 
 `tunnelblick` is an application for your Mac that allows you to configure
@@ -8,6 +9,6 @@ tilde.club via a network that does not allow high UDP ports; with a properly
 configured tunnel, you can still run [[mosh]] as your shell and keep on
 truckin.
 
-https://code.google.com/p/tunnelblick/
+[https://tunnelblick.net/](https://tunnelblick.net/)
 
 To find a VPN endpoint, see the [VPN Gate](vpn-gate.html) project.
