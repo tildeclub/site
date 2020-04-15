@@ -4,13 +4,13 @@ DST_HTML_FILES := $(SRC_MD_FILES:source/%.md=%.html)
 PANDOC != command -v pandoc 2> /dev/null
 PHP != command -v php 2> /dev/null
 
-all: dep-pandoc $(DST_HTML_FILES)
+all: dep-pandoc $(DST_HTML_FILES) index
 
 index: dep-php index.html
 %.html: %.php
 	php $< > $@
 
-%.html: source/%.md
+%.html: source/%.md wiki.tmpl custom.theme
 	$(info building $@)
 	@$(PANDOC) \
 		--from markdown+backtick_code_blocks \
