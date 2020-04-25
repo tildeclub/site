@@ -10,7 +10,7 @@ category: tilde.club
 
 There are at least 5 ways to contribute to this wiki:
 
-## The super ultra easy 
+## The super ultra easy way
 
 Send an email to [~audiodude](../~audiodude), audiodude@tilde.club. Put the
 proposed contents in the email in markdown format. You don't have to worry
