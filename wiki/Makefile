@@ -1,10 +1,10 @@
 SRC_MD_FILES != find source -name '*.md'
 DST_HTML_FILES := $(SRC_MD_FILES:source/%.md=%.html)
-
+DST_TXT_FILES := $(SRC_MD_FILES:source/%.md=%.txt)
 PANDOC != command -v pandoc 2> /dev/null
 PHP != command -v php 2> /dev/null
 
-all: dep-pandoc $(DST_HTML_FILES) index
+all: dep-pandoc $(DST_HTML_FILES) $(DST_TXT_FILES) index
 
 index: dep-php index.html
 %.html: %.php
@@ -24,9 +24,20 @@ index: dep-php index.html
 		--output $@ \
 		$<
 
+%.txt: source/%.md link_footnote.lua
+	$(info building $@)
+	@$(PANDOC) \
+		--from markdown+backtick_code_blocks \
+		--to plain \
+		--lua-filter ./link_footnote.lua \
+		--standalone \
+		--output $@ \
+		$<
+
 clean:
 	$(info removing generated files)
 	-rm $(DST_HTML_FILES)
+	-rm $(DST_TXT_FILES)
 
 dep-pandoc::
 ifndef PANDOC
