@@ -4,6 +4,8 @@ author: deepend
 category: tilde.club
 ---
 
+ If you like what tilde.club does and would like to contribute to the costs of running such a service, feel free to make a donation. If you can, we appreciate it, if you can't, we also appreciate you being here.
+
 ## Methods you can donate to tilde.club.
 
 There are currently two (2) methods you can donate financially to tilde.club.
