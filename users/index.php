@@ -7,19 +7,28 @@ $title = 'tilde.club users';
 include __DIR__.'/../header.php';
 ?>
 
-<h1>full user list</h1>
+<h1>$ full user list</h1>
 
-<p>here's a full list of users (including those who haven't updated their page from the default)</p>
+<div class="grid">
+	
+	<div class="row">
+		
+	<div class="col">
 
-<p>see <a href="http://tilde.club/tilde.24h.php">users who have updated their page in the last 24 hours</a></p>
+	<p>here's a full list of users (including those who haven't updated their page from the default)</p>
 
-<ol>
-<?php foreach (glob("/home/*") as $user) {
+	<p>see <a href="http://tilde.club/tilde.24h.php">users who have updated their page in the last 24 hours</a></p>
+
+<ul class="user-list>
+
+	<?php foreach (glob("/home/*") as $user) {
 	$user = basename($user); ?>
 	<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
-<?php } ?>
-</ol>
+	<?php } ?>
 
+</ul>
+	</div>
+</div>
 <?php
 include __DIR__.'/../footer.php';
 
