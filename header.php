@@ -8,14 +8,5 @@
 
 	</head>
 <body>
-	<div id="navbar">
-		<a href="/">~TILDE.CLUB~</a>
-		<a href="/">HOME</a>
-		<a href="/wiki/">WIKI</a>
-		<a href="/wiki/donate.html">DONATE</a>
-		<a href="https://web.tilde.chat/?join=club" target="_blank">CHAT</a>
-		<a href="https://search.tildeverse.org/" target="_blank">SEARCH</a>
-		<a href="/signup/">SIGN-UP</a>
-
-	</div>
+    <?php include "nav.html"; ?>
 	<div class="content">
