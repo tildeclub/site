@@ -12,10 +12,21 @@
   border: 6px double #fb5;
   padding: 1em;
 }
-ol {
-  margin-left: 1em;
-  column-count: 4;
+
+.user-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
+.user-list li {
+  margin-left: 5%;
+  width: 20%;
+}
+.user-list::after {
+  content: "";
+  flex: auto;
+}
+
 body {
   margin: auto;
   padding: 1em;
