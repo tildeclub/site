@@ -3,7 +3,12 @@ $title = "tilde.club wiki";
 include __DIR__."/../header.php";
 ?>
 
-<h1>the tilde.club wiki</h1>
+<h1>$ the tilde.club wiki</h1>
+
+	<div class="grid">
+		<div class="row">
+
+			<div class="col">
 
 <p>here's the articles on our wiki:</p>
 <ul>
@@ -40,5 +45,9 @@ include __DIR__."/../header.php";
 
         <?php } ?>
 </ul>
+	</div>
+</div>
 
-<?php include __DIR__."/../footer.php";
+        <p>big kudos and thanks to the people who built the original tilde.club!</p>
+
+<?php include "../footer.php"; ?>

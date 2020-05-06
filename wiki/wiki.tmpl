@@ -14,7 +14,7 @@
 		<meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 		$endif$
 		<title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-                <link rel="stylesheet" href="/style.css">
+                <link rel="stylesheet" href="../style.css">
 		<style type="text/css">
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,7 @@ $highlighting-css$
 		$if(title)$
 		<header>
 			<h1 class="title">$title$</h1>
-			<a href="/wiki/">&lt; back to wiki home</a>
+
 			$if(subtitle)$
 			<p class="subtitle">$subtitle$</p>
 			$endif$
@@ -59,7 +59,6 @@ $highlighting-css$
 				$for(author)$
 				<p class="author"><a href="/~$author$/">~$author$</a></p>
 				$endfor$
-			<hr>
 			$endif$
 
 			$if(date)$
@@ -67,6 +66,12 @@ $highlighting-css$
 			$endif$
 		</header>
 		$endif$
+<br>
+        <div class="grid">
+                <div class="row">
+
+                        <div class="col">
+
 		$if(toc)$
         $if(toc-title)$
         <h2>$toc-title$</h2>
@@ -82,6 +87,11 @@ $body$
 		$for(include-after)$
 		$include-after$
 		$endfor$
+	</div>
+</div>
+
+	<p>big kudos and thanks to the people who built the original tilde.club!</p>
+
 	</body>
 </html>
 

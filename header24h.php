@@ -20,11 +20,19 @@
 
 	<div class="content">
 
+<h1>$ recently updated</h1>
+
+        <div class="grid">
+                <div class="row">
+
+                        <div class="col">
+
 	<h2>tilde.club home pages updated in last 24 hours</h2>
 	<div>
 		There's also <a href="./tilde.24h.json">a JSON version of this data</a>; it's all updated once a minute, so hold yer damn horses, people. Also, times are in the server's time zone (GMT, it appears).<br>
 		<br>
 		This script is by <a href="http://tilde.club/~delfuego/" target="_blank">~delfuego</a>
 	</div>
+
 
 <ul>
