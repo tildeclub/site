@@ -55,6 +55,7 @@ function forbidden_name($name) {
         'wpad',
         'www',
         'znc',
+	'lukewarmcat',
     ]);
 }
 
