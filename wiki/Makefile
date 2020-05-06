@@ -14,6 +14,7 @@ index: dep-php index.html
 	$(info building $@)
 	@$(PANDOC) \
 		--from markdown+backtick_code_blocks \
+		--include-before-body=../nav.html \
 		--template wiki.tmpl \
 		--lua-filter header-permalinks.lua \
 		--highlight-style=custom.theme \
@@ -36,8 +37,7 @@ index: dep-php index.html
 
 clean:
 	$(info removing generated files)
-	-rm $(DST_HTML_FILES)
-	-rm $(DST_TXT_FILES)
+	-rm *.html *.txt
 
 dep-pandoc::
 ifndef PANDOC
