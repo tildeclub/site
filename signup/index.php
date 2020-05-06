@@ -3,7 +3,13 @@ $title = "sign up for the tilde.club!";
 include __DIR__."/../header.php";
 ?>
 
-<h1>sign up to join tilde.club</h1>
+<h1>$ sign up to join tilde.club</h1>
+
+
+	<div class="grid">
+		<div class="row">
+
+			<div class="col">
 
 <p>we're excited you're here! let's get you signed up!</p>
 <p>fill out this form and we'll get back to you with account info</p>
@@ -48,5 +54,8 @@ include __DIR__."/../header.php";
 		</td>
 	</tr>
 </table>
+
+	</div>
+</div>
 
 <?php include __DIR__."/../footer.php";
