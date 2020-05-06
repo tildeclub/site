@@ -10,23 +10,24 @@ include __DIR__.'/../header.php';
 <h1>$ full user list</h1>
 
 <div class="grid">
-	
+
 	<div class="row">
-		
-	<div class="col">
+		<div class="col">
 
 	<p>here's a full list of users (including those who haven't updated their page from the default)</p>
 
 	<p>see <a href="http://tilde.club/tilde.24h.php">users who have updated their page in the last 24 hours</a></p>
 
-<ul class="user-list>
+<br>
+<ul class="user-list">
 
-	<?php foreach (glob("/home/*") as $user) {
+<?php foreach (glob("/home/*") as $user) {
 	$user = basename($user); ?>
 	<li><a href="/~<?=$user?>/">~<?=$user?></a></li>
-	<?php } ?>
+<?php } ?>
 
 </ul>
+		</div>
 	</div>
 </div>
 <?php
