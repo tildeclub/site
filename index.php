@@ -96,7 +96,7 @@
 				<p>this list does not include people who haven't changed their page yet</p>
                                 <p>if you're not seeing yourself listed here, change your page from the default.</p>
                                 <p><a href="/users/">list all users</a></p>
-				<ol>
+				<ul class="user-list">
                                         <?php foreach (glob("/home/*") as $user) {
                                                 $index = "$user/public_html/index.html";
                                                 if (!file_exists($index) ||
@@ -110,7 +110,7 @@
                                                 $user = basename($user); ?>
                                                 <li><a href="/~<?=$user?>/">~<?=$user?></a></li>
                                         <?php } ?>
-                                </ol>
+                                </ul>
 
 			</div>
 
