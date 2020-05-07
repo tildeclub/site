@@ -85,10 +85,10 @@ h1 {
 		overflow: hidden;
 		white-space: nowrap;
 		animation: reveal 4s linear;
-		text-overflow: "ˆ";
+		text-overflow: "██";
 	}
 	#fancyboi::after {
-		content: "ˆ";
+		content: "██";
 		animation: flash 0.5s step-end infinite;
 	}
 }
