@@ -53,9 +53,6 @@ a:hover {color: #f20;}
 hr {
 	border-color: #fb5;
 }
-.text-center {
-	text-align: center
-}
 .advisory {
 	background: #fc4;
 	color: #222;
@@ -63,24 +60,36 @@ hr {
 	padding: 1em;
 	border-radius: 0.25em;
 }
-@keyframes cursor {
-	from { content: "_"; }
-	to { content: ""; }
-}
-@media not (prefers-reduced-motion: reduce) {
-	h1::after {
-		content: "_";
-		animation-name: cursor;
-		animation-iteration-count: infinite;
-		animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-		animation-duration: 1s;
-	}
-}
 h1 {
 	text-transform: uppercase;
 		color: #fb5;
 		font-family: monospace;
 }
+
+/* THEGOODS */
+#fancyboi::before {
+	content: "$ ";
+}
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes flash {
+		50% { opacity: 0; }
+	}
+	@keyframes reveal {
+		from { width: 2em; } /* Width of ::before */
+		  to { width: 100%; }
+	}
+	#fancyboi {
+		overflow: hidden;
+		white-space: nowrap;
+		animation: reveal 4s linear;
+		text-overflow: "â–ˆ";
+	}
+	#fancyboi::after {
+		content: "â–ˆ";
+		animation: flash 0.5s step-end infinite;
+	}
+}
+/* SDOOGEHT */
 
 .sourceCode {
  color:#008000;
@@ -141,4 +150,3 @@ div.alert-success {
 		display: block;
 	}
 }
-
