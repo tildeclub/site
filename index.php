@@ -117,6 +117,4 @@
 
 	</div>
 
-	<p>big kudos and thanks to the people who built the original tilde.club!</p>
-
 <?php include "footer.php"; ?>
