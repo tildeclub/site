@@ -60,6 +60,13 @@ hr {
 	padding: 1em;
 	border-radius: 0.25em;
 }
+h1::after {
+	content: "_";
+	animation-name: cursor;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+	animation-duration: 1s;
+}
 h1 {
 	text-transform: uppercase;
 		color: #fb5;
