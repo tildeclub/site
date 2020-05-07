@@ -3,7 +3,7 @@
 	<br>
 	</body>
         <footer class="text-center">
-            <p>ECDSA fingerprint: </p>
+            <p>ECDSA fingerprint: SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE</p>
             <a href="https://github.com/tildeclub/site">page source</a>
         </footer>
 </html>
