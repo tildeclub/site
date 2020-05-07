@@ -1,5 +1,8 @@
 
+
+		</div>
 	</div>
+<div>
 	<br>
         <footer class="text-center">
             <p>ECDSA fingerprint: SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE</p>
