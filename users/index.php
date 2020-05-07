@@ -7,7 +7,7 @@ $title = 'tilde.club users';
 include __DIR__.'/../header.php';
 ?>
 
-<h1 id="fancyboi">$ full user list</h1>
+<h1 id="fancyboi">full user list</h1>
 
 <div class="grid">
 
