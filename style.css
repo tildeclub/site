@@ -67,12 +67,14 @@ hr {
 	from { content: "_"; }
 	to { content: ""; }
 }
-h1::after {
-	content: "_";
-	animation-name: cursor;
-	animation-iteration-count: infinite;
-	animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-	animation-duration: 1s;
+@media not (prefers-reduced-motion: reduce) {
+	h1::after {
+		content: "_";
+		animation-name: cursor;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+		animation-duration: 1s;
+	}
 }
 h1 {
 	text-transform: uppercase;
