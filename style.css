@@ -63,6 +63,10 @@ hr {
 	padding: 1em;
 	border-radius: 0.25em;
 }
+@keyframes cursor {
+	from { content: "_"; }
+	to { content: ""; }
+}
 h1::after {
 	content: "_";
 	animation-name: cursor;
