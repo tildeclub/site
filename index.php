@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 
-	<h1>$ welcome to tilde.club</h1>
+	<h1 id="fancyboi">$ welcome to tilde.club</h1>
 
 	<p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 

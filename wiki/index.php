@@ -3,7 +3,7 @@ $title = "tilde.club wiki";
 include __DIR__."/../header.php";
 ?>
 
-<h1>$ the tilde.club wiki</h1>
+<h1 id="fancyboi">$ the tilde.club wiki</h1>
 
 	<div class="grid">
 		<div class="row">

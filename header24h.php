@@ -20,7 +20,7 @@
 
 	<div class="content">
 
-		<h1>$ recently updated</h1>
+		<h1 id="fancyboi">$ recently updated</h1>
 
         <div class="grid">
                 <div class="row">
