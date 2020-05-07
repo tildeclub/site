@@ -46,56 +46,56 @@ $highlighting-css$
 		$for(include-before)$
 		$include-before$
 		$endfor$
-		$if(title)$
-		<header>
-			<h1 class="title">$$ $title$</h1>
+		<div class="content">
+			$if(title)$
+			<header>
+				<h1 class="title">$$ $title$</h1>
 
-			$if(subtitle)$
-			<p class="subtitle">$subtitle$</p>
-			$endif$
+				$if(subtitle)$
+				<p class="subtitle">$subtitle$</p>
+				$endif$
 
-			$if(author)$
-			<p>authors:</p>
-				$for(author)$
-				<p class="author"><a href="/~$author$/">~$author$</a></p>
-				$endfor$
-			$endif$
+				$if(author)$
+				<p>authors:</p>
+					$for(author)$
+					<p class="author"><a href="/~$author$/">~$author$</a></p>
+					$endfor$
+				$endif$
 
-			$if(date)$
-			<p class="date">$date$</p>
+				$if(date)$
+				<p class="date">$date$</p>
+				$endif$
+			</header>
 			$endif$
-		</header>
+	<br>
+		<div class="grid">
+			<div class="row">
+
+				<div class="col">
+
+			$if(toc)$
+		$if(toc-title)$
+		<h2>$toc-title$</h2>
 		$endif$
-<br>
-        <div class="grid">
-                <div class="row">
-
-                        <div class="col">
-
-		$if(toc)$
-        $if(toc-title)$
-        <h2>$toc-title$</h2>
-        $endif$
-		<nav id="$idprefix$TOC">
-			$table-of-contents$
-		</nav>
-        <hr>
-		$endif$
+			<nav id="$idprefix$TOC">
+				$table-of-contents$
+			</nav>
+		<hr>
+			$endif$
 <!-- unindent body so that code blocks don't have extra indents. See
      https://stackoverflow.com/questions/42773587/code-block-formatting-issues-with-bootstrap-and-pandoc -->
 $body$
-		$for(include-after)$
-		$include-after$
-		$endfor$
+				$for(include-after)$
+				$include-after$
+				$endfor$
+			</div>
+		</div>
 	</div>
 </div>
-
+<br>
 <footer class="text-center">
 	<p>ECDSA fingerprint: SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE</p>
 	<a href="https://github.com/tildeclub/site">page source</a>
 </footer>
-
-</body>
-
+	</body>
 </html>
-
