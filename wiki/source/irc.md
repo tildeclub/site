@@ -29,8 +29,9 @@ some channels might require you to register your nickname with NickServ to post 
 3. wait for registration email with confirmation code
 4. confirm: `/msg NickServ CONFIRM someCode`
 
-you might also need to log in/identify: `/msg NickServ IDENTIFY YourPassword`.  
+after this, every time you reconnect to irc you will have to identify with nickserv again: `/msg NickServ IDENTIFY YourPassword`.  
 
+weechat tip: NickServ replies and error messages appear in the first buffer `tilde weechat` (use Alt + up/down to switch).
 
 ## mailing list
 
