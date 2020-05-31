@@ -22,6 +22,15 @@ port 6667 and `/join #club`.
 feel free to use tilde.chat's [webchat](https://web.tilde.chat/?join=club) if
 you prefer.
 
+some channels might require you to register your nickname with NickServ to post in them (e.g. #meta). NickServ acts like a regular user, so you communicate with it through `/msg`. steps:
+
+1. [optional] set nickname: `/nick YourNick` - not necessary with weechat, since it connects you under your tilde.club username
+2. register: `/msg NickServ REGISTER YourPassword youremail@example.com` - you can use your tilde.club e-mail address for this
+3. wait for registration email with confirmation code
+4. confirm: `/msg NickServ CONFIRM someCode`
+
+you might also need to log in/identify: `/msg NickServ IDENTIFY YourPassword`.  
+
 
 ## mailing list
 
