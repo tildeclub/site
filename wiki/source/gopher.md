@@ -54,7 +54,7 @@ gophernicus also supports the following special types:
 ## additional resources
 
 see [gophernicus' gophermap
-documentation](https://github.com/gophernicus/gophernicus/blob/master/README.Gophermap)
+documentation](https://github.com/gophernicus/gophernicus/blob/master/README.gophermap)
 for more info on available item types and other special selectors.
 
 if you're completely new to gopher, check out the [gopher zone](https://gopher.zone)!
