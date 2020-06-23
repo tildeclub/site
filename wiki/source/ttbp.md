@@ -2,7 +2,7 @@
 title: ttbp (feels)
 author:
   - benharri
-category: tilde.club
+category: software
 ---
 
 # FEELS MANUAL #
