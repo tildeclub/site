@@ -101,12 +101,17 @@
                                                 $index = "$user/public_html/index.html";
                                                 if (!file_exists($index) ||
                                                         in_array(sha1_file($index),
-                                                        // these are the hashes of previous and current default pages
-                                                        ["0eb53dab435e2e6e401921146bed85a80e9ad3a1",
-                                                        "61eff8202777bae134ac4b11f1e16ec23dfc97d3",
-                                                        "e9d41eab6edb7cd375c63ecb4a23bca928992547",
-                                                        "cb2ce535ab34edebc225e88a321f972ba55763c3",
-                                                        "13af6898f536265af7dbbe2935b591f5e2ee0d7d"])) continue;
+                                                            // these are the hashes of previous and current default pages
+                                                            [
+                                                                "0eb53dab435e2e6e401921146bed85a80e9ad3a1",
+                                                                "61eff8202777bae134ac4b11f1e16ec23dfc97d3",
+                                                                "e9d41eab6edb7cd375c63ecb4a23bca928992547",
+                                                                "cb2ce535ab34edebc225e88a321f972ba55763c3",
+                                                                "13af6898f536265af7dbbe2935b591f5e2ee0d7d",
+                                                                "b51a889545b5f065fd1ac2b8760cab0088a9dc22"
+                                                            ]
+                                                        )
+                                                ) continue;
                                                 $user = basename($user); ?>
                                                 <li><a href="/~<?=$user?>/">~<?=$user?></a></li>
                                         <?php } ?>
