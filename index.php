@@ -64,6 +64,7 @@
 					Here's who has donated! When you're on the  
 					server, THANK THEM.</p>
                                <ul>
+				       	<li>7/10/2020 | <a href="/~snowdusk">~snowdusk</a></li>
                                         <li>4/21/2020 | <a href="/~cano">~cano</a></li>
                                         <li>11/9/2019 | <a href="/~sneak">~sneak</a></li>                                                                                                            <li>10/5/2014 | <a href="/~beau">~beau</a></li>                                                                                                              <li>10/5/2014 | <a href="/~skk">~skk</a></li>                                                                                                                <li>10/5/2014 | <a href="/~joeld">~joeld</a></li>                                                                                                            <li>10/5/2014 | <a href="/~john">~john</a></li>                                                                                                              <li>10/5/2014 | <a href="/~brendn">~brendn</a></li>                                                                                                          
 					<li>10/5/2014 | <a href="/~droob">~droob</a></li>
