@@ -29,7 +29,7 @@
             <p>
             your new admins are: <a href="/~deepend/">~deepend</a> and
             <a href="/~benharri/">~benharri</a>. if you need anything,
-            reach out via email (root AT tilde DOT club) or on <a href="/wiki/chat.html#irc">irc</a>.
+            reach out via email (root AT tilde DOT club) or on <a href="/wiki/irc.html">irc</a>.
             </p>
             <p>so what's new?</p>
             <ul>
