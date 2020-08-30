@@ -16,4 +16,4 @@ au BufRead,BufNewFile *.md set filetype=markdown
 ``
 
 For more suggestions in deep depth on how to set up your `.vimrc` please read
-[this tutorial from Doug Black](http://dougblack.io/words/a-good-vimrc.html).
+[this tutorial from Doug Black](https://web.archive.org/web/20161224112739/https://dougblack.io/words/a-good-vimrc.html). (The website's no longer up, it's on the 'net archive.
