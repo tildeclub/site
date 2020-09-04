@@ -64,6 +64,7 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
+                <li>9/3/2020  | <a href="/~northernlights">~northernlights</a></li>
                 <li>8/16/2020 | <a href="/~dctrud">~dctrud</a></li>
                 <li>7/15/2020 | <a href="/~necrotechno">~necrotechno</a></li>
                 <li>7/10/2020 | <a href="/~snowdusk">~snowdusk</a></li>
