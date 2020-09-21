@@ -1,6 +1,6 @@
 ---
 title: faq
-author: ford
+author: ford (updated by deepend)
 category: tilde.club
 ---
 
@@ -17,7 +17,7 @@ category: tilde.club
 Looking to join? We can\'t wait to meet you!
 --------------------------------------------
 
-Sign-ups have re-launched as of September 20th, 2019. Sign up on our main page [https://tilde.club/signup](https://tilde.club/signup)!
+Sign up on our main page [https://tilde.club/signup](https://tilde.club/signup)!
 
 [Several alternate sites have sprouted
 up](http://tilde.club/%7Epfhawkins/othertildes.html)
@@ -48,11 +48,10 @@ Here are some good places to start
 
 -   [the unofficial official tilde
     primer](http://tilde.club/~anthonydpaul/primer.html)
--   [some quick tips](http://tilde.club/~procload/)
 -   [some more quick
     tips](http://tilde.club/~pfhawkins/tipsntricks.html)
 -   [how do I usenet in
-    Alpine](http://tilde.club/~cortex/usenet_in_pine.txt)?
+    tilde.club](http://tilde.club/wiki/usenet-news.html)?
 -   [help me understand \'screen\'](http://tilde.club/~jonathan/screen/)
 
 Who are all these folks and what are they up to?
@@ -62,7 +61,7 @@ Who are all these folks and what are they up to?
 -   [who is online right
     now](http://tilde.club/~whitneymcn/whoville.shtml)?
 -   [who updated their websites
-    recently](http://tilde.club/~delfuego/tilde.24h.html)?
+    recently](http://tilde.club/tilde.24h.php)?
 -   [who links to each other](http://tilde.club/~ford/social.html)?
 -   [can you give me a blogroll](http://tilde.club/~_/)?
 
@@ -71,6 +70,8 @@ Other links
 
 -   [Github](https://github.com/tildeclub/tilde.club)
 -   [Webring](http://tilde.club/~harper/link.html?action=join)
+-   [TildeClub Badge](http://tilde.club/~zarate/badge.html)
+-   [TildeRadio](https://tilderadio.org/)
 
 How do you pronounce \"tilde\"?
 -------------------------------
