@@ -17,6 +17,14 @@ You'll need a news (NNTP) client to read news. The address is
 ### slrn
 [slrn](slrn.html) is a newsreader; see http://slrn.sourceforge.net/ for details.
 
+First, add `export NNTPSERVER="localhost"` to your shellrc (`.bashrc`, `.zshrc`)
+and source it (`source path/to/.shellrc`).
+
+Then run `slrn --create` to create the slrn config file, and lastly `slrn -d` to
+populate group names.
+
+You're now ready to run `slrn`! If the list is empty, press `L` (for list-groups) and enter `*` in the field for all groups. You might need to enter each group (pressing `space`) to get a proper count for how many (if any) unread messages there are.
+
 ### pine/alpine
 
 [[pine]] can read news; this
