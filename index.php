@@ -118,7 +118,7 @@
                 "e9d41eab6edb7cd375c63ecb4a23bca928992547",
                 "cb2ce535ab34edebc225e88a321f972ba55763c3",
                 "13af6898f536265af7dbbe2935b591f5e2ee0d7d",
-                "b0eb2bf442e52b98714456b2f8a6662ba4c1f443"
+                "b0eb2bf442e52b98714456b2f8a6662ba4c1f443",
                 "b51a889545b5f065fd1ac2b8760cab0088a9dc22"
             ];
             foreach (glob("/home/*") as $user) {
