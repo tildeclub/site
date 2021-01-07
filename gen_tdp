@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+import glob, subprocess, json, os.path, requests
+from bs4 import BeautifulSoup as bs
+
+tdp = {}
+tdp["name"] = "tilde.club"
+tdp["url"] = "https://tilde.club"
+tdp["signup_url"] = tdp["url"] + "/signup/"
+users = sorted([u[len("/home/"):] for u in glob.glob("/home/*", recursive=False)])
+tdp["user_count"] = len(users)
+tdp["want_users"] = True
+tdp["admin_email"] = "root@tilde.club"
+tdp["description"] = "the original 'tilde': tilde.club is not a social network it is one tiny totally standard unix computer that people respectfully use together in their shared quest to build awesome web pages"
+
+tdpusers = []
+for user in users:
+    tdpuser = dict(username=user)
+    
+    try:
+        title = bs(
+            requests.get(f"http://tilde.club/~{user}/", allow_redirects=False).text,
+            "lxml",
+        ).title.text
+    except:
+        title = "No title"
+    tdpuser["title"] = title
+
+    if os.path.exists(f"/home/{user}/public_html/index.html"):
+        tdpuser["mtime"] = os.path.getmtime(f"/home/{user}/public_html/index.html")
+    elif os.path.exists(f"/home/{user}/public_html/index.php"):
+        tdpuser["mtime"] = os.path.getmtime(f"/home/{user}/public_html/index.php")
+
+    tdpusers.append(tdpuser)
+
+tdp["users"] = tdpusers
+
+with open("tilde.json", "w") as f:
+    json.dump(tdp, f)
+
