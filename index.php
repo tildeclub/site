@@ -64,6 +64,7 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
+                <li>03/08/2021 | <a href="/~webwiz">~webwiz</a></li>
                 <li>02/13/2021 | <a href="/~whitcomb">~whitcomb</a></li>
                 <li>11/30/2020 | <a href="/~dethelor">~dethelor</a></li>
                 <li>11/26/2020 | <a href="/~waffles">~waffles</a></li>
