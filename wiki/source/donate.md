@@ -14,9 +14,9 @@ There are currently two (3) methods you can donate financially to tilde.club.
 
 2.  [Paypal](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
 
-3.  Cryptocurrency:
-	Bitcoin: 17yfh3UGJquhyQJqr4iS7FCTxHhgcu8bAw
-	Etherium: 0xb172b6Be090A919FE9fe11C72607e8F8604246b4
+3.  Bitcoin: 17yfh3UGJquhyQJqr4iS7FCTxHhgcu8bAw
+
+4.  Etherium: 0xb172b6Be090A919FE9fe11C72607e8F8604246b4
 	
 **NOTE: Please E-Mail root@tilde.club to notify that you have donated so we can add you to the gold star supporters list.
 
