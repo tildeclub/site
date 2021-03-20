@@ -82,7 +82,3 @@ So yes, VPN services do serve a purpose - it's just one that benefits the provid
 __This post is licensed under the [WTFPL](http://cryto.net/~joepie91/blog/LICENSE.txt) or [CC0](https://creativecommons.org/publicdomain/zero/1.0/), at your choice.__ You may distribute, use, modify, translate, and license it in any way. 
 
 ----
-
-__Before you comment:__ Be aware that any non-constructive comments __will be removed__. This includes advertising for VPN providers (yes, even when you phrase the marketing claims like a question), trolling, harassment, insults towards other people, claims that have already been addressed in the article, and so on.
-
-If your comment isn't a genuine question or a concrete counterargument supported by evidence, it probably doesn't belong here.
