@@ -21,10 +21,8 @@ trigger:
 steps:
     - name: deploy
       commands:
-          - cd /usr/share/nginx/html
-          - git pull origin master
+          - git -C /usr/share/nginx/html pull --rebase origin master
     - name: build-wiki
       commands:
-          - cd /usr/share/nginx/html
-          - make -C wiki
+          - make -C /usr/share/nginx/html/wiki
 
