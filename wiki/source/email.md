@@ -23,6 +23,8 @@ connection settings:
 - pop3.tilde.club port 995 with ssl
 - smtp.tilde.club port 587 with starttls
 
+please remember to use only your tilde username as the login name, excluding the `@tilde.club`; for example `kot` instead of `kot@tilde.club`
+
 if you'd like your @tilde.club mail forwarded elsewhere, you can put an email 
 address in a file called `~/.forward`
 
