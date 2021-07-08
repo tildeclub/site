@@ -18,6 +18,10 @@ Our current server costs are $240.78 CAD /Month. (191.75 USD approx)
 	
 **NOTE: Please E-Mail root@tilde.club to notify that you have donated so we can add you to the gold star supporters list.
 
+## Tildeverse Swag
+
+The Tildeverse now has a shop you can buy some Tildeverse swag at.  If any profit is made it will be pooled and distributed to tildeverse administrators and admins to help aid in the upkeep of their tilde communities.   Find it here: [Tildeverse Shop](https://shop.tildeverse.org/)
+
 ## Be Involved!
 
 Other then financial contributions best thing to do is be involved in the community.
