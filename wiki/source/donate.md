@@ -8,17 +8,17 @@ category: tilde.club
 
 ## Methods you can donate to tilde.club.
 
-There are currently two (3) methods you can donate financially to tilde.club.
+There are currently two (2) methods you can donate financially to tilde.club. (All money is used towards paying hosting costs (domains, servers)
 
 1.  [Liberapay](https://liberapay.com/tilde.club/donate) - You can donate as little as $0.02/week using this method
 
 2.  [Paypal](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
 
-3.  Bitcoin: 17yfh3UGJquhyQJqr4iS7FCTxHhgcu8bAw
-
-4.  Etherium: 0xb172b6Be090A919FE9fe11C72607e8F8604246b4
+Our current server costs are $240.78 CAD /Month. (191.75 USD approx)
 	
 **NOTE: Please E-Mail root@tilde.club to notify that you have donated so we can add you to the gold star supporters list.
+
+## Be Involved!
 
 Other then financial contributions best thing to do is be involved in the community.
 Eg. Create a PR on tilde.club's github or tildegit, Chat on IRC, create awesome webpages, 
