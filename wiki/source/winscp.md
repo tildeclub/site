@@ -1,10 +1,10 @@
---
+---
 title: Editing your tilde.club site with WinSCP
 author: vincenz00
 category: tutorial
 ---
 
-![noobsguide](https://user-images.githubusercontent.com/57832/132114126-bb862c2c-d7ea-4a88-b186-b36bbaeba89e.PNG)
+![](https://user-images.githubusercontent.com/57832/132114126-bb862c2c-d7ea-4a88-b186-b36bbaeba89e.PNG)
 
 ## Stuff you'll need:-
 
