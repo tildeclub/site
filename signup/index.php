@@ -1,6 +1,10 @@
 <?php
 $title = "sign up for the tilde.club!";
 include __DIR__."/../header.php";
+
+function esc($v) {
+    return isset($_REQUEST[$v]) ? htmlspecialchars($_REQUEST[$v]) : "";
+}
 ?>
 
 <h1 id="fancyboi">sign up to join tilde.club</h1>
@@ -22,22 +26,22 @@ include __DIR__."/../header.php";
 
 			    <div>
 				    <p>your desired username (numbers and lowercase letters only, no spaces)</p>
-				    <input class="form-control" name="username" value="<?=$_REQUEST["username"] ?? ""?>" type="text" required>
+				    <input class="form-control" name="username" value="<?=esc("username")?>" type="text" required>
 			    </div>
 
 			    <div>
 				<p>email to contact you with account info</p>
-				<input class="form-control" name="email" value="<?=$_REQUEST["email"] ?? ""?>" type="text" required>
+				<input class="form-control" name="email" value="<?=esc("email")?>" type="text" required>
 			    </div>
 
 			    <div>
 				<p>what interests you about tilde.club? we want to make sure you're a real human being :)</p>
-				<textarea required class="form-control" name="interest" id="" cols="40" rows="7"><?=$_REQUEST["interest"] ?? ""?></textarea>
+				<textarea required class="form-control" name="interest" id="" cols="40" rows="7"><?=esc("interest")?></textarea>
 			    </div>
 
 			    <div>
 				<p>SSH public key</p>
-				<textarea required class="form-control" name="sshkey" id="" cols="40" rows="10"><?=$_REQUEST["sshkey"] ?? ""?></textarea>
+				<textarea required class="form-control" name="sshkey" id="" cols="40" rows="10"><?=esc("sshkey")?></textarea>
 				<p>if you don't have a key, don't worry! <a href="https://tilde.club/wiki/ssh.html">check out our guide to ssh keys</a> and make sure that you only put your pubkey here</p>
 			    </div>
 
