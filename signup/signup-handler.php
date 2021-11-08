@@ -56,6 +56,7 @@ function forbidden_name($name) {
         'www',
         'znc',
 	'lukewarmcat',
+	'chickfilla',
     ]);
 }
 

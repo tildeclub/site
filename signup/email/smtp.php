@@ -1283,7 +1283,7 @@
 					{
 						if (trim($line) !== "")
 						{
-							if ($line{0} !== "\xFF" && (($tagname === "/ul" && $line{0} !== "-") || ($tagname === "/ol" && !(int)$line{0})))  $prefix2 = "\xFF\xFF";
+							if ($line[0] !== "\xFF" && (($tagname === "/ul" && $line[0] !== "-") || ($tagname === "/ol" && !(int)$line[0])))  $prefix2 = "\xFF\xFF";
 							else  $prefix2 = "";
 
 							$lines[$num] = $prefix . $prefix2 . trim($line);

@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tilde.club
+Token: 9c786faeb68dcbed2a1c7ce23ed1674e1bc910765da27327c53bbf58bcf812fc 
