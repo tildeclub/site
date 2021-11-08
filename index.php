@@ -7,7 +7,21 @@
 <div class="grid">
     <div class="row">
 
-        <div class="col">
+                <div class="col">
+            <h2>UPDATE: November 2021:</h2>
+            <h3>OS Upgrade to Fedora 35</h3>
+                    </br />
+            <p> 
+                We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
+                If you encounter any issues please let ben or deepend know.
+                One notable update that may affect your programs is php is now version 8.  
+                Please check your php scripts to ensure they still work.
+            </p>
+            <p>
+                Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
+                with it.  You can find 2-Factor Authentication inside webmail/settings/security
+            </p>
+            <hr>
             <h2>UPDATE: March 2020:</h2>
             <p>
             Things at tilde.club are going well, Thank you to all our new and existing users.
