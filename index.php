@@ -10,7 +10,6 @@
                 <div class="col">
             <h2>UPDATE: November 2021:</h2>
             <h3>OS Upgrade to Fedora 35</h3>
-                    </br />
             <p> 
                 We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
                 If you encounter any issues please let ben or deepend know.
