@@ -140,6 +140,20 @@
                 "59e857ec585d6d34ed21e027164b3c3c36a95f0f",
                 "9da422e8759799cce29327024fc77b6aa2ace484",
                 "e5da596bd5f72aa583839bcefd28e988c9d4fcbe",
+                "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc",
+                "3f51b25206c137593124a16d8b881079352cd1c4",
+                "051b45fb2da9b15c523dfafd2a1dd33cc8b54e87",
+                "5a1cf2f88acb15da43f5d18a13fe638d175a44cc",
+                "0066d512c24f4ada7ad925fd0856b6b68334a93c",
+                "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                "f032fa07b3f4d9c1264a5a9369bff19f231bff45",
+                "259969faeba97eb16a675bb66427efd168406c92",
+                "75b7ce715379312bcc0b24696b9406e10b97cedc",
+                "e28aa091c26528a4084b8fad2a2ddb72bee3db75",
+                "12608ff7f6d222d97d2e02c1a13496e1d79713bb",
+                "22d29b83dc93b925bee08d090b0ea0fffdeb57f2",
+                "4706d8acdd74efd5c6d8f9e69ec215928d9ff165",
+                "385212d5ea557a21b77af992ea1b3c1ea71d22c9",
                 "b51a889545b5f065fd1ac2b8760cab0088a9dc22"
             ];
             foreach (glob("/home/*") as $user) {
