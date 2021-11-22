@@ -10,7 +10,9 @@ _or, how to tell other computers to do cool things_
 ---
 
 > all users are required to use an ssh keypair for login, or will be required
-to proceed with manual account recovery
+> to proceed with manual account recovery.
+> you can also set up [two-factor authentication](2fa.html) to log in without your
+> keypair.
 
 ## tilde.club details
 
@@ -27,6 +29,9 @@ ssh is also available on port 443 using the address `ssh.tilde.club`:
 
 this is useful if you're on a limited public network that blocks non-http
 ports.
+
+if you are prompted for a verification code, it's for [2fa](2fa.html).
+it will not work if you haven't set it up. be sure you're using the right ssh keypair.
 
 ---
 
