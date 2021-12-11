@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 $title = 'tilde.club users';
 include __DIR__.'/../header.php';
+
 ?>
 
 <h1 id="fancyboi">full user list</h1>

@@ -1,2 +1,12 @@
+.gitignore
+header24h.php
+nginx-logo.png
+pkglist.txt
+poweredby.png
+social.html
 tilde.24h*
 tilde.json
+news/
+icons/
+
+
