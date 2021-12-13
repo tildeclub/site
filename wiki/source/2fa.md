@@ -60,6 +60,20 @@ Now you're configured. You can now login without an SSH key. Make sure you
 know your account password because login using two-factor authentication will
 still require your password before letting you in.
 
+
+# Two-Factor Authentication (2FA) on Tilde.Club Webmail
+
+You can now enable 2FA in our webmail that is offered to users.  
+    
+    1. Log into the RainLoop user interface at [https://webmail.tilde.club](https://webmail.tilde.club)
+    
+    2. After your logged in you can go directly to: 
+        [https://webmail.tilde.club/#/settings/security](https://webmail.tilde.club/#/settings/security)
+    
+    3. There should be a link titled "Configurate 2-Step Authentication". 
+        Click it, and click the Activate button that appears.
+    
+
 # 2FA Mobile Applications
 
 1. [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA)
