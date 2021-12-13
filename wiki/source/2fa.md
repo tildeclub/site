@@ -65,14 +65,14 @@ still require your password before letting you in.
 
 You can now enable 2FA in our webmail that is offered to users.  
     
-    1. Log into the RainLoop user interface at 
+1. Log into the RainLoop user interface at:
    [https://webmail.tilde.club](https://webmail.tilde.club)
     
-    2. After your logged in you can go directly to: 
+2. After your logged in you can go directly to: 
    [https://webmail.tilde.club/#/settings/security](https://webmail.tilde.club/#/settings/security)
     
-    3. There should be a link titled "Configurate 2-Step Authentication". 
-        Click it, and click the Activate button that appears.
+3. There should be a link titled "Configurate 2-Step Authentication". 
+   Click it, and click the Activate button that appears.
     
 
 # 2FA Mobile Applications
