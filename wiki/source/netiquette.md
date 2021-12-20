@@ -1,6 +1,5 @@
 ---
 title: tilde.club netiquette
-author: michaelcoyote
 category: tilde.club
 ---
 
