@@ -7,57 +7,7 @@
 <div class="grid">
     <div class="row">
 
-                <div class="col">
-            <h2>UPDATE: November 2021:</h2>
-            <h3>OS Upgrade to Fedora 35</h3>
-            <p> 
-                We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
-                If you encounter any issues please let ben or deepend know.
-                One notable update that may affect your programs is php is now version 8.  
-                Please check your php scripts to ensure they still work.
-            </p>
-            <p>
-                Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
-                with it.  You can find 2-Factor Authentication inside webmail/settings/security
-            </p>
-            <hr>
-            <h2>UPDATE: March 2020:</h2>
-            <p>
-            Things at tilde.club are going well, Thank you to all our new and existing users.
-            Lets make 2020 a great one for ~club and the wider tildeverse!
-            </p>
-            <p>so what's new?</p>
-            <ul>
-                <li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
-                <li>Users can now utilize more to make their pages unique, such as PHP.</li>
-                <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
-                <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
-            </ul>
-            <hr>
-            <h2>UPDATE: September 2019:</h2>
-            <p>
-            tilde.club is back!! as of september 20th, we're now accepting
-            signups and operating as normal!
-            </p>
-            <p>
-            your new admins are: <a href="/~deepend/">~deepend</a> and
-            <a href="/~benharri/">~benharri</a>. if you need anything,
-            reach out via email (root AT tilde DOT club) or on <a href="/wiki/irc.html">irc</a>.
-            </p>
-            <p>so what's new?</p>
-            <ul>
-                <li>~club is joining the <a href="https://tildeverse.org">
-                        tildeverse</a>, a collective of like-minded tilde communities with a <a href="https://tilde.chat">shared irc network</a></li>
-                <li>we now have a <a href="https://lists.tildeverse.org/postorius/lists/tildeclub.lists.tildeverse.org/">mailing list</a> and a full-fledged <a href="/wiki/email.html">mailserver</a>. new users are automatically subscribed to the list with their @tilde.club address.</li>
-                <li>we're on a new vm with more ram and disk space to grow. check the expected ssh hostkey at the bottom of the page.</li>
-                <li>to keep up with updates, stop by irc (via <a href="https://web.tilde.chat/?join=club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
-                <li>most of the info from previous wiki iterations are now consolidated on our new <a href="/wiki/">wiki</a></li>
-                <li>we have a new donation page set up on <a href="https://liberapay.com/tilde.club">liberapay</a></li>
-            </ul>
-
-        </div>
-
-        <div class="col">
+                <div class="col">      
             <p>
             tilde.club is not a social network it is one tiny totally
             standard unix computer that people respectfully use together
@@ -114,6 +64,56 @@
                 <li>10/03/2014 | <a href="/~zarate">~zarate</a></li>
                 <li>10/03/2014 | <a href="/~englishm">~englishm</a></li>
                 <li>10/03/2014 | <a href="/~danbri">~danbri</a></li>
+            </ul>
+
+        </div>
+
+        <div class="col">
+            <h2>UPDATE: November 2021:</h2>
+            <h3>OS Upgrade to Fedora 35</h3>
+            <p> 
+                We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
+                If you encounter any issues please let ben or deepend know.
+                One notable update that may affect your programs is php is now version 8.  
+                Please check your php scripts to ensure they still work.
+            </p>
+            <p>
+                Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
+                with it.  You can find 2-Factor Authentication inside webmail/settings/security
+            </p>
+            <hr>
+            <h2>UPDATE: March 2020:</h2>
+            <p>
+            Things at tilde.club are going well, Thank you to all our new and existing users.
+            Lets make 2020 a great one for ~club and the wider tildeverse!
+            </p>
+            <p>so what's new?</p>
+            <ul>
+                <li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
+                <li>Users can now utilize more to make their pages unique, such as PHP.</li>
+                <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
+                <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
+            </ul>
+            <hr>
+            <h2>UPDATE: September 2019:</h2>
+            <p>
+            tilde.club is back!! as of september 20th, we're now accepting
+            signups and operating as normal!
+            </p>
+            <p>
+            your new admins are: <a href="/~deepend/">~deepend</a> and
+            <a href="/~benharri/">~benharri</a>. if you need anything,
+            reach out via email (root AT tilde DOT club) or on <a href="/wiki/irc.html">irc</a>.
+            </p>
+            <p>so what's new?</p>
+            <ul>
+                <li>~club is joining the <a href="https://tildeverse.org">
+                        tildeverse</a>, a collective of like-minded tilde communities with a <a href="https://tilde.chat">shared irc network</a></li>
+                <li>we now have a <a href="https://lists.tildeverse.org/postorius/lists/tildeclub.lists.tildeverse.org/">mailing list</a> and a full-fledged <a href="/wiki/email.html">mailserver</a>. new users are automatically subscribed to the list with their @tilde.club address.</li>
+                <li>we're on a new vm with more ram and disk space to grow. check the expected ssh hostkey at the bottom of the page.</li>
+                <li>to keep up with updates, stop by irc (via <a href="https://web.tilde.chat/?join=club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
+                <li>most of the info from previous wiki iterations are now consolidated on our new <a href="/wiki/">wiki</a></li>
+                <li>we have a new donation page set up on <a href="https://liberapay.com/tilde.club">liberapay</a></li>
             </ul>
 
 
