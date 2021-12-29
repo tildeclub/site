@@ -33,3 +33,11 @@ after this, every time you reconnect to irc you will have to identify with nicks
 
 weechat tip: NickServ replies and error messages appear in the first buffer `tilde weechat` (use Alt + up/down to switch).
 
+## IRC Bouncer (ZNC)
+
+You can find a ZNC IRC Bouncer by going to: [https://services.tilde.club/znc](https://services.tilde.club/znc).
+Use your tilde.club username and password for login.  
+To connect to your ZNC its at services.tilde.club   Port: 6699(SSL)
+
+### Users created before December 28th, 2021 will need to email [mailto:root@tilde.club](root@tilde.club) to get your user added. 
+
