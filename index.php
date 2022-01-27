@@ -27,6 +27,7 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
+                <li>01/27/2022 | <a href="/~whitcomb">~whitcomb</a></li>
                 <li>12/15/2021 | <a href="/~dctrud">~dctrud</a></li>
                 <li>10/10/2021 | <a href="/~dmi3">~dmi3</a></li>
                 <li>03/08/2021 | <a href="/~webwiz">~webwiz</a></li>
