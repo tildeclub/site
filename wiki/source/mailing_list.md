@@ -1,5 +1,5 @@
 ---
-title: email lists
+title: mailing list and guidelines
 author: audiodude
 category: tilde.club
 ---
