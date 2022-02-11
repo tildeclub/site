@@ -147,6 +147,11 @@ div.alert-success {
 	background-color: darkgreen;
 }
 
+blockquote {
+    border-left: 2px solid #fb5;
+    padding: 0.5em;
+}	
+
 /* Mobile */
 @media (max-width: 768px) {
 	td {
