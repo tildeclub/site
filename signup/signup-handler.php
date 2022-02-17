@@ -5,12 +5,16 @@ function forbidden_name($name) {
     return in_array($name, [
         '0x0',
         'abuse',
+        'adam',
         'admin',
         'administrator',
+        'amcclure',
+        'anton',
         'auth',
         'autoconfig',
         'bbj',
         'broadcasthost',
+        'chickfilla',
         'cloud',
         'forum',
         'ftp',
@@ -26,6 +30,7 @@ function forbidden_name($name) {
         'localdomain',
         'localhost',
         'lounge',
+        'lukewarmcat',
         'mail',
         'mailer-daemon',
         'marketing',
@@ -55,8 +60,6 @@ function forbidden_name($name) {
         'wpad',
         'www',
         'znc',
-	'lukewarmcat',
-	'chickfilla',
     ]);
 }
 
