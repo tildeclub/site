@@ -65,16 +65,19 @@ Who are all these folks and what are they up to?
 -   [who links to each other](http://tilde.club/~ford/social.html)?
 -   [can you give me a blogroll](http://tilde.club/~_/)?
 
-My function keys don't work in byobu! (I'm using PuTTY on Windows)
+My function keys don't work in byobu! (using Windows PuTTY)
 ------------------------------------------------------------------
 
 **TL;DR**
+
 Change your Terminal->Keyboard->"The Function keys and keypad" setting to "XTerm R6".
 
 **Details**
+
 I am using PuTTY 0.73 Windows 11, and could not get byobu hotkeys to work. Instead of creating or changing windows with F2, F3, and F4, the byobu command line would display a ~ every time I hit a a function key. The solution was to change my PuTTY settings for "XTerm R6" emulation. Now the Function keys work great, including F8! Note there are other articles out there that suggest using "VT100+" instead of "XTerm R6". Althought VT100+ helped out F2, F3, and F4, it *did not help F8* and some of the higher keys--that is where "XTerm R6" solved the rest.
 
 **References**
+
 -   [Function Key Fix at codeyarns.com](https://codeyarns.com/tech/2013-01-21-byobu-function-keys-do-not-work-in-putty.html)
 -   [byobu hotkey list at linuxsecrets.com](https://www.linuxsecrets.com/3326-byobu-commands)
 
