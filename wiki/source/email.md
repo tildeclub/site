@@ -38,7 +38,7 @@ symlink the active script to `~/.dovecot.sieve`, and make sure to compile it
 with `sievec ~/.dovecot.sieve`.
 
 you can find some example sieve scripts [here](
-https://wiki.dovecot.org/Pigeonhole/Sieve/Examples).
+https://doc.dovecot.org/configuration_manual/sieve/examples/).
 
 alternately, you can use webmail's [filter settings](
 https://webmail.tilde.club/#/settings/filters) to configure your filters.
