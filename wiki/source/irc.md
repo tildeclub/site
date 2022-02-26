@@ -39,5 +39,7 @@ You can find a ZNC IRC Bouncer by going to: [https://services.tilde.club/znc](ht
 Use your tilde.club username and password for login.  
 To connect to your ZNC its at services.tilde.club   Port: 6699(SSL)
 
+NOTE: long passwords fail to authenticate with the ZNC server.
+
 ### Users created before December 28th, 2021 will need to email [mailto:root@tilde.club](root@tilde.club) to get your user added. 
 
