@@ -115,7 +115,7 @@
                         tildeverse</a>, a collective of like-minded tilde communities with a <a href="https://tilde.chat">shared irc network</a></li>
                 <li>we now have a <a href="https://lists.tildeverse.org/postorius/lists/tildeclub.lists.tildeverse.org/">mailing list</a> and a full-fledged <a href="/wiki/email.html">mailserver</a>. new users are automatically subscribed to the list with their @tilde.club address.</li>
                 <li>we're on a new vm with more ram and disk space to grow. check the expected ssh hostkey at the bottom of the page.</li>
-                <li>to keep up with updates, stop by irc (via <a href="https://web.tilde.chat/?join=club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
+                <li>to keep up with updates, stop by irc (via <a href="https://tilde.chat/kiwi/#club">webchat</a> or at your shell by running "chat"), check the mailing list, or follow our projects on our <a href="https://github.com/tildeclub">github org</a></li>
                 <li>most of the info from previous wiki iterations are now consolidated on our new <a href="/wiki/">wiki</a></li>
                 <li>we have a new donation page set up on <a href="https://liberapay.com/tilde.club">liberapay</a></li>
             </ul>
