@@ -4,6 +4,9 @@
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
+<a href="https://donate.redcross.ca/page/100227/donate/1?_gl=1*li75g9*_ga*MTYxMTE4MjA2Ni4xNjQ0NjE1NDcw*_ga_376D8LHM0R*MTY0NTc5MzU5MC4xMi4wLjE2NDU3OTM1OTAuMA..&_ga=2.8498675.712879>
+<br>
+<br>
 <div class="grid">
     <div class="row">
 
