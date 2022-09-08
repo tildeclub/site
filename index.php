@@ -27,6 +27,7 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
+                <li>09-08-2022 | <a href="/~cyrus">~cyrus</a></li>
                 <li>06-08-2022 | <a href="/~barnold">~barnold</a></li>
                 <li>05-12-2022 | <a href="/~hifikuno">~hifikuno</a></li>
                 <li>04-27-2022 | <a href="/~mhd">~mhd</a></li>
