@@ -18,6 +18,10 @@
             If you would like a list of <a href="http://tilde.club/tilde.24h.php">
                 RECENTLY CHANGED PAGES</a> you can see that too
             </p>
+            <p>
+                Or Check out the tilde.club gallery created by <a href="/~tweska" target="_blank">~tweska</a>:
+                <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a>
+            </p>
 
             <hr>
             <h2>tilde.club gold star supporters</h2>
