@@ -4,6 +4,7 @@
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
+	<p class="advisory">SERVICE ADVISORY: Users using RSA SSH keys experiencing troubles connecting after Fedora 36 upgrade, you may need to update your client or switch to non-RSA keys.</p>
 <div class="grid">
     <div class="row">
 
@@ -85,8 +86,7 @@
             <h3>OS Upgrade to Fedora 36</h3>
             <p> 
                 Fedora 36 has been installed and things should be back to normal.
-                <strong>**NOTE**  If you are using a ssh-rsa key and it wont let 
-                you in then you may need to update your client.</strong>
+                <strong>**NOTE** SSH client requires SHA2 support since SHA1 support disabled.</strong>
             </p>
             <hr>
             <h2>UPDATE: November 2021:</h2>
