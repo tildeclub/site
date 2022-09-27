@@ -20,8 +20,7 @@
                 RECENTLY CHANGED PAGES</a> you can see that too
             </p>
             <p>
-                Or Check out the tilde.club gallery created by <a href="/~tweska" target="_blank">~tweska</a>:
-                <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a>
+                Or Check out the <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a> created by <a href="/~tweska" target="_blank">~tweska</a>
             </p>
 
             <hr>
