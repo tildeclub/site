@@ -86,7 +86,7 @@
             <h3>OS Upgrade to Fedora 36</h3>
             <p> 
                 Fedora 36 has been installed and things should be back to normal.
-                <strong>**NOTE** SSH client requires SHA2 support since SHA1 support disabled.</strong>
+                <strong>**NOTE** SSH client requires SHA2 support since SHA1 support is now disabled.</strong>
             </p>
             <hr>
             <h2>UPDATE: November 2021:</h2>
