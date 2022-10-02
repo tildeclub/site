@@ -101,42 +101,33 @@ pick your fighter: [[mac](#mac)] | [[windows](#windows)] | [[linux](#linux)]
 
 1. open terminal (it's in `/Applications/Utilities`)
 
-1. create your .ssh directory:
+2. create your .ssh directory:
 
 ```bash
 mkdir -m 700 ~/.ssh
 ```
 
-1. create your keys:
-
-for rsa keys:
-
-```bash
-ssh-keygen -t rsa -b 4096
-```
-
-for dd25519 keys:
+3. create your keypair:
 
 ```bash
 ssh-keygen -t ed25519 -a 100
 ```
 
-1. if you press enter to accept the defaults, your public and private key will
-be located at `~/.ssh/id_rsa.pub` and `~/.ssh/id_rsa` respectively (or
-`~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519` if you chose ed25519 type)
+4. if you press enter to accept the defaults, your public and private key will
+be located at `~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519`
 
-1. `cat ~/.ssh/id_rsa.pub` (or `cat ~/.ssh/id_ed25519.pub` for ed25519)
+`cat ~/.ssh/id_ed25519.pub`
 
-1. copy the output of the last command and paste it in the sshkey field on the
+5. copy the output of the last command and paste it in the sshkey field on the
 signup form (or email it to [~root](mailto:root@tilde.club) if you already have an account)
 
 #### using your keypair
 
 once an admin approves your signup, you can join the tilde.club
 
-1. open terminal (it's in `/Applications/Utilities`)
+6. open terminal (it's in `/Applications/Utilities`)
 
-1. `ssh` to tilde.club:
+7. `ssh` to tilde.club:
 
 ```bash
 ssh username@tilde.club
@@ -144,61 +135,47 @@ ssh username@tilde.club
 
 where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
-1. profit???
+8. profit???
 
 ---
 
 ### windows
 
-there are a couple options for using ssh on windows these days.
-i like to use [git bash](https://git-scm.com).
+#### Ensure OpenSSH is installed
+
+    1. Open Settings, select Apps, then select Optional Features
+    1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then...
+    1. Find OpenSSH Client, then select Install
 
 #### generating your keypair
 
-choose from any of the following options:
+1. open your command prompt (Start -> Search -> type "cmd")
 
-- [windows subsystem for linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-- [msys2](http://www.msys2.org/)
-- [git bash](https://git-scm.com)
-
-1. open your new shell
-
-1. create your .ssh directory
-
-```bash
-mkdir .ssh
-```
-
-1. create your keypair
-
-for rsa keys:
-
-```bash
-ssh-keygen -t rsa -b 4096
-```
-
-for ed25519 keys:
+2. create your keypair:
 
 ```bash
 ssh-keygen -t ed25519 -a 100
 ```
 
-1. if you press enter to accept the defaults, your public and private key will
-be located at `~/.ssh/id_rsa.pub` and `~/.ssh/id_rsa` respectively (or
-`~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519` if you chose ed25519 type)
+3. If you press enter to accept the defaults, your public and private key will be located at %USERPROFILE%\.ssh\id_ed25519.pub and %USERPROFILE%\.ssh\id_ed25519 respectively.
 
-1. `cat ~/.ssh/id_rsa.pub` (or `cat ~/.ssh/id_ed25519.pub` for ed25519)
+Note: %USERPROFILE% is a short code that the computer expands to mean c:\users\your_name\, or whatever the relevant path is to your user's main folder.
 
-1. copy the output of the last command and paste it in the sshkey field on the
-signup form (or email it to [~root](mailto:root@tilde.club) if you already have an account)
+Next we will open up the public key so we can copy its contents. 
+
+```bash
+notepad %USERPROFILE%\.ssh\id_ed25519.pub
+```
+
+4. Copy the text of the pubkey that opens in Notepad and paste it in the sshkey field on the signup form or email it to the relevant sign-up address for the tilde you are joining. 
 
 #### using your keypair
 
 once an admin approves your signup, you can join the tilde.club
 
-1. open terminal (it's in `/Applications/Utilities`)
+5. open command prompt (Start -> Search -> type "cmd")
 
-1. `ssh` to tilde.club:
+6. `ssh` to tilde.club:
 
 ```bash
 ssh username@tilde.club
@@ -206,7 +183,7 @@ ssh username@tilde.club
 
 where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
-1. profit???
+7. profit???
 
 ---
 
@@ -223,44 +200,43 @@ in almost all cases. if they're not, look up how to install ssh for your distro.
 mkdir -m 700 ~/.ssh
 ```
 
-1. create your keys
-
-for rsa keys:
-
-```bash
-ssh-keygen -t rsa -b 4096
-```
-
-for ed25519 keys:
+2. create your keypair
 
 ```bash
 ssh-keygen -t ed25519 -a 100
 ```
 
-1. if you press enter to accept the defaults, your public and private key will
-be located at `~/.ssh/id_rsa.pub` and `~/.ssh/id_rsa` respectively (or 
-`~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519` if you chose ed25519 type)
+3. if you press enter to accept the defaults, your public and private key will
+be located at `~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519`
 
-1. `cat ~/.ssh/id_rsa.pub` (or `cat ~/.ssh/id_ed25519.pub` for ed25519)
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
 
-1. copy the output of the last command and paste it in the sshkey field on the 
+4. copy the output of the last command and paste it in the sshkey field on the 
 signup form (or email it to [root@tilde.club](mailto:root@tilde.club) if you already have an account)
 
 #### using your keypair
 
 once an admin approves your signup, you can join the tilde.club
 
-1. open a terminal (this depends on your distro)
+5. open a terminal (this depends on your distro)
 
-1. `ssh` to tilde.club:
+6. `ssh` to tilde.club:
+
+where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
 ```bash
 ssh username@tilde.club
 ```
 
-where username is your username (~benharri would use `ssh benharri@tilde.club`)
+Note: If you generated your key to the location above (%USERPROFILE%\ssh\...) then you will be able to SSH to your tilde server without having to specify the location of the key. That folder is the default used by SSH and it will be found automatically. If you generated your keys in a different location or moved them, you will need to specify the full path to the private key.
 
-1. profit???
+```bash
+ssh -i c:\path\to\my\private\key username@your.tilde
+```
+
+7. profit???
 
 ---
 
