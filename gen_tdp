@@ -17,10 +17,10 @@ for user in users:
     tdpuser = dict(username=user)
     
     try:
-        title = bs(
-            requests.get(f"http://tilde.club/~{user}/", allow_redirects=False).text,
-            "lxml",
-        ).title.text
+     title = bs(
+        requests.get(f"http://tilde.club/~{user}/", allow_redirects=False).text,
+        "lxml", features='xml'
+    ).title.text
     except:
         title = "No title"
     tdpuser["title"] = title
@@ -36,4 +36,3 @@ tdp["users"] = tdpusers
 
 with open("tilde.json", "w") as f:
     json.dump(tdp, f)
-
