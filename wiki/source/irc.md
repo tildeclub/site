@@ -8,9 +8,9 @@ category: tilde.club
 
 ## irc
 
-we're members of the [tildeverse](https://tildeverse.org) and host a server
-in the [tildeverse irc network](https://tilde.chat). the official channel for
-~club is `#club`. stop by and say hello!
+we're members of the [tildeverse](https://tildeverse.org) which we do have a channel on.
+We have changed our main channel to the [Newnet IRC Network](https://newnet.net). the official 
+channel for ~club is `#club`. on both networks. Stop by and say hello!
 
 run `chat` to open [weechat](https://weechat.org) auto-connected to our irc
 server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
@@ -19,7 +19,7 @@ server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
 other clients like irssi are available as well! just connect to localhost on
 port 6667 and `/join #club`.
 
-feel free to use tilde.chat's [webchat](https://web.tilde.chat/?join=club) if
+feel free to use Newnet's [webchat](https://web.newnet.net/?join=club) if
 you prefer.
 
 some channels might require you to register your nickname with NickServ to post in them (e.g. #meta). NickServ acts like a regular user, so you communicate with it through `/msg`. steps:
