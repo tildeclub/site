@@ -69,6 +69,58 @@ if you're feeling especially motivated, please reach out to the support on
 your mail provider and ask them to look into why you're not receiving the
 messages.
 
+## Login-Time New Mail Notification
+
+If you use an on-server email client to handle your Tilde.club inbox
+and have ever received any email there,
+you probably noticed that there was no incoming mail notification
+(<q>You have new mail.</q> or similar message)
+appearing at login time.
+This is due to the [mailbox format](#Mailbox-Format) used in Tilde.club
+not being the traditional centralized-folder MBOX;
+but fret not:
+if you wish to bring back this old-timey function,
+it can still be done by a one-line script.
+
+To add this notification,
+add the following one-line Bourne shell snippet
+to your _login script_:
+
+	ls -U ~/.mail/new | grep -F -q "" && echo "You got mail."
+
+If you are using Bash (default) as your login shell,
+your _login script_ file would be `~/.bash_profile`;
+but if you are using Dash,
+your _login script_ would be the traditional `~/.profile`.
+(For other shells,
+check your manual)
+
+However,
+if you arranged for a terminal multiplexer to start automatically
+at the login time,
+you would not see the notification added this way.
+So in this case,
+you would rather want this notification
+to be shown at each start of your shell:
+instead of adding the snippet to your login script,
+you would have to add it to your shell's startup script:
+in case of Bash (default shell),
+your startup script would be `~/.bashrc`.
+(For other shells,
+check your manual)
+
+Note that this code snippet
+only checks your main inbox folder.
+So,
+if you have explicitly written some [Sieve](#sieve-filtering)
+or webmail filtering rules
+to deliver some of the incoming emails into specific folder
+other than the main inbox,
+those emails would not produce notification.
+(This can be a desirable outcome in most cases,
+where people write Sieve filter
+to redirect unsolicited emails into <q>Junk</q> folder)
+
 ## Mailbox Format
 
 Tilde.club uses [Dovecot](https://www.dovecot.org/) as a local mail delivery agent
