@@ -1,6 +1,8 @@
 ---
 title: email
-author: benharri
+author:
+  - benharri
+  - xwindows
 category: tutorial
 ---
 
@@ -67,3 +69,44 @@ if you're feeling especially motivated, please reach out to the support on
 your mail provider and ask them to look into why you're not receiving the
 messages.
 
+## Mailbox Format
+
+Tilde.club uses [Dovecot](https://www.dovecot.org/) as a local mail delivery agent
+as well as an IMAP server.
+It is configured to deliver your emails
+into a `.mail/` subdirectory
+within your home directory on the server,
+structured in [Courier MTA's Maildir++ format](https://www.courier-mta.org/imap/README.maildirquota.html).
+
+Maildir++ format is essentially the same as Maildir mailbox format,
+but with a concept of subfolders added in:
+apart from the usual `cur/`,
+`new/`,
+and `tmp/` subdirectories for normal Maildir operations;
+there would now also be dot-subdirectories
+which are email subfolders.
+Each dot-subdirectory
+would contain usual Maildir subdirectories,
+but not any more dot-subdirectory inside it.
+
+In Tilde.club,
+the default layout of your Maildir++ folder hierarchy
+would be as the following:
+
+| Email Folder | Filesystem Directory  |
+|:-------------|:----------------------|
+| _(Inbox)_    | `~/.mail/`            |
+| _(Sent)_     | `~/.mail/.sent-mail/` |
+| Junk         | `~/.mail/.Junk/`      |
+| Drafts       | `~/.mail/.Drafts/`    |
+| Trash        | `~/.mail/.Trash/`     |
+
+So,
+if you would like to use command line tools
+to tinker with your mailbox,
+then more power to you.
+Also,
+note that email access via IMAP and webmail
+actually read/write emails directly onto these directories;
+so now you know where to grab a copy of all your emails data
+if you ever need a backup as well.
