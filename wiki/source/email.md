@@ -76,7 +76,7 @@ and have ever received any email there,
 you probably noticed that there was no incoming mail notification
 (<q>You have new mail.</q> or similar message)
 appearing at login time.
-This is due to the [mailbox format](#Mailbox-Format) used in Tilde.club
+This is due to the [mailbox format](#mailbox-format) used in Tilde.club
 not being the traditional centralized-folder MBOX;
 but fret not:
 if you wish to bring back this old-timey function,
