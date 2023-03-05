@@ -6,7 +6,7 @@ author:
 category: tutorial
 ---
 
-Your shiny, new tilde.club account comes with an email account. `alpine`  is a command-line email application to use it, as is `mutt`. Good old-fashioned `mail` works too, although it's a little cryptic.
+Your shiny, new tilde.club account comes with an email account. `alpine`  is a command-line email application to use it, as is `mutt`. [Good old-fashioned `mail` works too](#using-traditional-unix-mail-program), once configured properly; although it's a little cryptic.
 
 `alpine` is menu driven, and the menus are self-explanatory; it's surprisingly easy to learn, and surprisingly powerful when you want to customize it.
 
@@ -120,6 +120,75 @@ those emails would not produce notification.
 (This can be a desirable outcome in most cases,
 where people write Sieve filter
 to redirect unsolicited emails into <q>Junk</q> folder)
+
+## Using Traditional Unix Mail Program
+
+A traditional Unix `mail` program provided on Tilde.club
+is [Heirloom Mailx](https://heirloom.sourceforge.net/mailx.html).
+In its default configuration,
+it works for sending emails,
+but not receiving;
+due to the incoming [mailbox format](#mailbox-format)
+used in Tilde.club
+not being the old style system-wide centralized inbox folders
+used in the olden days,
+which the program expects by default.
+
+However,
+for anyone who are soughting for a traditional Unix mail experience,
+or is experimenting with Tilde.club using a real teleprinter;
+Heirloom Mailx could be configured
+to operate directly on your Tilde.club mailbox,
+with some quirks,
+by adding the following lines to your `~/.mailrc`
+or create it with the following lines if not already existing
+(substitute `USERNAME` part with your Tilde.club username):
+
+	set MAIL=/home/USERNAME/.mail
+	set folder=.mail
+	set emptybox
+	set newfolders=maildir
+	set record=+.sent-mail
+
+Once you did so,
+running `mail` would now show the list your emails
+if you have any in your inbox.
+(Type `q` and press <kbd>Enter</kbd> to quit)
+
+Tips:
+
+- Set your `PAGER` and `EDITOR` environment variables properly;
+	unless you really want to view your emails through `more`
+	and/or compose your emails through `ed`.
+	(Even if you are really using a teleprinter,
+	it is still a good idea to set these explicitly however)
+- Type `?` and press <kbd>Enter</kbd> for in-program help.
+	Also read a manual
+	(`man mail` from the main system command line).
+- Heirloom Mailx does not understand the Maildir++ subfolder structure;
+	so you will have to type the name of subdirectory
+	as seen in the filesystem
+	(including its dot prefix)
+	when changing folder.
+	For example,
+	use command:
+	
+		folder +.sent-mail
+	
+	to view the emails you have sent.
+	(See [mailbox format](#mailbox-format)
+	below for the default folders available)
+- When changing to view mail folder other than inbox,
+	you nearly always want to prefix it with `+`;
+	which means the folder is a subdirectory of the main email folder.
+- When changing to view the main inbox folder,
+	simply use `%` as folder name
+	without any prefix.
+- Marking email as junk here
+	does not do a thing you would normally expect
+	from modern email clients
+	or webmails;
+	so don't do it.
 
 ## Mailbox Format
 
