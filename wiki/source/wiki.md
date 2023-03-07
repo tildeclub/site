@@ -3,6 +3,7 @@ title: how to contribute to this wiki
 author:
   - benharri
   - audiodude
+  - xwindows
 category: tilde.club
 ---
 
@@ -12,14 +13,15 @@ There are at least 5 ways to contribute to this wiki:
 
 ## The super ultra easy way
 
-Send an email to [~audiodude](../~audiodude), audiodude@tilde.club. Put the
-proposed contents in the email in markdown format. You don't have to worry
+To submit a new article,
+send an email to [~xwindows](/~xwindows/), `xwindows` _AT_ `tilde.club`.
+Put the proposed contents in the email in Pandoc Markdown format. You don't have to worry
 about "frontmatter", just indicate who the author is (your tilde username),
 what the title of the article should be, and what category, if any, it should
 fall under.
 
-**~audiodude** will add the article to the git repo, add the YAML frontmatter,
-and merge the content into the wiki repo for you. He'll also email you when
+**~xwindows** will add the article to the git repo, add the YAML frontmatter,
+and submit the patch for you. He'll also email you back when
 the content is live on the server so you can show all your friends!
 
 ## The super ultra mega easy way
@@ -27,8 +29,8 @@ the content is live on the server so you can show all your friends!
 Same as the "super ultra easy way" above, except you don't even have to add
 Markdown formatting if you don't want. Just send an email with your wiki
 article, and all the "metadata" aka author, title, and category, and
-**~audiodude** will add the Markdown formatting for you (in addition to all the
-things from the super ultra easy way).
+**~xwindows** will add the Pandoc Markdown formatting for you
+(in addition to all the things from the super ultra easy way).
 
 ## The easy-ish way
 
