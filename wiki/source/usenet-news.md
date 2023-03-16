@@ -66,7 +66,10 @@ There is also [tin](tin.html).
 If you are a Tilde.club member and already using Thunderbird for email;
 it can also be configured for news.
 
-1. Go to the `Tools` menu, -> `Account Settings`
+1. Go to the `Tools` menu
+   (`Edit` menu in case of Unix-like system) -> `Account Settings`.
+   Or in versions without a menu bar:
+   hamburger menu -> `Preferences` -> `Account Settings`.
 1. Under `Account Actions` click `Add Other Account...`
 1. Select "Newsgroup Account"
 1. Type in the name you and email address you want associated with your posts.
