@@ -42,7 +42,6 @@ Emacs has some weird, complex commands, that may not make sense to new users. Wh
 * `C-` means the Control/Ctrl key
 * `M-` means the Meta key
   - While not common on modern hardware, the Meta key can be typed by using either the Escape/ESC key, or the Alt key in some cases
-* `s-` or `S-` means the Shift key
 
 Key-bindings in Emacs are typically longer than normal key-bindings used outside of Emacs, usually being a combination of what would be two "normal" key-bindings. For example; to exit Emacs, you can type `C-x C-c`. That means you press both of these key-bindings in series to complete the Emacs key-binding of exiting Emacs. It's very weird and complex, but is easy to adjust to after using it for a while.
 
@@ -59,5 +58,5 @@ To visit a new or existing file, simply go to the File menu and select "Visit Ne
 To save the current buffer, select "Save" from the File menu. If you need to save the buffer as something else, you can select "Save As", which is also in the File menu.
 ### Killing a Buffer (C-x k)
 Whenever you are finished working on a file, and no longer need the buffer, you can kill the current buffer by selecting "Close" from the File menu.
-### Cut, Copy, Paste (C-w, s-c, C-y)
+### Cut, Copy, Paste (C-w, M-w, C-y)
 Cut, Copy, and Past are all available in the Edit menu.
