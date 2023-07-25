@@ -3,7 +3,7 @@ title: Socializing and chat
 author: 
   - emv
   - benharri
-category: tilde.club
+category: tutorials
 ---
 
 ## irc
