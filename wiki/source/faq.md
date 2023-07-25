@@ -62,7 +62,7 @@ Who are all these folks and what are they up to?
     now](http://tilde.club/~whitneymcn/whoville.shtml)?
 -   [who updated their websites
     recently](http://tilde.club/tilde.24h.php)?
--   [who links to each other](http://tilde.club/~ford/social.html)?
+-   [who links to each other](http://tilde.club/~deepend/social.html)?
 -   [can you give me a blogroll](http://tilde.club/~_/)?
 
 My function keys don't work in byobu! (using Windows PuTTY)
