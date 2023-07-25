@@ -4,7 +4,7 @@ author:
   - benharri
   - audiodude
   - xwindows
-category: tilde.club
+category: tutorials
 ---
 
 # Want to contribute to this wiki?
