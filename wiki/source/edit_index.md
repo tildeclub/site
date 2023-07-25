@@ -1,7 +1,7 @@
 ---
 title: Editing your index.html file
 author: vielmetti
-category: tutorial
+category: tutorials
 ---
 
 Type: `nano` index.html to open your index.html file and begin editing
