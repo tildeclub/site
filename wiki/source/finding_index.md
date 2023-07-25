@@ -1,6 +1,6 @@
 ---
 title: finding your index.html
-category: tutorial
+category: tutorials
 ---
 
 There are some basic command line commands you'll want to Google and learn, but for this tutorial you only need a few:
