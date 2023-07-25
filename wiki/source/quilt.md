@@ -1,7 +1,7 @@
 ---
 title: tilde quilt
 author: lab6
-category: tilde.club
+category: links
 ---
 
 ## 2-dimensional anonymous collaborative microblogging
