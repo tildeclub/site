@@ -1,7 +1,7 @@
 ---
 title: command line for absolute beginners
 author: cmccabe
-category: tutorial
+category: tutorials
 ---
 
 So, you want to join a public-access shell community like tilde.club,
