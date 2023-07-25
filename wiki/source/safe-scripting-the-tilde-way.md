@@ -1,7 +1,7 @@
 ---
 title: safe scripting the tilde way
 author: michaelcoyote
-category: tutorial
+category: tutorials
 ---
 
 Welcome to tilde.club. For many of you this may be your first multi-user host and for even more of you this may be your *first* host. Welcome to all of you.  
