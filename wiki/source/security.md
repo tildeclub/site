@@ -1,7 +1,7 @@
 ---
 title: Editing Basic UNIX Security the Tilde way
 author: michaelcoyote
-category: tutorial
+category: tutorials
 ---
 
 
