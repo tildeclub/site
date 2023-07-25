@@ -3,7 +3,7 @@ title: email
 author:
   - benharri
   - xwindows
-category: tutorial
+category: tutorials
 ---
 
 Your shiny, new tilde.club account comes with an email account. `alpine`  is a command-line email application to use it, as is `mutt`. [Good old-fashioned `mail` works too](#using-traditional-unix-mail-program), once configured properly; although it's a little cryptic.
