@@ -1,6 +1,6 @@
 ---
 title: time zones
-category: tutorial
+category: tutorials
 ---
 
 The timezone by default on the server is UTC.
