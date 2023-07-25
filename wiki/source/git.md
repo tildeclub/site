@@ -1,6 +1,6 @@
 ---
 title: how to use git
-category: tutorial
+category: tutorials
 ---
 
 `git` is a version control system. It's pretty confusing at first, but
