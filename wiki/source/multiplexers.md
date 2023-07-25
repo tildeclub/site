@@ -1,7 +1,7 @@
 ---
 title: Terminal Multiplexers
 author: rudi
-category: tilde.club
+category: tutorials
 ---
 
 # Terminal Muiltiplexers
