@@ -1,7 +1,7 @@
 ---
 title: gopher
 author: benharri
-category: tutorial
+category: tutorials
 ---
 
 tilde.club now serves gopher! we're using
