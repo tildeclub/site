@@ -1,6 +1,6 @@
 ---
 title: usenet news
-category: tutorial
+category: tutorials
 author:
   - deepend
   - audiodude
