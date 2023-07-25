@@ -1,7 +1,7 @@
 ---
 title: tildeverse
 author: audiodude
-category: tilde.club
+category: links
 ---
 From the website at [https://tildeverse.org/](https://tildeverse.org/):
 
