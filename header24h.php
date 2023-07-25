@@ -12,9 +12,8 @@
 		<a href="/">~TILDE.CLUB~</a>
 		<a href="/">HOME</a>
 		<a href="/wiki/">WIKI</a>
-		<a href="https://donate.tilde.club/" target="_blank">DONATE</a>
-		<a href="https://web.tilde.chat/?join=club" target="_blank">CHAT</a>
-                <a href="https://search.tildeverse.org/" target="_blank">SEARCH</a>
+		<a href="https://tilde.club/wiki/donate.html">DONATE</a>
+		<a href="https://web.newnet.net/?join=club" target="_blank">CHAT</a>
 		<a href="/signup/">SIGN-UP</a>
 	</div>
 
