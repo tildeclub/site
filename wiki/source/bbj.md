@@ -1,6 +1,6 @@
 ---
 title: bbj
 author: audiodude
-category: tutorial
+category: tutorials
 ---
 bbj: bulletin butter and jelly, a cozy bbs in your terminal
