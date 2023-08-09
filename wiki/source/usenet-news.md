@@ -27,7 +27,7 @@ and [~xwindows](/~xwindows/) (technical troubleshooter).
 ## News clients
 
 ### slrn
-[slrn](slrn.html) is a newsreader; see http://slrn.sourceforge.net/ for details.
+[slrn](slrn.html) is a newsreader; see [http://slrn.sourceforge.net/](http://slrn.sourceforge.net/) for details.
 
 First, add `export NNTPSERVER="localhost"` to your shellrc (`.bashrc`, `.zshrc`)
 and source it (`source path/to/.shellrc`).
@@ -39,8 +39,8 @@ You're now ready to run `slrn`! If the list is empty, press `L` (for list-groups
 
 ### pine/alpine
 
-[[pine]] can read news; this
-[http://www.chebucto.ns.ca/Help/News/PineNews.html](tutorial) might help.
+Pine can read news; this
+[tutorial](http://www.chebucto.ns.ca/Help/News/PineNews.html) might help.
 You can also read the [FAQ from U Washington](http://www.washington.edu/pine/faq/news.html).
 
 If you use Pine from inside Tilde.club,
@@ -53,11 +53,11 @@ configure it by:
 
 ### Emacs
 
-`M-x gnus` in [[emacs]] can read news, but you better know [[emacs]] first before you start.
+`M-x gnus` in emacs can read news, but you better know [emacs](emacs.html) first before you start.
 
 ### lynx
 
-[[lynx]] reads news, a la `lynx news://news.tilde.club/tilde.general`. It can even post news, but you have to design your own headers.
+Lynx reads news, a la `lynx nntp://news.tilde.club/local.general`. It can even post news, but you have to design your own headers.
 
 ### tin
 There is also [tin](tin.html).
