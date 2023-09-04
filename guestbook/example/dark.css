@@ -1,0 +1,83 @@
+/* Reset some default styles */
+body, h1, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+form {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Styles for the guestbook entries */
+.entry {
+    background-color: #34495e;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.entry-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #e74c3c;
+}
+
+.entry-email {
+    font-style: italic;
+    color: #95a5a6;
+    margin-left: 10px;
+}
+
+.entry-message {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ecf0f1;
+}
