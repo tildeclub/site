@@ -1,0 +1,91 @@
+User-Agent: MojeekBot
+Allow:    /~xwindows/
+
+User-Agent: Qwantify
+Allow:    /~xwindows/
+
+User-Agent: Wibybot
+Allow:    /~xwindows/
+
+User-Agent: search.marginalia.nu
+Allow:    /~xwindows/
+
+User-Agent: SearchMySiteBot
+Allow:    /~xwindows/
+
+User-Agent: Duckduckbot
+Allow:    /~xwindows/
+
+User-Agent: ia_archiver
+Allow:    /~xwindows/
+
+User-Agent: Googlebot
+Allow:    /~xwindows/$
+Allow:    /~xwindows/index.html$
+Disallow: /~xwindows/
+
+User-Agent: bingbot
+Allow:    /~xwindows/$
+Allow:    /~xwindows/index.html$
+Disallow: /~xwindows/
+
+User-Agent: YandexBot
+Allow:    /~xwindows/$
+Allow:    /~xwindows/index.html$
+Disallow: /~xwindows/
+
+User-Agent: YandexFavicons
+Disallow: /~xwindows/
+
+User-Agent: MegaIndex.ru
+Disallow: /~xwindows/
+
+User-Agent: Amazonbot
+Disallow: /~xwindows/
+
+User-Agent: Linespider
+Disallow: /~xwindows/
+
+User-Agent: Bytespider
+Disallow: /~xwindows/
+
+User-Agent: CCBot
+Disallow: /~xwindows/
+
+User-Agent: Neevabot
+Disallow: /~xwindows/
+
+User-Agent: PetalBot
+Disallow: /~xwindows/
+
+User-Agent: SemrushBot
+Disallow: /~xwindows/
+
+User-Agent: AhrefsBot
+Disallow: /~xwindows/
+
+User-Agent: DataForSeoBot
+Disallow: /~xwindows/
+
+User-Agent: dotbot
+Disallow: /~xwindows/
+
+User-Agent: Barkrowler
+Disallow: /~xwindows/
+
+User-Agent: MJ12bot
+Disallow: /~xwindows/
+
+User-Agent: BuiltWith
+Disallow: /~xwindows/
+
+User-Agent: webprosbot
+Disallow: /~xwindows/
+
+User-Agent: Dataprovider
+Disallow: /~xwindows/
+
+User-Agent: *
+Allow:    /~xwindows/$
+Allow:    /~xwindows/index.html$
+Disallow: /~xwindows/
