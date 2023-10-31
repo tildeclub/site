@@ -83,3 +83,83 @@ You can do this right from the Github GUI!
 
 Ask on irc if you have questions!
 
+## Notes for the nerds
+
+Following is technical information about Tilde.club website code repository
+(which contains Tilde.club wiki),
+for any of you who won't settle for an easy way out,
+but would rather embark on a do-it-yourself journey
+of technological liberation...
+
+* The code of Tilde.club website (which includes the wiki)
+  is maintained using [Git version control system](https://git-scm.com/).
+* The master Git repository is available inside Tilde.club at <q>`/usr/share/nginx/html`</q> directory,
+  with read-only access to Tilde.club members.
+  In case you prefer to work on your edits directly inside Tilde.club,
+  run a command like this to clone the repository:
+  
+      git clone /usr/share/nginx/html tildeclub-site
+  
+  If you prefer to clone to your local machine via SSH instead,
+  use **one** of the following commands:
+  
+      git clone ssh://USERNAME@tilde.club/usr/share/nginx/html tildeclub-site
+      git clone USERNAME@tilde.club:/usr/share/nginx/html tildeclub-site
+  
+  * Don't forget to substitute <var>USERNAME</var> with your Tilde.club username
+    (else SSH would fail logging you in for the access).
+  * The first command works even with a very old Git version.
+  
+  Note that you cannot issue <q>`git push`</q> from a repository cloned these ways
+  (but <q>`git pull`</q> will work like usual),
+  so it would be suitable mainly for email-based patch submission,
+  or your private experiment/exploration.
+* This Git repository is also officially available online at two places:
+  
+  * [GitHub](https://github.com/tildeclub/site/)
+    (requires JavaScript and latest browser to view)
+  * [Tildegit](https://tildegit.org/club/site/)
+    (read-only mirror,
+    replicates from GitHub;
+    do not need JavaScript to view)
+  
+  The <q>`git clone`</q> command also work directly with these URLs;
+  although note that pull requests are accepted only on GitHub.
+  If you prefer not to use GitHub,
+  email-based patch submission is also accepted.
+* Traditional email-based patch submission
+  is accepted on email address `root` at `tilde.club`.
+  If your patches require a use of <q>`--scissors`</q> option on <q>`git am`</q> command,
+  please explicitly mention that on each patch email.
+* The in-repository subdirectory that contains the actual wiki text
+  is <q>`wiki/source/`</q>.
+* Wiki articles are stored in that directory as individual files:
+  one file per article,
+  in [Pandoc Markdown format](https://pandoc.org/MANUAL.html#pandocs-markdown)
+  with [YAML metadata](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) frontmatter at the top,
+  bearing file extension <q>`.md`</q>.
+* The actual mechanism used
+  for rendering each Markdown files into actual HTML pages
+  on Tilde.club's website
+  (and text files on Tilde.club's Gopher site)
+  is specified in <q>`wiki/Makefile`</q> in the repository.
+  * The Gophermap of the wiki
+    is generated dynamically on Gopher request however;
+    see <q>`wiki/gophermap`</q> and <q>`wiki/txtlist.sh`</q> in the repository
+    for this part.
+* The copyright license of this repository is
+  [GNU General Public License](https://www.gnu.org/licenses/gpl.html),
+  _any version_
+  published by the [Free Software Foundation](https://www.fsf.org/);
+  as stated in <q>`LICENSE`</q> file on the repository,
+  while the _any version_ part comes from the fallback condition
+  specified in the section 14 of that license.
+  If you submit your work to be a part of this wiki,
+  this is the copyright license that your work would get published under.
+  
+  **Do not trust what GitHub says about the specifics
+  of licensing** on this repository
+  (or any other repository hosted there for that matter),
+  always check the <q>`README`</q>,
+  <q>`LICENSE`</q>,
+  and <q>`COPYING`</q> files for the fine prints.
