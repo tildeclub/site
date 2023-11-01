@@ -78,5 +78,4 @@ To connect to your ZNC its at services.tilde.club   Port: 6699(SSL)
 
 NOTE: long passwords fail to authenticate with the ZNC server.
 
-### Users created before December 28th, 2021 will need to email [mailto:root@tilde.club](root@tilde.club) to get your user added. 
-
+<big>**Users created before December 28th, 2021 will need to email <root@tilde.club> to get your user added.**</big>
