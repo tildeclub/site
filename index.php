@@ -31,19 +31,19 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
-		<li>05-15-2022 | <a href="/~passthejoe">~passthejoe</a></li>
-		<li>12-16-2023 | <a href="/~lake">~lake</a></li>
-		<li>08-17-2023 | <a href="/~amr">~amr</a></li>
-		<li>05-15-2022 | <a href="/~hifikuno">~hifikuno</a></li>
-		<li>12-20-2022 | <a href="/~rajiv">~rajiv</a></li>
-                <li>09-27-2022 | <a href="/~tubbo">~tubbo</a></li>
-                <li>09-08-2022 | <a href="/~cyrus">~cyrus</a></li>
-                <li>06-08-2022 | <a href="/~barnold">~barnold</a></li>
-                <li>05-12-2022 | <a href="/~hifikuno">~hifikuno</a></li>
-                <li>04-27-2022 | <a href="/~mhd">~mhd</a></li>
-                <li>02-29-2022 | <a href="/~neildaemond">~neildaemond</a></li>
-                <li>02-15-2022 | <a href="/~alex1138">~alex1138</a></li>
-                <li>02-15-2022 | <a href="/~amr">~amr</a></li>
+		<li>12/19/2023 | <a href="/~passthejoe">~passthejoe</a></li>
+		<li>12/16/2023 | <a href="/~lake">~lake</a></li>
+		<li>08/17/2023 | <a href="/~amr">~amr</a></li>
+		<li>05/15/2022 | <a href="/~hifikuno">~hifikuno</a></li>
+		<li>12/20/2022 | <a href="/~rajiv">~rajiv</a></li>
+                <li>09/27/2022 | <a href="/~tubbo">~tubbo</a></li>
+                <li>09/08/2022 | <a href="/~cyrus">~cyrus</a></li>
+                <li>06/08/2022 | <a href="/~barnold">~barnold</a></li>
+                <li>05/12/2022 | <a href="/~hifikuno">~hifikuno</a></li>
+                <li>04/27/2022 | <a href="/~mhd">~mhd</a></li>
+                <li>02/29/2022 | <a href="/~neildaemond">~neildaemond</a></li>
+                <li>02/15/2022 | <a href="/~alex1138">~alex1138</a></li>
+                <li>02/15/2022 | <a href="/~amr">~amr</a></li>
                 <li>01/27/2022 | <a href="/~whitcomb">~whitcomb</a></li>
                 <li>12/15/2021 | <a href="/~dctrud">~dctrud</a></li>
                 <li>10/10/2021 | <a href="/~dmi3">~dmi3</a></li>
