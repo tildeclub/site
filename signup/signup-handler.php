@@ -198,7 +198,7 @@ reason: {$_REQUEST["interest"]}
 $makeuser
 ";
 
-        if (mail('sudoers', 'new tilde.club signup', $msgbody)) {
+        if (mail('root', 'new tilde.club signup', $msgbody)) {
             echo '<div class="alert alert-success" role="alert">
                 email sent! we\'ll get back to you soon (usually within a day) with login instructions! <a href="/">back to tilde.club home</a>
                 </div>';
