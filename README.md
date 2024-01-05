@@ -15,4 +15,4 @@ Tilde.club is moving very quickly and is 100% volunteer led.
 - We love philosophy, just not in our issue tracker!
 
 
-signup code from [https://tildegit.org/tildeteam/site/signup](https://tildegit.org/team/site/src/branch/master/signup)https://tildegit.org/team/site/src/branch/master/signup
+signup code from [https://tildegit.org/team/site/src/branch/master/signup](https://tildegit.org/team/site/src/branch/master/signup)
