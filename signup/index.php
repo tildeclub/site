@@ -50,6 +50,7 @@ function esc($v) {
 				<br>
 				no drama. be respectful. have fun. we're all trying, and we're all in this together :)
 			    </p>
+                            <p>you must be at least 13 years or older to sign up and use tilde.club.</p>
 
 			    <button class="btn btn-primary" type="submit">submit</button>
 
