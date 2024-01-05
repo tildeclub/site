@@ -1,6 +1,6 @@
 <?php
 $filepath = __FILE__;
-require __DIR__.'/../vendor/autoload.php';
+# require __DIR__.'/../vendor/autoload.php';
 require_once "email/smtp.php";
 
 function getUserIpAddr() {
