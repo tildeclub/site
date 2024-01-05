@@ -14,16 +14,14 @@
 		// Reduce dependencies.  Duplicates code though.
 		private static function FilenameSafe($filename)
 		{
-			return preg_replace('/[_]+/', "_", preg_replace('/[^A-Za-z0-9_.\-]/', "_", $filename));
+			return preg_replace('/_+/', "_", preg_replace('/[^A-Za-z0-9_.\-]/', "_", $filename));
 		}
 
 		private static function ReplaceNewlines($replacewith, $data)
 		{
 			$data = str_replace("\r\n", "\n", $data);
 			$data = str_replace("\r", "\n", $data);
-			$data = str_replace("\n", $replacewith, $data);
-
-			return $data;
+            return str_replace("\n", $replacewith, $data);
 		}
 
 		// RFC1341 is a hacky workaround to allow 8-bit over 7-bit transport.
@@ -184,7 +182,7 @@
 			// Reverse parse out the initial domain/IP address part of the e-mail address.
 			$domain = "";
 			$state = "domend";
-			$cfwsdepth = 0;
+
 			while ($email != "" && $state != "")
 			{
 				$prevchr = substr($email, -2, 1);
@@ -224,7 +222,7 @@
 						{
 							$email = trim(substr($email, 0, -1));
 							$depth--;
-							if (!$depth && substr($email, -1) != ")")  $state = $laststate;
+							if (!$depth && !str_ends_with($email, ")"))  $state = $laststate;
 						}
 						else  $email = trim(substr($email, 0, -1));
 
@@ -286,7 +284,7 @@
 
 			// Forward parse out the local part of the e-mail address.
 			// Remove CFWS (comments, folding whitespace).
-			while (substr($email, 0, 1) == "(")
+			while (str_starts_with($email, "("))
 			{
 				while ($email != "")
 				{
@@ -301,14 +299,14 @@
 					{
 						$email = trim(substr($email, 1));
 						$depth--;
-						if (!$depth && substr($email, 0, 1) != "(")  break;
+						if (!$depth && !str_starts_with($email, "("))  break;
 					}
 				}
 			}
 
 			// Process quoted/unquoted string.
 			$local = "";
-			if (substr($email, 0, 1) == "\"")
+			if (str_starts_with($email, "\""))
 			{
 				$email = substr($email, 1);
 				while ($email != "")
@@ -338,7 +336,7 @@
 					else  $email = substr($email, 1);
 				}
 
-				if (substr($local, -1) != "\"")  $local .= "\"";
+				if (!str_ends_with($local, "\""))  $local .= "\"";
 			}
 			else
 			{
@@ -355,17 +353,17 @@
 				}
 
 				$local = preg_replace('/[.]+/', ".", $local);
-				if (substr($local, 0, 1) == ".")  $local = substr($local, 1);
-				if (substr($local, -1) == ".")  $local = substr($local, 0, -1);
+				if (str_starts_with($local, "."))  $local = substr($local, 1);
+				if (str_ends_with($local, "."))  $local = substr($local, 0, -1);
 			}
-			while (substr($local, -2) == "\\\"")  $local = substr($local, 0, -2) . "\"";
+			while (str_ends_with($local, "\\\""))  $local = substr($local, 0, -2) . "\"";
 			if ($local == "\"" || $local == "\"\"")  $local = "";
 
 			// Analyze the domain/IP part and fix any issues.
 			$domain = preg_replace('/[.]+/', ".", $domain);
-			if (substr($domain, -1) == "]")
+			if (str_ends_with($domain, "]"))
 			{
-				if (substr($domain, 0, 1) != "[")  $domain = "[" . $domain;
+				if (!str_starts_with($domain, "["))  $domain = "[" . $domain;
 
 				// Process the IP address.
 				if (strtolower(substr($domain, 0, 6)) == "[ipv6:")  $ipaddr = IPAddr::NormalizeIP(substr($domain, 6, -1));
@@ -377,13 +375,13 @@
 			else
 			{
 				// Process the domain.
-				if (substr($domain, 0, 1) == ".")  $domain = substr($domain, 1);
-				if (substr($domain, -1) == ".")  $domain = substr($domain, 0, -1);
+				if (str_starts_with($domain, "."))  $domain = substr($domain, 1);
+				if (str_ends_with($domain, "."))  $domain = substr($domain, 0, -1);
 				$domain = explode(".", $domain);
 				foreach ($domain as $num => $part)
 				{
-					if (substr($part, 0, 1) == "-")  $part = substr($part, 1);
-					if (substr($part, -1) == "-")  $part = substr($part, 0, -1);
+					if (str_starts_with($part, "-"))  $part = substr($part, 1);
+					if (str_ends_with($part, "-"))  $part = substr($part, 0, -1);
 					if (strlen($part) > 63)  $part = substr($part, 0, 63);
 
 					$domain[$num] = $part;
@@ -401,13 +399,13 @@
 			if ($y > 64 || $y2 > 253 || $y + $y2 + 1 > 253)  return array("success" => false, "error" => self::SMTP_Translate("E-mail address is too long."), "errorcode" => "email_too_long", "info" => $email);
 
 			// Process results.
-			if (substr($domain, 0, 1) == "[" && substr($domain, -1) == "]")  $result = array("success" => true, "email" => $email, "lookup" => false, "type" => "IP");
+			if (str_starts_with($domain, "[") && str_ends_with($domain, "]"))  $result = array("success" => true, "email" => $email, "lookup" => false, "type" => "IP");
 			else if (isset($options["usedns"]) && $options["usedns"] === false)  $result = array("success" => true, "email" => $email, "lookup" => false, "type" => "Domain");
 			else if ((!isset($options["usednsttlcache"]) || $options["usednsttlcache"] === true) && isset(self::$dnsttlcache[$domain]) && self::$dnsttlcache[$domain] >= time())  $result = array("success" => true, "email" => $email, "lookup" => false, "type" => "CachedDNS");
 			else
 			{
 				// Check for a mail server based on a DNS lookup.
-				$result = self::GetDNSRecord($domain, array("MX", "A"), (isset($options["nameservers"]) ? $options["nameservers"] : array("8.8.8.8", "8.8.4.4")), (!isset($options["usednsttlcache"]) || $options["usednsttlcache"] === true));
+				$result = self::GetDNSRecord($domain, array("MX", "A"), ($options["nameservers"] ?? array("8.8.8.8", "8.8.4.4")), (!isset($options["usednsttlcache"]) || $options["usednsttlcache"] === true));
 				if ($result["success"])  $result = array("success" => true, "email" => $email, "lookup" => true, "type" => $result["type"], "records" => $result["records"]);
 			}
 
@@ -480,7 +478,6 @@
 				$name = "";
 				$email = "";
 				$state = "addrend";
-				$cfwsdepth = 0;
 				$inbracket = false;
 
 				while ($data != "" && $state != "")
@@ -538,7 +535,7 @@
 							{
 								$data = trim(substr($data, 0, -1));
 								$depth--;
-								if (!$depth && substr($data, -1) != ")")  $state = $laststate;
+								if (!$depth && !str_ends_with($data, ")"))  $state = $laststate;
 							}
 							else  $data = trim(substr($data, 0, -1));
 
@@ -616,18 +613,18 @@
 						{
 							if ($prevchr == "\\")
 							{
-								$email .= $lastchar . $prevchr;
+								$email .= $lastchr . $prevchr;
 								$data = substr($data, 0, -2);
 							}
 							else if ($lastchr == "\"")
 							{
-								$email .= $lastchar;
+								$email .= $lastchr;
 								$data = trim(substr($data, 0, -1));
 								$state = "localstart";
 							}
 							else
 							{
-								$email .= $lastchar;
+								$email .= $lastchr;
 								$data = substr($data, 0, -1);
 							}
 
@@ -683,7 +680,7 @@
 						{
 							if ($prevchr == "\\")
 							{
-								$name .= $lastchar . $prevchr;
+								$name .= $lastchr . $prevchr;
 								$data = substr($data, 0, -2);
 							}
 							else if ($lastchr == "\"")
@@ -718,7 +715,7 @@
 				{
 					if ($removenames)  $name = "";
 					$name = trim(strrev($name));
-					if (substr($name, 0, 1) == "\"")  $name = trim(substr($name, 1));
+					if (str_starts_with($name, "\""))  $name = trim(substr($name, 1));
 					$name = str_replace("\\\\", "\\", $name);
 					$name = str_replace("\\\"", "\"", $name);
 
@@ -816,11 +813,11 @@
 		// Reads one or more lines in.
 		private static function ProcessState__ReadLine(&$state)
 		{
-			while (strpos($state["data"], "\n") === false)
+			while (!str_contains($state["data"], "\n"))
 			{
 				$data2 = @fgets($state["fp"], 116000);
 				if ($data2 === false)  return array("success" => false, "error" => self::SMTP_Translate("Underlying stream encountered a read error."), "errorcode" => "stream_read_error");
-				if (strpos($data2, "\n") === false)
+				if (!str_contains($data2, "\n"))
 				{
 					if (feof($state["fp"]))  return array("success" => false, "error" => self::SMTP_Translate("Remote peer disconnected."), "errorcode" => "peer_disconnected");
 					if (self::StreamTimedOut($state["fp"]))  return array("success" => false, "error" => self::SMTP_Translate("Underlying stream timed out."), "errorcode" => "stream_timeout_exceeded");
@@ -851,7 +848,7 @@
 				if ($state["timeout"] !== false && self::GetTimeLeft($state["startts"], $state["timeout"]) == 0)  return array("success" => false, "error" => self::SMTP_Translate("HTTP timeout exceeded."), "errorcode" => "timeout_exceeded");
 
 				$data2 = substr($state["data"], 0, $result);
-				$state["data"] = (string)substr($state["data"], $result);
+				$state["data"] = substr($state["data"], $result);
 
 				$state["result"]["rawsendsize"] += $result;
 
@@ -993,9 +990,9 @@
 					case "helo_ehlo":
 					{
 						// Send EHLO or HELO depending on server support.
-						$hostname = (isset($state["options"]["hostname"]) ? $state["options"]["hostname"] : "[" . trim(isset($_SERVER["SERVER_ADDR"]) && $_SERVER["SERVER_ADDR"] != "127.0.0.1" ? $_SERVER["SERVER_ADDR"] : "192.168.0.101") . "]");
+						$hostname = ($state["options"]["hostname"] ?? "[" . trim(isset($_SERVER["SERVER_ADDR"]) && $_SERVER["SERVER_ADDR"] != "127.0.0.1" ? $_SERVER["SERVER_ADDR"] : "192.168.0.101") . "]");
 						$state["size_supported"] = 0;
-						if (strpos($state["response"], " ESMTP") !== false)
+						if (str_contains($state["response"], " ESMTP"))
 						{
 							self::InitSMTPRequest($state, "EHLO " . $hostname, 250, "esmtp_extensions", self::SMTP_Translate("Expected a 250 response from the SMTP server upon EHLO."));
 						}
@@ -1021,7 +1018,7 @@
 						$state["state"] = "mail_from";
 
 						// Process login (if any and supported).
-						if (strpos($auth, "LOGIN") !== false)
+						if (str_contains($auth, "LOGIN"))
 						{
 							$state["username"] = (isset($state["options"]["username"]) ? (string)$state["options"]["username"] : "");
 							$state["password"] = (isset($state["options"]["password"]) ? (string)$state["options"]["password"] : "");
@@ -1132,7 +1129,7 @@
 		public static function SendSMTPEmail($toaddr, $fromaddr, $message, $options = array())
 		{
 			$startts = microtime(true);
-			$timeout = (isset($options["timeout"]) ? $options["timeout"] : false);
+			$timeout = ($options["timeout"] ?? false);
 
 			if (!function_exists("stream_socket_client") && !function_exists("fsockopen"))  return array("success" => false, "error" => self::SMTP_Translate("The functions 'stream_socket_client' and 'fsockopen' do not exist."), "errorcode" => "function_check");
 
@@ -1143,11 +1140,11 @@
 			if (!self::EmailAddressesToNamesAndEmail($temptonames, $temptoaddrs, $toaddr, true, $options))  return array("success" => false, "error" => self::SMTP_Translate("Invalid 'To' e-mail address(es)."), "errorcode" => "invalid_to_address", "info" => $toaddr);
 			if (!self::EmailAddressesToNamesAndEmail($tempfromnames, $tempfromaddrs, $fromaddr, true, $options))  return array("success" => false, "error" => self::SMTP_Translate("Invalid 'From' e-mail address."), "errorcode" => "invalid_from_address", "info" => $fromaddr);
 
-			$server = (isset($options["server"]) ? $options["server"] : "localhost");
-			$secure = (isset($options["secure"]) ? $options["secure"] : false);
+			$server = ($options["server"] ?? "localhost");
+			$secure = ($options["secure"] ?? false);
 			$port = (isset($options["port"]) ? (int)$options["port"] : -1);
 			if ($port < 0 || $port > 65535)  $port = ($secure ? 465 : 25);
-			$debug = (isset($options["debug"]) ? $options["debug"] : false);
+			$debug = ($options["debug"] ?? false);
 
 			$headers = "Message-ID: <" . self::SMTP_RandomHexString(8) . "." . self::SMTP_RandomHexString(7) . "@" . substr($tempfromaddrs[0], strrpos($tempfromaddrs[0], "@") + 1) . ">\r\n";
 			$headers .= "Date: " . date("D, d M Y H:i:s O") . "\r\n";
@@ -1168,7 +1165,7 @@
 			if ($timeout !== false && self::GetTimeLeft($startts, $timeout) == 0)  return array("success" => false, "error" => self::SMTP_Translate("HTTP timeout exceeded."), "errorcode" => "timeout_exceeded");
 
 			// Connect to the target server.
-			$hostname = (isset($options["hostname"]) ? $options["hostname"] : "[" . trim(isset($_SERVER["SERVER_ADDR"]) && $_SERVER["SERVER_ADDR"] != "127.0.0.1" ? $_SERVER["SERVER_ADDR"] : "192.168.0.101") . "]");
+			$hostname = ($options["hostname"] ?? "[" . trim(isset($_SERVER["SERVER_ADDR"]) && $_SERVER["SERVER_ADDR"] != "127.0.0.1" ? $_SERVER["SERVER_ADDR"] : "192.168.0.101") . "]");
 			$errornum = 0;
 			$errorstr = "";
 			if (isset($options["fp"]) && is_resource($options["fp"]))
@@ -1202,7 +1199,7 @@
 			// Initialize the connection request state array.
 			$state = array(
 				"fp" => $fp,
-				"async" => (isset($options["async"]) ? $options["async"] : false),
+				"async" => ($options["async"] ?? false),
 				"debug" => $debug,
 				"startts" => $startts,
 				"timeout" => $timeout,
@@ -1305,7 +1302,7 @@
 			if (TagFilter::GetParentPos($stack, "pre") === false)
 			{
 				$content = preg_replace('/\s{2,}/', "  ", str_replace(array("\r\n", "\n", "\r", "\t"), " ", $content));
-				if ($result !== "" && substr($result, -1) === "\n")  $content = trim($content);
+				if ($result !== "" && str_ends_with($result, "\n"))  $content = trim($content);
 			}
 		}
 
@@ -1352,13 +1349,13 @@
 			$subject = str_replace("\n", " ", $subject);
 			if (!UTF8::IsASCII($subject))  $subject = self::ConvertToRFC1342($subject);
 
-			$replytoaddr = (isset($options["replytoaddr"]) ? $options["replytoaddr"] : "");
-			$ccaddr = (isset($options["ccaddr"]) ? $options["ccaddr"] : "");
-			$bccaddr = (isset($options["bccaddr"]) ? $options["bccaddr"] : "");
-			$headers = (isset($options["headers"]) ? $options["headers"] : "");
-			$textmessage = (isset($options["textmessage"]) ? $options["textmessage"] : "");
-			$htmlmessage = (isset($options["htmlmessage"]) ? $options["htmlmessage"] : "");
-			$attachments = (isset($options["attachments"]) ? $options["attachments"] : array());
+			$replytoaddr = ($options["replytoaddr"] ?? "");
+			$ccaddr = ($options["ccaddr"] ?? "");
+			$bccaddr = ($options["bccaddr"] ?? "");
+			$headers = ($options["headers"] ?? "");
+			$textmessage = ($options["textmessage"] ?? "");
+			$htmlmessage = ($options["htmlmessage"] ?? "");
+			$attachments = ($options["attachments"] ?? array());
 
 			$messagetoaddr = self::EmailAddressesToEmailHeaders($toaddr, "To", true, false, $options);
 			$replytoaddr = self::EmailAddressesToEmailHeaders($replytoaddr, "Reply-To", false, false, $options);
@@ -1373,8 +1370,7 @@
 			if ($htmlmessage == "" && !count($attachments))
 			{
 				// Plain-text e-mail.
-				$destheaders = "";
-				$destheaders .= $messagefromaddr;
+                $destheaders = $messagefromaddr;
 				if ($headers != "")  $destheaders .= $headers;
 				$destheaders .= "MIME-Version: 1.0\r\n";
 				if (!isset($options["usemail"]) || !$options["usemail"])  $destheaders .= $messagetoaddr;
@@ -1391,8 +1387,7 @@
 			{
 				// MIME e-mail (HTML, text, attachments).
 				$mimeboundary = "--------" . self::MIME_RandomString(25);
-				$destheaders = "";
-				$destheaders .= $messagefromaddr;
+                $destheaders = $messagefromaddr;
 				if ($headers != "")  $destheaders .= $headers;
 				$destheaders .= "MIME-Version: 1.0\r\n";
 				if (!isset($options["usemail"]) || !$options["usemail"])  $destheaders .= $messagetoaddr;
@@ -1516,4 +1511,3 @@
 			}
 		}
 	}
-?>
