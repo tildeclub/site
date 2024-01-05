@@ -7,11 +7,10 @@
 		static function NormalizeIP($ipaddr)
 		{
 			$ipv4addr = "";
-			$ipv6addr = "";
 
 			// Generate IPv6 address.
 			$ipaddr = strtolower(trim($ipaddr));
-			if (strpos($ipaddr, ":") === false)  $ipaddr = "::ffff:" . $ipaddr;
+			if (!str_contains($ipaddr, ":"))  $ipaddr = "::ffff:" . $ipaddr;
 			$ipaddr = explode(":", $ipaddr);
 			if (count($ipaddr) < 3)  $ipaddr = array("", "", "0");
 			$ipaddr2 = array();
@@ -27,7 +26,7 @@
 				}
 			}
 			// Convert ::ffff:123.123.123.123 format.
-			if (strpos($ipaddr2[count($ipaddr2) - 1], ".") !== false)
+			if (str_contains($ipaddr2[count($ipaddr2) - 1], "."))
 			{
 				$x = count($ipaddr2) - 1;
 				if ($ipaddr2[count($ipaddr2) - 2] != "ffff")  $ipaddr2[$x] = "0";
@@ -51,7 +50,7 @@
 			$ipv6addr = implode(":", $ipaddr);
 
 			// Extract IPv4 address.
-			if (substr($ipv6addr, 0, 30) == "0000:0000:0000:0000:0000:ffff:")  $ipv4addr = hexdec(substr($ipv6addr, 30, 2)) . "." . hexdec(substr($ipv6addr, 32, 2)) . "." . hexdec(substr($ipv6addr, 35, 2)) . "." . hexdec(substr($ipv6addr, 37, 2));
+			if (str_starts_with($ipv6addr, "0000:0000:0000:0000:0000:ffff:"))  $ipv4addr = hexdec(substr($ipv6addr, 30, 2)) . "." . hexdec(substr($ipv6addr, 32, 2)) . "." . hexdec(substr($ipv6addr, 35, 2)) . "." . hexdec(substr($ipv6addr, 37, 2));
 
 			// Make a short IPv6 address.
 			$shortipv6 = $ipv6addr;
@@ -73,7 +72,7 @@
 
 		static function GetRemoteIP($proxies = array())
 		{
-			$ipaddr = self::NormalizeIP(isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : "127.0.0.1");
+			$ipaddr = self::NormalizeIP($_SERVER["REMOTE_ADDR"] ?? "127.0.0.1");
 
 			// Check for trusted proxies.  Stop at first untrusted IP in the chain.
 			if (isset($proxies[$ipaddr["ipv6"]]) || ($ipaddr["ipv4"] != "" && isset($proxies[$ipaddr["ipv4"]])))
@@ -85,10 +84,9 @@
 				{
 					$found = false;
 
-					if (isset($proxies[$ipaddr["ipv6"]]))  $header = $proxies[$ipaddr["ipv6"]];
-					else  $header = $proxies[$ipaddr["ipv4"]];
+                    $header = $proxies[$ipaddr["ipv6"]] ?? $proxies[$ipaddr["ipv4"]];
 
-					$header = strtolower($header);
+                    $header = strtolower($header);
 					if ($header == "xforward" && count($xforward) > 0)
 					{
 						$ipaddr = self::NormalizeIP(array_pop($xforward));
@@ -109,7 +107,7 @@
 		{
 			if (is_string($ipaddr))  $ipaddr = self::NormalizeIP($ipaddr);
 
-			if (strpos($pattern, ":") !== false)
+			if (str_contains($pattern, ":"))
 			{
 				// Pattern is IPv6.
 				$pattern = explode(":", strtolower($pattern));
@@ -128,7 +126,7 @@
 							$piece = $piece[0];
 
 							if ($piece == "*")  $found = true;
-							else if (strpos($piece, "-") !== false)
+							else if (str_contains($piece, "-"))
 							{
 								$range = explode("-", $piece);
 								$range[0] = hexdec($range[0]);
@@ -148,7 +146,7 @@
 							$val2 = hexdec(substr($ipaddr[$num], 2, 2));
 
 							if ($piece[0] == "*")  $found2 = true;
-							else if (strpos($piece[0], "-") !== false)
+							else if (str_contains($piece[0], "-"))
 							{
 								$range = explode("-", $piece[0]);
 								if ($range[0] > $range[1])  $range[0] = $range[1];
@@ -157,7 +155,7 @@
 							else if ($piece[0] == $val)  $found2 = true;
 
 							if ($piece[1] == "*")  $found3 = true;
-							else if (strpos($piece[1], "-") !== false)
+							else if (str_contains($piece[1], "-"))
 							{
 								$range = explode("-", $piece[1]);
 								if ($range[0] > $range[1])  $range[0] = $range[1];
@@ -189,7 +187,7 @@
 						$piece = trim($piece);
 
 						if ($piece == "*")  $found = true;
-						else if (strpos($piece, "-") !== false)
+						else if (str_contains($piece, "-"))
 						{
 							$range = explode("-", $piece);
 							if ($range[0] > $range[1])  $range[0] = $range[1];
@@ -207,4 +205,3 @@
 			return true;
 		}
 	}
-?>
