@@ -17,7 +17,7 @@ function esc($v) {
 
 <p>we're excited you're here! let's get you signed up!</p>
 <p>fill out this form and we'll get back to you with account info</p>
-<strong><p>(GMail currently not accepting our emails. Add root@tilde.club to whitelist)</p></strong>
+<p><strong>(GMail currently not accepting our emails. Add root@tilde.club to whitelist)</strong></p>
 
 
 <table>
