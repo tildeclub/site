@@ -17,6 +17,8 @@ function esc($v) {
 
 <p>we're excited you're here! let's get you signed up!</p>
 <p>fill out this form and we'll get back to you with account info</p>
+<strong></b><p>(GMail currently not accepting our emails. Add root@tilde.club to whitelist)</p></strong>
+
 
 <table>
 	<tr>
@@ -31,7 +33,6 @@ function esc($v) {
 
 			    <div>
 				<p>email to contact you with account info</p>
-				<p></p>(GMail currently not accepting our emails. Add root@tilde.club to whitelist)</p>
 				<input class="form-control" name="email" value="<?=esc("email")?>" type="text" required>
 			    </div>
 
