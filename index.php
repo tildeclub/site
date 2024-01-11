@@ -4,7 +4,7 @@
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-	<p class="advisory">GMAIL USERS: Please add the tilde.club domain to your whitelist in Gmail. This action may assist in resolving ongoing email delivery issues related to past spam incidents from our server..</p>
+	<p class="advisory">GMAIL USERS: Please add the tilde.club domain to your whitelist in Gmail. This action may assist in resolving ongoing email delivery issues related to past spam incidents from our server.</p>
 <div class="grid">
     <div class="row">
 
