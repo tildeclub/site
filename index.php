@@ -87,6 +87,17 @@
         </div>
 
         <div class="col">
+		<h2>UPDATE: March 2024:</h2>
+		<h3>Hey everyone, we've leveled up to Fedora 39!</h3>
+		<p>
+		Big shoutout to all of you who've been part of this journey with tilde.club. Your contributions, big and small, have really made a difference. We couldn't keep this going without all of you.
+		Fedora 39 is here, and it's packed with cool updates and features. Just a heads-up for those of you working with PHP, there's been an update, so you might want to check your scripts to make sure everything's still running smoothly.
+		</p>
+		<p>
+		Looking forward, 2024 is shaping up to be an exciting year, and we're just getting started. We're all about fostering a community that's innovative, supportive, and fun. Together, we're not just keeping tilde.club alive; we're making it thrive.
+		Thanks again to every single one of you. Your creativity, support, and collaboration are what make this community special. Here's to more adventures and achievements together in 2024 and beyond!
+		</p>
+		<hr>
             <h2>UPDATE: September 2022:</h2>
             <h3>OS Upgrade to Fedora 36</h3>
             <p> 
