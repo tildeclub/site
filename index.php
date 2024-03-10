@@ -31,7 +31,7 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
-		<li>02/17/2024 | <a hred="/~dddaaannn">~dddaaannn</a></li>
+		<li>02/17/2024 | <a href="/~dddaaannn">~dddaaannn</a></li>
 		<li>12/19/2023 | <a href="/~passthejoe">~passthejoe</a></li>
 		<li>12/16/2023 | <a href="/~lake">~lake</a></li>
 		<li>11/18/2023 | <a href="/~serge">~serge</a></li>
