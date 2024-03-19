@@ -25,6 +25,8 @@ connection settings:
 - pop3.tilde.club port 995 with ssl
 - smtp.tilde.club port 587 with starttls
 
+currently thunderbird chooses port 465 which doesn't seem to work, so please try 587
+
 please remember to use only your tilde username as the login name, excluding the `@tilde.club`; for example `invalid` instead of `invalid@tilde.club`
 
 if you'd like your @tilde.club mail forwarded elsewhere, you can put an email 
