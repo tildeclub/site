@@ -9,10 +9,6 @@ include __DIR__."/../header.php";
         <div class="col">
             <p>Sorry Signups are currently closed.</p>
 
-		</td>
-	</tr>
-</table>
-
 	</div>
 </div>
 
