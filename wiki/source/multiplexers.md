@@ -1,7 +1,7 @@
 ---
 title: Terminal Multiplexers
 author: rudi
-category: tutorials
+category: software
 ---
 
 # Terminal Muiltiplexers
