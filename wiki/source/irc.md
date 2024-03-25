@@ -8,9 +8,8 @@ category: tutorials
 
 ## irc
 
-we're members of the [tildeverse](https://tildeverse.org) which we do have a channel on.
-We have changed our main channel to the [Newnet IRC Network](https://newnet.net). the official 
-channel for ~club is `#club`. on both networks. Stop by and say hello!
+Our main channel is on the [Newnet IRC Network](https://newnet.net). the official 
+channel for ~club is `#club`. Stop by and say hello!
 
 run `chat` to open [weechat](https://weechat.org) auto-connected to our irc
 server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
@@ -71,11 +70,10 @@ location (`~/.weechat/relay_socket`). to get started using it, follow these step
       ~/.weechat/relay_socket)
 
 ## IRC Bouncer (ZNC)
+NOTE: Email deepend or message him on IRC if you require ZNC access. 
 
 You can find a ZNC IRC Bouncer by going to: [https://services.tilde.club/znc](https://services.tilde.club/znc).
 Use your tilde.club username and password for login.  
 To connect to your ZNC its at services.tilde.club   Port: 6699(SSL)
 
 NOTE: long passwords fail to authenticate with the ZNC server.
-
-<big>**Users created before December 28th, 2021 will need to email <root@tilde.club> to get your user added.**</big>
