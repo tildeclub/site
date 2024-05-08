@@ -126,10 +126,10 @@ would be noted in each example.
 	(also works with <q><samp>.pl</samp></q> file extension):
 	
 		#!/usr/bin/perl
-		print "Status: 200";
-		print "Content-Type: text/plain";
-		print "";
-		print "Hello World!";
+		print "Status: 200\n";
+		print "Content-Type: text/plain\n";
+		print "\n";
+		print "Hello World!\n";
 	
 	Note that Perl was the main language of choice
 	back in the heyday of CGI programming.
@@ -189,7 +189,7 @@ put the script (or executable) in a file anywhere inside your <q>`public_html`</
 of your Tilde.club home directory,
 with appropriate file extension;
 and also make sure that the thing is **world-readable** _and_ **world-executable**
-(something like <q>`chmod o+rx YOURFILE.EXT`</q> would do).
+(something like <q>`chmod +rx YOURFILE.EXT`</q> would do).
 If you use other language that compiles to a binary executable,
 just world-executable permission will suffice.
 
