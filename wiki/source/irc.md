@@ -53,7 +53,7 @@ location (`~/.weechat/relay_socket`). to get started using it, follow these step
       weechat as the socket doesn't exist until weechat starts up.
 
 3. in your relay client:
-    * [glowing-bear](https://glowing-bear.org):
+    * [glowing-bear](https://glowingbear.tilde.club/):
         - relay hostname: tilde.club:443/~username/weechat
         - relay port: 443
         - your relay password
