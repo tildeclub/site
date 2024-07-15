@@ -93,53 +93,59 @@
 
         </div>
 
-        <div class="col">
-		<h2>UPDATE: March 2024:</h2>
-		<h3>Hey everyone, we've leveled up to Fedora 39!</h3>
-		<p>
-		Big shoutout to all of you who've been part of this journey with tilde.club. Your contributions, big and small, have really made a difference. We couldn't keep this going without all of you.
-		Fedora 39 is here, and it's packed with cool updates and features. Just a heads-up for those of you working with PHP, there's been an update, so you might want to check your scripts to make sure everything's still running smoothly.
-		</p>
-		<p>
-		Looking forward, 2024 is shaping up to be an exciting year, and we're just getting started. We're all about fostering a community that's innovative, supportive, and fun. Together, we're not just keeping tilde.club alive; we're making it thrive.
-		Thanks again to every single one of you. Your creativity, support, and collaboration are what make this community special. Here's to more adventures and achievements together in 2024 and beyond!
-		</p>
-		<hr>
-            <h2>UPDATE: September 2022:</h2>
-            <h3>OS Upgrade to Fedora 36</h3>
-            <p> 
-                Fedora 36 has been installed and things should be back to normal.
-                <strong>**NOTE** SSH client requires SHA2 support since SHA1 support is now disabled.</strong>
-            </p>
-            <hr>
-            <h2>UPDATE: November 2021:</h2>
-            <h3>OS Upgrade to Fedora 35</h3>
-            <p> 
-                We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
-                If you encounter any issues please let ben or deepend know.
-                One notable update that may affect your programs is php is now version 8.  
-                Please check your php scripts to ensure they still work.
-            </p>
-            <p>
-                Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
-                with it.  You can find 2-Factor Authentication inside webmail/settings/security
-            </p>
-            <hr>
-            <h2>UPDATE: March 2020:</h2>
-            <p>
-            Things at tilde.club are going well, Thank you to all our new and existing users.
-            Lets make 2020 a great one for ~club and the wider tildeverse!
-            </p>
-            <p>so what's new?</p>
-            <ul>
-                <li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
-                <li>Users can now utilize more to make their pages unique, such as PHP.</li>
-                <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
-                <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
-            </ul>
-
-        </div>
-
+<div class="col">
+    <?php if (new DateTime() >= new DateTime('2024-09-30')): ?>
+        <h2>UPDATE: September 2024:</h2>
+        <h3>Happy 10th Birthday, Tilde.Club!</h3>
+        <p>
+        Tilde.Club turned 10! This cozy corner of the internet has become a haven for creativity and community. Members have crafted quirky personal pages, shared knowledge through the wiki, and supported each other in countless projects. It's a space where everyone's unique contributions shine, making it truly special. Here's to a decade of fun and friendship, and many more to come!
+        </p>
+        <hr>
+    <?php endif; ?>
+    <h2>UPDATE: March 2024:</h2>
+    <h3>Hey everyone, we've leveled up to Fedora 39!</h3>
+    <p>
+    Big shoutout to all of you who've been part of this journey with tilde.club. Your contributions, big and small, have really made a difference. We couldn't keep this going without all of you.
+    Fedora 39 is here, and it's packed with cool updates and features. Just a heads-up for those of you working with PHP, there's been an update, so you might want to check your scripts to make sure everything's still running smoothly.
+    </p>
+    <p>
+    Looking forward, 2024 is shaping up to be an exciting year, and we're just getting started. We're all about fostering a community that's innovative, supportive, and fun. Together, we're not just keeping tilde.club alive; we're making it thrive.
+    Thanks again to every single one of you. Your creativity, support, and collaboration are what make this community special. Here's to more adventures and achievements together in 2024 and beyond!
+    </p>
+    <hr>
+    <h2>UPDATE: September 2022:</h2>
+    <h3>OS Upgrade to Fedora 36</h3>
+    <p>
+        Fedora 36 has been installed and things should be back to normal.
+        <strong>**NOTE** SSH client requires SHA2 support since SHA1 support is now disabled.</strong>
+    </p>
+    <hr>
+    <h2>UPDATE: November 2021:</h2>
+    <h3>OS Upgrade to Fedora 35</h3>
+    <p>
+        We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
+        If you encounter any issues please let ben or deepend know.
+        One notable update that may affect your programs is php is now version 8.  
+        Please check your php scripts to ensure they still work.
+    </p>
+    <p>
+        Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
+        with it.  You can find 2-Factor Authentication inside webmail/settings/security
+    </p>
+    <hr>
+    <h2>UPDATE: March 2020:</h2>
+    <p>
+    Things at tilde.club are going well, Thank you to all our new and existing users.
+    Lets make 2020 a great one for ~club and the wider tildeverse!
+    </p>
+    <p>so what's new?</p>
+    <ul>
+        <li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
+        <li>Users can now utilize more to make their pages unique, such as PHP.</li>
+        <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
+        <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
+    </ul>
+	</div>
     </div>
 
     <div class="col">
