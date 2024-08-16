@@ -102,6 +102,23 @@
         </p>
         <hr>
     <?php endif; ?>
+    <h2>UPDATE: August 2024:</h2>
+    <h3>Hey Everyone, Disk Quotas are Here!</h3>
+    <p>
+        Just a heads up: we've rolled out disk quotas to keep things running smoothly for everyone. This will help us share space fairly and make sure the system stays in good shape.
+    </p>
+    <p>
+        Here's the scoop:
+        <ul>
+            <li><strong>Soft Limit:</strong> 1 GB – You’ll get a nudge if you go over this, but no worries, you can still go up to the hard limit.</li>
+            <li><strong>Hard Limit:</strong> 3 GB – This is the max. Once you hit this, you won’t be able to save more files until you clean up.</li>
+            <li><strong>Grace Period:</strong> 1 week – If you go over the soft limit, you’ll have a week to get back under before things get strict.</li>
+        </ul>
+    </p>
+    <p>
+        You can check your usage and see how much space you’ve got left by running the <code>resources-used</code> script in your home directory. It’s easy!
+    </p>
+    <hr>
     <h2>UPDATE: March 2024:</h2>
     <h3>Hey everyone, we've leveled up to Fedora 39!</h3>
     <p>

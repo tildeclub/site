@@ -159,3 +159,120 @@ blockquote {
 		display: block;
 	}
 }
+/* Ensure the user-list displays items in a single column */
+.single-column {
+    display: block;
+}
+.single-column li {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Style for the article content */
+.article-headers {
+    background-color: #333;
+    color: #fb5;
+    padding: 1em;
+    border: 1px solid #fb5;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+}
+
+.article-headers p {
+    margin: 0.5em 0;
+}
+
+pre {
+    background-color: #333;
+    color: #fb5;
+    padding: 1em;
+    border: 1px solid #fb5;
+    border-radius: 0.25em;
+}
+
+/* Style for error messages */
+.alert-warning {
+    background-color: darkred;
+    color: #fb5;
+    padding: 1em;
+    border-radius: 0.25em;
+    font-weight: bold;
+}
+/* Ensure the user-list displays items in a single column */
+.single-column {
+    display: block;
+}
+.single-column li {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Tree structure styles */
+.tree, .tree ul {
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+.tree ul {
+    margin-left: 1em; /* indentation for nested lists */
+}
+
+.tree ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid #fb5;
+}
+
+.tree li {
+    margin: 0;
+    padding: 0.5em 0 0.5em 1em; /* space between items */
+    position: relative;
+}
+
+.tree li:before {
+    content: "";
+    display: inline-block;
+    width: 1em; /* horizontal space for the branch line */
+    height: 0;
+    border-top: 1px solid #fb5;
+    position: absolute;
+    top: 1.2em; /* adjust as needed */
+    left: 0;
+}
+
+.tree li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.5em; /* adjust to align with the branch */
+    border-left: 1px solid #fb5;
+}
+
+.tree li:last-child:after {
+    display: none; /* hide the line for the last child */
+}
+
+/* Style for timestamps */
+.timestamp {
+    color: #999;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+}
+/* Highlighted item */
+.highlighted {
+    background-color: #333; /* Dark background to fit the page colorscheme */
+    border: 1px solid #fb5; /* Matching border color */
+    border-radius: 0.25em; /* Slight border radius for better appearance */
+    padding: 0.5em; /* Padding for better readability */
+}
