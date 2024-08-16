@@ -64,6 +64,21 @@ Who are all these folks and what are they up to?
     recently](http://tilde.club/tilde.24h.php)?
 -   [can you give me a blogroll](http://tilde.club/~_/)?
 
+Disk Quotas Now Enforced
+------------------------
+
+To help keep tilde.club running smoothly, we've introduced disk quotas. This helps make sure everyone gets their fair share of space and keeps the system in good shape.
+
+**Here's what you need to know:**
+
+-   **Soft Limit:** 1 GB – You'll get a heads-up if you go over this, but you can still use more space up to the hard limit.
+-   **Hard Limit:** 3 GB – This is the max. If you hit this limit, you'll need to clear some space before adding more files.
+-   **Grace Period:** 1 week – If you exceed the soft limit, you have 7 days to get back under it before the hard limit kicks in.
+
+You can check your usage and see how much space you have left by running the `resources-used` script in your home directory.
+
+If you have any questions or run into any issues, just reach out. We're all in this together!
+
 My function keys don't work in byobu! (using Windows PuTTY)
 ------------------------------------------------------------------
 
