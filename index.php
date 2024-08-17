@@ -30,14 +30,27 @@
             they give, only by the fact that they gave.
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
+            <?php
+            $supporters = json_decode(file_get_contents('supporters.json'), true);
+            usort($supporters, function($a, $b) {
+                return strtotime($b['date']) - strtotime($a['date']);
+            });
+
+            $showAll = isset($_GET['show_all']) && $_GET['show_all'] == 'true';
+            $supportersToShow = $showAll ? $supporters : array_slice($supporters, 0, 10);
+            ?>
+
             <ul>
-                <?php
-                $supporters = json_decode(file_get_contents('supporters.json'), true);
-                foreach ($supporters as $supporter) {
-                    echo '<li>' . htmlspecialchars($supporter['date']) . ' | <a href="' . htmlspecialchars($supporter['url']) . '">' . htmlspecialchars($supporter['name']) . '</a></li>';
-                }
-                ?>
+                <?php foreach ($supportersToShow as $supporter): ?>
+                    <li><?= htmlspecialchars($supporter['date']) ?> | <a href="<?= htmlspecialchars($supporter['url']) ?>"><?= htmlspecialchars($supporter['name']) ?></a></li>
+                <?php endforeach; ?>
             </ul>
+
+            <?php if (!$showAll): ?>
+                <p><a href="?show_all=true">Show all supporters</a></p>
+            <?php else: ?>
+                <p><a href="?show_all=false">Show only the 10 most recent supporters</a></p>
+            <?php endif; ?>
 
         </div>
 
