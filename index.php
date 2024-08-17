@@ -10,7 +10,7 @@
     <h2>Currently Active Users</h2>
     <div class="active-users-list">
         <?php
-        $activeUsers = json_decode(file_get_contents('/path/to/your/webroot/online-users.json'), true);
+        $activeUsers = json_decode(file_get_contents('online-users.json'), true);
 
         if (!empty($activeUsers)) {
             echo "<ul>";
