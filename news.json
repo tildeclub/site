@@ -1,0 +1,56 @@
+[
+    {
+        "date": "2024-09-30",
+        "title": "UPDATE: September 2024",
+        "heading": "Happy 10th Birthday, Tilde.Club!",
+        "content": "Tilde.Club turned 10! This cozy corner of the internet has become a haven for creativity and community. Members have crafted quirky personal pages, shared knowledge through the wiki, and supported each other in countless projects. It's a space where everyone's unique contributions shine, making it truly special. Here's to a decade of fun and friendship, and many more to come!"
+    },
+    {
+        "date": "2024-08-01",
+        "title": "UPDATE: August 2024",
+        "heading": "Hey Everyone, Disk Quotas are Here!",
+        "content": "Just a heads up: we've rolled out disk quotas to keep things running smoothly for everyone. This will help us share space fairly and make sure the system stays in good shape. Here's the scoop:",
+        "details": [
+            "Soft Limit: 1 GB – You’ll get a nudge if you go over this, but no worries, you can still go up to the hard limit.",
+            "Hard Limit: 3 GB – This is the max. Once you hit this, you won’t be able to save more files until you clean up.",
+            "Grace Period: 1 week – If you go over the soft limit, you’ll have a week to get back under before things get strict."
+        ],
+        "additional_content": "You can check your usage and see how much space you’ve got left by running the <code>resources-used</code> script in your home directory. It’s easy!"
+    },
+    {
+        "date": "2024-03-01",
+        "title": "UPDATE: March 2024",
+        "heading": "Hey everyone, we've leveled up to Fedora 39!",
+        "content": "Big shoutout to all of you who've been part of this journey with tilde.club. Your contributions, big and small, have really made a difference. We couldn't keep this going without all of you. Fedora 39 is here, and it's packed with cool updates and features. Just a heads-up for those of you working with PHP, there's been an update, so you might want to check your scripts to make sure everything's still running smoothly.",
+        "details": [
+            "Looking forward, 2024 is shaping up to be an exciting year, and we're just getting started. We're all about fostering a community that's innovative, supportive, and fun. Together, we're not just keeping tilde.club alive; we're making it thrive.",
+            "Thanks again to every single one of you. Your creativity, support, and collaboration are what make this community special. Here's to more adventures and achievements together in 2024 and beyond!"
+        ]
+    },
+    {
+        "date": "2022-09-01",
+        "title": "UPDATE: September 2022",
+        "heading": "OS Upgrade to Fedora 36",
+        "content": "Fedora 36 has been installed and things should be back to normal.",
+        "note": "**NOTE** SSH client requires SHA2 support since SHA1 support is now disabled."
+    },
+    {
+        "date": "2021-11-01",
+        "title": "UPDATE: November 2021",
+        "heading": "OS Upgrade to Fedora 35",
+        "content": "We have upgraded our OS to Fedora 35. All updates installed without error or any issues. If you encounter any issues please let ben or deepend know. One notable update that may affect your programs is php is now version 8. Please check your php scripts to ensure they still work.",
+        "additional_content": "Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication with it. You can find 2-Factor Authentication inside webmail/settings/security."
+    },
+    {
+        "date": "2020-03-01",
+        "title": "UPDATE: March 2020",
+        "heading": "",
+        "content": "Things at tilde.club are going well, Thank you to all our new and existing users. Let's make 2020 a great one for ~club and the wider tildeverse!",
+        "details": [
+            "We have reached 1985 users! and many more signing up daily. Welcome everyone.",
+            "Users can now utilize more to make their pages unique, such as PHP.",
+            "~club now has a Mastodon page you can follow us at https://tilde.zone/@tildeclub.",
+            "Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth."
+        ]
+    }
+]
