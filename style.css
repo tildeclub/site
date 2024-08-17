@@ -278,5 +278,5 @@ pre {
 }
 .recently-updated a {
     font-weight: bold;
-    color: #ffa !important; /* Use !important to override other styles */
+    color: #fb5 !important; /* Use !important to override other styles */
 }
