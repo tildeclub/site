@@ -14,6 +14,7 @@
 <!-- Tildeverse Banner Exchange code begin -->
 	<br><br>
 	    <p>ECDSA fingerprint: SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE</p>
+		<a href="https://github.com/tildeclub/site">page source</a> | <a href="http://updown.tilde.club/">Uptime Status</a> | <a href="https://tilde.club/stats" target="_blank">Stats</a>
 	</footer>
 	</body>
 </html>
