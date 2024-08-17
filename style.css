@@ -280,3 +280,13 @@ pre {
     font-weight: bold;
     color: #fb5 !important; /* Use !important to override other styles */
 }
+        .rss-icon-container {
+            position: absolute;
+            right: 20px; /* Adjust as needed */
+            top: 20px; /* Adjust as needed */
+        }
+
+        .rss-icon-container img {
+            width: 24px; /* Adjust icon size */
+            height: 24px; /* Adjust icon size */
+        }
