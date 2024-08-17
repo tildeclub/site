@@ -9,11 +9,11 @@
 <div class="active-users-container">
     <h2 style="display: inline;">Currently Active Users:</h2>
     <div class="active-users-list">
+        <ul>
         <?php
         $activeUsers = json_decode(file_get_contents('online-users.json'), true);
 
         if (!empty($activeUsers)) {
-            echo "<ul>";
             foreach ($activeUsers as $user) {
                 $username = htmlspecialchars($user);
                 echo "<li><a href='/~$username'>$username</a></li>";
@@ -23,11 +23,11 @@
                 $username = htmlspecialchars($user);
                 echo "<li><a href='/~$username'>$username</a></li>";
             }
-            echo "</ul>";
         } else {
-            echo "<span>No active users at the moment.</span>";
+            echo "<li>No active users at the moment.</li>";
         }
         ?>
+        </ul>
     </div>
 </div>
 <div class="grid">
