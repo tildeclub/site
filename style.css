@@ -276,8 +276,7 @@ pre {
     border-radius: 0.25em; /* Slight border radius for better appearance */
     padding: 0.5em; /* Padding for better readability */
 }
-.recently-updated {
-    padding: 2px;
-    border-radius: 3px;
-    color: #fb5 !important;
+.recently-updated a {
+    font-weight: bold;
+    color: #ffa !important; /* Use !important to override other styles */
 }
