@@ -5,7 +5,31 @@
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
 <!-- <p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account information email.</p> -->
+<!-- Active Users Scrolling List -->
+<div class="active-users-container">
+    <h2 style="display: inline;">Currently Active Users:</h2>
+    <div class="active-users-list">
+        <ul>
+        <?php
+        $activeUsers = json_decode(file_get_contents('online-users.json'), true);
 
+        if (!empty($activeUsers)) {
+            foreach ($activeUsers as $user) {
+                $username = htmlspecialchars($user);
+                echo "<li><a href='/~$username'>$username</a></li>";
+            }
+            // Repeat the list for seamless scrolling
+            foreach ($activeUsers as $user) {
+                $username = htmlspecialchars($user);
+                echo "<li><a href='/~$username'>$username</a></li>";
+            }
+        } else {
+            echo "<li>No active users at the moment.</li>";
+        }
+        ?>
+        </ul>
+    </div>
+</div>
 <div class="grid">
     <div class="row">
 
