@@ -296,16 +296,14 @@ pre {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    overflow: hidden; /* Hide overflow to prevent scrolling glitches */
 }
 
 .active-users-list {
     overflow: hidden;
-    box-sizing: border-box;
-    padding-left: 10px; /* Space between heading and scrolling list */
-    background-color: #111;
-    color: #fb5;
-    width: 100%; /* Make the list take up the rest of the available space */
     position: relative;
+    width: 100%;
+    height: 2em; /* Adjust height as needed */
 }
 
 .active-users-list ul {
@@ -314,7 +312,7 @@ pre {
     margin: 0;
     list-style-type: none;
     white-space: nowrap;
-    animation: scroll-left 30s linear infinite; /* Adjust the duration as needed */
+    animation: scroll-left 30s linear infinite;
 }
 
 .active-users-list li {
@@ -334,9 +332,10 @@ pre {
 
 @keyframes scroll-left {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%); /* Start off-screen */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* End off-screen */
     }
 }
+
