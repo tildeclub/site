@@ -4,7 +4,7 @@
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
-<p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account information email.</p>
+<!-- <p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account information email.</p> -->
 <!-- Active Users Scrolling List -->
 <div class="active-users-container">
     <h2 style="display: inline;">Currently Active Users:</h2>
