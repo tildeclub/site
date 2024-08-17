@@ -7,7 +7,7 @@
 <p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account information email.</p>
 <!-- Active Users Scrolling List -->
 <div class="active-users-container">
-    <h2>Currently Active Users</h2>
+    <h2 style="display: inline;">Currently Active Users:</h2>
     <div class="active-users-list">
         <?php
         $activeUsers = json_decode(file_get_contents('online-users.json'), true);
@@ -19,7 +19,7 @@
             }
             echo "</ul>";
         } else {
-            echo "<p>No active users at the moment.</p>";
+            echo "<span>No active users at the moment.</span>";
         }
         ?>
     </div>
