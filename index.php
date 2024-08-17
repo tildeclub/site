@@ -13,12 +13,13 @@
         $activeUsers = json_decode(file_get_contents('online-users.json'), true);
 
         if (!empty($activeUsers)) {
-            echo "<ul>";
+            $userList = "";
             foreach ($activeUsers as $user) {
                 $username = htmlspecialchars($user);
-                echo "<li><a href='/~$username'>$username</a></li>";
+                $userList .= "<li><a href='/~$username'>$username</a></li>";
             }
-            echo "</ul>";
+            // Print the list with data-content for seamless scrolling
+            echo "<ul data-content=\"$userList\">$userList</ul>";
         } else {
             echo "<span>No active users at the moment.</span>";
         }
