@@ -55,75 +55,35 @@
         </div>
 
 <div class="col">
-    <?php if (new DateTime() >= new DateTime('2024-09-30')): ?>
-        <h2>UPDATE: September 2024:</h2>
-        <h3>Happy 10th Birthday, Tilde.Club!</h3>
-        <p>
-        Tilde.Club turned 10! This cozy corner of the internet has become a haven for creativity and community. Members have crafted quirky personal pages, shared knowledge through the wiki, and supported each other in countless projects. It's a space where everyone's unique contributions shine, making it truly special. Here's to a decade of fun and friendship, and many more to come!
-        </p>
-        <hr>
-    <?php endif; ?>
-    <h2>UPDATE: August 2024:</h2>
-    <h3>Hey Everyone, Disk Quotas are Here!</h3>
-    <p>
-        Just a heads up: we've rolled out disk quotas to keep things running smoothly for everyone. This will help us share space fairly and make sure the system stays in good shape.
-    </p>
-    <p>
-        Here's the scoop:
-        <ul>
-            <li><strong>Soft Limit:</strong> 1 GB – You’ll get a nudge if you go over this, but no worries, you can still go up to the hard limit.</li>
-            <li><strong>Hard Limit:</strong> 3 GB – This is the max. Once you hit this, you won’t be able to save more files until you clean up.</li>
-            <li><strong>Grace Period:</strong> 1 week – If you go over the soft limit, you’ll have a week to get back under before things get strict.</li>
-        </ul>
-    </p>
-    <p>
-        You can check your usage and see how much space you’ve got left by running the <code>resources-used</code> script in your home directory. It’s easy!
-    </p>
-    <hr>
-    <h2>UPDATE: March 2024:</h2>
-    <h3>Hey everyone, we've leveled up to Fedora 39!</h3>
-    <p>
-    Big shoutout to all of you who've been part of this journey with tilde.club. Your contributions, big and small, have really made a difference. We couldn't keep this going without all of you.
-    Fedora 39 is here, and it's packed with cool updates and features. Just a heads-up for those of you working with PHP, there's been an update, so you might want to check your scripts to make sure everything's still running smoothly.
-    </p>
-    <p>
-    Looking forward, 2024 is shaping up to be an exciting year, and we're just getting started. We're all about fostering a community that's innovative, supportive, and fun. Together, we're not just keeping tilde.club alive; we're making it thrive.
-    Thanks again to every single one of you. Your creativity, support, and collaboration are what make this community special. Here's to more adventures and achievements together in 2024 and beyond!
-    </p>
-    <hr>
-    <h2>UPDATE: September 2022:</h2>
-    <h3>OS Upgrade to Fedora 36</h3>
-    <p>
-        Fedora 36 has been installed and things should be back to normal.
-        <strong>**NOTE** SSH client requires SHA2 support since SHA1 support is now disabled.</strong>
-    </p>
-    <hr>
-    <h2>UPDATE: November 2021:</h2>
-    <h3>OS Upgrade to Fedora 35</h3>
-    <p>
-        We have upgraded our OS to Fedora 35. All updates installed without error or any issues.
-        If you encounter any issues please let ben or deepend know.
-        One notable update that may affect your programs is php is now version 8.  
-        Please check your php scripts to ensure they still work.
-    </p>
-    <p>
-        Webmail has also been upgraded as well and we have enabled the ability for our users to use 2-Factor Authentication
-        with it.  You can find 2-Factor Authentication inside webmail/settings/security
-    </p>
-    <hr>
-    <h2>UPDATE: March 2020:</h2>
-    <p>
-    Things at tilde.club are going well, Thank you to all our new and existing users.
-    Lets make 2020 a great one for ~club and the wider tildeverse!
-    </p>
-    <p>so what's new?</p>
-    <ul>
-        <li>We have reached 1985 users! and many more signing up daily.  Welcome everyone.</li>
-        <li>Users can now utilize more to make their pages unique, such as PHP.</li>
-        <li>~club now has a Mastodon page you can follow us at <a href="https://tilde.zone/@tildeclub" target="_blank">https://tilde.zone/@tildeclub</a></li>
-        <li>Users can now setup Two-Factor Authentication (2FA) to use for SSH logins instead of only public key auth <a href="https://tilde.club/wiki/2fa.html">More Info</a></li>
-    </ul>
-	</div>
+            <?php
+            $news = json_decode(file_get_contents('news.json'), true);
+
+            foreach ($news as $newsItem) {
+                if (new DateTime() >= new DateTime($newsItem['date'])) {
+                    echo '<h2>' . htmlspecialchars($newsItem['title']) . ':</h2>';
+                    echo '<h3>' . htmlspecialchars($newsItem['heading']) . '</h3>';
+                    echo '<p>' . htmlspecialchars($newsItem['content']) . '</p>';
+
+                    if (isset($newsItem['details']) && is_array($newsItem['details'])) {
+                        echo '<ul>';
+                        foreach ($newsItem['details'] as $detail) {
+                            echo '<li>' . htmlspecialchars($detail) . '</li>';
+                        }
+                        echo '</ul>';
+                    }
+
+                    if (isset($newsItem['note'])) {
+                        echo '<p><strong>' . htmlspecialchars($newsItem['note']) . '</strong></p>';
+                    }
+
+                    if (isset($newsItem['additional_content'])) {
+                        echo '<p>' . htmlspecialchars($newsItem['additional_content']) . '</p>';
+                    }
+
+                    echo '<hr>';
+                }
+            }
+            ?>
     </div>
 
     <div class="col">
