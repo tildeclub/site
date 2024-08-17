@@ -279,5 +279,5 @@ pre {
 .recently-updated {
     padding: 2px;
     border-radius: 3px;
-    color: #fb5;
+    color: #fb5 !important;
 }
