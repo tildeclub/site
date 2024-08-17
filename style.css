@@ -317,6 +317,15 @@ pre {
     animation: scroll-left 30s linear infinite; /* Adjust the duration as needed */
 }
 
+.active-users-list ul::after {
+    content: "";
+    display: flex;
+}
+
+.active-users-list ul::after {
+    content: attr(data-content);
+}
+
 .active-users-list li {
     display: inline-block;
     padding: 0 20px; /* Space between usernames */
@@ -337,14 +346,6 @@ pre {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
-
-.active-users-list ul:before {
-    content: '';
-    display: inline-block;
-    width: 100%; /* Makes it loop seamlessly */
-    flex-shrink: 0;
-}
-
