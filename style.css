@@ -291,3 +291,26 @@ pre {
     font-weight: bold;
     color: #fb5 !important; /* Use !important to override other styles */
 }
+.active-users-container {
+    margin-top: 20px;
+}
+
+.active-users-list {
+    max-height: 150px; /* Adjust the height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 0.25em;
+}
+
+.active-users-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.active-users-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
