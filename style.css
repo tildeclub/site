@@ -103,31 +103,42 @@ code > span.fl {
 }
 
  /* Style the navbar */
-#navbar {
-	overflow: hidden;
-	background-color: #fb5;
-	color: #222;
-	z-index: 99;
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	border-radius: 0.25em;
-}
+        #navbar {
+            overflow: hidden;
+            background-color: #fb5;
+            color: #222;
+            z-index: 99;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 0.25em;
+        }
 
-#navbar a:hover {
-	background-color: #f93;
-}
+        #navbar a:hover {
+            background-color: #f93;
+        }
 
-/* Navbar links */
-#navbar a {
-	float: left;
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-}
+        /* Navbar links */
+        #navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        /* RSS Icon Styles */
+        .rss-icon {
+            float: right;
+            padding: 14px;
+        }
+
+        .rss-icon img {
+            width: 24px; /* Adjust icon size */
+            height: 24px; /* Adjust icon size */
+        }
 
 /* Page content */
 .content {
@@ -280,13 +291,3 @@ pre {
     font-weight: bold;
     color: #fb5 !important; /* Use !important to override other styles */
 }
-        .rss-icon-container {
-            position: absolute;
-            right: 20px; /* Adjust as needed */
-            top: 20px; /* Adjust as needed */
-        }
-
-        .rss-icon-container img {
-            width: 24px; /* Adjust icon size */
-            height: 24px; /* Adjust icon size */
-        }
