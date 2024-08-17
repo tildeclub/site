@@ -9,52 +9,6 @@
 <div class="grid">
     <div class="row">
 
-        <div class="col">      
-            <p>
-            tilde.club is not a social network it is one tiny totally
-            standard unix computer that people respectfully use together
-            in their shared quest to build awesome web pages
-            </p>
-
-            <p>
-            If you would like a list of <a href="http://tilde.club/tilde.24h.php">
-                RECENTLY CHANGED PAGES</a> you can see that too
-            </p>
-            <p>
-                Or Check out the <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a> created by <a href="/~tweska" target="_blank">~tweska</a>
-            </p>
-
-            <hr>
-            <h2>tilde.club gold star supporters</h2>
-            <p>Tilde.Club is supported by a global community of
-            good people. We don't rank people by the amount
-            they give, only by the fact that they gave.
-            Here's who has donated! When you're on the
-            server, THANK THEM.</p>
-            <?php
-            $supporters = json_decode(file_get_contents('supporters.json'), true);
-            usort($supporters, function($a, $b) {
-                return strtotime($b['date']) - strtotime($a['date']);
-            });
-
-            $showAll = isset($_GET['show_all']) && $_GET['show_all'] == 'true';
-            $supportersToShow = $showAll ? $supporters : array_slice($supporters, 0, 10);
-            ?>
-
-            <ul>
-                <?php foreach ($supportersToShow as $supporter): ?>
-                    <li><?= htmlspecialchars($supporter['date']) ?> | <a href="<?= htmlspecialchars($supporter['url']) ?>"><?= htmlspecialchars($supporter['name']) ?></a></li>
-                <?php endforeach; ?>
-            </ul>
-
-            <?php if (!$showAll): ?>
-                <p><a href="?show_all=true">Show all supporters</a></p>
-            <?php else: ?>
-                <p><a href="?show_all=false">Show only the 10 most recent supporters</a></p>
-            <?php endif; ?>
-
-        </div>
-
         <div class="col">
             <?php
             $news = json_decode(file_get_contents('news.json'), true);
@@ -87,6 +41,38 @@
             ?>
         </div>
 
+        <div class="col">
+            <h2>tilde.club gold star supporters</h2>
+            <p>Tilde.Club is supported by a global community of
+            good people. We don't rank people by the amount
+            they give, only by the fact that they gave.
+            Here's who has donated! When you're on the
+            server, THANK THEM.</p>
+            <?php
+            $supporters = json_decode(file_get_contents('supporters.json'), true);
+            usort($supporters, function($a, $b) {
+                return strtotime($b['date']) - strtotime($a['date']);
+            });
+
+            $showAll = isset($_GET['show_all']) && $_GET['show_all'] == 'true';
+            $supportersToShow = $showAll ? $supporters : array_slice($supporters, 0, 10);
+            ?>
+
+            <ul>
+                <?php foreach ($supportersToShow as $supporter): ?>
+                    <li><?= htmlspecialchars($supporter['date']) ?> | <a href="<?= htmlspecialchars($supporter['url']) ?>"><?= htmlspecialchars($supporter['name']) ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+
+            <?php if (!$showAll): ?>
+                <p><a href="?show_all=true">Show all supporters</a></p>
+            <?php else: ?>
+                <p><a href="?show_all=false">Show only the 10 most recent supporters</a></p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col">
             <h3>here are the home pages of our users</h3>
             <p>this list does not include people who haven't changed their page yet</p>
