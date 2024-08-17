@@ -307,15 +307,15 @@ pre {
 
 .active-users-list ul {
     display: inline-block;
-    padding-left: 100%; /* Initial offset for animation */
-    animation: scroll-left 15s linear infinite; /* Adjust duration as needed */
+    padding-left: 100%; /* Start position for the animation */
+    animation: scroll-left 15s linear infinite; /* Adjust the duration as needed */
     margin: 0;
     list-style-type: none;
 }
 
 .active-users-list li {
     display: inline;
-    padding: 0 20px; /* Space between names */
+    padding: 0 20px; /* Space between usernames */
 }
 
 @keyframes scroll-left {
@@ -326,3 +326,4 @@ pre {
         transform: translateX(-100%);
     }
 }
+
