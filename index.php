@@ -42,6 +42,21 @@
         </div>
 
         <div class="col">
+            <p>
+            tilde.club is not a social network it is one tiny totally
+            standard unix computer that people respectfully use together
+            in their shared quest to build awesome web pages
+            </p>
+
+            <p>
+            If you would like a list of <a href="http://tilde.club/tilde.24h.php">
+                RECENTLY CHANGED PAGES</a> you can see that too
+            </p>
+            <p>
+                Or Check out the <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a> created by <a href="/~tweska" target="_blank">~tweska</a>
+            </p>
+
+            <hr>
             <h2>tilde.club gold star supporters</h2>
             <p>Tilde.Club is supported by a global community of
             good people. We don't rank people by the amount
