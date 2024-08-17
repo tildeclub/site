@@ -300,9 +300,10 @@ pre {
     overflow: hidden;
     box-sizing: border-box;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #111; /* Match the site’s background color */
     border-radius: 0.25em;
-    border: 1px solid #ccc;
+    border: 1px solid #fb5; /* Match the border color to the site's theme */
+    color: #fb5; /* Match the text color to the site's theme */
 }
 
 .active-users-list ul {
@@ -316,6 +317,8 @@ pre {
 .active-users-list li {
     display: inline;
     padding: 0 20px; /* Space between usernames */
+    color: #fb5; /* Ensure the username color matches the theme */
+    font-family: "courier new", monospace; /* Match the font to the rest of the site */
 }
 
 @keyframes scroll-left {
@@ -326,4 +329,5 @@ pre {
         transform: translateX(-100%);
     }
 }
+
 
