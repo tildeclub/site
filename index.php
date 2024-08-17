@@ -13,34 +13,66 @@
             <?php
             $news = json_decode(file_get_contents('news.json'), true);
 
-            foreach ($news as $newsItem) {
-                if (new DateTime() >= new DateTime($newsItem['date'])) {
-                    echo '<h2>' . htmlspecialchars($newsItem['title']) . ':</h2>';
-                    echo '<h3>' . htmlspecialchars($newsItem['heading']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($newsItem['content']) . '</p>';
+            // Sort news items by date, most recent first
+            usort($news, function ($a, $b) {
+                return strtotime($b['date']) - strtotime($a['date']);
+            });
 
-                    if (isset($newsItem['details']) && is_array($newsItem['details'])) {
-                        echo '<ul>';
-                        foreach ($newsItem['details'] as $detail) {
-                            echo '<li>' . htmlspecialchars($detail) . '</li>';
-                        }
-                        echo '</ul>';
+            // Determine the year filter if present
+            $selectedYear = isset($_GET['year']) ? $_GET['year'] : null;
+            $filteredNews = [];
+
+            if ($selectedYear) {
+                // Filter news by selected year
+                foreach ($news as $newsItem) {
+                    if (date('Y', strtotime($newsItem['date'])) == $selectedYear) {
+                        $filteredNews[] = $newsItem;
                     }
-
-                    if (isset($newsItem['note'])) {
-                        echo '<p><strong>' . htmlspecialchars($newsItem['note']) . '</strong></p>';
-                    }
-
-                    if (isset($newsItem['additional_content'])) {
-                        echo '<p>' . htmlspecialchars($newsItem['additional_content']) . '</p>';
-                    }
-
-                    echo '<hr>';
                 }
+            } else {
+                // Show only the most recent 2 news items if no year filter is applied
+                $filteredNews = array_slice($news, 0, 2);
             }
+
+            // Display news items
+            foreach ($filteredNews as $newsItem) {
+                echo '<h2>' . htmlspecialchars($newsItem['title']) . ':</h2>';
+                echo '<h3>' . htmlspecialchars($newsItem['heading']) . '</h3>';
+                echo '<p>' . htmlspecialchars($newsItem['content']) . '</p>';
+
+                if (isset($newsItem['details']) && is_array($newsItem['details'])) {
+                    echo '<ul>';
+                    foreach ($newsItem['details'] as $detail) {
+                        echo '<li>' . htmlspecialchars($detail) . '</li>';
+                    }
+                    echo '</ul>';
+                }
+
+                if (isset($newsItem['note'])) {
+                    echo '<p><strong>' . htmlspecialchars($newsItem['note']) . '</strong></p>';
+                }
+
+                if (isset($newsItem['additional_content'])) {
+                    echo '<p>' . htmlspecialchars($newsItem['additional_content']) . '</p>';
+                }
+
+                echo '<hr>';
+            }
+
+            // Display year links for filtering
+            $years = array_unique(array_map(function ($newsItem) {
+                return date('Y', strtotime($newsItem['date']));
+            }, $news));
+            sort($years);
+
+            echo '<div><strong>View news by year:</strong> ';
+            foreach ($years as $year) {
+                echo '<a href="?year=' . $year . '">' . $year . '</a> ';
+            }
+            echo '</div>';
             ?>
         </div>
-
+        
         <div class="col">
             <p>
             tilde.club is not a social network it is one tiny totally
