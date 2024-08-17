@@ -165,11 +165,25 @@
                     "385212d5ea557a21b77af992ea1b3c1ea71d22c9",
                     "b51a889545b5f065fd1ac2b8760cab0088a9dc22"
                 ];
+                $oneMonthAgo = strtotime('-1 month');
+
                 foreach (glob("/home/*") as $user) {
                     $index = "$user/public_html/index.html";
                     if (!file_exists($index) || in_array(sha1_file($index), $page_shas)) continue;
-                    $user = basename($user); ?>
-                    <li><a href="/~<?=$user?>/">~<?=$user?></a></li>
+
+                    // Check for any recent changes in the public_html directory
+                    $recentChange = false;
+                    foreach (glob("$user/public_html/*") as $file) {
+                        if (filemtime($file) > $oneMonthAgo) {
+                            $recentChange = true;
+                            break;
+                        }
+                    }
+
+                    $user = basename($user);
+                    $class = $recentChange ? 'recently-updated' : '';
+                    ?>
+                    <li class="<?= $class ?>"><a href="/~<?=$user?>/">~<?=$user?></a></li>
                 <?php } ?>
             </ul>
         </div>
