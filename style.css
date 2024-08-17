@@ -296,21 +296,33 @@ pre {
 }
 
 .active-users-list {
-    max-height: 150px; /* Adjust the height as needed */
-    overflow-y: auto;
-    border: 1px solid #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 0.25em;
+    border: 1px solid #ccc;
 }
 
 .active-users-list ul {
-    list-style-type: none;
-    padding: 0;
+    display: inline-block;
+    padding-left: 100%; /* Initial offset for animation */
+    animation: scroll-left 15s linear infinite; /* Adjust duration as needed */
     margin: 0;
+    list-style-type: none;
 }
 
 .active-users-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
+    display: inline;
+    padding: 0 20px; /* Space between names */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
