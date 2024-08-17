@@ -1,0 +1,17 @@
+#!/usr/bin/php
+<?php
+// Define the path to the JSON file
+$jsonFile = '/usr/share/nginx/html/online-users.json';
+
+// Run the `who` command to get the list of active users
+$activeUsers = shell_exec("who | awk '{print $1}' | sort | uniq");
+
+// Convert the output into an array, filtering out any empty lines
+$activeUsersArray = array_filter(explode("\n", $activeUsers));
+
+// Convert the array to JSON format
+$activeUsersJson = json_encode($activeUsersArray, JSON_PRETTY_PRINT);
+
+// Write the JSON data to the file
+file_put_contents($jsonFile, $activeUsersJson);
+?>
