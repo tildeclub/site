@@ -131,9 +131,10 @@
 
     <div class="row">
         <div class="col">
-            <h3>here are the home pages of our users</h3>
-            <p>this list does not include people who haven't changed their page yet</p>
-            <p>if you're not seeing yourself listed here, change your page from the default.</p>
+               <h3>here are the home pages of our users</h3>
+               <p>this list does not include people who haven't changed their page yet.</p>
+               <p>if you're not seeing yourself listed here, change your page from the default.</p>
+               <p>users with recently updated pages within the last month are highlighted in a lighter color.</p>
             <p><a href="/users/">list all users</a></p>
             <ul class="user-list">
                 <?php
