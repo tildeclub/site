@@ -4,6 +4,8 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?=isset($title) ? $title : "Welcome to ~tilde.club~"?></title>
+                <link rel="preload" href="/style.css" as="style">
+		<link rel="preload" href="/images/rss.png" as="image">
 		<link rel="stylesheet" href="/style.css">
 
 	</head>
