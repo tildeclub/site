@@ -15,7 +15,8 @@
         if (!empty($activeUsers)) {
             echo "<ul>";
             foreach ($activeUsers as $user) {
-                echo "<li>" . htmlspecialchars($user) . "</li>";
+                $username = htmlspecialchars($user);
+                echo "<li><a href='/~$username'>$username</a></li>";
             }
             echo "</ul>";
         } else {
