@@ -21,6 +21,7 @@
             // Determine the year filter if present
             $selectedYear = isset($_GET['year']) ? $_GET['year'] : null;
             $filteredNews = [];
+            $currentDate = new DateTime();
 
             if ($selectedYear) {
                 // Filter news by selected year
@@ -31,7 +32,14 @@
                 }
             } else {
                 // Show only the most recent 2 news items if no year filter is applied
-                $filteredNews = array_slice($news, 0, 2);
+                foreach ($news as $newsItem) {
+                    if (new DateTime($newsItem['date']) <= $currentDate) {
+                        $filteredNews[] = $newsItem;
+                    }
+                    if (count($filteredNews) >= 2) {
+                        break;
+                    }
+                }
             }
 
             // Display news items
@@ -72,6 +80,7 @@
             echo '</div>';
             ?>
         </div>
+
         
         <div class="col">
             <p>
