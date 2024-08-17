@@ -305,6 +305,7 @@ pre {
     background-color: #111;
     color: #fb5;
     width: 100%; /* Make the list take up the rest of the available space */
+    position: relative;
 }
 
 .active-users-list ul {
@@ -314,6 +315,12 @@ pre {
     list-style-type: none;
     white-space: nowrap;
     animation: scroll-left 15s linear infinite;
+}
+
+.active-users-list ul:before,
+.active-users-list ul:after {
+    content: attr(data-content);
+    display: inline-block;
 }
 
 .active-users-list li {
@@ -328,14 +335,8 @@ pre {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
-}
-
-.active-users-list ul::after {
-    content: '';
-    display: inline-block;
-    width: 100%; /* Width of the space to repeat */
 }
 
 
