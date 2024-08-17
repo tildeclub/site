@@ -5,7 +5,25 @@
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
 <p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account information email.</p>
+<!-- Active Users Scrolling List -->
+<div class="active-users-container">
+    <h2>Currently Active Users</h2>
+    <div class="active-users-list">
+        <?php
+        $activeUsers = json_decode(file_get_contents('/path/to/your/webroot/online-users.json'), true);
 
+        if (!empty($activeUsers)) {
+            echo "<ul>";
+            foreach ($activeUsers as $user) {
+                echo "<li>" . htmlspecialchars($user) . "</li>";
+            }
+            echo "</ul>";
+        } else {
+            echo "<p>No active users at the moment.</p>";
+        }
+        ?>
+    </div>
+</div>
 <div class="grid">
     <div class="row">
 
