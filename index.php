@@ -31,64 +31,12 @@
             Here's who has donated! When you're on the
             server, THANK THEM.</p>
             <ul>
-		<li>05/08/2024 | <a href="/~whitcomb">~whitcomb</a></li>
-		<li>03/14/2024 | <a href="/~alcor">~alcor</a></li>
-		<li>02/17/2024 | <a href="/~dddaaannn">~dddaaannn</a></li>
-		<li>12/19/2023 | <a href="/~passthejoe">~passthejoe</a></li>
-		<li>12/16/2023 | <a href="/~lake">~lake</a></li>
-		<li>11/18/2023 | <a href="/~serge">~serge</a></li>
-		<li>08/17/2023 | <a href="/~amr">~amr</a></li>
-		<li>04/08/2023 | <a href="/~corwin">~corwin</a></li>
-		<li>05/15/2022 | <a href="/~hifikuno">~hifikuno</a></li>
-		<li>12/20/2022 | <a href="/~rajiv">~rajiv</a></li>
-                <li>09/27/2022 | <a href="/~tubbo">~tubbo</a></li>
-                <li>09/08/2022 | <a href="/~cyrus">~cyrus</a></li>
-		<li>08/17/2023 | <a href="/~ranguli">~ranguli</a></li>
-                <li>06/08/2022 | <a href="/~barnold">~barnold</a></li>
-                <li>05/12/2022 | <a href="/~hifikuno">~hifikuno</a></li>
-                <li>04/27/2022 | <a href="/~mhd">~mhd</a></li>
-                <li>02/29/2022 | <a href="/~neildaemond">~neildaemond</a></li>
-                <li>02/15/2022 | <a href="/~alex1138">~alex1138</a></li>
-                <li>02/15/2022 | <a href="/~amr">~amr</a></li>
-                <li>01/27/2022 | <a href="/~whitcomb">~whitcomb</a></li>
-                <li>12/15/2021 | <a href="/~dctrud">~dctrud</a></li>
-                <li>10/10/2021 | <a href="/~dmi3">~dmi3</a></li>
-                <li>03/08/2021 | <a href="/~webwiz">~webwiz</a></li>
-                <li>02/13/2021 | <a href="/~whitcomb">~whitcomb</a></li>
-                <li>11/30/2020 | <a href="/~dethelor">~dethelor</a></li>
-                <li>11/26/2020 | <a href="/~waffles">~waffles</a></li>
-                <li>11/20/2020 | <a href="/~buttstuf">~buttstuf</a></li>
-                <li>09/03/2020 | <a href="/~northernlights">~northernlights</a></li>
-                <li>08/16/2020 | <a href="/~dctrud">~dctrud</a></li>
-		<li>07/21/2020 | <a href="/~offdutypirate">~offdutypirate</a></li>
-                <li>07/15/2020 | <a href="/~necrotechno">~necrotechno</a></li>
-                <li>07/10/2020 | <a href="/~snowdusk">~snowdusk</a></li>
-                <li>05/31/2020 | <a href="/~melyanna">~melyanna</a></li>
-                <li>05/15/2020 | <a href="/~wgreenhouse">~wgreenhouse</a></li>
-                <li>04/21/2020 | <a href="/~cano">~cano</a></li>
-                <li>11/09/2019 | <a href="/~sneak">~sneak</a></li>
-                <li>10/05/2014 | <a href="/~beau">~beau</a></li>
-                <li>10/05/2014 | <a href="/~skk">~skk</a></li>
-                <li>10/05/2014 | <a href="/~joeld">~joeld</a></li>
-                <li>10/05/2014 | <a href="/~john">~john</a></li>
-                <li>10/05/2014 | <a href="/~brendn">~brendn</a></li>
-                <li>10/05/2014 | <a href="/~droob">~droob</a></li>
-                <li>10/05/2014 | <a href="/~delfuego">~delfuego</a></li>
-                <li>10/05/2014 | <a href="/~jonathan">~jonathan</a></li>
-                <li>10/05/2014 | <a href="/~coldmode">~coldmode</a></li>
-                <li>10/05/2014 | <a href="/~jemal">~jemal</a></li>
-                <li>10/05/2014 | <a href="/~jonbell">~jonbell</a></li>
-                <li>10/05/2014 | <a href="/~_">~_</a></li>
-                <li>10/05/2014 | <a href="/~dvd">~dvd</a></li>
-                <li>10/05/2014 | <a href="/~whitneymcn">~whitneymcn</a></li>
-                <li>10/05/2014 | <a href="/~jimray">~jimray</a></li>
-                <li>10/05/2014 | <a href="/~schussat">~schussat</a></li>
-                <li>10/05/2014 | <a href="/~macdiva">~macdiva</a></li>
-                <li>10/03/2014 | <a href="/~extraface">~extraface</a></li>
-                <li>10/03/2014 | <a href="/~joshuag">~joshuag</a></li>
-                <li>10/03/2014 | <a href="/~zarate">~zarate</a></li>
-                <li>10/03/2014 | <a href="/~englishm">~englishm</a></li>
-                <li>10/03/2014 | <a href="/~danbri">~danbri</a></li>
+                <?php
+                $supporters = json_decode(file_get_contents('supporters.json'), true);
+                foreach ($supporters as $supporter) {
+                    echo '<li>' . htmlspecialchars($supporter['date']) . ' | <a href="' . htmlspecialchars($supporter['url']) . '">' . htmlspecialchars($supporter['name']) . '</a></li>';
+                }
+                ?>
             </ul>
 
         </div>
