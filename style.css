@@ -309,22 +309,16 @@ pre {
 }
 
 .active-users-list ul {
-    display: inline-block;
+    display: flex;
     padding: 0;
     margin: 0;
     list-style-type: none;
     white-space: nowrap;
-    animation: scroll-left 15s linear infinite;
-}
-
-.active-users-list ul:before,
-.active-users-list ul:after {
-    content: attr(data-content);
-    display: inline-block;
+    animation: scroll-left 30s linear infinite; /* Adjust the duration as needed */
 }
 
 .active-users-list li {
-    display: inline;
+    display: inline-block;
     padding: 0 20px; /* Space between usernames */
     color: #fb5;
     font-family: "courier new", monospace;
@@ -335,9 +329,13 @@ pre {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
-
-
+.active-users-list ul:before {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Makes it loop seamlessly */
+    flex-shrink: 0;
+}
