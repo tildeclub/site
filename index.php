@@ -23,22 +23,24 @@
             $filteredNews = [];
             $currentDate = new DateTime();
 
-            if ($selectedYear) {
-                // Filter news by selected year
-                foreach ($news as $newsItem) {
-                    if (date('Y', strtotime($newsItem['date'])) == $selectedYear) {
+            foreach ($news as $newsItem) {
+                $newsDate = new DateTime($newsItem['date']);
+
+                // Only add to filteredNews if the current date is on or after the news date
+                if ($newsDate <= $currentDate) {
+                    if ($selectedYear) {
+                        // If filtering by year, add items from the selected year only
+                        if (date('Y', strtotime($newsItem['date'])) == $selectedYear) {
+                            $filteredNews[] = $newsItem;
+                        }
+                    } else {
+                        // Otherwise, show the most recent 2 items
                         $filteredNews[] = $newsItem;
                     }
                 }
-            } else {
-                // Show only the most recent 2 news items if no year filter is applied
-                foreach ($news as $newsItem) {
-                    if (new DateTime($newsItem['date']) <= $currentDate) {
-                        $filteredNews[] = $newsItem;
-                    }
-                    if (count($filteredNews) >= 2) {
-                        break;
-                    }
+
+                if (!$selectedYear && count($filteredNews) >= 2) {
+                    break;
                 }
             }
 
@@ -80,7 +82,6 @@
             echo '</div>';
             ?>
         </div>
-
         
         <div class="col">
             <p>
