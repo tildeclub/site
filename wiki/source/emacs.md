@@ -3,6 +3,7 @@ title: Editing with Emacs
 author:
   - ohnoitsnoah
   - xwindows
+  - keyboardan
 category: tutorials
 ---
 <!-- Make a section for Modes -->
@@ -10,7 +11,7 @@ category: tutorials
 Emacs in tilde.club
 ===================
 
-[Emacs](https://www.gnu.org/software/emacs/) is a text-editor that is very capable, but also can be very confusing to new users, so here's a basic guide to working with Emacs.
+[Emacs](https://www.gnu.org/software/emacs/) is a text-editor that is very capable, but also can be confusing to new users, so here's a basic guide to working with Emacs.
 
 Opening Emacs
 -------------
@@ -63,7 +64,14 @@ Emacs has some weird, complex commands, that may not make sense to new users. Wh
 * `M-` means the Meta key
 	* While not common on modern hardware, the Meta key can be typed by using either the Escape/ESC key, or the Alt key in some cases
 
-Key-bindings in Emacs are typically longer than normal key-bindings used outside of Emacs, usually being a combination of what would be two "normal" key-bindings. For example; to exit Emacs, you can type `C-x C-c`. That means you press both of these key-bindings in series to complete the Emacs key-binding of exiting Emacs. It's very weird and complex, but is easy to adjust to after using it for a while.
+Key-bindings in Emacs are typically longer than normal key-bindings used outside of Emacs, usually being a combination of what would be two "normal" key-bindings. For example; to exit Emacs, you can type `C-x C-c`. That means you press both of these key-bindings in series to complete the Emacs key-binding of exiting Emacs. It's somewhat weird, but is easy to adjust to after using it for a while.
+
+Interactive Learning
+--------------------
+
+The best way to begin learning, is the interactive way. GNU Emacs has a built-in command that is specifically to learning the basic of GNU Emacs. To access it, you can press `C-h t`, or execute the GNU Emacs command named `help-with-tutorial` (pressing `M-x help-with-tutorial`).
+
+To close the tutorial, use `C-x k` to kill the buffer.
 
 Navigating Emacs with the Drop-Down Menus
 -----------------------------------------
@@ -91,4 +99,45 @@ Whenever you are finished working on a file, and no longer need the buffer, you 
 
 ### Cut, Copy, Paste (C-w, M-w, C-y)
 
-Cut, Copy, and Past are all available in the Edit menu.
+Cut, Copy, and Paste are all available in the Edit menu.
+
+Emacs is Self-Documented
+------------------------
+
+GNU Emacs is a very big program, and to master it, it takes a lot of time. GNU Emacs is an LISP environment, where you can *grow* a lot. Which makes learning GNU Emacs, a great investment of time; because you can do basically everything, related to text, and, with time, you will master GNU Emacs flexibility. Which means you will be able to do anything with GNU Emacs.
+
+But you don't need to know everything that GNU Emacs has to offer (is there anyone that does know?).... The most important thing to know, is how to seek for help. And GNU Emacs is there to help you.
+
+To access the main help menu of GNU Emacs, you press `C-h C-h`. This will open a new buffer, where you can interact. In this buffer, there is, for example, " b  Show all keybindings" entry. This means that if you now press "b" it will show all the keybindings of the buffer.
+
+And, if you are in any other buffer, and want to know all the keybindings quickly, you may, instead, press `C-h b` (mind that this "b", after the `C-h`, has the same effect as pressing "b" in the main menu help). `C-h` in GNU Emacs, means exactly, I want help. Then follow it with a keystroke that say the type of help you want.
+
+### Common Help Keybindings
+
+#### C-h t (help-with-tutorial)
+
+Select the Emacs learn-by-doing tutorial.
+
+#### C-h k (describe-key)
+
+Display documentation of the function invoked by a key sequence.
+
+#### C-h f (describe-function)
+
+Display the full documentation of function.
+
+#### C-h v (describe-variable)
+
+Display the full documentation of variable.
+
+#### C-h a (apropos-command)
+
+Show commands that match a certain pattern.
+
+#### C-h m (describe-mode)
+
+Display documentation of current major mode and minor modes.
+
+#### C-h i (info)
+
+Enter Info, the documentation browser. It shows a complete documentation of your installed operating system's commands.
