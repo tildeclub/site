@@ -161,13 +161,13 @@ ssh-keygen -t ed25519 -a 100
 
 Note: %USERPROFILE% is a short code that the computer expands to mean C:\\Users\\your_name\\, or whatever the relevant path is to your user's main folder.
 
-Next we will open up the public key so we can copy its contents. 
+Next we will open up the public key so we can copy its contents.
 
 ```cmd
 notepad %USERPROFILE%\.ssh\id_ed25519.pub
 ```
 
-4. Copy the text of the pubkey that opens in Notepad and paste it in the sshkey field on the signup form or email it to the relevant sign-up address for the tilde you are joining. 
+4. Copy the text of the pubkey that opens in Notepad and paste it in the sshkey field on the signup form or email it to the relevant sign-up address for the tilde you are joining.
 
 #### using your keypair
 
@@ -182,6 +182,13 @@ ssh username@tilde.club
 ```
 
 where username is your username (~benharri would use `ssh benharri@tilde.club`)
+
+
+Note: If you generated your key to the location above (%USERPROFILE%\\.ssh\\...) then you will be able to SSH to your tilde server without having to specify the location of the key. That folder is the default used by SSH and it will be found automatically. If you generated your keys in a different location or moved them, you will need to specify the full path to the private key.
+
+```cmd
+ssh -i c:\path\to\my\private\key username@your.tilde
+```
 
 7. profit???
 
@@ -213,7 +220,7 @@ be located at `~/.ssh/id_ed25519.pub` and `~/.ssh/id_ed25519`
 cat ~/.ssh/id_ed25519.pub
 ```
 
-4. copy the output of the last command and paste it in the sshkey field on the 
+4. copy the output of the last command and paste it in the sshkey field on the
 signup form (or email it to [root@tilde.club](mailto:root@tilde.club) if you already have an account)
 
 #### using your keypair
@@ -228,12 +235,6 @@ where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
 ```bash
 ssh username@tilde.club
-```
-
-Note: If you generated your key to the location above (%USERPROFILE%\\.ssh\\...) then you will be able to SSH to your tilde server without having to specify the location of the key. That folder is the default used by SSH and it will be found automatically. If you generated your keys in a different location or moved them, you will need to specify the full path to the private key.
-
-```cmd
-ssh -i c:\path\to\my\private\key username@your.tilde
 ```
 
 7. profit???
