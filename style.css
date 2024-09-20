@@ -158,6 +158,18 @@ div.alert-success {
 	background-color: darkgreen;
 }
 
+.notice-message {
+    background-color: #f93;
+    color: #222;
+    font-weight: bold;
+    padding: 0.75em;
+    border-radius: 0.25em;
+    margin: 1em 0;
+    text-align: center;
+    border: 2px solid #fb5;
+    box-shadow: 0 0 10px rgba(255, 187, 85, 0.5);
+}
+
 blockquote {
     border-left: 2px solid #fb5;
     background-color: rgba(255, 187, 85, 5%);
