@@ -1,5 +1,17 @@
 <?php include "header.php"; ?>
 
+<?php
+// Display notice message based on query parameters
+if (isset($_GET['notice'])) {
+    $notice = htmlspecialchars($_GET['notice']);
+    if ($notice == 'cancel') {
+        echo '<div class="notice-message">Your transaction was canceled.</div>';
+    } elseif ($notice == 'thanks') {
+        echo '<div class="notice-message">Thank you for helping us provide this great service!</div>';
+    }
+}
+?>
+
 <h1 id="fancyboi">welcome to tilde.club</h1>
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
