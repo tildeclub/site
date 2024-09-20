@@ -7,7 +7,7 @@ if (isset($_GET['notice'])) {
     if ($notice == 'cancel') {
         echo '<div class="notice-message">Your transaction was canceled.</div>';
     } elseif ($notice == 'thanks') {
-        echo '<div class="notice-message">Thank you for helping us provide this great service!</div>';
+        echo '<div class="notice-message">Thank you for helping this great service continue to exist!</div>';
     }
 }
 ?>
