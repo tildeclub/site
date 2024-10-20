@@ -79,7 +79,7 @@ You can now enable 2FA in our webmail that is offered to users.
 
 1. [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA)
 
-2. [Authy](https://authy.com/)
+2. [Ente Auth](https://ente.io/auth/)
 
 3. [Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
 
