@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "../header.php"; ?>
 
         <h1 id="fancyboi">ERROR 404</h1>
 
@@ -19,5 +19,5 @@
 </div>
 
 
-<?php include "footer.php"; ?>
+<?php include "../footer.php"; ?>
 
