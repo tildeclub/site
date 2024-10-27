@@ -78,8 +78,8 @@ h1 {
 		50% { opacity: 0; }
 	}
 	@keyframes reveal {
-		from { width: 2em; } /* Width of ::before */
-		  to { width: 100%; }
+		from { max-width: 2em; } /* Width of ::before */
+		  to { max-width: 100%; }
 	}
 	#fancyboi {
 		overflow: hidden;
