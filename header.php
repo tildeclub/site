@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
