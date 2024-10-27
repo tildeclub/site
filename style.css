@@ -135,11 +135,6 @@ code > span.fl {
             padding: 14px;
         }
 
-        .rss-icon img {
-            width: 24px; /* Adjust icon size */
-            height: 24px; /* Adjust icon size */
-        }
-
 /* Page content */
 .content {
 	padding-top: 5px;

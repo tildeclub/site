@@ -16,8 +16,6 @@
     <?php include "nav.html"; ?>
     <div class="content">
         <!-- RSS Icon -->
-        <div class="rss-icon">
-            <a href="/changes.rss" title="RSS Feed">
-                <img src="/images/rss.png" alt="RSS Feed">
-            </a>
-        </div>
+        <a href="/changes.rss" class="rss-icon" title="RSS Feed">
+            <img src="/images/rss.png" width="24" alt="RSS icon">
+        </a>
