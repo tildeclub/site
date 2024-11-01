@@ -204,18 +204,22 @@ if (isset($_GET['notice'])) {
                 ];
                 $oneMonthAgo = strtotime('-1 month');
 
-                foreach (glob("/home/*") as $user) {
-                    $index = "$user/public_html/index.html";
-                    if (!file_exists($index) || in_array(sha1_file($index), $page_shas)) continue;
+foreach (glob("/home/*") as $user) {
+    // Look for index files with common extensions
+    $indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
+    $index = count($indexFiles) > 0 ? $indexFiles[0] : null;
 
-                    // Check for any recent changes in the public_html directory
-                    $recentChange = false;
-                    foreach (glob("$user/public_html/*") as $file) {
-                        if (filemtime($file) > $oneMonthAgo) {
-                            $recentChange = true;
-                            break;
-                        }
-                    }
+    if (!$index || in_array(sha1_file($index), $page_shas)) continue;
+
+    // Check for any recent changes in the public_html directory
+    $recentChange = false;
+    foreach (glob("$user/public_html/*") as $file) {
+        if (filemtime($file) > $oneMonthAgo) {
+            $recentChange = true;
+            break;
+        }
+    }
+}
 
                     $user = basename($user);
                     $class = $recentChange ? 'recently-updated' : '';
