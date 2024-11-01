@@ -219,7 +219,6 @@ foreach (glob("/home/*") as $user) {
             break;
         }
     }
-}
 
                     $user = basename($user);
                     $class = $recentChange ? 'recently-updated' : '';
