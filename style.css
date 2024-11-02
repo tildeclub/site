@@ -78,8 +78,8 @@ h1 {
 		50% { opacity: 0; }
 	}
 	@keyframes reveal {
-		from { width: 2em; } /* Width of ::before */
-		  to { width: 100%; }
+		from { max-width: 2em; } /* Width of ::before */
+		  to { max-width: 100%; }
 	}
 	#fancyboi {
 		overflow: hidden;
@@ -133,11 +133,6 @@ code > span.fl {
         .rss-icon {
             float: right;
             padding: 14px;
-        }
-
-        .rss-icon img {
-            width: 24px; /* Adjust icon size */
-            height: 24px; /* Adjust icon size */
         }
 
 /* Page content */

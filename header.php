@@ -1,7 +1,7 @@
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=isset($title) ? $title : "Welcome to ~tilde.club~"?></title>
     
@@ -16,8 +16,6 @@
     <?php include "nav.html"; ?>
     <div class="content">
         <!-- RSS Icon -->
-        <div class="rss-icon">
-            <a href="/changes.rss" title="RSS Feed">
-                <img src="/images/rss.png" alt="RSS Feed">
-            </a>
-        </div>
+        <a href="/changes.rss" class="rss-icon" title="RSS Feed">
+            <img src="/images/rss.png" width="24" alt="RSS icon">
+        </a>
