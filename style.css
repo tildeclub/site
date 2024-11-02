@@ -298,53 +298,24 @@ pre {
     font-weight: bold;
     color: #fb5 !important; /* Use !important to override other styles */
 }
-.active-users-container {
+
+#active-users {
     margin-top: 20px;
     display: flex;
     align-items: center;
-    white-space: nowrap;
+	gap:10px;
 }
 
-.active-users-list {
-    overflow: hidden;
-    box-sizing: border-box;
-    padding-left: 10px; /* Space between heading and scrolling list */
-    background-color: #111;
-    color: #fb5;
-    width: 100%; /* Make the list take up the rest of the available space */
-    position: relative;
-}
+	#active-users h2 {
+		flex-shrink:0;
+	}
 
-.active-users-list ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    white-space: nowrap;
-    animation: scroll-left 30s linear infinite; /* Adjust the duration as needed */
-}
+	#active-users a {
+		color: #fb5;
+		text-decoration: none;
+	}
 
-.active-users-list li {
-    display: inline-block;
-    padding: 0 20px; /* Space between usernames */
-    font-family: "courier new", monospace;
-}
-
-.active-users-list a {
-    color: #fb5;
-    text-decoration: none;
-}
-
-.active-users-list a:hover {
-    color: #f70;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+		#active-users a:hover {
+			color: #f70;
+		}
 
