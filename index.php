@@ -1,6 +1,6 @@
-<?php include "header.php"; ?>
+<?php 
+include "header.php"; 
 
-<?php
 // Display notice message based on query parameters
 if (isset($_GET['notice'])) {
     $notice = htmlspecialchars($_GET['notice']);
@@ -11,7 +11,6 @@ if (isset($_GET['notice'])) {
     }
 }
 ?>
-
 <h1 id="fancyboi">welcome to tilde.club</h1>
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
@@ -171,7 +170,6 @@ if (isset($_GET['notice'])) {
             <p>if you're not seeing yourself listed here, change your page from the default.</p>
             <p>users with recently updated pages within the last month are highlighted in a lighter color.</p>
             <p><a href="/users/">list all users</a></p>
-            <ul class="user-list">
 			<?php
 			// these are the hashes of previous and current default pages
 			$page_shas = [
@@ -204,33 +202,50 @@ if (isset($_GET['notice'])) {
 
 			$oneMonthAgo = strtotime('-1 month');
 
-			// Check if user has a default index page
-			foreach (glob("/home/*") as $user) {
-				// Look for index files with common extensions
-				$indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
-				$index = count($indexFiles) > 0 ? $indexFiles[0] : null;
+			// Retrieve from cache file if available
+			$cache_file = 'cache/homepages_list.html';
 
-				if (!$index || in_array(sha1_file($index), $page_shas)) continue;
+			if (file_exists($cache_file) and time() - filemtime($cache_file) < 86400)
+			{
+				$homepages_list = file_get_contents($cache_file);
+			}
+			// Cache not available or expired
+			else
+			{
+				$homepages_list = '<ul class="user-list">';
 
-				// Check if the index pages were updated in the last month
-				$recentChange = false;
+				foreach (glob("/home/*") as $user) {
+					// Look for index files with common extensions
+					$indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
+					$index = count($indexFiles) > 0 ? $indexFiles[0] : null;
 
-				foreach ($indexFiles as $file) {
-					if (filemtime($file) > $oneMonthAgo) {
-						$recentChange = true;
-						break;
+					if (!$index || in_array(sha1_file($index), $page_shas)) continue;
+
+					// Check if the index pages were updated in the last month
+					$recentChange = false;
+
+					foreach ($indexFiles as $file) {
+						if (filemtime($file) > $oneMonthAgo) {
+							$recentChange = true;
+							break;
+						}
 					}
-				}
 
-				$user = basename($user);
-				$class = $recentChange ? 'recently-updated' : '';
-				
-				echo '<li class="'.$class.'"><a href="/~'.$user.'/">~'.$user.'</a></li>';
-			} 
+					$user = basename($user);
+					$class = $recentChange ? 'recently-updated' : '';
+					
+					$homepages_list .= '<li class="'.$class.'"><a href="/~'.$user.'/">~'.$user.'</a></li>';
+				} 
+
+				$homepages_list .= '</ul>';	
+
+				// Save cache file
+				$save_cache = file_put_contents($cache_file, $homepages_list);
+			}
+
+			echo $homepages_list;
 			?>
-            </ul>
         </div>
     </div>
 </div>
-
-<?php include "footer.php"; ?>
+<?php include "footer.php";
