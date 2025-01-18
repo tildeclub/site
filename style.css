@@ -17,23 +17,6 @@
 	padding: 1em;
 }
 
-.user-list {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	list-style-type: none;
-	padding: 0;
-}
-.user-list li {
-	overflow: hidden;
-	text-overflow: ellipsis; 
-	white-space: nowrap;
-	flex: 10em;
-}
-.user-list::after {
-	content: "";
-}
-
 body {
 	margin: auto;
 	padding: 1em;
@@ -138,6 +121,24 @@ code > span.fl {
 /* Page content */
 .content {
 	padding-top: 5px;
+}
+
+.user-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	list-style-type: none;
+	padding: 0;
+}
+.user-list a {
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+	flex: 10em;
+}
+.user-list b {
+    background-color: #fb5;
+	color:#000;
 }
 
 input[type="text"],
@@ -293,10 +294,6 @@ pre {
     border: 1px solid #fb5; /* Matching border color */
     border-radius: 0.25em; /* Slight border radius for better appearance */
     padding: 0.5em; /* Padding for better readability */
-}
-.recently-updated a {
-    font-weight: bold;
-    color: #fb5 !important; /* Use !important to override other styles */
 }
 
 #active-users {
