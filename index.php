@@ -212,7 +212,7 @@ if (isset($_GET['notice'])) {
 			// Cache not available or expired
 			else
 			{
-				$homepages_list = '<ul class="user-list">';
+				$homepages_list = '<div class="user-list">';
 
 				foreach (glob("/home/*") as $user) {
 					// Look for index files with common extensions
@@ -232,12 +232,11 @@ if (isset($_GET['notice'])) {
 					}
 
 					$user = basename($user);
-					$class = $recentChange ? 'recently-updated' : '';
 					
-					$homepages_list .= '<li class="'.$class.'"><a href="/~'.$user.'/">~'.$user.'</a></li>';
+					$homepages_list .= '<a href="/~'.$user.'/">'.(($recentChange) ? '<b>~'.$user.'</b>' : '~'.$user).'</a>';
 				} 
 
-				$homepages_list .= '</ul>';	
+				$homepages_list .= '</div>';	
 
 				// Save cache file
 				$save_cache = file_put_contents($cache_file, $homepages_list);
