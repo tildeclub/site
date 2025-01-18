@@ -171,7 +171,7 @@ if (isset($_GET['notice'])) {
             <p>if you're not seeing yourself listed here, change your page from the default.</p>
             <p>users with recently updated pages within the last month are highlighted in a lighter color.</p>
             <p><a href="/users/">list all users</a></p>
-            <ul class="user-list">
+            <div class="user-list">
                 <?php
                 // these are the hashes of previous and current default pages
                 $page_shas = [
@@ -203,30 +203,30 @@ if (isset($_GET['notice'])) {
                 ];
                 $oneMonthAgo = strtotime('-1 month');
 
-foreach (glob("/home/*") as $user) {
-    // Look for index files with common extensions
-    $indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
-    $index = count($indexFiles) > 0 ? $indexFiles[0] : null;
+				foreach (glob("/home/*") as $user) {
+					// Look for index files with common extensions
+					$indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
+					$index = count($indexFiles) > 0 ? $indexFiles[0] : null;
 
-    if (!$index || in_array(sha1_file($index), $page_shas)) continue;
+					if (!$index || in_array(sha1_file($index), $page_shas)) continue;
 
-    // Check for any recent changes in the public_html directory
-    $recentChange = false;
-    foreach (glob("$user/public_html/*") as $file) {
-        if (filemtime($file) > $oneMonthAgo) {
-            $recentChange = true;
-            break;
-        }
-    }
+					// Check for any recent changes in the public_html directory
+					$recentChange = false;
+					foreach (glob("$user/public_html/*") as $file) {
+						if (filemtime($file) > $oneMonthAgo) {
+							$recentChange = true;
+							break;
+						}
+					}
 
                     $user = basename($user);
-                    $class = $recentChange ? 'recently-updated' : '';
-                    ?>
-                    <li class="<?= $class ?>"><a href="/~<?=$user?>/">~<?=$user?></a></li>
-                <?php } ?>
-            </ul>
+                    
+                    echo '<a href="/~'.$user.'/">'.(($recentChange) ? '<b>~'.$user.'</b>' : '~'.$user).'</a>';
+                 } 
+				?>
+            </div>
         </div>
     </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "footer.php"; 
