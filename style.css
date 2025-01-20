@@ -16,7 +16,7 @@ body {
 	margin: auto;
 	padding: 1em;
 	max-width: 1024px;
-	font-family: 'Liberation Monospace', 'Courier New', sans-serif;
+	font-family: 'Liberation Monospace', 'Courier New', monospace, sans-serif;
 	color: #fb5;
 	background: #111;
 	word-wrap: break-word;
