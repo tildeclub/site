@@ -188,7 +188,14 @@ blockquote {
     padding: 0.5em;
 }	
 
-/* Mobile */
+@media (min-width: 768px) {
+	.row {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row-reverse;
+	}
+}
+
 @media (max-width: 768px) {
 	td {
 		display: block;
