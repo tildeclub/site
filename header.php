@@ -11,7 +11,7 @@
     <link rel="preload" href="/images/rss.png" as="image">
     
     <!-- Load the CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <?php include "nav.html"; ?>
