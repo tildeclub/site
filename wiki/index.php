@@ -19,6 +19,7 @@ include __DIR__."/../header.php";
 			{
                 $article = basename($file, ".md");
 				$title = preg_match("/title: (.*)/i", file_get_contents($file), $matches) ? $matches[1] : $article;
+				$title = ucfirst($title);
 				$category = preg_match("/category: (.*)/i", file_get_contents($file), $matches) ? $matches[1] : 'default';
 
 				if (array_key_exists($category, $category_to_articles)) 
