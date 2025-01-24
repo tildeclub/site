@@ -1,7 +1,7 @@
 ---
 author: benharri
-title: ssh
-category: tutorials
+title: SSH (secure shell)
+category: software
 ---
 
 
