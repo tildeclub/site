@@ -1,6 +1,6 @@
 ---
 author: jeffbonhag
-title: SSHFS
+title: SSHFS (SSH Filesystem)
 category: software
 ---
 
