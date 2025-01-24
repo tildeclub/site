@@ -1,7 +1,7 @@
 ---
 author: benharri
-title: SSH (secure shell)
-category: software
+title: How to connect using SSH (secure shell)
+category: tutorials
 ---
 
 
