@@ -10,7 +10,7 @@
  *   - Poll results
  */
 
-$databaseFile = __DIR__ . '../pollsdb/poll.db';
+$databaseFile = __DIR__ . '/poll.db';
 
 try {
     // If the database file does not exist, create it and set it up
