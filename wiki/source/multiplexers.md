@@ -1,5 +1,5 @@
 ---
-title: Terminal Multiplexers
+title: Byobu, TMUX & Screen (terminal multiplexers)
 author: rudi
 category: software
 ---

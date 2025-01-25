@@ -1,5 +1,5 @@
 ---
-title: custom 404
+title: custom 404 error page
 author: deepend
 category: tutorials
 ---

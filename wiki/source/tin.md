@@ -1,5 +1,5 @@
 ---
-title: tin
+title: tin (UseNet reader)
 category: software
 ---
 

@@ -1,5 +1,5 @@
 --- 
-title: bashblog 
+title: bashblog (blog platform)
 author: 
   - deepend 
   - benharri

@@ -1,7 +1,7 @@
 ---
 title: Don't use VPN services
 author: joepie91 on github
-category: tilde.club
+category: tutorials
 ---
 
 # Don't use VPN services.
