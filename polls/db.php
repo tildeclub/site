@@ -1,166 +1,90 @@
 <?php
-session_start();
+/**
+ * db.php
+ *
+ * This file checks if the SQLite database file 'poll.db' exists.
+ * If not, it creates one and sets up the required tables for:
+ *   - Users (including an admin user/password)
+ *   - Poll questions
+ *   - Poll options
+ *   - Poll results
+ */
 
-// Include the database setup/connection
-require_once 'db.php';
+$databaseFile = __DIR__ . '../pollsdb/poll.db';
 
-// Initialize variables
-$error = '';
-$success = '';
+try {
+    // If the database file does not exist, create it and set it up
+    $dbExists = file_exists($databaseFile);
 
-// Count how many users already exist in the database
-$checkTotal = $db->query("SELECT COUNT(*) FROM users")->fetchColumn();
+    // Initialize the PDO connection
+    $db = new PDO('sqlite:' . $databaseFile);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// If at least one user exists, show a message and no form
-if ($checkTotal > 0) {
-    ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Setup Admin User</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif; 
-                margin: 20px;
-            }
-            .container {
-                max-width: 500px; 
-                margin: 0 auto;
-            }
-            .info {
-                color: #333;
-            }
-            a {
-                color: blue;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-    <div class="container">
-        <h2>Admin User Already Exists</h2>
-        <p class="info">
-            An admin user has already been created. No additional admins can be set up here.
-        </p>
-        <p>
-            Go back to the <a href="index.php">Polls site</a>.
-        </p>
-    </div>
-    </body>
-    </html>
-    <?php
-    exit;
-}
+    // If the DB didn't exist before, create the required tables
+    if (!$dbExists) {
+        // Create 'users' table
+        $db->exec("
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT UNIQUE NOT NULL,
+                password TEXT NOT NULL
+            );
+        ");
 
-// If we are here, no user exists yet, so show the form
-if (isset($_POST['setup'])) {
-    $username = trim($_POST['username'] ?? '');
-    $password = trim($_POST['password'] ?? '');
-    $confirmPassword = trim($_POST['confirm_password'] ?? '');
+        // Create 'poll_questions' table
+        $db->exec("
+            CREATE TABLE IF NOT EXISTS poll_questions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                question_text TEXT NOT NULL,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+            );
+        ");
 
-    // Basic validation
-    if ($username === '' || $password === '' || $confirmPassword === '') {
-        $error = 'All fields are required.';
-    } elseif ($password !== $confirmPassword) {
-        $error = 'Passwords do not match.';
-    } else {
-        // Create the first (and only) admin user
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $insertStmt = $db->prepare("
+        // Create 'poll_options' table
+        $db->exec("
+            CREATE TABLE IF NOT EXISTS poll_options (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                question_id INTEGER NOT NULL,
+                option_text TEXT NOT NULL,
+                FOREIGN KEY (question_id) REFERENCES poll_questions(id)
+            );
+        ");
+
+        // Create 'poll_results' table
+        $db->exec("
+            CREATE TABLE IF NOT EXISTS poll_results (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                question_id INTEGER NOT NULL,
+                option_id INTEGER NOT NULL,
+                vote_count INTEGER NOT NULL DEFAULT 0,
+                FOREIGN KEY (question_id) REFERENCES poll_questions(id),
+                FOREIGN KEY (option_id) REFERENCES poll_options(id)
+            );
+        ");
+
+        // Create a default admin user with a hashed password
+        // NOTE: In production, you should not hardcode these credentials.
+        //       Instead, store them outside of your code or set them up once.
+        $adminUsername = 'admin';
+        $adminPlainPassword = 'password'; // Change this in production
+        $adminHashedPassword = password_hash($adminPlainPassword, PASSWORD_DEFAULT);
+
+        $insertUser = $db->prepare("
             INSERT INTO users (username, password)
             VALUES (:username, :password)
         ");
-        $insertStmt->bindValue(':username', $username, PDO::PARAM_STR);
-        $insertStmt->bindValue(':password', $hashedPassword, PDO::PARAM_STR);
-        $insertStmt->execute();
-
-        $success = "Admin user '$username' created successfully.";
+        $insertUser->bindValue(':username', $adminUsername, PDO::PARAM_STR);
+        $insertUser->bindValue(':password', $adminHashedPassword, PDO::PARAM_STR);
+        $insertUser->execute();
     }
+
+    // Optionally, you can return $db or leave it globally accessible
+    // for other parts of your application.
+    // Example:
+    // return $db;
+    
+} catch (PDOException $e) {
+    echo "Database error: " . $e->getMessage();
+    exit;
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Setup Admin User</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 20px;
-        }
-        .container {
-            max-width: 500px; 
-            margin: 0 auto;
-        }
-        .error {
-            color: red;
-        }
-        .success {
-            color: green;
-        }
-        label {
-            display: inline-block; 
-            width: 120px;
-        }
-        input[type=text], 
-        input[type=password] {
-            width: 250px;
-            margin-bottom: 10px;
-        }
-        button {
-            margin-top: 5px;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h2>Setup Admin User</h2>
-
-    <?php if ($error): ?>
-        <div class="error"><?php echo htmlspecialchars($error); ?></div>
-    <?php endif; ?>
-    <?php if ($success): ?>
-        <div class="success"><?php echo htmlspecialchars($success); ?></div>
-        <p>You can now <a href="admin.php">go to the Admin page</a> to log in.</p>
-    <?php else: ?>
-        <form action="setup.php" method="post">
-            <div>
-                <label for="username">Admin Username:</label>
-                <input 
-                    type="text" 
-                    name="username" 
-                    id="username" 
-                    value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>" 
-                    required
-                />
-            </div>
-
-            <div>
-                <label for="password">Password:</label>
-                <input 
-                    type="password" 
-                    name="password" 
-                    id="password" 
-                    required
-                />
-            </div>
-
-            <div>
-                <label for="confirm_password">Confirm Password:</label>
-                <input 
-                    type="password" 
-                    name="confirm_password" 
-                    id="confirm_password" 
-                    required
-                />
-            </div>
-
-            <div>
-                <button type="submit" name="setup">Save Admin User</button>
-            </div>
-        </form>
-    <?php endif; ?>
-</div>
-</body>
-</html>
