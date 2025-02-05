@@ -11,7 +11,7 @@ if (isset($_GET['notice'])) {
     }
 }
 ?>
-<h1 id="fancyboi">welcome to tilde.club</h1>
+<h1 id="fancyboi">welcome to Tilde.club</h1>
 
 <p><a href="/wiki/faq.html">Questions? See the official FAQ.</a></p>
 
@@ -119,7 +119,7 @@ if (isset($_GET['notice'])) {
         
         <div class="col">
             <p>
-            tilde.club is not a social network it is one tiny totally
+            Tilde.club is not a social network it is one tiny totally
             standard unix computer that people respectfully use together
             in their shared quest to build awesome web pages
             </p>
@@ -129,12 +129,12 @@ if (isset($_GET['notice'])) {
                 RECENTLY CHANGED PAGES</a> you can see that too
             </p>
             <p>
-                Or Check out the <a href="https://tilde.club/~tweska/gallery" target="blank">tilde.club gallery</a> created by <a href="/~tweska" target="_blank">~tweska</a>
+                Or Check out the <a href="https://tilde.club/~tweska/gallery" target="blank">Tilde.club gallery</a> created by <a href="/~tweska" target="_blank">~tweska</a>
             </p>
 
             <hr>
-            <h2>tilde.club gold star supporters</h2>
-            <p>Tilde.Club is supported by a global community of
+            <h2>Tilde.club gold star supporters</h2>
+            <p>Tilde.club is supported by a global community of
             good people. We don't rank people by the amount
             they give, only by the fact that they gave.
             Here's who has donated! When you're on the
@@ -165,11 +165,11 @@ if (isset($_GET['notice'])) {
 
     <div class="row">
         <div class="col">
-            <h3>here are the home pages of our users</h3>
-            <p>this list does not include people who haven't changed their page yet.</p>
-            <p>if you're not seeing yourself listed here, change your page from the default.</p>
-            <p>users with recently updated pages within the last month are highlighted in a lighter color.</p>
-            <p><a href="/users/">list all users</a></p>
+            <h3>Here are the home pages of our users</h3>
+            <p>This list does not include people who haven't changed their page yet.</p>
+            <p>If you're not seeing yourself listed here, change your page from the default.</p>
+            <p>Users with recently updated pages are highlighted in a lighter color.</p>
+            <p><a href="/users/">List all users</a></p>
 			<?php
 			// these are the hashes of previous and current default pages
 			$page_shas = [
@@ -200,49 +200,59 @@ if (isset($_GET['notice'])) {
 				"b51a889545b5f065fd1ac2b8760cab0088a9dc22"
 			];
 
-			$oneMonthAgo = strtotime('-1 month');
-
 			// Retrieve from cache file if available
 			$cache_file = 'cache/homepages_list.html';
 
 			if (file_exists($cache_file) and time() - filemtime($cache_file) < 86400)
 			{
-				$homepages_list = file_get_contents($cache_file);
+				$homepagesOutput = file_get_contents($cache_file);
 			}
-			// Cache not available or expired
+
+			// Cache not available or expired - create list
 			else
 			{
-				$homepages_list = '<div class="user-list">';
+				$homepagesOutput = '<div class="user-list">';
+				$now = time();
 
-				foreach (glob("/home/*") as $user) {
+				foreach (glob("/home/*") as $user) 
+				{
 					// Look for index files with common extensions
 					$indexFiles = glob("$user/public_html/index.{html,htm,php}", GLOB_BRACE);
 					$index = count($indexFiles) > 0 ? $indexFiles[0] : null;
 
 					if (!$index || in_array(sha1_file($index), $page_shas)) continue;
 
-					// Check if the index pages were updated in the last month
-					$recentChange = false;
+					// determine the most recently updated file
+					$age = 0;
 
-					foreach ($indexFiles as $file) {
-						if (filemtime($file) > $oneMonthAgo) {
-							$recentChange = true;
-							break;
-						}
+					foreach ($indexFiles as $file) 
+					{
+						$access = filemtime($file);
+
+						if ($access > $age) 
+							$age = $access;
 					}
 
 					$user = basename($user);
+
+					// For simplicity, we use a maximum of 50 months old 
+					$monthsOld = floor(($now - $age) / 2592000);
+					if ($monthsOld > 50) $monthsOld = 50;
 					
-					$homepages_list .= '<a href="/~'.$user.'/">'.(($recentChange) ? '<b>~'.$user.'</b>' : '~'.$user).'</a>';
+					// Minimum is 15% opacity
+					$opacity = 100 - 2 * $monthsOld;
+					if ($opacity < 15) $opacity = 15;
+
+					$homepagesOutput .= '<a style="opacity:'.$opacity.'%" href="/~'.$user.'/">~'.$user.'</a>';
 				} 
 
-				$homepages_list .= '</div>';	
+				$homepagesOutput .= '</div>';	
 
 				// Save cache file
-				$save_cache = file_put_contents($cache_file, $homepages_list);
+				$save_cache = file_put_contents($cache_file, $homepagesOutput);
 			}
 
-			echo $homepages_list;
+			echo $homepagesOutput;
 			?>
         </div>
     </div>
