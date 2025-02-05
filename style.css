@@ -141,18 +141,17 @@ code > span.fl {
 
 /* Page content */
 .user-list {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	list-style-type: none;
-	padding: 0;
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
 }
+
 .user-list a {
 	overflow: hidden;
 	text-overflow: ellipsis; 
 	white-space: nowrap;
 	flex: 10em;
 }
+
 .user-list b {
     background-color: #fb5;
 	color:#000;
