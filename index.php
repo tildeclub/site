@@ -239,11 +239,14 @@ if (isset($_GET['notice'])) {
 					$monthsOld = floor(($now - $age) / 2592000);
 					if ($monthsOld > 50) $monthsOld = 50;
 					
-					// Minimum is 15% opacity
+					// Set opacity in steps of 5
 					$opacity = 100 - 2 * $monthsOld;
+					$opacity = ceil($opacity / 5) * 5;
+					
+					// Minimum is 15% opacity
 					if ($opacity < 15) $opacity = 15;
 
-					$homepagesOutput .= '<a style="opacity:'.$opacity.'%" href="/~'.$user.'/">~'.$user.'</a>';
+					$homepagesOutput .= '<a data-op="'.$opacity.'" href="/~'.$user.'/">'.$user.'</a>';
 				} 
 
 				$homepagesOutput .= '</div>';	

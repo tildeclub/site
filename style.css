@@ -152,6 +152,36 @@ code > span.fl {
 	flex: 10em;
 }
 
+	.user-list a:before {
+		content:"~";
+	}
+
+	[data-op="5"]   { opacity:5%; } 
+	[data-op="10"]  { opacity:10%; } 
+	[data-op="15"]  { opacity:15%; } 
+	[data-op="20"]  { opacity:20%; } 
+	[data-op="25"]  { opacity:25%; } 
+	[data-op="30"]  { opacity:30%; } 
+	[data-op="35"]  { opacity:35%; } 
+	[data-op="40"]  { opacity:40%; } 
+	[data-op="45"]  { opacity:45%; } 
+	[data-op="50"]  { opacity:50%; } 
+	[data-op="55"]  { opacity:55%; } 
+	[data-op="60"]  { opacity:60%; } 
+	[data-op="65"]  { opacity:65%; } 
+	[data-op="70"]  { opacity:70%; } 
+	[data-op="75"]  { opacity:75%; } 
+	[data-op="80"]  { opacity:80%; } 
+	[data-op="85"]  { opacity:85%; } 
+	[data-op="90"]  { opacity:90%; } 
+	[data-op="95"]  { opacity:95%; } 
+	[data-op="100"] { opacity:100%; } 
+
+	.user-list a:hover {
+		background:#f70;
+		color:#000;
+	}
+
 .user-list b {
     background-color: #fb5;
 	color:#000;
