@@ -1,5 +1,5 @@
 ---
-title: CGI: Making web applications like it's 90s
+title: CGI - Making web applications like it's 90s
 category: tutorials
 author: xwindows
 ---
