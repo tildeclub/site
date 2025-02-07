@@ -178,8 +178,8 @@ code > span.fl {
 	[data-op="100"] { opacity:100%; } 
 
 	.user-list a:hover {
-		background:#f70;
-		color:#000;
+		text-decoration:underline;
+		color:#f70;
 	}
 
 .user-list b {
