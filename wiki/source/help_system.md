@@ -1,6 +1,6 @@
 ---
 title: Tilde.club Help Desk Guide
-category: Tilde.club
+category: tilde.club
 author: deepend
 ---
 
