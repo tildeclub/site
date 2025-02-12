@@ -14,7 +14,7 @@ include __DIR__.'/../header.php';
 			foreach (glob("/home/*") as $user) 
 			{
 				$user = basename($user); 
-				echo '<a href="/~'.$user.'/">~'.$user.'</a>';
+				echo '<a href="/~'.$user.'/">'.$user.'</a>';
 			} 
 			?>
 			</div>
