@@ -17,7 +17,7 @@ server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
  or [screen](screen.html) to keep your chat session running.
 
 other clients like irssi are available as well! just connect to irc.newnet.net on
-port 6697 TLS and `/join #club`. If your client defaults to enabling TLS, you'll need to specify that it shouldn't use TLS.
+port 6697 TLS and `/join #club`.
 
 feel free to use Newnet's [webchat](https://web.newnet.net/?join=club) if
 you prefer.
