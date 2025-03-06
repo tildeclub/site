@@ -20,7 +20,7 @@ There are currently two (2) methods you can donate financially to tilde.club. (A
 4.  [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=be3f8510bfe9&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  Signing up gets your $200 Credit and helps tilde.club.
 
 5.  [Web Hosting Canada](https://clients.whc.ca/aff.php?aff=7560)  Buying any service/domain helps tilde.club.
-6.  
+
 
 Our current server costs are $180.00 USD /Month. And will be going up in the coming months due to costs increasing at OVH.
 (is the reason this page exists again) 
