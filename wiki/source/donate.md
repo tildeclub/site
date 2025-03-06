@@ -15,6 +15,8 @@ There are currently two (2) methods you can donate financially to tilde.club. (A
 
 2.  [Paypal](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
 
+3.  [Vultr](https://www.vultr.com/?ref=9732299-9J)  Signing up to Vultr using this link gives you $300 and benefits tilde.club as well.  
+
 Our current server costs are $180.00 USD /Month. And will be going up in the coming months due to costs increasing at OVH.
 (is the reason this page exists again) 
 	
