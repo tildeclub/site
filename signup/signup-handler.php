@@ -200,7 +200,7 @@ $makeuser
 
         if (mail('root', 'new tilde.club signup', $msgbody)) {
             echo '<div class="alert alert-success" role="alert">
-                email sent! we\'ll get back to you soon (usually within a day) with login instructions! <a href="/">back to tilde.club home</a>
+                email sent! we\'ll get back to you soon with login instructions! (timeframe for processing signups varies greatly) <a href="/">back to tilde.club home</a>
                 </div>';
             // temp. add to forbidden to prevent double signups (cleanup after user creation)
             file_put_contents("/var/signups_current", $name.PHP_EOL, FILE_APPEND);
