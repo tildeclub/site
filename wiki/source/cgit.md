@@ -1,5 +1,3 @@
----
-
 title: using cgit on tilde.club
 author: deepend
 category: tilde.club
