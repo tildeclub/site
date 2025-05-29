@@ -12,6 +12,7 @@
 		<a href="/">~TILDE.CLUB~</a>
 		<a href="/">HOME</a>
 		<a href="/wiki/">WIKI</a>
+		<a href="https://tildeforge.dev" target="_blank">TildeForge</a>
 		<a href="https://tilde.club/wiki/donate.html">DONATE</a>
 		<a href="https://web.newnet.net/?join=club" target="_blank">CHAT</a>
 		<a href="/signup/">SIGN-UP</a>
