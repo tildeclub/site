@@ -1,7 +1,7 @@
 ---
 title: using cgit on tilde.club
 author: deepend
-category: tilde.club
+category: Tutorials
 ---
 
 `cgit` gives every tilde.club member a simple, read‑only web view of their public Git repositories.
