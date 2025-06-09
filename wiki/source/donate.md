@@ -12,8 +12,8 @@ category: tilde.club
 
 There are currently two (2) methods you can donate financially to tilde.club. (All money is used towards paying hosting costs (domains, servers)
 
-[Liberapay](https://liberapay.com/tilde.club/donate)  
-<img src="https://img.shields.io/liberapay/receives/tilde.club.svg?logo=liberapay">  <img src="https://img.shields.io/liberapay/patrons/tilde.club.svg?logo=liberapay">  <img src="https://img.shields.io/liberapay/goal/tilde.club.svg?logo=liberapay">
+[[Ko-Fi](https://ko-fi.com/tildeclub)  
+<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">
 
 [Paypal](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)  Direct contribution. 
 
