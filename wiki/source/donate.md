@@ -16,6 +16,8 @@ There are currently two (2) methods you can donate financially to tilde.club. (A
 
 [![PayPal](https://img.shields.io/badge/PayPal-Support_Us-003087?logo=paypal&logoColor=fff)](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
 
+[![Github Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-30363D?&logo=GitHub-Sponsors&logoColor=EA4AAA)](https://img.shields.io/github/sponsors/tildeclub)
+
 [Vultr](https://www.vultr.com/?ref=9732299-9J)  Signing up to Vultr using this link gives you $300 credit and it benefits tilde.club ($300 Credit is Limited Time).
 
 [DigitalOcean](https://www.digitalocean.com/?refcode=be3f8510bfe9&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  Signing up gets your $200 Credit and helps tilde.club.
