@@ -13,7 +13,7 @@ category: tilde.club
 There are currently two (2) methods you can donate financially to tilde.club. (All money is used towards paying hosting costs (domains, servers)
 
 [[Ko-Fi](https://ko-fi.com/tildeclub)  
-<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">
+[<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">](https://ko-fi.com/tildeclub)
 
 [Paypal](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)  Direct contribution. 
 
