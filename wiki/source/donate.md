@@ -14,7 +14,7 @@ There are currently two (2) methods you can donate financially to tilde.club. (A
 
 [<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">](https://ko-fi.com/tildeclub)
 
-[![PayPal](https://img.shields.io/badge/PayPal-003087?logo=paypal&logoColor=fff)](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)  Direct contribution. 
+[![PayPal](https://img.shields.io/badge/PayPal-Direct_Contribution-003087?logo=paypal&logoColor=fff)](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
 
 [Vultr](https://www.vultr.com/?ref=9732299-9J)  Signing up to Vultr using this link gives you $300 credit and it benefits tilde.club ($300 Credit is Limited Time).
 
