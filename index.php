@@ -43,7 +43,7 @@ if (isset($_GET['notice'])) {
 <div class="grid">
     <div class="row">
 
-        <div class="col">
+        <div id="news" class="col">
             <?php
             $news = json_decode(file_get_contents('news.json'), true);
 
