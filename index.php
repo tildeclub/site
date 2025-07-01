@@ -80,8 +80,14 @@ if (isset($_GET['notice'])) {
 
             // Display news items
             foreach ($filteredNews as $newsItem) {
+                echo '<div class="news-item">';
+
+                echo '<div class="news-item-title">';
                 echo '<h2>' . htmlspecialchars($newsItem['title']) . ':</h2>';
                 echo '<h3>' . htmlspecialchars($newsItem['heading']) . '</h3>';
+                echo '</div>';
+
+                echo '<div class="news-item-body">';
                 echo '<p>' . htmlspecialchars($newsItem['content']) . '</p>';
 
                 if (isset($newsItem['details']) && is_array($newsItem['details'])) {
@@ -99,7 +105,9 @@ if (isset($_GET['notice'])) {
                 if (isset($newsItem['additional_content'])) {
                     echo '<p>' . htmlspecialchars($newsItem['additional_content']) . '</p>';
                 }
+                echo '</div>';
 
+                echo '</div>';
                 echo '<hr>';
             }
 
