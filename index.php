@@ -127,9 +127,10 @@ if (isset($_GET['notice'])) {
         
         <div class="col">
             <p>
-            Tilde.club is not a social network it is one tiny totally
-            standard unix computer that people respectfully use together
-            in their shared quest to build awesome web pages
+            Tilde.club gives you access to a shared Unix computer 
+            where you can make web pages, learn, and share knowledge.
+	    It's a place where working together happens naturally, 
+	    all within a friendly and supportive setting.
             </p>
 
             <p>
