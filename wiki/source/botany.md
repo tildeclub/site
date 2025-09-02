@@ -44,7 +44,7 @@ The page will show “private” instead of details.
 ## Visiting and the garden
 
 * **Garden**: browse everyone’s plants from inside Botany.
-* **Visit**: see who stopped by and go say hi. Visiting is social; it doesn’t automatically water unless you explicitly do so.
+* **Visit**: see who stopped by and go say hi. Visiting is social.
 
 ## Tips
 
