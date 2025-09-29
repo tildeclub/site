@@ -1,4 +1,8 @@
 <?php
+
+declare(strict_types=1);
+require __DIR__ . '/vendor/autoload.php';
+
 $title = "sign up for the tilde.club!";
 include __DIR__."/../header.php";
 

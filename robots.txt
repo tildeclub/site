@@ -1,91 +1,264 @@
-User-Agent: MojeekBot
-Allow:    /~xwindows/
+user-agent:AwarioRssBot
+disallow:/~bayang/
 
-User-Agent: Qwantify
-Allow:    /~xwindows/
+user-agent:YouBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: Wibybot
-Allow:    /~xwindows/
+user-agent:PerplexityBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: search.marginalia.nu
-Allow:    /~xwindows/
+user-agent:ImagesiftBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: SearchMySiteBot
-Allow:    /~xwindows/
+user-agent:search.marginalia.nu
+allow:/~xwindows/
 
-User-Agent: Duckduckbot
-Allow:    /~xwindows/
+user-agent:Dataprovider
+disallow:/~xwindows/
 
-User-Agent: ia_archiver
-Allow:    /~xwindows/
+user-agent:ChatGPT-User
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: Googlebot
-Allow:    /~xwindows/$
-Allow:    /~xwindows/index.html$
-Disallow: /~xwindows/
+user-agent:Barkrowler
+disallow:/~xwindows/
 
-User-Agent: bingbot
-Allow:    /~xwindows/$
-Allow:    /~xwindows/index.html$
-Disallow: /~xwindows/
+user-agent:peer39_crawler
+disallow:/~bayang/
 
-User-Agent: YandexBot
-Allow:    /~xwindows/$
-Allow:    /~xwindows/index.html$
-Disallow: /~xwindows/
+user-agent:ia_archiver
+allow:/~xwindows/
 
-User-Agent: YandexFavicons
-Disallow: /~xwindows/
+user-agent:GTPBot
+disallow:/~miccaman/
 
-User-Agent: MegaIndex.ru
-Disallow: /~xwindows/
+user-agent:magpie-crawler
+disallow:/~bayang/
 
-User-Agent: Amazonbot
-Disallow: /~xwindows/
+user-agent:Qwantify
+allow:/~xwindows/
 
-User-Agent: Linespider
-Disallow: /~xwindows/
+user-agent:GPTBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: Bytespider
-Disallow: /~xwindows/
+user-agent:ClaudeBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: CCBot
-Disallow: /~xwindows/
+user-agent:YandexFavicons
+disallow:/~xwindows/
 
-User-Agent: Neevabot
-Disallow: /~xwindows/
+user-agent:peer39_crawler/1.0
+disallow:/~bayang/
 
-User-Agent: PetalBot
-Disallow: /~xwindows/
+user-agent:Linespider
+disallow:/~xwindows/
 
-User-Agent: SemrushBot
-Disallow: /~xwindows/
+user-agent:Applebot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: AhrefsBot
-Disallow: /~xwindows/
+user-agent:SearchMySiteBot
+allow:/~xwindows/
 
-User-Agent: DataForSeoBot
-Disallow: /~xwindows/
+user-agent:Duckduckbot
+allow:/~xwindows/
 
-User-Agent: dotbot
-Disallow: /~xwindows/
+user-agent:AwarioSmartBot
+disallow:/~bayang/
 
-User-Agent: Barkrowler
-Disallow: /~xwindows/
+user-agent:PetalBot
+disallow:/~xwindows/
 
-User-Agent: MJ12bot
-Disallow: /~xwindows/
+user-agent:Yandex
+disallow:/~gareppa/
 
-User-Agent: BuiltWith
-Disallow: /~xwindows/
+user-agent:Twitterbot
+disallow:/~bayang/
 
-User-Agent: webprosbot
-Disallow: /~xwindows/
+user-agent:bingbot
+allow:/~xwindows/$
+allow:/~xwindows/index.html$
+disallow:/~xwindows/
 
-User-Agent: Dataprovider
-Disallow: /~xwindows/
+user-agent:FacebookBot
+disallow:/~bayang/
+disallow:/~jbd/
 
-User-Agent: *
-Allow:    /~xwindows/$
-Allow:    /~xwindows/index.html$
-Disallow: /~xwindows/
+user-agent:SemrushBot
+disallow:/~xwindows/
+
+user-agent:MJ12bot
+disallow:/~xwindows/
+
+user-agent:Amazonbot
+disallow:/~bayang/
+disallow:/~jbd/
+disallow:/~xwindows/
+
+user-agent:Neevabot
+disallow:/~xwindows/
+
+user-agent:Googlebot-image
+disallow:/~harvettfox96/
+
+user-agent:Wibybot
+allow:/~xwindows/
+
+user-agent:DataForSeoBot
+disallow:/~bayang/
+disallow:/~xwindows/
+
+user-agent:Omgili
+disallow:/~jbd/
+
+user-agent:Googlebot
+disallow:/~gareppa/
+allow:/~xwindows/$
+allow:/~xwindows/index.html$
+disallow:/~xwindows/
+
+user-agent:MegaIndex.ru
+disallow:/~xwindows/
+
+user-agent:Bingbot
+disallow:/~gareppa/
+
+user-agent:omgili
+disallow:/~bayang/
+
+user-agent:AdsBot-Google
+disallow:/~bayang/
+
+user-agent:Bytespider
+disallow:/~bayang/
+disallow:/~jbd/
+disallow:/~xwindows/
+
+user-agent:webprosbot
+disallow:/~xwindows/
+
+user-agent:Diffbot
+disallow:/~jbd/
+
+user-agent:dotbot
+disallow:/~xwindows/
+
+user-agent:cohere-ai
+disallow:/~bayang/
+
+user-agent:Google-Extended
+disallow:/~bayang/
+disallow:/~jbd/
+
+user-agent:Omgilibot
+disallow:/~jbd/
+disallow:/~jbd/
+
+user-agent:Claude-Web
+disallow:/~bayang/
+disallow:/~jbd/
+
+user-agent:anthropic-ai
+disallow:/~bayang/
+disallow:/~jbd/
+
+user-agent:MojeekBot
+allow:/~xwindows/
+
+user-agent:BuiltWith
+disallow:/~xwindows/
+
+user-agent:YandexBot
+allow:/~xwindows/$
+allow:/~xwindows/index.html$
+disallow:/~xwindows/
+
+user-agent:CCBot
+disallow:/~bayang/
+disallow:/~xwindows/
+
+user-agent:AhrefsBot
+disallow:/~xwindows/
+
+user-agent:omgilibot
+disallow:/~bayang/
+
+user-agent:*
+disallow:/~alf/
+disallow:/~almaren/log/
+disallow:/~almaren/md/
+disallow:/~andre4ik3/
+disallow:/~ant/
+allow:/~atamblingpoder/
+allow:/~bayang/
+disallow:/~bazz/.github/
+disallow:/~bazz/.phan/
+disallow:/~bazz/assets/
+disallow:/~bazz/backup/
+disallow:/~bazz/bin/
+disallow:/~bazz/cache/
+disallow:/~bazz/logs/
+disallow:/~bazz/system/
+disallow:/~bazz/tests/
+disallow:/~bazz/tmp/
+disallow:/~bazz/user/
+disallow:/~bazz/vendor/
+disallow:/~bazz/webserver-configs/
+allow:/~bazz/user/pages/
+allow:/~bazz/user/themes/
+allow:/~bazz/user/images/
+allow:/~bazz/
+allow:/~bazz*.css$
+allow:/~bazz*.js$
+allow:/~bazz/system/*.js$
+allow:/~cfw/
+allow:/~claytron/
+disallow:/~cosmiceye/
+disallow:/~dbcohn/
+disallow:/~dikiaap/
+disallow:/~dmi3/
+disallow:/~endling/
+disallow:/~fenris/
+disallow:/~fiveoverfour/
+allow:/~fran/
+disallow:/~freespeech/
+disallow:/~gareppa/
+disallow:/~harvettfox96/c/
+disallow:/~hj/
+allow:/~hnp/# from a pending header
+disallow:/~indoneziva/
+allow:/~jamiemichelle/
+disallow:/~jbgoldberg/
+disallow:/~jozi/
+allow:/~jpurnell/
+allow:/~levin/
+allow:/~levin/
+disallow:/~meskin/
+allow:/~mjk/
+disallow:/~mlot/
+allow:/~mrkumar/
+allow:/~mydeardiary/
+allow:/~numbermumbler/
+disallow:/~pb/
+disallow:/~silver/wp-admin/
+allow:/~skk/
+disallow:/~somecarbon/
+allow:/~speleo/
+allow:/~srw/
+disallow:/~surfingreg/
+allow:/~talhah/
+disallow:/~tivrusky/
+disallow:/~turbo/test
+disallow:/~uslesshumans.txt
+allow:/~ve3zsh/
+disallow:/~ve3zsh/api
+allow:/~xwindows/$
+allow:/~xwindows/index.html$
+disallow:/~xwindows/
+disallow:/~zihtt/
+

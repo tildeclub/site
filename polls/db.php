@@ -65,17 +65,17 @@ try {
         // Create a default admin user with a hashed password
         // NOTE: In production, you should not hardcode these credentials.
         //       Instead, store them outside of your code or set them up once.
-        $adminUsername = 'admin';
-        $adminPlainPassword = 'password'; // Change this in production
-        $adminHashedPassword = password_hash($adminPlainPassword, PASSWORD_DEFAULT);
+//        $adminUsername = 'admin';
+//        $adminPlainPassword = 'password'; // Change this in production
+//        $adminHashedPassword = password_hash($adminPlainPassword, PASSWORD_DEFAULT);
 
-        $insertUser = $db->prepare("
-            INSERT INTO users (username, password)
-            VALUES (:username, :password)
-        ");
-        $insertUser->bindValue(':username', $adminUsername, PDO::PARAM_STR);
-        $insertUser->bindValue(':password', $adminHashedPassword, PDO::PARAM_STR);
-        $insertUser->execute();
+//        $insertUser = $db->prepare("
+//            INSERT INTO users (username, password)
+//            VALUES (:username, :password)
+//        ");
+//        $insertUser->bindValue(':username', $adminUsername, PDO::PARAM_STR);
+//        $insertUser->bindValue(':password', $adminHashedPassword, PDO::PARAM_STR);
+//        $insertUser->execute();
     }
 
     // Optionally, you can return $db or leave it globally accessible

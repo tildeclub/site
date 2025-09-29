@@ -1,6 +1,5 @@
 <?php
 $filepath = __FILE__;
-# require __DIR__.'/../vendor/autoload.php';
 require_once "email/smtp.php";
 
 function getUserIpAddr() {
@@ -43,71 +42,22 @@ function is_ssh_pubkey($string): bool
     return false;
 }
 
-function forbidden_name($name): bool
+function forbidden_name(string $name): bool
 {
-    $badnames = [
-        '0x0',
-        'abuse',
-        'admin',
-        'administrator',
-        'auth',
-        'autoconfig',
-        'bbj',
-        'broadcasthost',
-        'cloud',
-        'forum',
-        'ftp',
-        'git',
-        'gopher',
-        'hostmaster',
-        'imap',
-        'info',
-        'irc',
-        'is',
-        'isatap',
-        'it',
-        'localdomain',
-        'localhost',
-        'lounge',
-        'mail',
-        'mailer-daemon',
-        'marketing',
-        'marketting',
-        'mis',
-        'news',
-        'nobody',
-        'noc',
-        'noreply',
-        'pop',
-        'pop3',
-        'postmaster',
-        'retro',
-        'root',
-        'sales',
-        'security',
-        'smtp',
-        'ssladmin',
-        'ssladministrator',
-        'sslwebmaster',
-        'support',
-        'sysadmin',
-        'team',
-        'usenet',
-        'uucp',
-        'webmaster',
-        'wpad',
-        'www',
-        'znc',
+    $bad = [
+        '0x0','abuse','admin','administrator','auth','autoconfig','bbj','broadcasthost','cloud','forum','ftp',
+        'git','gopher','hostmaster','imap','info','irc','is','isatap','it','localdomain','localhost','lounge',
+        'mail','mailer-daemon','marketing','marketting','mis','news','nobody','noc','noreply','pop','pop3',
+        'postmaster','retro','root','sales','security','smtp','ssladmin','ssladministrator','sslwebmaster',
+        'support','sysadmin','team','usenet','uucp','webmaster','wpad','www','znc',
     ];
 
-    return in_array(
-        $name,
-        array_merge(
-            $badnames,
-            file("/var/signups_current", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES),
-            file("/var/banned_names.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
-        )
-    );
+    $lists = [$bad];
+    foreach (['/var/signups_current','/var/banned_names.txt'] as $p) {
+        $t = @file($p, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        if (is_array($t)) { $lists[] = $t; }   // ignore missing/unreadable files
+    }
+    return in_array($name, array_merge(...$lists), true);
 }
 
 function forbidden_email($email): bool
@@ -198,7 +148,9 @@ reason: {$_REQUEST["interest"]}
 $makeuser
 ";
 
-        if (mail('root', 'new tilde.club signup', $msgbody)) {
+            $to = 'root@tilde.club';
+            $headers = "To: {$to}\r\nFrom: signup <signup@tilde.club>\r\n";
+            if (mail($to, 'new tilde.club signup', $msgbody, $headers)) {
             echo '<div class="alert alert-success" role="alert">
                 email sent! we\'ll get back to you soon with login instructions! (timeframe for processing signups varies greatly) <a href="/">back to tilde.club home</a>
                 </div>';

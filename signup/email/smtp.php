@@ -424,8 +424,11 @@
 		public static function GetDNSRecord($domain, $types = array("MX", "A"), $nameservers = array("8.8.8.8", "8.8.4.4"), $cache = true)
 		{
 			// Check for a mail server based on a DNS lookup.
-			if (!class_exists("Net_DNS2_Resolver"))  require_once str_replace("\\", "/", dirname(__FILE__)) . "/Net/DNS2.php";
-
+                if (!class_exists('Net_DNS2_Resolver')) {
+                        // Composer autoloader should already be loaded above; this is a last-ditch attempt.
+                        $autoload = dirname(__DIR__, 2) . '/vendor/autoload.php';
+                                 if (is_file($autoload)) { require $autoload; }
+                }
 			$resolver = new Net_DNS2_Resolver(array("nameservers" => $nameservers));
 			try
 			{
