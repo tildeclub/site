@@ -12,7 +12,7 @@ category: tilde.club
 
 These are currently the methods you can donate financially to tilde.club. (All money is used towards paying hosting costs (domains, servers)\
 
-[<img src="[https://img.shields.io/badge/Directly-Donate-blue](https://donate.tilde.club)
+[<img src="https://img.shields.io/badge/Directly-Donate-blue">](https://donate.tilde.club)
 
 [<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">](https://ko-fi.com/tildeclub)
 
