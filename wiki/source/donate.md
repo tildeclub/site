@@ -20,13 +20,7 @@ These are currently the methods you can donate financially to tilde.club. (All m
 
 [![Github Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-30363D?&logo=GitHub-Sponsors&logoColor=EA4AAA)](https://github.com/sponsors/tildeclub)
 
-[Vultr](https://www.vultr.com/?ref=9732299-9J)  Signing up to Vultr using this link gives you $300 credit and it benefits tilde.club ($300 Credit is Limited Time).
-
-[DigitalOcean](https://www.digitalocean.com/?refcode=be3f8510bfe9&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  Signing up gets your $200 Credit and helps tilde.club.
-
 [Web Hosting Canada](https://clients.whc.ca/aff.php?aff=7560)  Buying any service/domain helps tilde.club.
-
-[Voip.ms](https://voip.ms/en/invite/MTEyMDM5)  Buying Voip Services gives me credit so I will be able to offer more tilde.tel features in the future. 
 	
 **NOTE: Please E-Mail root@tilde.club to notify that you have donated so we can add you to the gold star supporters list.
 
