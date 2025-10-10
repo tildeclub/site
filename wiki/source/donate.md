@@ -12,11 +12,11 @@ category: tilde.club
 
 These are currently the methods you can donate financially to tilde.club. (All money is used towards paying hosting costs (domains, servers)\
 
-[<img src="https://img.shields.io/badge/Directly-Donate-blue">](https://donate.tilde.club)
-
-[<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">](https://ko-fi.com/tildeclub)
+[<img src="https://img.shields.io/badge/Stripe-Donate Directly-blue">](https://donate.tilde.club)
 
 [![PayPal](https://img.shields.io/badge/PayPal-Support_Us-003087?logo=paypal&logoColor=fff)](https://www.paypal.com/donate?hosted_button_id=DWHSADKJ26HZ8)
+
+[<img src="https://shields.io/badge/kofi-Support_Us-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">](https://ko-fi.com/tildeclub)
 
 [![Github Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-30363D?&logo=GitHub-Sponsors&logoColor=EA4AAA)](https://github.com/sponsors/tildeclub)
 
