@@ -118,7 +118,7 @@ of technological liberation...
   
   * [GitHub](https://github.com/tildeclub/site/)
     (requires JavaScript and latest browser to view)
-  * [Tildegit](https://tildegit.org/club/site/)
+  * [Tildeforge](https://tildeforge.dev/TildeClub/site)
     (read-only mirror,
     replicates from GitHub;
     do not need JavaScript to view)
