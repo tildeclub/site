@@ -68,6 +68,7 @@ When you pass a `theme`, **only your CSS is loaded** (the default stylesheet is 
 
   * Make sure the link is on `https://tilde.club/~<your_username>/...` (not just the domain root).
   * Check that browser extensions or privacy settings aren’t stripping referrers.
+    * On Firefox: Make sure in your about:config that `network.http.referer.XOriginTrimmingPolicy` is set to 0.
   * The error page will display what referrer was received and the expected pattern.
 
 ## Example links
