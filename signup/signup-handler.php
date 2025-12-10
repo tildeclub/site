@@ -49,7 +49,7 @@ function forbidden_name(string $name): bool
         'git','gopher','hostmaster','imap','info','irc','is','isatap','it','localdomain','localhost','lounge',
         'mail','mailer-daemon','marketing','marketting','mis','news','nobody','noc','noreply','pop','pop3',
         'postmaster','retro','root','sales','security','smtp','ssladmin','ssladministrator','sslwebmaster',
-        'support','sysadmin','team','usenet','uucp','webmaster','wpad','www','znc',
+        'support','sysadmin','team','usenet','uucp','webmaster','wpad','www','znc','openpgpkey',
     ];
 
     $lists = [$bad];

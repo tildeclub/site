@@ -1,6 +1,7 @@
 .gitignore
 .well-known/
-blocks/
+blocks/.csfdeny
+blocks/.env
 header24h.php
 nginx-logo.png
 pkglist.txt
