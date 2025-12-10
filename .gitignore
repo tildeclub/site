@@ -1,5 +1,6 @@
 .gitignore
 .well-known/
+blocks/
 header24h.php
 nginx-logo.png
 pkglist.txt
