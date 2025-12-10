@@ -1,4 +1,5 @@
 .gitignore
+.well-known/
 header24h.php
 nginx-logo.png
 pkglist.txt
