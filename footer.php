@@ -10,7 +10,10 @@
     </div>
     <!-- Tildeverse Banner Exchange code end -->
     <br><br>
-    <p>ECDSA fingerprint: SHA256:Cu43W3WD1hYBUFXCPbswIOZw1/tRu+WhcOh6Wsdn3Zk</p>
+    <p>SSH fingerprints:</p>
+    <p>SHA256:M2URWy/QGPdn8K1XHA5KEWQs+7RtqKCkHCqp1NyxFyI (RSA)</p>
+    <p>SHA256:duamOATgnGcfRFFkotCwrAWzZtRjwxm64WAhq5tQRwE (ECDSA)</p>
+    <p>SHA256:Cu43W3WD1hYBUFXCPbswIOZw1/tRu+WhcOh6Wsdn3Zk (ED25519)</p>
     <a href="https://github.com/tildeclub/site">page source</a> | 
     <a href="https://tilde.club/stats" target="_blank">Stats</a> | 
     <a href="https://tilde.club/news.php">NNTP Stats</a>
