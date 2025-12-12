@@ -1,4 +1,10 @@
 [
+{
+        "date": "2025-12-20",
+        "title": "MAINTENANCE: Fedora 43 Upgrade",
+        "heading": "Fedora 43 upgrade planned for Dec 20, 2025",
+        "content": "I will be upgrading the system to Fedora 43 on December 20, 2025. There is no specific start time. A 10-minute warning will be posted in the terminal before the upgrade begins. Expect brief downtime during the upgrade and reboot.\n\nIn preparation for this, IMAP will be upgraded during the next week due to breaking changes in Dovecot. There may be brief interruptions to mail access while this work is performed."
+    },
     {
         "date": "2024-09-30",
         "title": "UPDATE: September 2024",
