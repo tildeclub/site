@@ -1,9 +1,8 @@
 ---
 title: Editing Basic UNIX Security the Tilde way
-author: michaelcoyote
+author: michaelcoyote. updated by deepend
 category: tutorials
 ---
-
 
 > "Unix is public by default. This means that other people who use the server can see your files. You can change that on a file-by-file basis. You can also change the default behavior for you. It is totally okay to keep your stuff private. Let us show you how." 
 
@@ -20,12 +19,12 @@ What is a user? For starters, you are a user and so is every other person on the
 
 There are several attributes that define a user.
 
-- username
+- username  
     This is your login id and the name of your homedir
-- user id (or uid)
+- user id (or uid)  
     This is your unique numerical id number on the system. This is how the system keeps track of you, your processes, and your files.
-- group id (or gid)
-    This is a unique numerical id number for your primary user group on the system. User groups are the traditional way that users would colaberate on large projects. 
+- group id (or gid)  
+    This is a unique numerical id number for your primary user group on the system. User groups are the traditional way that users would collaborate on large projects. 
 
 For now we only need to know about the username.
 
@@ -48,7 +47,6 @@ What does this long file listing of `my_file` show us?
     -rw-rw-r--  1  youruser  youruser   177   Oct 13 04:51    my_file
     ---------- --- -------   --------  -----  ------------ -------------
         |       |     |        |         |         |             |
-        |       |     |        |         |         |         File Name
         |       |     |        |         |         +---  Modification Time
         |       |     |        |         +-------------   Size (in bytes)
         |       |     |        +-----------------------     Group owner
@@ -78,11 +76,12 @@ The first column at first glance looks like a bunch of alphabet soup, however if
 #### Types of permissions
 
 There are three major types of permissions (and a hand full of others)
-- Read 
+
+- Read  
     Read permission is represented as an `r` and will allow a listing of a directory and reading a file.
-- Write
+- Write  
     Write permission is represented with a `w` and allows a file or directory to be written to or deleted.
-- Execute
+- Execute  
     Execute permission is represented as an `x` and allows a file (such as a script) to be executed  and it allows for a directory to be "traversed" 
     
 - Other special permissions and notations in `ls -l`
@@ -93,13 +92,13 @@ There are three major types of permissions (and a hand full of others)
 
 #### Three classes of access permissions
 
-- User permissions
+- User permissions  
     This set of access controls define what an owner can do to her own files or directories. These controls are most often useful to set on a script file you want to run or a file you want to protect from deletion or overwriting.
  
-- Group permissions
+- Group permissions  
     This set of access controls define what the group can do to a file or directory. This tends not to matter much in your homedir, but it can matter a lot when working with other users on shared projects.
     
-- Others
+- Others  
     These access controls are what you use to allow and others who are not listed as an owner or group member to do to a file or directory. For example, if you remove read permissions from others on your  ~/public_html/index.html`, the webserver process will be unable to read your web page. 
     
 #### Changing file and directory permissions using `chmod`
@@ -114,7 +113,6 @@ Examples
             chmod ugo-rw test
             ls -l test
             ls -l test/a_file
-            
             
 
 #### Basics about the `finger` and `chfn` commands
@@ -154,3 +152,46 @@ The `id` command is a tool to show us how the system keeps track of us. From thi
     - use the `grep` command to find your uid in the `/etc/passwd` file
         
 As noted above, we can obtain our group id using the `id` command. Try locating your group in `/etc/group` using the commands that were specified above; your group name will probably be the same as your user (although at times this might not be true depending on the configuration of the system).
+
+#### Using your personal group for collaboration (`groupmems`)
+
+On this tilde server, each user normally has a *personal* group with the same name as their login. For example:
+
+- user: `youruser`  
+- primary group: `youruser`
+
+You can use this personal group to give trusted friends access to files and directories you own, without making them world-readable.
+
+To make this easier, the server provides a helper command you use with `sudo`:
+
+- List who is in your personal group:
+
+    ```sh
+    sudo self-groupmems list
+    ```
+
+- Add another user to your group:
+
+    ```sh
+    sudo self-groupmems add otheruser
+    ```
+
+- Remove a user from your group:
+
+    ```sh
+    sudo self-groupmems del otheruser
+    ```
+
+This only affects membership of **your** personal group. It does **not** change your primary group, and it does not let you modify other system groups.
+
+Once someone is in your group, you can share things with them by making the group the owner and giving it access:
+
+```sh
+# Make a shared directory
+mkdir ~/shared
+
+# Set the group to your personal group (usually already true)
+chgrp "$USER" ~/shared
+
+# Let your group read/write/enter it, but keep others out
+chmod 770 ~/shared
