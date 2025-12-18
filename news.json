@@ -1,5 +1,11 @@
 [
-{
+    {
+        "date": "2025-12-18",
+        "title": "Happy Holidays",
+        "heading": "Happy Holidays, Tilde Club!",
+        "content": "Wishing everyone a warm, restful holiday season (or at least one with fewer surprises than a random package upgrade). Whether you\u2019re traveling, staying put, coding something wonderfully unnecessary, or just lurking with a mug of something hot, I hope you get a little peace and a lot of cozy.\n\nThanks for being part of what makes this place special: the creativity, the kindness, the weird little projects, and the steady reminder that the internet can still be human.\n\nMerry Christmas to those who celebrate, and happy holidays to everyone. See you on the other side of the calendar.\n\n~deepend"
+    },
+    {
         "date": "2025-12-12",
         "title": "MAINTENANCE: Fedora 43 Upgrade",
         "heading": "Fedora 43 upgrade planned for Dec 20, 2025",
@@ -11,7 +17,7 @@
         "heading": "Happy 10th Birthday, Tilde.Club!",
         "content": "Tilde.Club turned 10! This cozy corner of the internet has become a haven for creativity and community. Members have crafted quirky personal pages, shared knowledge through the wiki, and supported each other in countless projects. It's a space where everyone's unique contributions shine, making it truly special. Here's to a decade of fun and friendship, and many more to come!"
     },
-   {
+    {
         "date": "2024-08-01",
         "title": "UPDATE: August 2024",
         "heading": "Hey Everyone, Disk Quotas are Here!",
