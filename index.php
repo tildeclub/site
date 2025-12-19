@@ -73,7 +73,7 @@ if (isset($_GET['notice'])) {
                     }
                 }
 
-                if (!$selectedYear && count($filteredNews) >= 2) {
+                if (!$selectedYear && count($filteredNews) >= 3) {
                     break;
                 }
             }
