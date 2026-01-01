@@ -38,42 +38,62 @@ after this, every time you reconnect to irc you will have to identify with nicks
 
 weechat tip: NickServ replies and error messages appear in the first buffer `tilde weechat` (use Alt + up/down to switch).
 
-## Weechat relays
+## WeeChat relays
 
-weechat introduced [unix socket relays](
-https://weechat.org/files/doc/stable/weechat_user.en.html#relay_unix_socket)
-in version 2.5 which is a much easier way to offer per-user relay access.
+WeeChat introduced [UNIX domain socket relays](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_unix_socket)
+in version 2.5, which is a much easier way to offer per-user relay access.
 
-tilde.club/~username/weechat is configured to proxy to the default unix relay socket
-location (`~/.weechat/relay_socket`). to get started using it, follow these steps.
+---
 
-1. in weechat:
-    * `/relay add unix.weechat %h/relay_socket`
-    * `/set relay.network.password mysupersecretpassword` - don't use this password
-      of course. note that you might already have this set.
+username.tildecities.com/weechat is configured to proxy to a per-user UNIX relay socket.
+To get started:
 
-2. at your shell:
-    * `chmod o+rw ~/.weechat/relay_socket` - note that other members of the club group
-      are not included in the granted permissions. this allows nginx to connect
-      to your socket on your behalf. you will need to do this every time you start
-      weechat as the socket doesn't exist until weechat starts up.
+1. In WeeChat:
 
-3. in your relay client:
-    * [glowing-bear](https://glowingbear.tilde.club/):
-        - relay hostname: tilde.club:443/~username/weechat
-        - relay port: 443
-        - your relay password
+   * Set your relay password using `/secure`:
+     * `/secure set relay mysupersecretpassword`
+     * `/set relay.network.password "${sec.data.relay}"`
 
-    * [weechat-android](https://github.com/ubergeek42/weechat-android) and [lith](https://github.com/lithapp/lith):
-        - connection type: websocket (ssl)
-        - websocket path: ~username/weechat
-        - relay host: tilde.club
-        - relay port: 443
-        - your relay password
+   * Create the UNIX-socket relay.
 
-    - (if you get "Error: Could not connect using WebSocket", check to be sure
-      ~/ and ~/.weechat have at least o+rx permissions so nginx can reach
-      ~/.weechat/relay_socket)
+     * **tilde.club’s nginx proxy expects the socket in your home dir:**
+       * `/relay add unix.weechat ~/.weechat/relay_socket`
+
+2. At your shell (permissions):
+
+   * Ensure nginx can traverse to the socket (execute-only is enough):
+     * `chmod o+x ~/.weechat`
+
+   * After WeeChat creates the socket, allow nginx to read/write it:
+     * `setfacl -m u:nginx:rw ~/.weechat/relay_socket`
+
+3. In your relay client (WebSocket via tilde.club proxy):
+
+   WeeChat expects the WebSocket URI to end with `/weechat` for the weechat protocol.
+   (The tilde.club proxy endpoint should handle this mapping for you.)
+
+   * [glowing-bear](https://glowingbear.tilde.club/):
+     - relay host: `username.tildecities.com:443/weechat`
+     - relay port: `443`
+     - your relay password
+
+   * [weechat-android](https://github.com/ubergeek42/weechat-android) and [lith](https://github.com/lithapp/lith):
+     - connection type: WebSocket (SSL/TLS)
+     - relay host: `username.tildecities.com`
+     - relay port: `443`
+     - websocket path: `/weechat`
+     - your relay password
+
+### Removing old relays
+
+List relays:
+* `/relay listrelay` (or `/relay listfull`)
+
+Delete a relay:
+* `/relay del <name>`
+
+(Example: `/relay del unix.weechat`.)
+
 
 ## IRC Bouncer (ZNC)
 NOTE: Email deepend or message him on IRC if you require ZNC access. 
