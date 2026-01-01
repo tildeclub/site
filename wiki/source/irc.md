@@ -24,7 +24,7 @@ server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
 other clients like irssi are available as well! just connect to **irc.newnet.net**
 on port **6697 TLS** and `/join #club`.  
 
-feel free to use Newnet's [webchat](https://web.newnet.net/?join=club) if
+feel free to use Newnet's [webchat](https://newnet.net/chat.php?channel=%23club) if
 you prefer.
 
 some channels might require you to register your nickname with NickServ to post in them (e.g. #meta). NickServ acts like a regular user, so you communicate with it through `/msg`. steps:
