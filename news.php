@@ -6,29 +6,28 @@
 
 <!-- <p class="advisory">GMAIL USERS: We no longer accept gmail.com addresses for signups since you would not receive your account> -->
 <!-- Active Users Scrolling List -->
-<div class="active-users-container">
-    <h2 style="display: inline;">Currently Active Users:</h2>
-    <div class="active-users-list">
-        <ul>
+<div id="active-users">
+    <h2>Currently Active Users:</h2>
 	<?php
-	$activeUsers = json_decode(file_get_contents('online-users.json'), true);
+	$activeUsers = json_decode(file_get_contents('/usr/share/nginx/html/online-users.json'), true);
 
-        if (!empty($activeUsers)) {
-            foreach ($activeUsers as $user) {
-                $username = htmlspecialchars($user);
-                echo "<li><a href='/~$username'>$username</a></li>";
-            }
-            // Repeat the list for seamless scrolling
-            foreach ($activeUsers as $user) {
-                $username = htmlspecialchars($user);
-                echo "<li><a href='/~$username'>$username</a></li>";
-            }
-	} else {
-            echo "<li>No active users at the moment.</li>";
-        }
+	if (!empty($activeUsers)) 
+	{
+		echo '<marquee scrollamount="2">';
+
+		foreach ($activeUsers as $user) 
+		{
+			$username = htmlspecialchars($user);
+			echo "<a href='/~$username'>$username</a> &nbsp;";
+		}
+
+		echo '</marquee>';
+	} 
+	else 
+	{
+		echo "<li>No active users at the moment.</li>";
+	}
 	?>
-	</ul>
-    </div>
 </div>
 <?php
 // Load the HTML from inn_status.html
