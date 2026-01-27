@@ -1,6 +1,7 @@
 ---
-title: Userdir traffic stats (sanitized analytics)
+title: Userdir traffic stats
 category: Software
+Author: deepend
 ---
 
 So you want traffic stats for your `~/public_html` site, This stats system generates a **sanitized** report per user from the server’s nginx logs, then lets you publish it *only if you choose to*.
