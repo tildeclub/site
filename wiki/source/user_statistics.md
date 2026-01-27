@@ -1,6 +1,6 @@
 ---
 title: Userdir traffic stats
-category: Software
+category: software
 Author: deepend
 ---
 
