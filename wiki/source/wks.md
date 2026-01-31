@@ -1,7 +1,7 @@
 ---
 title: Publish your PGP key via WKS (tilde.club)
 author: deepend
-category: security
+category: tutorials
 ---
 
 # Publish your OpenPGP key so mail apps can auto-discover it using **WKD/WKS** on `openpgpkey.tilde.club`.
