@@ -190,8 +190,8 @@ of your Tilde.club home directory,
 with appropriate file extension;
 and also make sure that the thing is **world-readable** _and_ **world-executable**
 (something like <q>`chmod +rx YOURFILE.EXT`</q> would do).
-If you use other language that compiles to a binary executable,
-just world-executable permission will suffice.
+If you use another language that compiles to a binary executable, use a `.cgi` extension
+and just world-executable permission will suffice.
 
 The URL for accessing a CGI program from a web browser
 is no different from accessing
