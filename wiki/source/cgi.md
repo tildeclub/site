@@ -125,64 +125,64 @@ would be noted in each example.
 - Perl
 	(also works with <q><samp>.pl</samp></q> file extension):
 	
-		#!/usr/bin/perl
-		print "Status: 200\n";
-		print "Content-Type: text/plain\n";
-		print "\n";
-		print "Hello World!\n";
+	  #!/usr/bin/perl
+	  print "Status: 200\n";
+	  print "Content-Type: text/plain\n";
+	  print "\n";
+	  print "Hello World!\n";
 	
 	Note that Perl was the main language of choice
 	back in the heyday of CGI programming.
 - Bourne shell script
 	(also works with <q><samp>.sh</samp></q> file extension):
 	
-		#!/bin/sh
-		echo "Status: 200"
-		echo "Content-Type: text/plain"
-		echo
-		echo "Hello World!"
+	  #!/bin/sh
+	  echo "Status: 200"
+	  echo "Content-Type: text/plain"
+	  echo
+	  echo "Hello World!"
 - Python
 	(usable under both 3.x and 2.x,
 	also works with <q><samp>.py</samp></q> file extension):
 	
-		#!/usr/bin/python
-		print("Status: 200")
-		print("Content-Type: text/plain")
-		print("")
-		print("Hello World!")
+	  #!/usr/bin/python
+	  print("Status: 200")
+	  print("Content-Type: text/plain")
+	  print("")
+	  print("Hello World!")
 - AWK:
 	
-		#!/usr/bin/awk -E
-		BEGIN {
-			print "Status: 200"
-			print "Content-Type: text/plain"
-			print
-			print "Hello World!"
-		}
+	  #!/usr/bin/awk -E
+	  BEGIN {
+	  	print "Status: 200"
+	  	print "Content-Type: text/plain"
+	  	print
+	  	print "Hello World!"
+	  }
 - Lua
 	(also works with <q><samp>.lua</samp></q> extension):
 	
-		#!/usr/bin/lua
-		print("Status: 200")
-		print("Content-Type: text/plain")
-		print("")
-		print("Hello World!")
+	  #!/usr/bin/lua
+	  print("Status: 200")
+	  print("Content-Type: text/plain")
+	  print("")
+	  print("Hello World!")
 - Tcl:
 	
-		#!/usr/bin/tclsh
-		puts "Status: 200"
-		puts "Content-Type: text/plain"
-		puts ""
-		puts "Hello World!"
+	  #!/usr/bin/tclsh
+	  puts "Status: 200"
+	  puts "Content-Type: text/plain"
+	  puts ""
+	  puts "Hello World!"
 - Common Lisp:
 	
-		#!/usr/bin/sbcl --script
-		(progn
-			(princ "Status: 200") (terpri)
-			(princ "Content-Type: text/plain") (terpri)
-			(terpri)
-			(princ "Hello World!") (terpri)
-		)
+	  #!/usr/bin/sbcl --script
+	  (progn
+	  	(princ "Status: 200") (terpri)
+	  	(princ "Content-Type: text/plain") (terpri)
+	  	(terpri)
+	  	(princ "Hello World!") (terpri)
+	  )
 
 Pick the language you like,
 put the script (or executable) in a file anywhere inside your <q>`public_html`</q> subdirectory
