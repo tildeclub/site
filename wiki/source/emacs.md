@@ -51,7 +51,7 @@ The Minibuffer is the small area under the Modeline. It acts as a prompt, tellin
 
 ### Menu Bar
 
-The Menu Bar is the series of drop-down menus at the top of an GNU Emacs instance. It gives all the available commands in the current buffer, and shows their corresponding keybindings.
+The Menu Bar is the series of drop-down menus at the top of a GNU Emacs instance. It gives all the available commands in the current buffer, and shows their corresponding keybindings.
 
 About Emacs Keybindings
 -----------------------
