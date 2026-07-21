@@ -1,6 +1,8 @@
 ---
 title: command line for absolute beginners
-author: cmccabe
+author:
+  - cmccabe
+  - keyboardan
 category: tutorials
 ---
 
@@ -235,7 +237,7 @@ home directory. Verify this with `ls` in your home directory and in
 
 ### Delete Files and Directories, with `rm` and `rmdir`
 
-As long as you're in one of your own directories (e.g. your home, or
+As long as you're in one of your own directories (e.g. your home, or
 'downloads' or 'public\_html'), you can create a new files. Create a new
 file called 'testtrash.txt':
 
@@ -393,7 +395,7 @@ read, write or execute it.
 If you don't own a file, then you can't change its mode. This is a basic
 security principle in GNU+Linux systems.
 
-For the files you own (i.e. the files within your home directory), you
+For the files you own (i.e. the files within your home directory), you
 can change the file modes yourself. You do this using the "change mode"
 command, `chmod`.
 
@@ -471,7 +473,7 @@ List of Common Programs
 `weechat`, `irssi` - for irc
 
 `scp` - for securely moving files between networked systems. this copies
-files (i.e. 'cp') over ssh, hence 'scp'
+files (i.e. 'cp') over ssh, hence 'scp'
 
 `lynx` - web browsing
 

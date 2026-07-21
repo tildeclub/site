@@ -1,6 +1,8 @@
 ---
 title: using cgit on tilde.club
-author: deepend
+author:
+  - deepend
+  - keyboardan
 category: tutorials
 ---
 
@@ -15,7 +17,7 @@ Below is the quick‑start plus a few tips.
 
 ---
 
-## 1  Create the **public\_git** directory (once)
+## 1. Create the **public\_git** directory (once)
 
 ```bash
 $ mkdir -p ~/public_git
@@ -25,7 +27,7 @@ The web server is already allowed to traverse `~/public_git`, so you do **not** 
 
 ---
 
-## 2  Add a repository
+## 2. Add a repository
 
 Only **bare** repos are accepted (they have no working tree inside them).
 
@@ -49,7 +51,7 @@ You can repeat for as many repos as you like; just keep each one directly in
 
 ---
 
-## 3  Browse your repos
+## 3. Browse your repos
 
 ```
 Index page   : https://tilde.club/~<username>/git/
@@ -63,12 +65,12 @@ https://tilde.club/~deepend/git/          # lists everything
 https://tilde.club/~deepend/git/hello.git/  # specific repo
 ```
 
-The header will say `~deepend Git Repositories`, commits are clickable, diffs
+The header will say `~deepend Git Repositories`, commits are clickable, diffs
 are highlighted, and the cloning URL is shown near the top right.
 
 ---
 
-## 4  Update a repository
+## 4. Update a repository
 
 Because the repo is bare you **push** into it; cgit shows the new state
 immediately.
@@ -80,7 +82,7 @@ $ git push --mirror tilde      # full mirror (branches + tags)
 
 ---
 
-## 5  Remove a repository
+## 5. Remove a repository
 
 Simply delete or rename the directory:
 
@@ -122,4 +124,4 @@ https://tilde.club/~<username>/git/<repo>.git
 ---
 
 Happy hacking, and show off your code!
-Questions? `#club` on irc.newnet.net or mail **[root@tilde.club](mailto:root@tilde.club)**.
+Questions? `#club` on irc.newnet.net or mail **[root@tilde.club](mailto:root@tilde.club)**.
