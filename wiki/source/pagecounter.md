@@ -1,6 +1,8 @@
 ---
 title: Page Counter (counter.tilde.club)
-author: deepend
+author:
+  - deepend
+  - keyboardan
 category: software
 ---
 
@@ -40,6 +42,6 @@ Example with options:
 
 ## Troubleshooting
 
-* **No digits**: open the script URL directly—fix invalid `page/user` or typos.
+* **No digits**: open the script URL directly -- fix invalid `page/user` or typos.
 * **Broken images**: ensure `style` exists and `ext=gif`.
 * **Shared counts**: give each page a distinct `page` value.

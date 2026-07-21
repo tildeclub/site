@@ -1,6 +1,8 @@
 ---
 title: Publish your PGP key via WKS (tilde.club)
-author: deepend
+author:
+  - deepend
+  - keyboardan
 category: tutorials
 ---
 
@@ -36,7 +38,7 @@ You’ll be prompted for a passphrase. If a key already exists for that email, i
 
 You’ll receive a “confirm your key publication” email.
 
-### Option A — quick pipe (no config)
+### Option A -- quick pipe (no config)
 
 Open the message in mutt and press `|`, then type:
 
@@ -45,7 +47,7 @@ gpg-wks-client --read | /usr/sbin/sendmail -t
 ```
 Enter your key’s passphrase if prompted. That’s it.
 
-### Option B — one-time mutt integration (nicer UX)
+### Option B -- one-time mutt integration (nicer UX)
 
 In mutt: open the email → press `v` (view parts) → select the `application/vnd.gnupg.wks` part → Enter. Done.
 
@@ -76,4 +78,4 @@ You should see your public key.
   `echo pinentry-mode\ loopback >> ~/.gnupg/gpg.conf`
   `gpgconf --kill gpg-agent; export GPG_TTY=$(tty); gpg-connect-agent updatestartuptty /bye`
 
-That’s it—once confirmed, mail clients can auto-fetch your key from `openpgpkey.tilde.club` with zero copy-paste.
+That’s it -- once confirmed, mail clients can auto-fetch your key from `openpgpkey.tilde.club` with zero copy-paste.

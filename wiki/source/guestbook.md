@@ -1,6 +1,8 @@
 ---
 title: Tilde Guestbook
-author: deepend
+author:
+  - deepend
+  - keyboardan
 category: software
 ---
 
@@ -60,7 +62,7 @@ When you pass a `theme`, **only your CSS is loaded** (the default stylesheet is 
 ## Embedding notes
 
 * Works fine when linked from inside frames/iframes **as long as** the referrer includes your full path (`/~<user>/...`). The meta tag above usually fixes “origin-only” referrers.
-* Do **not** use `rel="noreferrer"` on the link—this strips the referrer entirely.
+* Do **not** use `rel="noreferrer"` on the link -- this strips the referrer entirely.
 
 ## Troubleshooting
 

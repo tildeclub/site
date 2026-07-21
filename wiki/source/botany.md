@@ -1,10 +1,12 @@
 ---
 title: Botany
-author: deepend
+author:
+  - deepend
+  - keyboardan
 category: software
 ---
 
-**Botany** is a tiny terminal game where you grow an ASCII plant that lives on your Tilde home. It thrives when you water it on time, and it sulks—then dies—if you forget.
+**Botany** is a tiny terminal game where you grow an ASCII plant that lives on your Tilde home. It thrives when you water it on time, and it sulks -- then dies -- if you forget.
 
 ## Quick start
 
@@ -24,8 +26,8 @@ category: software
 
 * In the game: choose **Water**.
 * On IRC (community bot): in a channel the bot is in (or via DM), use:
-  * `!water <user>` — record a visit/watering for `~<user>`.
-  * `!plant <user>` — show the current status summary.
+  * `!water <user>` -- record a visit/watering for `~<user>`.
+  * `!plant <user>` -- show the current status summary.
   * The bot is rate-limited to prevent spam and will **tell you if a plant appears dead** (watering won’t revive it).
   * Privacy: if a user has opted out (see below), the bot **pretends their plant doesn’t exist**.
 
@@ -57,7 +59,6 @@ The personal page will show “private,” the garden won’t list it, and the I
 
 * Water roughly every 18 hours; set a reminder.
 * Stage 5 lets you **harvest** to start a new generation with bonuses.
-* If a web page looks wrong, launch `botany` once—opening the game reconciles state.
+* If a web page looks wrong, launch `botany` once -- opening the game reconciles state.
 
 Grow well, water often, to keep the garden alive.
-
