@@ -1,10 +1,10 @@
 ---
-title: how to contribute to this wiki
+title: Tilde.club Wiki Contributions
 author:
   - benharri
   - audiodude
   - xwindows
-category: tutorials
+category: tilde.club
 ---
 
 # Want to contribute to this wiki?
@@ -97,32 +97,32 @@ of technological liberation...
   with read-only access to Tilde.club members.
   In case you prefer to work on your edits directly inside Tilde.club,
   run a command like this to clone the repository:
-  
+
       git clone /usr/share/nginx/html tildeclub-site
-  
+
   If you prefer to clone to your local machine via SSH instead,
   use **one** of the following commands:
-  
+
       git clone ssh://USERNAME@tilde.club/usr/share/nginx/html tildeclub-site
       git clone USERNAME@tilde.club:/usr/share/nginx/html tildeclub-site
-  
+
   * Don't forget to substitute <var>USERNAME</var> with your Tilde.club username
     (else SSH would fail logging you in for the access).
   * The first command works even with a very old Git version.
-  
+
   Note that you cannot issue <q>`git push`</q> from a repository cloned these ways
   (but <q>`git pull`</q> will work like usual),
   so it would be suitable mainly for email-based patch submission,
   or your private experiment/exploration.
 * This Git repository is also officially available online at two places:
-  
+
   * [GitHub](https://github.com/tildeclub/site/)
     (requires JavaScript and latest browser to view)
   * [Tildeforge](https://tildeforge.dev/TildeClub/site)
     (read-only mirror,
     replicates from GitHub;
     do not need JavaScript to view)
-  
+
   The <q>`git clone`</q> command also work directly with these URLs;
   although note that pull requests are accepted only on GitHub.
   If you prefer not to use GitHub,
@@ -156,7 +156,7 @@ of technological liberation...
   specified in the section 14 of that license.
   If you submit your work to be a part of this wiki,
   this is the copyright license that your work would get published under.
-  
+
   **Do not trust what GitHub says about the specifics
   of licensing** on this repository
   (or any other repository hosted there for that matter),
