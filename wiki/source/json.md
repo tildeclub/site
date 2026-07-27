@@ -1,6 +1,6 @@
 ---
-title: JSON
-category: software
+title: Using JSON in tilde.club
+category: tutorials
 ---
 
 JSON is the "Javascript Object Notation", basically a file format for
@@ -18,4 +18,4 @@ JSON on standard input and produces JSON on standard output. Along the
 way in the middle you can do various standard sorts of file munging on
 a field by field basis.
 
-[Documentation for `jq` is in its manual.](http://stedolan.github.io/jq/manual/) 
+[Documentation for `jq` is in its manual.](http://stedolan.github.io/jq/manual/)
