@@ -135,29 +135,30 @@ To access the main help menu of GNU Emacs, you press `C-h C-h`. This will open a
 
 And now you know, if you are in any other buffer, to know all the keybindings quickly, you may press `C-h b` instead. Mind that this "b", after the `C-h`, has the same effect as pressing "b" in the `C-h C-h` main menu help. `C-h` in GNU Emacs, means exactly, I want help. Then follow it with a keystroke that say the type of help you want.
 
-### Common Help Keybindings
+Common Help Keybindings
+-----------------------
 
-#### C-h t (help-with-tutorial)
+### C-h t (help-with-tutorial)
 
 Select the GNU Emacs learn-by-doing tutorial.
 
-#### C-h k (describe-key)
+### C-h k (describe-key)
 
 Display documentation of the function invoked by a key sequence.
 
-#### C-h f (describe-function)
+### C-h f (describe-function)
 
 Display the full documentation of function.
 
-#### C-h v (describe-variable)
+### C-h v (describe-variable)
 
 Display the full documentation of variable.
 
-#### C-h a (apropos-command)
+### C-h a (apropos-command)
 
 Show commands that match a certain pattern.
 
-#### C-h m (describe-mode)
+### C-h m (describe-mode)
 
 Display documentation of current major mode and minor modes.
 
