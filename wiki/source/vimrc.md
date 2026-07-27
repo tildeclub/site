@@ -1,6 +1,6 @@
 ---
-title: Vim (editor) .vimrc file
-category: software
+title: Editing .vimrc file
+category: tutorials
 ---
 
 The file `.vimrc` in your home directory has instructions for [[vim]]
