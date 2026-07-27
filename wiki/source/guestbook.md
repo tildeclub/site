@@ -1,5 +1,5 @@
 ---
-title: Tilde Guestbook
+title: Tilde Guestbook (guestbook.tilde.club)
 author:
   - deepend
   - keyboardan
