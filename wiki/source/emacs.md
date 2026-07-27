@@ -24,6 +24,10 @@ Basic Elements of the Screen/Terminology
 
 When first starting GNU Emacs, there are a few elements of the screen that you should know:
 
+### Point
+
+Point is your (blinking) cursor position inside GNU Emacs, for editing within GNU Emacs.
+
 ### Buffer
 
 A "Buffer" is basically a container that holds the contents of whatever file you're editing.
@@ -47,8 +51,6 @@ A tab contains window(s). You may change your windows layout (by splitting windo
 ### Frame
 
 A frame contains tab(s). A usage for frames is, for example, at work, to switch between having a place for your coding tabs, and another place for your -- much well deserved -- leisure&chatting tabs.
-
-You may set up your leisure&chatting place in a tab instead, rather than in a frame. Making you just use one frame if it suits you better.
 
 ### Modeline
 
