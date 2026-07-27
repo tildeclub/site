@@ -1,10 +1,10 @@
 ---
-title: Editing with Emacs
+title: Emacs
 author:
   - ohnoitsnoah
   - xwindows
   - keyboardan
-category: tutorials
+category: software
 ---
 
 Emacs in tilde.club
