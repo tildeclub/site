@@ -4,6 +4,7 @@ author:
   - benharri
   - audiodude
   - xwindows
+  - keyboardan
 category: tilde.club
 ---
 
@@ -78,6 +79,26 @@ You can do this right from the Github GUI!
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
    it. if you're working locally on Tilde.club, you won't have to configure
    anything; git will use the system's sendmail to handle the email.
+
+# Removing unnecessary spaces in git patches is important
+
+Removing unnecessary whitespace in git patches is a common civilized thing to do when contributing. This makes it easier for people reading or modifying the same file, making it clear what changes are being made, by the patch.
+
+Before committing a file, do run:
+
+<!-- This code excerpt need improvement (with process substitution?).  Do test your snippet before putting here. -->
+
+```bash
+tmpfile=$(mktemp)
+editedfile="path/to/file-to-commit"
+
+git stripspace < "$editedfile" > $tmpfile
+mv $tmpfile "$editedfile"
+
+unset tmpfile editedfile
+```
+
+and you are alright. Do remember doing this.
 
 # Most importantly
 
