@@ -14,9 +14,9 @@ _or, how to tell other computers to do cool things_
 > you can also set up [two-factor authentication](2fa.html) to log in without your
 > keypair.
 
-## tilde.club details
+## Tilde.club details
 
-for example, to connect to tilde.club, you can do:
+for example, to connect to Tilde.club, you can do:
 
 ```
 ssh user@tilde.club
@@ -41,14 +41,14 @@ it will not work if you haven't set it up. be sure you're using the right ssh ke
 [skip over this background info](#how-to-make-an-ssh-key)**
 
 while [tilde.club](https://tilde.club) is accessible on the web and features
-lovely web pages written by its users, most interaction with tilde.club takes
-place **inside the machine** that runs tilde.club as opposed to via web forms
-that have an effect from **outside** tilde.club's computer.
+lovely web pages written by its users, most interaction with Tilde.club takes
+place **inside the machine** that runs Tilde.club as opposed to via web forms
+that have an effect from **outside** Tilde.club's computer.
 
-this is what sets tilde.club apart from most other online communities. you
+this is what sets Tilde.club apart from most other online communities. you
 connect directly to another computer from yours alongside other people and then
 write your web pages, chat, and play games all via text-based interfaces right
-on tilde.club's computer.
+on Tilde.club's computer.
 
 prior to the web (which debuted in 1995) this is how pretty much all computer
 stuff got done. you connected directly to a machine (usually over a direct,
@@ -123,7 +123,7 @@ signup form (or email it to [~root](mailto:root@tilde.club) if you already have 
 
 #### using your keypair
 
-once an admin approves your signup, you can join the tilde.club
+once an admin approves your signup, you can join the Tilde.club
 
 6. open terminal (it's in `/Applications/Utilities`)
 
@@ -171,11 +171,11 @@ notepad %USERPROFILE%\.ssh\id_ed25519.pub
 
 #### using your keypair
 
-once an admin approves your signup, you can join the tilde.club
+once an admin approves your signup, you can join the Tilde.club
 
 5. open command prompt (Start -> Search -> type "cmd")
 
-6. `ssh` to tilde.club:
+6. `ssh` to Tilde.club:
 
 ```cmd
 ssh username@tilde.club
@@ -225,11 +225,11 @@ signup form (or email it to [root@tilde.club](mailto:root@tilde.club) if you alr
 
 #### using your keypair
 
-once an admin approves your signup, you can join the tilde.club
+once an admin approves your signup, you can join the Tilde.club
 
 5. open a terminal (this depends on your distro)
 
-6. `ssh` to tilde.club:
+6. `ssh` to Tilde.club:
 
 where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
@@ -241,4 +241,4 @@ ssh username@tilde.club
 
 ---
 
-this tutorial is based on and uses parts of [the tilde.club ssh primer](https://github.com/tildeclub/tilde.club/blob/master/docs/ssh.md) and [the tilde.town ssh guide](https://tilde.town/wiki/getting-started/ssh.html).
+this tutorial is based on and uses parts of [the Tilde.club ssh primer](https://github.com/tildeclub/tilde.club/blob/master/docs/ssh.md) and [the tilde.town ssh guide](https://tilde.town/wiki/getting-started/ssh.html).

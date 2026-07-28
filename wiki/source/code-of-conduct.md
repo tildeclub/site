@@ -9,7 +9,7 @@ category: tilde.club
 
 ## 1. purpose
 
-a primary goal of tilde.club is to be inclusive to the largest number of
+a primary goal of Tilde.club is to be inclusive to the largest number of
 contributors, with the most varied and diverse backgrounds possible. as such,
 we are committed to providing a friendly, safe and welcoming environment
 for all.
@@ -17,11 +17,11 @@ for all.
 this code of conduct outlines our expectations for all those who participate
 in our community, as well as the consequences for unacceptable behavior.
 
-we invite all those who participate in tilde.club to help us create safe
+we invite all those who participate in Tilde.club to help us create safe
 and positive experiences for everyone.
 
 
-## 2. tilde.club mission
+## 2. Tilde.club mission
 
 **tilde.club exists to foster an engaged community for socializing, learning,
 and making cool stuff**
@@ -30,7 +30,7 @@ in a mass-media age, it is up to small, intentional communities to gather
 and work together to provide a space outside of the advertising-laden,
 profit-seeking, corporate-owned world of social media.
 
-to that end, tilde.club strives to be a radically inclusive community where
+to that end, Tilde.club strives to be a radically inclusive community where
 people of all backgrounds and all technological experience levels can come
 together to learn, to teach, and to delight in one another's creations.
 
@@ -76,7 +76,7 @@ anyone asked to stop unacceptable behavior is expected to comply immediately.
 
 if a community member engages in unacceptable behavior, the community
 organizers may take any action they deem appropriate, up to and including
-a temporary ban or permanent expulsion from tilde.club without warning
+a temporary ban or permanent expulsion from Tilde.club without warning
 (meaning your account will be terminated and all user data deleted).
 
 
@@ -97,15 +97,15 @@ of your grievance.
 
 ## 8. scope
 
-we expect all tilde.club members to abide by this code of conduct while:
+we expect all Tilde.club members to abide by this code of conduct while:
 
 * engaging with other members 
-* publishing content on tilde.club
+* publishing content on Tilde.club
 
 
 ## 9. contact info
 
-tilde.club admins:
+Tilde.club admins:
 
 you can also send a mail to [root@tilde.club](mailto:root@tilde.club) to
 make sure we all get it.

@@ -1,5 +1,5 @@
 ---
-title: tilde.club netiquette
+title: Tilde.club netiquette
 category: tilde.club
 ---
 

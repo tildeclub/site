@@ -51,7 +51,7 @@ Here are some good places to start
 -   [some more quick
     tips](http://tilde.club/~pfhawkins/tipsntricks.html)
 -   [how do I usenet in
-    tilde.club](http://tilde.club/wiki/usenet-news.html)?
+    Tilde.club](http://tilde.club/wiki/usenet-news.html)?
 -   [help me understand \'screen\'](http://tilde.club/~jonathan/screen/)
 
 Who are all these folks and what are they up to?
@@ -67,7 +67,7 @@ Who are all these folks and what are they up to?
 Disk Quotas Now Enforced
 ------------------------
 
-To help keep tilde.club running smoothly, we've introduced disk quotas. This helps make sure everyone gets their fair share of space and keeps the system in good shape.
+To help keep Tilde.club running smoothly, we've introduced disk quotas. This helps make sure everyone gets their fair share of space and keeps the system in good shape.
 
 **Here's what you need to know:**
 

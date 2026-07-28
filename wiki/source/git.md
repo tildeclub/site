@@ -24,7 +24,7 @@ one for this exercise. If you choose another Git host, you will need to
 work out some parts of this setup on your own.
 
 Once you have a git account, you will want to set up `git` for your
-tilde.club account. Use the email address that you used to create your
+Tilde.club account. Use the email address that you used to create your
 GitHub account. You can register multiple accounts with GitHub if
 needed.
 

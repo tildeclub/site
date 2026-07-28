@@ -5,10 +5,10 @@ category: software
 ---
 
 # Terminal Muiltiplexers
-Terminal multiplexers are programs that will keep your session running, even if you disconnect from the server. They also allow you to 'multiplex' your terminals, spawning multiple shells in one local terminal. The three multiplexers on tilde.club are [byobu](https://linux.die.net/man/1/byobu), [tmux](https://linux.die.net/man/1/tmux), and [screen](https://linux.die.net/man/1/screen).
+Terminal multiplexers are programs that will keep your session running, even if you disconnect from the server. They also allow you to 'multiplex' your terminals, spawning multiple shells in one local terminal. The three multiplexers on Tilde.club are [byobu](https://linux.die.net/man/1/byobu), [tmux](https://linux.die.net/man/1/tmux), and [screen](https://linux.die.net/man/1/screen).
 
 # Byobu
-byobu is the default mutliplexer for tilde.club. It was originally designed to provide elegant enhancements to the otherwise functional, plain, practical [GNU Screen](http://www.gnu.org/software/screen/), for the [Ubuntu](https://ubuntu.com/) server distribution. Byobu now includes an enhanced profiles, convenient keybindings, configuration utilities, and toggle-able system status notifications for both the GNU Screen window manager and the more modern [Tmux](https://github.com/tmux/tmux) terminal multiplexer, and works on most Linux, BSD, and Mac distributions.
+byobu is the default mutliplexer for Tilde.club. It was originally designed to provide elegant enhancements to the otherwise functional, plain, practical [GNU Screen](http://www.gnu.org/software/screen/), for the [Ubuntu](https://ubuntu.com/) server distribution. Byobu now includes an enhanced profiles, convenient keybindings, configuration utilities, and toggle-able system status notifications for both the GNU Screen window manager and the more modern [Tmux](https://github.com/tmux/tmux) terminal multiplexer, and works on most Linux, BSD, and Mac distributions.
 
 In the spirit of the former tmux page, here is a super basic primer:
 The basic keys to know are f2, f3, f4, f6, f8, and f9

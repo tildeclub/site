@@ -59,7 +59,7 @@ but you get an idea)
 > which previously only accessible as command line programs
 > run via on-premise terminal
 > or over telnet/dial-in shell session.
-> 
+>
 > Such glue logic programs would accept the request,
 > invoke the on-server infosystem programs with correct parameters,
 > dress its output a bit
@@ -124,18 +124,18 @@ would be noted in each example.
 
 - Perl
 	(also works with <q><samp>.pl</samp></q> file extension):
-	
+
 	  #!/usr/bin/perl
 	  print "Status: 200\n";
 	  print "Content-Type: text/plain\n";
 	  print "\n";
 	  print "Hello World!\n";
-	
+
 	Note that Perl was the main language of choice
 	back in the heyday of CGI programming.
 - Bourne shell script
 	(also works with <q><samp>.sh</samp></q> file extension):
-	
+
 	  #!/bin/sh
 	  echo "Status: 200"
 	  echo "Content-Type: text/plain"
@@ -144,14 +144,14 @@ would be noted in each example.
 - Python
 	(usable under both 3.x and 2.x,
 	also works with <q><samp>.py</samp></q> file extension):
-	
+
 	  #!/usr/bin/python
 	  print("Status: 200")
 	  print("Content-Type: text/plain")
 	  print("")
 	  print("Hello World!")
 - AWK:
-	
+
 	  #!/usr/bin/awk -E
 	  BEGIN {
 	  	print "Status: 200"
@@ -161,21 +161,21 @@ would be noted in each example.
 	  }
 - Lua
 	(also works with <q><samp>.lua</samp></q> extension):
-	
+
 	  #!/usr/bin/lua
 	  print("Status: 200")
 	  print("Content-Type: text/plain")
 	  print("")
 	  print("Hello World!")
 - Tcl:
-	
+
 	  #!/usr/bin/tclsh
 	  puts "Status: 200"
 	  puts "Content-Type: text/plain"
 	  puts ""
 	  puts "Hello World!"
 - Common Lisp:
-	
+
 	  #!/usr/bin/sbcl --script
 	  (progn
 	  	(princ "Status: 200") (terpri)
@@ -212,7 +212,7 @@ Output of your CGI programs is expected to have two parts:
 
 1. Lines you printed before the first blank line
    will be treated as HTTP response headers fields:
-   
+
    - The only exception is the <q>`Status:`</q> pseudo-header,
      which will not be output as a real response header,
      but its value will be rather used as HTTP status code of the response.
@@ -233,7 +233,7 @@ Output of your CGI programs is expected to have two parts:
      which is LF in case of Tilde.club and other GNU/Linux hosts;
      but in practice,
      CR/LF is accepted as well.
-   
+
 1. And what you output after the first blank line
    is your response body (i.e. content).
    This part can use any line ending in case of text,
@@ -390,7 +390,7 @@ And some caveats:
 
 - There is no support for <var>PATH_INFO</var> environment variable;
   you can blame Nginx for this one.
-  
+
   This mean you cannot simulate files and directory-like URIs
   (like <q>`/~SOMEONE/category.cgi/automobile/ev`</q>)
   under your CGI program;
@@ -398,13 +398,13 @@ And some caveats:
   even when <q>`category.cgi`</q> exist and being executable.
 - Avoid leaving files with following extensions in your web space
   when you don't intend for them to be run as CGI:
-  
+
   - `.cgi`
   - `.pl`
   - `.sh`
   - `.py`
   - `.lua`
-  
+
   This is because in current setup,
   requests to these files will be forwarded to a CGI handler anyway,
   even when their corresponding executable bit is not set;

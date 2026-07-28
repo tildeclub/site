@@ -35,7 +35,7 @@ article, and all the "metadata" aka author, title, and category, and
 ## The easy-ish way
 
 This wiki exists as a [git repo on Github](https://github.com/tildeclub/site/tree/master/wiki/). Whenever someone pushes a commit to the wiki directory,
-the wiki site gets automatically built and made live on tilde.club.
+the wiki site gets automatically built and made live on Tilde.club.
 
 What that means is that if you can simply create a file in that repo, you will
 have made your article live on the wiki. But luckily, you can do that from the
@@ -76,7 +76,7 @@ You can do this right from the Github GUI!
 
 3. submit the code via a PR on github or with git-send-email(1) to root@tilde.club
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
-   it. if you're working locally on tilde.club, you won't have to configure
+   it. if you're working locally on Tilde.club, you won't have to configure
    anything; git will use the system's sendmail to handle the email.
 
 # Most importantly

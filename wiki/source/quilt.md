@@ -30,9 +30,9 @@ Have fun and be kind!
 
 ## What's going on?
 
-We are building a patchwork quilt with the aid of POSIX named pipes. Any user able to execute a command on tilde.club
+We are building a patchwork quilt with the aid of POSIX named pipes. Any user able to execute a command on Tilde.club
 can pipe their message to `/home/lab6/quilt`. Messages are anonymous - there is no way to detect which user sent data into the pipe.
-Users from outside the tilde.club server can [read the quilt](https://tilde.club/~lab6/quilt.html) but cannot add to it.
+Users from outside the Tilde.club server can [read the quilt](https://tilde.club/~lab6/quilt.html) but cannot add to it.
 
 Backups will be taken regularly and the quilt will never be reset. The quilt is strictly
 append-only. Old messages are never edited or overwritten (spam and nastiness may be spray-painted over but I trust you folk to be better than this).

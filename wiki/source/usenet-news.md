@@ -73,7 +73,7 @@ it can also be configured for news.
 1. Under `Account Actions` click `Add Other Account...`
 1. Select "Newsgroup Account"
 1. Type in the name you and email address you want associated with your posts.
-   This can be your real name and tilde.club email address, or any other name
+   This can be your real name and Tilde.club email address, or any other name
    (like your tilde username) and any other email address.
 1. For the "Newsgroup Server" type `news.tilde.club`. Give it a name
    ("news.tilde.club" works fine), confirm a couple of times,

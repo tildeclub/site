@@ -11,13 +11,13 @@ this project. the complete codebase is available on
 [github](https://github.com/tildeclub/ttbp).
 
 `ttbp` runs from the command line, providing a hub for writing personal blog
-posts and reading posts written by other users of tilde.club. it's a little bit
+posts and reading posts written by other users of Tilde.club. it's a little bit
 like livejournal or dreamwidth or tumblr. you can opt to publish your posts to a
-public html file hosted on your tilde page, to tilde.club's gopher server, or
-keep all your entries private to the tilde.club server.
+public html file hosted on your tilde page, to Tilde.club's gopher server, or
+keep all your entries private to the Tilde.club server.
 
-this is a project that runs on tilde.club, so all users of this program are
-expected to operate under the tilde.club [code of
+this is a project that runs on Tilde.club, so all users of this program are
+expected to operate under the Tilde.club [code of
 conduct](http://tilde.club/wiki/code-of-conduct.html). content/personal issues should be
 worked out according to the CoC, with support from the [administrative
 team](https://tilde.club/wiki/code-of-conduct.html#contact-info) if needed.
@@ -35,7 +35,7 @@ to me directly; this uses email, which is what i'll respond to.
 entries are recorded as plaintext files in your `~/.ttbp/entries` directory.
 `ttbp` will use your selected editor to open and write files; each day is its
 own entry, like a diary page. at midnight for whatever timezone you've set for
-your user account on tilde.club, you'll get a fresh entry. if you don't write
+your user account on Tilde.club, you'll get a fresh entry. if you don't write
 any feels on a particular day, no entries will show up there.
 
 when you save and quit the text editor, your entry will automatically propagate
@@ -63,7 +63,7 @@ by creating files with any date you want.)*
 ### reading other feels
 
 the `browse global feels` feature shows the ten most recent entries that anyone
-has written on ttbp. this list is only accessible from within tilde.club,
+has written on ttbp. this list is only accessible from within Tilde.club,
 although individual entries may be posted to html or gopher.
 
 you can also pull up a list of a single user's feels through `check out your
@@ -75,7 +75,7 @@ opted to publish their posts.
 private information, even if a particular user is publishing entries in a
 world-viewable way! please be respectful about having access to other people's
 feels, and do not copy/repeat any information without getting their explicit
-permission. tilde.club operates on a high level of mutual trust, and `ttbp` is
+permission. Tilde.club operates on a high level of mutual trust, and `ttbp` is
 designed to give individuals control over their content.
 
 ### privacy
@@ -84,7 +84,7 @@ when you start your ttbp, you have the option of publishing or not publishing
 your blog.
 
 if you opt to not publish, your entires will never be accessible from outside of
-the tilde.club network; other tilde.club users will still be able to read your
+the Tilde.club network; other Tilde.club users will still be able to read your
 entries through the ttbp interface, or by directly accessing your
 `~/.ttbp/entries` directory.
 
@@ -114,7 +114,7 @@ them from within the program can help keep your files properly linked up.
   posts. entries marked `(nopub)` will not get written to html or gopher,
   and toggling them from this menu will immediately publish or unpublish
   that entry (if you're not publishing your posts at all, these settings
-  won't matter, since your feels will never show up outside of tilde.club)
+  won't matter, since your feels will never show up outside of Tilde.club)
 * **backup your feels**--makes a .tar.gz of all your entries, saving one
   copy to `~/.ttbp/backups/` with the current date, and a second copy to
   your home directory for safekeeping.

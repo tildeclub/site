@@ -1,5 +1,5 @@
 ---
-title: Editing your tilde.club site with WinSCP
+title: Editing your Tilde.club site with WinSCP
 author: vincenz00
 category: tutorials
 ---
@@ -8,9 +8,9 @@ category: tutorials
 
 ## Stuff you'll need:-
 
-1. tilde.club sign up confirmation email
+1. Tilde.club sign up confirmation email
 1. WinSCP ([download](https://winscp.net/eng/index.php))
-1. Public and private keys you used for signing up to tilde.club
+1. Public and private keys you used for signing up to Tilde.club
 1. Decent knowledge in HTML(why are you even here otherwise?)
 
 ## Steps to follow:-
@@ -21,8 +21,8 @@ category: tutorials
 1. Download and install WinSCP
 1. Now when you open WinSCP, you'll meet with the login page.
 1. Enter the following here:-
-   - Host name: tilde.club
-   - Username: username you used to sign up to tilde.club
+   - Host name: Tilde.club
+   - Username: username you used to sign up to Tilde.club
    - Password: the password given in the sign up confirmation email
 1. Now the final step before you go ahead and login. Go to
    advanced=>SSH=>Authentication and under authentication parameters, add your

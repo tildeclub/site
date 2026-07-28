@@ -7,7 +7,7 @@ author:
 category: software
 ---
 
-Emacs in tilde.club
+Emacs in Tilde.club
 ===================
 
 [GNU Emacs](https://www.gnu.org/software/emacs/) is a text-editor that is very capable, but also can be confusing to new users, so here's a basic guide of working with GNU Emacs.

@@ -4,7 +4,7 @@ author: benharri
 category: tutorials
 ---
 
-tilde.club now serves gopher! we're using
+Tilde.club now serves gopher! we're using
 [gophernicus](https://github.com/gophernicus/gophernicus) as our
 gopherd.
 

@@ -376,4 +376,3 @@ For a complete UI reference and settings,
 see the
 [tin(1)](http://www.tin.org/bin/man.cgi?section=1&topic=tin)
 manpage.
-

@@ -4,9 +4,9 @@ author: michaelcoyote
 category: tutorials
 ---
 
-Welcome to tilde.club. For many of you this may be your first multi-user host and for even more of you this may be your *first* host. Welcome to all of you.  
+Welcome to Tilde.club. For many of you this may be your first multi-user host and for even more of you this may be your *first* host. Welcome to all of you.
 
-Whether you are used to Unix, Linux and programming or a complete beginner please consider this an invitation to create and build new things. 
+Whether you are used to Unix, Linux and programming or a complete beginner please consider this an invitation to create and build new things.
 
 It's important when creating however that we respect the shared environment and that we respect the boundaries of others.
 
@@ -18,13 +18,13 @@ What does that mean with respect to scripting and programming on a shared host?
 
 - DOs
     - Respect shared CPU/Disk/Network resources
-    - Keep things that require a tilde.club login local to the server (don't post publicly), like home directory files:
+    - Keep things that require a Tilde.club login local to the server (don't post publicly), like home directory files:
         - Note that exceptions could include an opt-in file or special permissions from the user.
     - Respect `robots.txt` when writing web crawlers
 
 In short use your common sense and consider how your actions may affect others.
-  
-If you are unsure if something is a good idea or not, head to irc or message using the `wall` command and ask others what they think.  
+
+If you are unsure if something is a good idea or not, head to irc or message using the `wall` command and ask others what they think.
 
 If you want a conclusive answer, contact one of the system operators.
 
@@ -32,9 +32,9 @@ If you want a conclusive answer, contact one of the system operators.
 
 Consider the source of the data.
 
-E.g. We know that finger data might contain personal data such as phone numbers, and other identifying information and is not generally available without a tilde.club login. 
+E.g. We know that finger data might contain personal data such as phone numbers, and other identifying information and is not generally available without a Tilde.club login.
 
-Before exposing data such as this to the world, it should check for an opt in file such as the .public file file test before presenting info to the outside world. 
+Before exposing data such as this to the world, it should check for an opt in file such as the .public file file test before presenting info to the outside world.
 
 #### Shared Resources
 
@@ -48,4 +48,4 @@ Before exposing data such as this to the world, it should check for an opt in fi
 - Disk
     - On any commands that will heavily use disk, consider using the `ionice` command so that scripts will not affect interactive users
         - By adding the `ionice -c3 -p$$` command to any script, it will only use disk when idle.
-        - You can also run a command or script: `ionice -c3 -t ~/bin/command`  
+        - You can also run a command or script: `ionice -c3 -t ~/bin/command`

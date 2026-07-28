@@ -28,7 +28,7 @@ There are several attributes that define a user.
 
 For now we only need to know about the username.
 
-#### Welcome to tilde.club, your new home (and homedir)
+#### Welcome to Tilde.club, your new home (and homedir)
 When you registered for the system, you got an email that contained many things. One of those things was a username, and another was a password. When you logged into the server you were presented with what we call a prompt, and it looked a bit like this:
    
     sh-4.1$

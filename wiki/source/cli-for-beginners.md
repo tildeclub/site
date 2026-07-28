@@ -6,12 +6,12 @@ author:
 category: tutorials
 ---
 
-So, you want to join a public-access shell community like tilde.club,
+So, you want to join a public-access shell community like Tilde.club,
 but you don't yet have experience using GNU+Linux or other UNIX-like
 operating systems? This tutorial is designed to give you enough guidance
 that you can get started and move on to successfully directing your
 future learning. Once you get a basic level of self-sufficiency,
-tilde.club is a great place to practice and learn more.
+Tilde.club is a great place to practice and learn more.
 
 GNU+Linux is a text-based operating system. And it takes work and thought to start using.
 -----------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ You'll find a lot of people online arguing that GNU+Linux is *not* a
 text-based operating system, and that it in fact has a GUI interface
 just like Windows. It is true that you can use GNU+Linux through a
 graphical user interface (GUI) like Gnome, or that you can use services
-from GNU+Linux servers like tilde.club through a web interface. But the
+from GNU+Linux servers like Tilde.club through a web interface. But the
 people who are so keen on GUIs are saying this to make GNU+Linux sound
 like an easy transition for Windows or Mac users. However: (1) to really
 leverage the power of GNU+Linux, you need to learn to interact with it
@@ -36,12 +36,12 @@ client. SSH stands for secure-shell. SSH allows you to make a private
 connection between your computer and a shell server like
 [tilde.club](https://tilde.club), and it ensures that nobody else along
 the wire can listen in on your connection. Check out [our SSH
-page](/wiki/ssh.html) for information on connecting to tilde.club over
+page](/wiki/ssh.html) for information on connecting to Tilde.club over
 SSH.
 
 If you are having trouble with making your first SSH connection to
-tilde.club, or anything else while you're learning from this tutorial,
-drop by the [tilde.club web chat](https://web.tilde.chat/) or email an
+Tilde.club, or anything else while you're learning from this tutorial,
+drop by the [Tilde.club web chat](https://web.tilde.chat/) or email an
 admin for help (<root@tilde.club>).
 
 What is a shell?
@@ -72,7 +72,7 @@ you only need to know a few to get started and be self-sustaining.
 
 This tutorial will teach you the few commands that should allow you to
 take care of yourself and start down the real, longer-term path of
-self-directed learning. Once you're logged into tilde.club (or any
+self-directed learning. Once you're logged into Tilde.club (or any
 GNU+Linux shell server), you can practice the following commands as you
 learn them.
 
@@ -100,18 +100,18 @@ below.
 ### Logging In, with `ssh`
 
 Recall from the How-Do-I-Connect section above that you can use a SSH
-client to log into tilde.club. Once you're logged in, you can use the
+client to log into Tilde.club. Once you're logged in, you can use the
 command line SSH client to log into any other shell server; in the
 example below, let's say you want to log into tilde.town from
-tilde.club.
+Tilde.club.
 
 Skipping some specifics for now, you can log into tilde.town from a
-tilde.club shell by using SSH as follows:
+Tilde.club shell by using SSH as follows:
 
 > `ssh username@tilde.club`
 
 Some shell servers allow you to log in with nothing more than a username
-and password. But increasingly, many servers (like both tilde.club and
+and password. But increasingly, many servers (like both Tilde.club and
 tilde.town) require you to use ssh keys. To learn more about ssh keys,
 again, see our [SSH page](/wiki/ssh.html).
 
@@ -172,7 +172,7 @@ Now, save and quit by hitting the key combination Ctrl+x, and then
 typing 'y' in response to the question about wanting to save the
 modified buffer.
 
-Now you can pull up a browser to see the change at your tilde.club URL:
+Now you can pull up a browser to see the change at your Tilde.club URL:
 'https://tilde.club/\~yourUserName'
 
 ### Create a New File with `nano`
@@ -279,7 +279,7 @@ Now `cd` into your 'downloads' directory because we're going to use it
 for actual downloads.
 
 Use the `wget` (WWW get) command to download a text copy of this
-tutorial from tilde.club user cmccabe's public\_html directory:
+tutorial from Tilde.club user cmccabe's public\_html directory:
 
 > `wget https://tilde.team/~cmccabe/gnu-linux-toot.txt`
 
@@ -377,7 +377,7 @@ contents:
 > `ls /etc/cron.d`
 
 You now know enough to look around the file system. Note that most
-GNU+Linux systems (like tilde.club) adhere somewhat to an organization
+GNU+Linux systems (like Tilde.club) adhere somewhat to an organization
 scheme called the Filesystem Hierarchy Standard ([Wikipedia
 link](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)).
 This is another subject for you to read up on later.
@@ -451,7 +451,7 @@ There you have it -- you know about logging in, using basic shell
 commands, and the file system, and you're now self-sustaining (and a
 little more).
 
-tilde.club is about community, but it is about community of individuals
+Tilde.club is about community, but it is about community of individuals
 who work hard to learn. what you have just leaned will give you a
 platform on which you can learn by doing and trying things out.
 
@@ -484,10 +484,10 @@ stored in a script)
 
 `aspell` - a program for spell checking
 
-`motd` - list the message of the day, which on tilde.club displays all
+`motd` - list the message of the day, which on Tilde.club displays all
 the other commands below
 
-some tilde.club specific programs
+some Tilde.club specific programs
 ---------------------------------
 
 `bbj` - a bulletin board for asynchronous discussions
@@ -511,7 +511,7 @@ Other Intro-to-Linux Material
 
 Not suprisingly, you'll find a lot of other intro material online or in
 your local library. Here are a few that have been mentioned by
-tilde.club members:
+Tilde.club members:
 
 Terminus - an interactive game-like introduction to shell commands
 http://www.mprat.org/Terminus/

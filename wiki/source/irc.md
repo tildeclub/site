@@ -1,6 +1,6 @@
 ---
 title: Socializing and chat
-author: 
+author:
   - emv
   - benharri
   - deepend
@@ -9,10 +9,10 @@ category: tutorials
 
 ## irc
 
-Our main channel is on the [Newnet IRC Network](https://newnet.net).  
+Our main channel is on the [Newnet IRC Network](https://newnet.net).
 The official channel for ~club is `#club`. Stop by and say hello!
 
-> **New!** An *official secondary* channel is now open on the Zoite IRC  
+> **New!** An *official secondary* channel is now open on the Zoite IRC
 > Network in case Newnet ever has an outage (or if you just feel like
 > hanging out elsewhere). Connect to **irc.zoite.net** on port **6670 SSL**
 > and `/join #club` – same welcoming vibe, different network.
@@ -22,19 +22,19 @@ server. try launching [tmux](tmux.html), [byobu](https://superuser.com/a/423397)
  or [screen](screen.html) to keep your chat session running.
 
 other clients like irssi are available as well! just connect to **irc.newnet.net**
-on port **6697 TLS** and `/join #club`.  
+on port **6697 TLS** and `/join #club`.
 
 feel free to use Newnet's [webchat](https://newnet.net/chat.php?channel=%23club) if
 you prefer.
 
 some channels might require you to register your nickname with NickServ to post in them (e.g. #meta). NickServ acts like a regular user, so you communicate with it through `/msg`. steps:
 
-1. [optional] set nickname: `/nick YourNick` - not necessary with weechat, since it connects you under your tilde.club username
-2. register: `/msg NickServ REGISTER YourPassword youremail@example.com` - you can use your tilde.club e-mail address for this
+1. [optional] set nickname: `/nick YourNick` - not necessary with weechat, since it connects you under your Tilde.club username
+2. register: `/msg NickServ REGISTER YourPassword youremail@example.com` - you can use your Tilde.club e-mail address for this
 3. wait for registration email with confirmation code
 4. confirm: `/msg NickServ CONFIRM someCode`
 
-after this, every time you reconnect to irc you will have to identify with nickserv again: `/msg NickServ IDENTIFY YourPassword`.  
+after this, every time you reconnect to irc you will have to identify with nickserv again: `/msg NickServ IDENTIFY YourPassword`.
 
 weechat tip: NickServ replies and error messages appear in the first buffer `tilde weechat` (use Alt + up/down to switch).
 
@@ -56,7 +56,7 @@ To get started:
 
    * Create the UNIX-socket relay.
 
-     * **tilde.club’s nginx proxy expects the socket in your home dir:**
+     * **Tilde.club’s nginx proxy expects the socket in your home dir:**
        * `/relay add unix.weechat ~/.weechat/relay_socket`
 
 2. At your shell (permissions):
@@ -67,10 +67,10 @@ To get started:
    * After WeeChat creates the socket, allow nginx to read/write it:
      * `setfacl -m u:nginx:rw ~/.weechat/relay_socket`
 
-3. In your relay client (WebSocket via tilde.club proxy):
+3. In your relay client (WebSocket via Tilde.club proxy):
 
    WeeChat expects the WebSocket URI to end with `/weechat` for the weechat protocol.
-   (The tilde.club proxy endpoint should handle this mapping for you.)
+   (The Tilde.club proxy endpoint should handle this mapping for you.)
 
    * [glowing-bear](https://glowingbear.tilde.club/):
      - relay host: `username.tildecities.com:443/weechat`
@@ -96,10 +96,10 @@ Delete a relay:
 
 
 ## IRC Bouncer (ZNC)
-NOTE: Email deepend or message him on IRC if you require ZNC access. 
+NOTE: Email deepend or message him on IRC if you require ZNC access.
 
 You can find a ZNC IRC Bouncer by going to: [https://services.tilde.club/znc](https://services.tilde.club/znc).
-Use your tilde.club username and password for login.  
+Use your Tilde.club username and password for login.
 To connect to your ZNC its at services.tilde.club   Port: 6699(SSL)
 
 NOTE: long passwords fail to authenticate with the ZNC server.
