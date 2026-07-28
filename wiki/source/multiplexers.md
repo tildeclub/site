@@ -34,7 +34,7 @@ TMUX has sessions, windows, and panes. Each of these things will have a terminal
 
 ## windows
 
-Your tmux bar should look like: 
+Your tmux bar should look like:
 
 `[tildemux] 0:bash*`
 
@@ -56,7 +56,7 @@ To move between panes in the current window, use `PREFIX <up,down,left,right>`. 
 
 ## more
 
-I'm not the best writer or teacher. Just google anything that doesn't make sense. 
+I'm not the best writer or teacher. Just google anything that doesn't make sense.
 
 [Or take a look at this tmux guide](http://robots.thoughtbot.com/a-tmux-crash-course)
 
@@ -71,4 +71,3 @@ Or, if you don't like it - try [screen](screen.html)
 It's pretty handy. [tmux](tmux.html) does a similar set of things.
 
 a nice [screen tutorial](http://tilde.club/~jonathan/screen/) from ~jonathan will walk you through it.
-

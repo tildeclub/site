@@ -4,7 +4,6 @@ title: How to connect using SSH (secure shell)
 category: tutorials
 ---
 
-
 _or, how to tell other computers to do cool things_
 
 ---
@@ -25,7 +24,7 @@ mosh user@tilde.club
 
 ssh is also available on port 443 using the address `ssh.tilde.club`:
 
-    ssh -p 443 user@ssh.tilde.club
+	ssh -p 443 user@ssh.tilde.club
 
 this is useful if you're on a limited public network that blocks non-http
 ports.
@@ -75,7 +74,7 @@ be hacked) and for me, your humble sysadmin (less administration than passwords)
 
 SSH supports a handful of types of cryptographic keys. The most used are [RSA](
   <https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) and the more modern [Ed25519](
-    https://en.wikipedia.org/wiki/EdDSA#Ed25519).
+	https://en.wikipedia.org/wiki/EdDSA#Ed25519).
 
 RSA is the de-facto standard and is supported everywhere (just choose a big
 enough key like 4096 bits to be secure). Ed25519 is designed to be faster and
@@ -143,9 +142,9 @@ where username is your username (~benharri would use `ssh benharri@tilde.club`)
 
 #### Ensure OpenSSH is installed
 
-    1. Open Settings, select Apps, then select Optional Features
-    1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then...
-    1. Find OpenSSH Client, then select Install
+	1. Open Settings, select Apps, then select Optional Features
+	1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select Add a feature, then...
+	1. Find OpenSSH Client, then select Install
 
 #### generating your keypair
 
@@ -182,7 +181,6 @@ ssh username@tilde.club
 ```
 
 where username is your username (~benharri would use `ssh benharri@tilde.club`)
-
 
 Note: If you generated your key to the location above (%USERPROFILE%\\.ssh\\...) then you will be able to SSH to your tilde server without having to specify the location of the key. That folder is the default used by SSH and it will be found automatically. If you generated your keys in a different location or moved them, you will need to specify the full path to the private key.
 

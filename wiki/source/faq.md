@@ -4,15 +4,15 @@ author: ford (updated by deepend)
 category: tilde.club
 ---
 
-      _______________________________________
-     / WELCOME TO TILDE.CLUB A place for web \
-     \ pages                                 /
-      ---------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
+	  _______________________________________
+	 / WELCOME TO TILDE.CLUB A place for web \
+	 \ pages                                 /
+	  ---------------------------------------
+		\   ^__^
+		 \  (oo)\_______
+			(__)\       )\/\
+				||----w |
+				||     ||
 
 Looking to join? We can\'t wait to meet you!
 --------------------------------------------
@@ -39,7 +39,7 @@ new to all of this. In the meantime\...
 
 -   DON\'T HACK THE GIBSON.
 -   no drama. be respectful. have fun. we\'re all trying, and we\'re all
-    in this together :)
+	in this together :)
 
 Got it, don\'t be a jerk. But how do I, like, do things?
 --------------------------------------------------------
@@ -47,11 +47,11 @@ Got it, don\'t be a jerk. But how do I, like, do things?
 Here are some good places to start
 
 -   [the unofficial official tilde
-    primer](http://tilde.club/~anthonydpaul/primer.html)
+	primer](http://tilde.club/~anthonydpaul/primer.html)
 -   [some more quick
-    tips](http://tilde.club/~pfhawkins/tipsntricks.html)
+	tips](http://tilde.club/~pfhawkins/tipsntricks.html)
 -   [how do I usenet in
-    Tilde.club](http://tilde.club/wiki/usenet-news.html)?
+	Tilde.club](http://tilde.club/wiki/usenet-news.html)?
 -   [help me understand \'screen\'](http://tilde.club/~jonathan/screen/)
 
 Who are all these folks and what are they up to?
@@ -59,9 +59,9 @@ Who are all these folks and what are they up to?
 
 -   [tell me some lore](http://tilde.club/~joeld/tildelore.html)?
 -   [who is online right
-    now](http://tilde.club/~whitneymcn/whoville.shtml)?
+	now](http://tilde.club/~whitneymcn/whoville.shtml)?
 -   [who updated their websites
-    recently](http://tilde.club/tilde.24h.php)?
+	recently](http://tilde.club/tilde.24h.php)?
 -   [can you give me a blogroll](http://tilde.club/~_/)?
 
 Disk Quotas Now Enforced
@@ -111,7 +111,7 @@ TIL-dee.
 
 We can\'t wait to meet you. Seriously.
 
-         __         .' '.
-       _/__)        .   .       .
-      (8|)_}}- .      .        .
-       `\__)    '. . ' ' .  . '
+		 __         .' '.
+	   _/__)        .   .       .
+	  (8|)_}}- .      .        .
+	   `\__)    '. . ' ' .  . '

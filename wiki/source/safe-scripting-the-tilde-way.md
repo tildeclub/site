@@ -17,10 +17,10 @@ As Paul says:
 What does that mean with respect to scripting and programming on a shared host?
 
 - DOs
-    - Respect shared CPU/Disk/Network resources
-    - Keep things that require a Tilde.club login local to the server (don't post publicly), like home directory files:
-        - Note that exceptions could include an opt-in file or special permissions from the user.
-    - Respect `robots.txt` when writing web crawlers
+	- Respect shared CPU/Disk/Network resources
+	- Keep things that require a Tilde.club login local to the server (don't post publicly), like home directory files:
+		- Note that exceptions could include an opt-in file or special permissions from the user.
+	- Respect `robots.txt` when writing web crawlers
 
 In short use your common sense and consider how your actions may affect others.
 
@@ -39,13 +39,13 @@ Before exposing data such as this to the world, it should check for an opt in fi
 #### Shared Resources
 
 - In general
-    - Consider executing long running processes during overnight hours when fewer users are on the system
+	- Consider executing long running processes during overnight hours when fewer users are on the system
 - CPU
-    - Use the `nice` command to keep intensive processes from affecting others
-        - The `nice -n19 -p$$` placed in a script will make sure it runs at the lowest priority.
-        - Run a long command at the lowest CPU priority: `nice -n 19 ~/bin/command`
-        - Change the priority of process 923 (also known as "re-nicing a process") : `renice -17 -p923`
+	- Use the `nice` command to keep intensive processes from affecting others
+		- The `nice -n19 -p$$` placed in a script will make sure it runs at the lowest priority.
+		- Run a long command at the lowest CPU priority: `nice -n 19 ~/bin/command`
+		- Change the priority of process 923 (also known as "re-nicing a process") : `renice -17 -p923`
 - Disk
-    - On any commands that will heavily use disk, consider using the `ionice` command so that scripts will not affect interactive users
-        - By adding the `ionice -c3 -p$$` command to any script, it will only use disk when idle.
-        - You can also run a command or script: `ionice -c3 -t ~/bin/command`
+	- On any commands that will heavily use disk, consider using the `ionice` command so that scripts will not affect interactive users
+		- By adding the `ionice -c3 -p$$` command to any script, it will only use disk when idle.
+		- You can also run a command or script: `ionice -c3 -t ~/bin/command`

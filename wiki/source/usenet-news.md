@@ -46,7 +46,7 @@ You can also read the [FAQ from U Washington](http://www.washington.edu/pine/faq
 If you use Pine from inside Tilde.club,
 configure it by:
 
-1. 'S' for setup, 'C' for config, then 
+1. 'S' for setup, 'C' for config, then
 1. set 'NNTP Server (for news)' to `localhost`
 1. Then go back to the main menu, and pick Folder List,
 1. A for add, ^t for list

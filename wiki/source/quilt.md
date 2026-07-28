@@ -38,7 +38,7 @@ Backups will be taken regularly and the quilt will never be reset. The quilt is 
 append-only. Old messages are never edited or overwritten (spam and nastiness may be spray-painted over but I trust you folk to be better than this).
 The quilt grows without bound in all four directions.
 
-Be creative. Use your 150 characters wisely. If you didn't use them wisely, try again. Hold a conversation. Vent a thought. 
+Be creative. Use your 150 characters wisely. If you didn't use them wisely, try again. Hold a conversation. Vent a thought.
 Play correspondence chess. Golf some perl. Branch off into the void.
 
 Early adopters who snag the low messages IDs will be venerated by the generations to come.

@@ -22,12 +22,12 @@ You can invoke *The Traditional Vi* in several ways
 
 1. by the full path to the executable:
 
-       /usr/archaic/bin/vi
+	   /usr/archaic/bin/vi
 
 2. by adding it as an alias to your shell's `rc` file
    (`~/.bashrc` for *Bash*), e.g:
 
-       alias tvi=/usr/archaic/bin/vi
+	   alias tvi=/usr/archaic/bin/vi
 
    and then invokng *Vi* by typing `tvi`,
 
@@ -36,8 +36,8 @@ You can invoke *The Traditional Vi* in several ways
    in your shell's profile script
    (for *Bash*, `~/.bash_profile` or `~/.profile`):
 
-       export    PATH="/usr/archaic/bin/:$PATH"
-       export MANPATH="/usr/archaic/share/man/man:$MANPATH"
+	   export    PATH="/usr/archaic/bin/:$PATH"
+	   export MANPATH="/usr/archaic/share/man/man:$MANPATH"
 
 The latter method has the advantage
 of affecting subshells,
@@ -68,10 +68,10 @@ and the `EDITOR` environment variale.
 [its source](https://sourceforge.net/p/ex-vi/code/).
 You only need to locate the following line in `Makefile`:
 
-    TERMLIB = termlib
+	TERMLIB = termlib
 
 and replace the value with `curses` or `ncurses`,
 depending on your preferred terminal library.
 Now you can build and install the project with:
 
-    make && make install
+	make && make install

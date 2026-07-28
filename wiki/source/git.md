@@ -28,8 +28,8 @@ Tilde.club account. Use the email address that you used to create your
 GitHub account. You can register multiple accounts with GitHub if
 needed.
 
-    git config --global user.name "Your Name Here"
-    git config --global user.email youremail@example.org
+	git config --global user.name "Your Name Here"
+	git config --global user.email youremail@example.org
 
 You will also want to create a `.gitignore` file. This file defines what
 things you want git to ignore, such as editor temporary files or
@@ -40,13 +40,13 @@ project directory.
 
 Here is an example `.gitignore` file:
 
-    # files being edited
-    *~
-    *swp
-    # Generated files
-    tilde_graphs
-    # Private files
-    diary.txt
+	# files being edited
+	*~
+	*swp
+	# Generated files
+	tilde_graphs
+	# Private files
+	diary.txt
 
 Now go create a repository on GitHub. In our examples we are using
 mytildeweb as the repo name, but you can choose whatever name works for
@@ -55,22 +55,22 @@ with the proper one.
 
 Now we should be ready to create and upload the repository.
 
-    cd public_html/
-    # This will initialize public_html as a repository
-    git init
-    # Adds all files to the repo. "." means "the current directory" (public_html, in this case)
-    # Note: you can also add files one at a time
-    git add .
-    # Commits files to local repo
-    git commit -m "first commit of tildeweb"
-    # Tells git where your remote repo is
-    git remote add origin https://github.com/<yourgithubuser>/mytildeweb.git
-    # Uploads to the remote repo
-    git push -u origin master
+	cd public_html/
+	# This will initialize public_html as a repository
+	git init
+	# Adds all files to the repo. "." means "the current directory" (public_html, in this case)
+	# Note: you can also add files one at a time
+	git add .
+	# Commits files to local repo
+	git commit -m "first commit of tildeweb"
+	# Tells git where your remote repo is
+	git remote add origin https://github.com/<yourgithubuser>/mytildeweb.git
+	# Uploads to the remote repo
+	git push -u origin master
 
 Your files should now be on GitHub. If you make a change and you want to
 update, do the following after making your edits:
 
-    git add index.html
-    git commit -m "updated blog"
-    git push origin master
+	git add index.html
+	git commit -m "updated blog"
+	git push origin master

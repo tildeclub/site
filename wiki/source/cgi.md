@@ -154,10 +154,10 @@ would be noted in each example.
 
 	  #!/usr/bin/awk -E
 	  BEGIN {
-	  	print "Status: 200"
-	  	print "Content-Type: text/plain"
-	  	print
-	  	print "Hello World!"
+		print "Status: 200"
+		print "Content-Type: text/plain"
+		print
+		print "Hello World!"
 	  }
 - Lua
 	(also works with <q><samp>.lua</samp></q> extension):
@@ -178,10 +178,10 @@ would be noted in each example.
 
 	  #!/usr/bin/sbcl --script
 	  (progn
-	  	(princ "Status: 200") (terpri)
-	  	(princ "Content-Type: text/plain") (terpri)
-	  	(terpri)
-	  	(princ "Hello World!") (terpri)
+		(princ "Status: 200") (terpri)
+		(princ "Content-Type: text/plain") (terpri)
+		(terpri)
+		(princ "Hello World!") (terpri)
 	  )
 
 Pick the language you like,
@@ -214,25 +214,25 @@ Output of your CGI programs is expected to have two parts:
    will be treated as HTTP response headers fields:
 
    - The only exception is the <q>`Status:`</q> pseudo-header,
-     which will not be output as a real response header,
-     but its value will be rather used as HTTP status code of the response.
-     - When <q>`Status:`</q> pseudo-header is omitted,
-       the HTTP status code of your response would be 200.
-     - Your program ought **NOT** to output this as a real HTTP response line
-       (<q>`HTTP/1.0 200 OK`</q> and suchlike).
-       Doing so is off-spec;
-       and while some servers handle this okay,
-       Tilde.club doesn't.
+	 which will not be output as a real response header,
+	 but its value will be rather used as HTTP status code of the response.
+	 - When <q>`Status:`</q> pseudo-header is omitted,
+	   the HTTP status code of your response would be 200.
+	 - Your program ought **NOT** to output this as a real HTTP response line
+	   (<q>`HTTP/1.0 200 OK`</q> and suchlike).
+	   Doing so is off-spec;
+	   and while some servers handle this okay,
+	   Tilde.club doesn't.
    - You **MUST** output <q>`Content-Type:`</q> header;
-     or else the server would reject your program's output
-     and give HTTP 502 error to the client instead.
+	 or else the server would reject your program's output
+	 and give HTTP 502 error to the client instead.
    - A blank line ends the headers section.
    - You should output headers
-     (including the blank line terminating the headers)
-     in platform's native line ending,
-     which is LF in case of Tilde.club and other GNU/Linux hosts;
-     but in practice,
-     CR/LF is accepted as well.
+	 (including the blank line terminating the headers)
+	 in platform's native line ending,
+	 which is LF in case of Tilde.club and other GNU/Linux hosts;
+	 but in practice,
+	 CR/LF is accepted as well.
 
 1. And what you output after the first blank line
    is your response body (i.e. content).
@@ -269,9 +269,9 @@ in the environment variables:
   would be passed to your CGI program
   as the value of environment variable `QUERY_STRING`.
   - This variable will always be present.
-    If the request URI had no <q>`?`</q>,
-    or there was nothing after <q>`?`</q>;
-    the value would be empty.
+	If the request URI had no <q>`?`</q>,
+	or there was nothing after <q>`?`</q>;
+	the value would be empty.
 - Each request headers field's name would be converted to uppercase,
   prepended with <q>`HTTP_`</q>,
   and set as environment variable
@@ -327,7 +327,7 @@ but are set for CGI programs in Tilde.club:
   checking for `HTTPS` value <q>`on`</q> is to be used
   if you expect your CGI program to be portable to Apache HTTP Server.
   - This can be used for ensuring a correct version of Atom or RSS feed
-    got served on a right protocol.
+	got served on a right protocol.
 
 Program Execution
 -----------------

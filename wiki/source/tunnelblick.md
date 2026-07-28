@@ -4,7 +4,7 @@ category: links
 ---
 
 `tunnelblick` is an application for your Mac that allows you to configure
-and manage VPN sessions. You can use this e.g. if you are connecting to 
+and manage VPN sessions. You can use this e.g. if you are connecting to
 Tilde.club via a network that does not allow high UDP ports; with a properly
 configured tunnel, you can still run [[mosh]] as your shell and keep on
 truckin.

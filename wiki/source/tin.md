@@ -5,8 +5,8 @@ author:
   - ant
 todo:
   - describe the common entry prefixes on:
-    - groups
-    - threads
+	- groups
+	- threads
 	- articles
   - arrange the principal keys in the way most convenient to the learner:
 	- with grouping by relative function
@@ -321,7 +321,7 @@ The most important keys are:
 Key    Level   Action
 ----   ------  --------------------
 H      SGTA    toggle on-screen help,
-               useful for learning
+			   useful for learning
 
 h      SGTA    list available commands
 
@@ -361,7 +361,7 @@ c/C    SGTA    mark group (SG) or thread (TA) as read
 			   and move to the next unread (C) one
 
 K      GTA     mark current thread (G) or article (TA)
-               as read and move to the next unread one
+			   as read and move to the next unread one
 
 z      SGA     mark group/base article/article unread
 

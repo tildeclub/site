@@ -3,7 +3,7 @@ title: VPN Gate
 category: links
 ---
 
-`VPN Gate` is a project from U Tsukuba in Japan that allows you to 
+`VPN Gate` is a project from U Tsukuba in Japan that allows you to
 evade censorship and filtering by setting up VPN tunnels. It was
 designed with the Great Firewall of China in mind.
 

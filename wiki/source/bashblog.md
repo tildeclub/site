@@ -1,11 +1,10 @@
---- 
+---
 title: bashblog (blog platform)
-author: 
-  - deepend 
+author:
+  - deepend
   - benharri
 category: software
 ---
-
 
 ## Usage
 
@@ -26,7 +25,6 @@ It will use Markdown. To force HTML:
 The script will handle the rest.
 
 When you’re done, access the public URL for that folder (https://tilde.club/~username/blog) and you should see the index file and a new page for that post!
-
 
 ## advanced
 

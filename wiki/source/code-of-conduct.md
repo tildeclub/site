@@ -1,11 +1,10 @@
---- 
-title: code of conduct 
+---
+title: code of conduct
 author: benharri
 category: tilde.club
 ---
 
 > **tl;dr** learn by doing and helping. be excellent to each other. have fun!
-
 
 ## 1. purpose
 
@@ -20,7 +19,6 @@ in our community, as well as the consequences for unacceptable behavior.
 we invite all those who participate in Tilde.club to help us create safe
 and positive experiences for everyone.
 
-
 ## 2. Tilde.club mission
 
 **tilde.club exists to foster an engaged community for socializing, learning,
@@ -34,20 +32,18 @@ to that end, Tilde.club strives to be a radically inclusive community where
 people of all backgrounds and all technological experience levels can come
 together to learn, to teach, and to delight in one another's creations.
 
-
 ## 3. expected behavior
 
 the following behaviors are expected and requested of all community members:
 
   * participate in an authentic and active way. in doing so, you contribute
-  to the health and longevity of this community.  
+  to the health and longevity of this community.
   * exercise consideration and
-  respect in your speech and actions.  
+  respect in your speech and actions.
   * attempt collaboration before conflict.
   * refrain from demeaning, discriminatory, or harassing behavior and speech.
-  * be mindful of your surroundings and of your fellow participants.  
+  * be mindful of your surroundings and of your fellow participants.
   * teach when people need help. don't do it for them.
-
 
 ## 4. unacceptable behavior
 
@@ -55,17 +51,16 @@ the following behaviors are considered harassment and are unacceptable within
 our community:
 
 * violence, threats of violence or violent language directed against another
-  person.  
+  person.
 * sexist, racist, homophobic, transphobic, ableist or otherwise
-  discriminatory jokes and language.  
-* posting or displaying sexually explicit or violent material.  
-* posting or threatening to post other people's personally identifying 
-  information ("doxing").  
+  discriminatory jokes and language.
+* posting or displaying sexually explicit or violent material.
+* posting or threatening to post other people's personally identifying
+  information ("doxing").
 * personal insults, particularly those related to gender, sexual orientation,
-  race, religion, or disability.  
-* unwelcome sexual attention. this includes sexualized comments or jokes.  
+  race, religion, or disability.
+* unwelcome sexual attention. this includes sexualized comments or jokes.
 * deliberate intimidation, stalking or following.
-
 
 ## 5. consequences of unacceptable behavior
 
@@ -79,7 +74,6 @@ organizers may take any action they deem appropriate, up to and including
 a temporary ban or permanent expulsion from Tilde.club without warning
 (meaning your account will be terminated and all user data deleted).
 
-
 ## 6. reporting guidelines
 
 if you are subject to or witness unacceptable behavior, or have any other
@@ -87,21 +81,18 @@ concerns, please contact an admin (see info below).
 
 additionally, help engaging with law enforcement is available.
 
-
 ## 7. addressing grievances
 
 if you feel you have been falsely or unfairly accused of violating this
 code of conduct, use the contact info below to send a concise description
 of your grievance.
 
-
 ## 8. scope
 
 we expect all Tilde.club members to abide by this code of conduct while:
 
-* engaging with other members 
+* engaging with other members
 * publishing content on Tilde.club
-
 
 ## 9. contact info
 
@@ -111,13 +102,12 @@ you can also send a mail to [root@tilde.club](mailto:root@tilde.club) to
 make sure we all get it.
 
 * [benharri](https://tilde.club/~benharri/):
-  - [benharri@tilde.club](mailto:benharri@tilde.club) 
+  - [benharri@tilde.club](mailto:benharri@tilde.club)
   - on irc `/query
   ben hello`
 * [deepend](https://tilde.club/~deepend/):
-  - [deepend@tilde.club](mailto:deepend@tilde.club) 
+  - [deepend@tilde.club](mailto:deepend@tilde.club)
   - on irc `/query deepend hello`
-
 
 ## 10. license and attribution
 
@@ -126,4 +116,3 @@ this code of conduct is based on
 and [tilde.town coc](http://tilde.town/wiki/conduct.html)
 under the terms of the [creative commons attribution-sharealike
 license](http://creativecommons.org/licenses/by-sa/3.0/).
-

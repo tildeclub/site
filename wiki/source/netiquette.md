@@ -10,7 +10,7 @@ category: tilde.club
 
 ## Details
 
-First things first, explore and have fun! But remember, this is a single linux server trying to support the weight of several hundred nerds. Don't host servers, don't run heavy processes, don't host giant files. In short, be gentle. 
+First things first, explore and have fun! But remember, this is a single linux server trying to support the weight of several hundred nerds. Don't host servers, don't run heavy processes, don't host giant files. In short, be gentle.
 
 More about [scripting netiquette here](http://tilde.club/wiki/safe-scripting-the-tilde-way.html)
 

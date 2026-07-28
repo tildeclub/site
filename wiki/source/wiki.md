@@ -68,11 +68,11 @@ You can do this right from the Github GUI!
 
 1. Grab a copy of the site's source code
 
-    git clone https://github.com/tildeclub/site tilde.club && cd tilde.club/wiki
+	git clone https://github.com/tildeclub/site tilde.club && cd tilde.club/wiki
 
 1. Make a new article or update an existing one. Make sure that you create the
    title, author, and category keys in the yaml frontmatter (see an existing
-    article for an example).
+	article for an example).
 
 3. submit the code via a PR on github or with git-send-email(1) to root@tilde.club
    see [git-send-email.io](https://git-send-email.io) for more info on how to use
@@ -98,16 +98,16 @@ of technological liberation...
   In case you prefer to work on your edits directly inside Tilde.club,
   run a command like this to clone the repository:
 
-      git clone /usr/share/nginx/html tildeclub-site
+	  git clone /usr/share/nginx/html tildeclub-site
 
   If you prefer to clone to your local machine via SSH instead,
   use **one** of the following commands:
 
-      git clone ssh://USERNAME@tilde.club/usr/share/nginx/html tildeclub-site
-      git clone USERNAME@tilde.club:/usr/share/nginx/html tildeclub-site
+	  git clone ssh://USERNAME@tilde.club/usr/share/nginx/html tildeclub-site
+	  git clone USERNAME@tilde.club:/usr/share/nginx/html tildeclub-site
 
   * Don't forget to substitute <var>USERNAME</var> with your Tilde.club username
-    (else SSH would fail logging you in for the access).
+	(else SSH would fail logging you in for the access).
   * The first command works even with a very old Git version.
 
   Note that you cannot issue <q>`git push`</q> from a repository cloned these ways
@@ -117,11 +117,11 @@ of technological liberation...
 * This Git repository is also officially available online at two places:
 
   * [GitHub](https://github.com/tildeclub/site/)
-    (requires JavaScript and latest browser to view)
+	(requires JavaScript and latest browser to view)
   * [Tildeforge](https://tildeforge.dev/TildeClub/site)
-    (read-only mirror,
-    replicates from GitHub;
-    do not need JavaScript to view)
+	(read-only mirror,
+	replicates from GitHub;
+	do not need JavaScript to view)
 
   The <q>`git clone`</q> command also work directly with these URLs;
   although note that pull requests are accepted only on GitHub.
@@ -144,9 +144,9 @@ of technological liberation...
   (and text files on Tilde.club's Gopher site)
   is specified in <q>`wiki/Makefile`</q> in the repository.
   * The Gophermap of the wiki
-    is generated dynamically on Gopher request however;
-    see <q>`wiki/gophermap`</q> and <q>`wiki/txtlist.sh`</q> in the repository
-    for this part.
+	is generated dynamically on Gopher request however;
+	see <q>`wiki/gophermap`</q> and <q>`wiki/txtlist.sh`</q> in the repository
+	for this part.
 * The copyright license of this repository is
   [GNU General Public License](https://www.gnu.org/licenses/gpl.html),
   _any version_

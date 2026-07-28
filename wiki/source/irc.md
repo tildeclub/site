@@ -51,21 +51,21 @@ To get started:
 1. In WeeChat:
 
    * Set your relay password using `/secure`:
-     * `/secure set relay mysupersecretpassword`
-     * `/set relay.network.password "${sec.data.relay}"`
+	 * `/secure set relay mysupersecretpassword`
+	 * `/set relay.network.password "${sec.data.relay}"`
 
    * Create the UNIX-socket relay.
 
-     * **Tilde.club’s nginx proxy expects the socket in your home dir:**
-       * `/relay add unix.weechat ~/.weechat/relay_socket`
+	 * **Tilde.club’s nginx proxy expects the socket in your home dir:**
+	   * `/relay add unix.weechat ~/.weechat/relay_socket`
 
 2. At your shell (permissions):
 
    * Ensure nginx can traverse to the socket (execute-only is enough):
-     * `chmod o+x ~/.weechat`
+	 * `chmod o+x ~/.weechat`
 
    * After WeeChat creates the socket, allow nginx to read/write it:
-     * `setfacl -m u:nginx:rw ~/.weechat/relay_socket`
+	 * `setfacl -m u:nginx:rw ~/.weechat/relay_socket`
 
 3. In your relay client (WebSocket via Tilde.club proxy):
 
@@ -73,16 +73,16 @@ To get started:
    (The Tilde.club proxy endpoint should handle this mapping for you.)
 
    * [glowing-bear](https://glowingbear.tilde.club/):
-     - relay host: `username.tildecities.com:443/weechat`
-     - relay port: `443`
-     - your relay password
+	 - relay host: `username.tildecities.com:443/weechat`
+	 - relay port: `443`
+	 - your relay password
 
    * [weechat-android](https://github.com/ubergeek42/weechat-android) and [lith](https://github.com/lithapp/lith):
-     - connection type: WebSocket (SSL/TLS)
-     - relay host: `username.tildecities.com`
-     - relay port: `443`
-     - websocket path: `/weechat`
-     - your relay password
+	 - connection type: WebSocket (SSL/TLS)
+	 - relay host: `username.tildecities.com`
+	 - relay port: `443`
+	 - websocket path: `/weechat`
+	 - your relay password
 
 ### Removing old relays
 
@@ -93,7 +93,6 @@ Delete a relay:
 * `/relay del <name>`
 
 (Example: `/relay del unix.weechat`.)
-
 
 ## IRC Bouncer (ZNC)
 NOTE: Email deepend or message him on IRC if you require ZNC access.

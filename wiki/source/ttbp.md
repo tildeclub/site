@@ -176,7 +176,7 @@ your ~/.ttbp directory entirely.  **you might want to back up your
 * to modify your stylesheet, edit your ~/.ttbp/config/style.css
 * to modify the page header, edit your ~/.ttbp/config/header.txt
   * there's a place marked off in the default header where you can safely put
-    custom HTML elements!
+	custom HTML elements!
 * to modify the page footer, edit your ~/.ttbp/config/footer.txt
 
 ### general tips/troubleshooting

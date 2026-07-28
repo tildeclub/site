@@ -27,12 +27,12 @@ connection settings:
 
 please remember to use only your tilde username as the login name, excluding the `@tilde.club`; for example `invalid` instead of `invalid@tilde.club`
 
-if you'd like your @tilde.club mail forwarded elsewhere, you can put an email 
+if you'd like your @tilde.club mail forwarded elsewhere, you can put an email
 address in a file called `~/.forward`
 
 ## sieve filtering
 
-our dovecot configuration supports [sieve](http://sieve.info/) and 
+our dovecot configuration supports [sieve](http://sieve.info/) and
 [managesieve](https://wiki1.dovecot.org/ManageSieve).
 
 this means that you should put your scripts in a `~/sieve/` directory,
@@ -50,7 +50,7 @@ https://webmail.tilde.club/#/settings/filters) to configure your filters.
 we now have an official mailing list!
 
 if your account is old (pre sept 2019), you should be subscribed with the email
-you originally signed up with. if your account is newer (post sept 2019), then 
+you originally signed up with. if your account is newer (post sept 2019), then
 you should be subscribed with your @tilde.club address. if you don't fit either
 of those categories, you can subscribe by visiting the [web portal](
 https://lists.tildeverse.org/postorius/lists/tildeclub.lists.tildeverse.org/)
@@ -172,9 +172,9 @@ Tips:
 	when changing folder.
 	For example,
 	use command:
-	
+
 		folder +.sent-mail
-	
+
 	to view the emails you have sent.
 	(See [mailbox format](#mailbox-format)
 	below for the default folders available)

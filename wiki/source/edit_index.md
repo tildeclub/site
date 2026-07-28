@@ -20,4 +20,3 @@ Note: If at any time you feel you made a mistake in editing, you can exit and n 
 
 There's more info here about the nano editor; if you're familiar with
 emacs or vim they are here too.
-
