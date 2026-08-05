@@ -1,5 +1,5 @@
 ---
-title: using cgit on Tilde.club
+title: Using Cgit on Tilde.club
 author:
   - deepend
   - keyboardan

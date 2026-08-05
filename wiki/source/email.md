@@ -1,5 +1,5 @@
 ---
-title: email
+title: Email
 author:
   - benharri
   - xwindows

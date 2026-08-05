@@ -1,5 +1,5 @@
 ---
-title: The Vi Editor
+title: Vi (editor)
 category: software
 author:
   - ant

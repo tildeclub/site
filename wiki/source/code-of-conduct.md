@@ -1,5 +1,5 @@
 ---
-title: code of conduct
+title: Code of Conduct
 author: benharri
 category: tilde.club
 ---

@@ -1,5 +1,5 @@
 ---
-title: tilde quilt
+title: Tilde Quilt
 author: lab6
 category: links
 ---

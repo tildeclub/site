@@ -1,5 +1,5 @@
 ---
-title: slrn
+title: Slrn
 category: links
 ---
 

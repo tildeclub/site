@@ -1,5 +1,5 @@
 ---
-title: Git
+title: Git (version control system)
 category: software
 ---
 

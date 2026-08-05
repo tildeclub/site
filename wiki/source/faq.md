@@ -1,5 +1,5 @@
 ---
-title: faq
+title: FAQ
 author: ford (updated by deepend)
 category: tilde.club
 ---

@@ -1,5 +1,5 @@
 ---
-title: ttbp / feels (blog platform)
+title: Ttbp / Feels (blog platform)
 author: benharri
 category: software
 ---

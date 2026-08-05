@@ -1,5 +1,5 @@
 ---
-title: command line for absolute beginners
+title: Command line for absolute beginners
 author:
   - cmccabe
   - keyboardan

@@ -1,5 +1,5 @@
 ---
-title: Userdir traffic stats
+title: Userdir traffic stats (tilde.club)
 category: software
 Author: deepend
 ---

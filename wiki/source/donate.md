@@ -1,5 +1,5 @@
 ---
-title: donate to Tilde.club
+title: Donate to Tilde.club
 author: deepend
 category: tilde.club
 ---

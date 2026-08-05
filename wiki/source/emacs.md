@@ -1,5 +1,5 @@
 ---
-title: Emacs
+title: Emacs (editor)
 author:
   - ohnoitsnoah
   - xwindows

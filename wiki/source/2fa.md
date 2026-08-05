@@ -1,5 +1,5 @@
 ---
-title: Using Two-Factor Authentication (2FA) on Tilde.club
+title: Using two-factor authentication (2FA) on Tilde.club
 author: deepend
 category: tutorials
 ---

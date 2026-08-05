@@ -1,5 +1,5 @@
 ---
-title: Botany
+title: Botany (ASCII gardening)
 author:
   - deepend
   - keyboardan

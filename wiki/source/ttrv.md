@@ -1,5 +1,5 @@
 ---
-title: ttrv (Reddit in your terminal)
+title: Ttrv (Reddit in your terminal)
 author: deepend
 category: software
 ---

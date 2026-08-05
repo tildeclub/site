@@ -1,5 +1,5 @@
 ---
-title: tin (Usenet client)
+title: Tin (Usenet client)
 category: software
 author:
   - ant

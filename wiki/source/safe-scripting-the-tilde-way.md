@@ -1,5 +1,5 @@
 ---
-title: safe scripting the tilde way
+title: Safe scripting the Tilde way
 author: michaelcoyote
 category: tutorials
 ---

@@ -1,5 +1,5 @@
 ---
-title: usenet news
+title: Usenet news
 category: tutorials
 author:
   - deepend

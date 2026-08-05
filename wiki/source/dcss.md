@@ -1,5 +1,5 @@
 ---
-title: dcss (dungeon crawl stone soup)
+title: Dcss (dungeon crawl stone soup)
 author: audiodude
 category: software
 ---

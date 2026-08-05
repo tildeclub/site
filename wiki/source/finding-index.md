@@ -1,5 +1,5 @@
 ---
-title: finding your index.html
+title: Finding your index.html
 category: tutorials
 ---
 

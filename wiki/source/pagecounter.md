@@ -1,5 +1,5 @@
 ---
-title: Page Counter (counter.tilde.club)
+title: Page counter (counter.tilde.club)
 author:
   - deepend
   - keyboardan

@@ -1,5 +1,5 @@
 ---
-title: tildeverse
+title: Tildeverse
 author: audiodude
 category: links
 ---

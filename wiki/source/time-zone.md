@@ -1,5 +1,5 @@
 ---
-title: time zones
+title: Timezones
 category: tutorials
 ---
 
