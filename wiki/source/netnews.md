@@ -1,10 +1,11 @@
 ---
-title: Usenet news
+title: Netnews
 category: tutorials
 author:
   - deepend
   - audiodude
   - xwindows
+  - keyboardan
 ---
 
 ## As of 2020-04-14 news is back up!
