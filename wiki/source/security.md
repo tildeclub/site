@@ -1,6 +1,8 @@
 ---
 title: Editing basic UNIX security the Tilde way
-author: michaelcoyote. updated by deepend
+author:
+ - michaelcoyote
+ - deepend
 category: tutorials
 ---
 
