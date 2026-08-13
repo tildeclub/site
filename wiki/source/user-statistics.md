@@ -1,7 +1,7 @@
 ---
 title: Userdir traffic stats (tilde.club)
 category: software
-Author: deepend
+author: deepend
 ---
 
 So you want traffic stats for your `~/public_html` site, This stats system generates a **sanitized** report per user from the server’s nginx logs, then lets you publish it *only if you choose to*.
