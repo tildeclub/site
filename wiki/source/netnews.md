@@ -101,3 +101,20 @@ it can also be configured for news.
 1. When you click `Send` on your new post,
    Thunderbird would ask for your Tilde.club username and password
    (which is the same as the one you use on your [Tilde.club email](email.html)).
+
+
+## News proxies
+
+### leafnode
+[Leafnode](http://leafnode.sourceforge.net/) is a software package
+that implements a store & forward NNTP proxy (client and server).  It
+gives a regular newsreader off-line functionality, merges news
+articles from several upstream newsservers for newsreaders that only
+support one server well, and avoids duplicate news downloads for a
+small LAN with multiple users reading news.
+
+Leafnode is suitable for “leaf” nodes, that is, nodes that only pull
+from other Netnews nodes.
+
+As of 2026-08-11, `leafnode` is not available as a tilde.club system
+executable.
