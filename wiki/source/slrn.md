@@ -3,7 +3,7 @@ title: Slrn
 category: links
 ---
 
-``slrn`` is a news reader for [Usenet](usenet-news.html).
+``slrn`` is a news reader for [Usenet](netnews.html).
 
 Documentation for slrn can be found at [http://slrn.sourceforge.net](http://slrn.sourceforge.net)
 

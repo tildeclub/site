@@ -3,6 +3,7 @@ title: Tin (Usenet client)
 category: software
 author:
   - ant
+  - keyboardan
 todo:
   - describe the common entry prefixes on:
 	- groups
@@ -16,7 +17,7 @@ todo:
 
 [*tin*](http://www.tin.org/)
 is a text-mode threading NNTP and spool-based
-[Usenet](usenet-news.html) client
+[Usenet](netnews.html) client
 for a variety of platforms.
 
 ## Local connection

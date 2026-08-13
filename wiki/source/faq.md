@@ -1,6 +1,9 @@
 ---
 title: FAQ
-author: ford (updated by deepend)
+author:
+ - ford
+ - deepend
+ - keyboardan
 category: tilde.club
 ---
 
@@ -51,7 +54,7 @@ Here are some good places to start
 -   [some more quick
 	tips](http://tilde.club/~pfhawkins/tipsntricks.html)
 -   [how do I usenet in
-	Tilde.club](http://tilde.club/wiki/usenet-news.html)?
+	Tilde.club](http://tilde.club/wiki/netnews.html)?
 -   [help me understand \'screen\'](http://tilde.club/~jonathan/screen/)
 
 Who are all these folks and what are they up to?
