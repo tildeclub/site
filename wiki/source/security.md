@@ -194,3 +194,4 @@ chgrp "$USER" ~/shared
 
 # Let your group read/write/enter it, but keep others out
 chmod 770 ~/shared
+```
