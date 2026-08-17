@@ -21,11 +21,11 @@ What is a user? For starters, you are a user and so is every other person on the
 
 There are several attributes that define a user.
 
-- username
+- username  
 	This is your login id and the name of your homedir
-- user id (or uid)
+- user id (or uid)  
 	This is your unique numerical id number on the system. This is how the system keeps track of you, your processes, and your files.
-- group id (or gid)
+- group id (or gid)  
 	This is a unique numerical id number for your primary user group on the system. User groups are the traditional way that users would collaborate on large projects.
 
 For now we only need to know about the username.
@@ -78,11 +78,11 @@ The first column at first glance looks like a bunch of alphabet soup, however if
 
 There are three major types of permissions (and a hand full of others)
 
-- Read
+- Read  
 	Read permission is represented as an `r` and will allow a listing of a directory and reading a file.
-- Write
+- Write  
 	Write permission is represented with a `w` and allows a file or directory to be written to or deleted.
-- Execute
+- Execute  
 	Execute permission is represented as an `x` and allows a file (such as a script) to be executed  and it allows for a directory to be "traversed"
 
 - Other special permissions and notations in `ls -l`
@@ -93,13 +93,13 @@ There are three major types of permissions (and a hand full of others)
 
 #### Three classes of access permissions
 
-- User permissions
+- User permissions  
 	This set of access controls define what an owner can do to her own files or directories. These controls are most often useful to set on a script file you want to run or a file you want to protect from deletion or overwriting.
 
-- Group permissions
+- Group permissions  
 	This set of access controls define what the group can do to a file or directory. This tends not to matter much in your homedir, but it can matter a lot when working with other users on shared projects.
 
-- Others
+- Others  
 	These access controls are what you use to allow and others who are not listed as an owner or group member to do to a file or directory. For example, if you remove read permissions from others on your  ~/public_html/index.html`, the webserver process will be unable to read your web page.
 
 #### Changing file and directory permissions using `chmod`
