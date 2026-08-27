@@ -424,13 +424,17 @@ And some caveats:
   If you would like to distribute these verbatim as source files,
   you might want to workaround by renaming such files
   to add <q><samp>.txt</samp></q> at the end.
-- CGI programs here run under web server's credentials:
-  user <q><samp>nginx</samp></q>
-  and group <q><samp>nginx</samp></q>
-  (user ID <samp>994</samp>,
-  group ID <samp>990</samp>);
+- CGI programs here run under a dedicated user <q><samp>cgiwrap</samp></q>
+  and group <q><samp>cgiwrap</samp></q>
+  (user ID <samp>480</samp>,
+  group ID <samp>463</samp>);
   tread carefully if you need to make your program read/write
   private files.
+  Note that this is also different
+  from the credentials that the web server itself uses
+  when serving static files
+  (user <q><samp>nginx</samp></q> ID <samp>994</samp>,
+  group <q><samp>nginx</samp></q> ID <samp>990</samp>).
 
 Further Reading
 ---------------
