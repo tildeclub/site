@@ -183,6 +183,17 @@ would be noted in each example.
 		(terpri)
 		(princ "Hello World!") (terpri)
 	  )
+- Forth:
+
+	  #! /usr/bin/gforth
+	  ." Content-Type: text/plain" CR
+	  CR
+	  ." Hello World!" CR
+	  bye
+
+	Note that the space between <q>`#!`</q> and <q>`/usr/bin/gforth`</q> in the shebang line,
+	as well as the existence of <q>`bye`</q> statement at the end of program,
+	are essential for a correct operation.
 
 Pick the language you like,
 put the script (or executable) in a file anywhere inside your <q>`public_html`</q> subdirectory
