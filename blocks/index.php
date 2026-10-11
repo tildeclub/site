@@ -4,53 +4,53 @@ declare(strict_types=1);
 /**
  * CSF deny list JSON API
  * - Outputs only JSON
- * - Locked down by IP allowlist (and optional token)
+ * - Locked down by IP allowlist and optional token
+ * - Supports IPv4, IPv6, IPv4-mapped IPv6, and CIDR ranges
  * - Parses:
- *    - Single IP or CIDR (v4/v6), with optional trailing comment
+ *    - Single IP or CIDR, with optional trailing comment
  *    - Advanced rules: proto(s)|in/out|s/d=port(s)|s/d=ip
  */
 
-////////////////////////////
-// Bootstrap & headers
-////////////////////////////
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: no-referrer');
 header('Cache-Control: no-store');
 
-$env = loadEnv(__DIR__.'/.env');
+$env = loadEnv(__DIR__ . '/.env');
 $env += [
-    'APP_ENV'        => 'prod',
-    'DENY_FILE'      => '/etc/csf/csf.deny', // or full path to ".csfdeny"
-    'ALLOW_IPS'      => '',                  // comma-separated allowlist
-    'TRUST_PROXY'    => '0',                 // "1" to respect X-Forwarded-For from trusted proxies
-    'TRUSTED_PROXIES'=> '',                  // comma-separated IPs/CIDRs of proxies
-    'API_TOKEN'      => '',                  // optional shared token
+    'APP_ENV'         => 'prod',
+    'DENY_FILE'       => '/etc/csf/csf.deny',
+    'ALLOW_IPS'       => '',
+    'TRUST_PROXY'     => '0',
+    'TRUSTED_PROXIES' => '',
+    'API_TOKEN'       => '',
 ];
 
 if (($env['APP_ENV'] ?? 'prod') !== 'dev') {
     ini_set('display_errors', '0');
     ini_set('log_errors', '1');
 }
-////////////////////////////
-// Access control
-////////////////////////////
-$clientIp = resolveClientIp((bool)intval($env['TRUST_PROXY']), $env['TRUSTED_PROXIES']);
+
+$clientIp = resolveClientIp((bool) intval($env['TRUST_PROXY']), $env['TRUSTED_PROXIES']);
+
 if (!ipAllowed($clientIp, $env['ALLOW_IPS'])) {
     http_response_code(403);
-    echo json_encode(['error' => 'forbidden', 'reason' => 'ip_not_allowed', 'client_ip' => $clientIp], JSON_UNESCAPED_SLASHES);
+    echo json_encode([
+        'error' => 'forbidden',
+        'reason' => 'ip_not_allowed',
+        'client_ip' => canonicalIp($clientIp) ?? $clientIp,
+    ], JSON_UNESCAPED_SLASHES);
     exit;
 }
+
 if (($env['API_TOKEN'] ?? '') !== '' && !hash_equals($env['API_TOKEN'], $_SERVER['HTTP_X_API_TOKEN'] ?? '')) {
     http_response_code(403);
     echo json_encode(['error' => 'forbidden', 'reason' => 'bad_token'], JSON_UNESCAPED_SLASHES);
     exit;
 }
 
-////////////////////////////
-// Read & parse deny file
-////////////////////////////
 $file = $env['DENY_FILE'];
+
 if (!is_readable($file)) {
     http_response_code(500);
     echo json_encode(['error' => 'unreadable_file', 'path' => $file], JSON_UNESCAPED_SLASHES);
@@ -59,37 +59,40 @@ if (!is_readable($file)) {
 
 $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) ?: [];
 $entries = [];
+
 foreach ($lines as $rawLine) {
     $line = trim($rawLine);
+
     if ($line === '' || str_starts_with($line, '#')) {
         continue;
     }
-    // Split off trailing comment after a space + '#'
+
     $comment = null;
     $hashPos = strpos($line, ' #');
+
     if ($hashPos !== false) {
         $comment = trim(substr($line, $hashPos + 2));
-        $line    = trim(substr($line, 0, $hashPos));
+        $line = trim(substr($line, 0, $hashPos));
     }
 
     $parsed = parseCsfLine($line);
+
     if ($parsed !== null) {
         $parsed['raw'] = $rawLine;
+
         if ($comment !== null) {
             $parsed['comment'] = $comment;
         }
+
         $entries[] = $parsed;
     }
 }
 
-////////////////////////////
-// Output
-////////////////////////////
 echo json_encode([
     'generated_at' => gmdate('c'),
-    'source'       => realpath($file) ?: $file,
-    'count'        => count($entries),
-    'entries'      => $entries,
+    'source' => realpath($file) ?: $file,
+    'count' => count($entries),
+    'entries' => $entries,
 ], JSON_UNESCAPED_SLASHES);
 
 /* -------------------- helpers -------------------- */
@@ -97,170 +100,316 @@ echo json_encode([
 function loadEnv(string $path): array
 {
     $out = [];
+
     if (!is_file($path) || !is_readable($path)) {
         return $out;
     }
-    foreach (file($path, FILE_IGNORE_NEW_LINES) ?: [] as $l) {
-        $l = trim($l);
-        if ($l === '' || str_starts_with($l, '#')) { continue; }
-        if (!str_contains($l, '=')) { continue; }
-        [$k, $v] = array_map('trim', explode('=', $l, 2));
-        $v = trim($v, " \t\n\r\0\x0B\"'");
-        $out[$k] = $v;
+
+    foreach (file($path, FILE_IGNORE_NEW_LINES) ?: [] as $line) {
+        $line = trim($line);
+
+        if ($line === '' || str_starts_with($line, '#')) {
+            continue;
+        }
+
+        if (!str_contains($line, '=')) {
+            continue;
+        }
+
+        [$key, $value] = array_map('trim', explode('=', $line, 2));
+        $out[$key] = trim($value, " \t\n\r\0\x0B\"'");
     }
+
     return $out;
 }
 
 function resolveClientIp(bool $trustProxy, string $trustedProxiesCsv): string
 {
     $remote = $_SERVER['REMOTE_ADDR'] ?? '';
+
     if (!$trustProxy) {
-        return $remote;
+        return canonicalIp($remote) ?? $remote;
     }
-    $proxyList = array_filter(array_map('trim', explode(',', $trustedProxiesCsv ?: '')));
-    // If the REMOTE_ADDR is not a trusted proxy, ignore forwarded headers
-    if (!ipAllowed($remote, implode(',', $proxyList))) {
-        return $remote;
+
+    if (!ipAllowed($remote, $trustedProxiesCsv)) {
+        return canonicalIp($remote) ?? $remote;
     }
+
     $xff = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
+
     if ($xff === '') {
-        return $remote;
+        return canonicalIp($remote) ?? $remote;
     }
-    // pick the first IP in XFF chain
+
     $first = trim(explode(',', $xff)[0]);
-    return filter_var($first, FILTER_VALIDATE_IP) ? $first : $remote;
+
+    return canonicalIp($first) ?? canonicalIp($remote) ?? $remote;
 }
 
 function ipAllowed(string $ip, string $allowCsv): bool
 {
-    if ($allowCsv === '') {
+    if (trim($allowCsv) === '') {
         return false;
     }
-    $allow = array_filter(array_map('trim', explode(',', $allowCsv)));
-    foreach ($allow as $cidrOrIp) {
-        if ($cidrOrIp === '') { continue; }
-        if (str_contains($cidrOrIp, '/')) {
-            if (ipInCidr($ip, $cidrOrIp)) { return true; }
-        } else {
-            if (hash_equals($cidrOrIp, $ip)) { return true; }
+
+    $client = parseIpOrCidr($ip);
+
+    if ($client === null || $client['cidr'] !== null) {
+        return false;
+    }
+
+    foreach (array_filter(array_map('trim', explode(',', $allowCsv))) as $allowed) {
+        $entry = parseIpOrCidr($allowed);
+
+        if ($entry === null) {
+            continue;
+        }
+
+        if ($entry['cidr'] !== null) {
+            if (ipInCidr($client['ip'], $entry['ip'] . '/' . $entry['cidr'])) {
+                return true;
+            }
+
+            continue;
+        }
+
+        if ($client['family'] === $entry['family'] && hash_equals($entry['ip'], $client['ip'])) {
+            return true;
         }
     }
+
     return false;
 }
 
 function parseCsfLine(string $line): ?array
 {
-    // If it contains pipes, treat as advanced rule
     if (str_contains($line, '|')) {
         $parts = array_map('trim', explode('|', $line));
+
         if (count($parts) < 2) {
             return null;
         }
-        // proto(s)
-        $protoRaw = strtolower($parts[0]);
-        $protocols = array_filter(array_map('trim', explode('/', $protoRaw)));
-        // direction
+
+        $protocols = array_values(array_filter(array_map(
+            static fn (string $proto): string => strtolower(trim($proto)),
+            explode('/', $parts[0])
+        )));
+
         $direction = strtolower($parts[1] ?? '');
-        $srcIp = $dstIp = null;
-        $srcPorts = $dstPorts = [];
+        $srcIp = null;
+        $dstIp = null;
+        $srcPorts = [];
+        $dstPorts = [];
 
         for ($i = 2; $i < count($parts); $i++) {
             $kv = explode('=', $parts[$i], 2);
-            if (count($kv) !== 2) { continue; }
-            [$key, $val] = [strtolower(trim($kv[0])), trim($kv[1])];
+
+            if (count($kv) !== 2) {
+                continue;
+            }
+
+            [$key, $value] = [strtolower(trim($kv[0])), trim($kv[1])];
+            $ipOrCidr = parseIpOrCidr($value);
+
             if ($key === 's' || $key === 'src') {
-                // src may be IP/CIDR or port list
-                if (looksLikeIpOrCidr($val)) {
-                    $srcIp = $val;
+                if ($ipOrCidr !== null) {
+                    $srcIp = formatIpOrCidr($ipOrCidr);
                 } else {
-                    $srcPorts = parsePortList($val);
+                    $srcPorts = parsePortList($value);
                 }
             } elseif ($key === 'd' || $key === 'dst') {
-                if (looksLikeIpOrCidr($val)) {
-                    $dstIp = $val;
+                if ($ipOrCidr !== null) {
+                    $dstIp = formatIpOrCidr($ipOrCidr);
                 } else {
-                    $dstPorts = parsePortList($val);
+                    $dstPorts = parsePortList($value);
                 }
             }
         }
+
         return [
-            'type'      => 'rule',
+            'type' => 'rule',
             'protocols' => $protocols ?: ['tcp'],
-            'direction' => in_array($direction, ['in','out'], true) ? $direction : 'in',
-            'ports'     => ['source' => $srcPorts, 'dest' => $dstPorts],
+            'direction' => in_array($direction, ['in', 'out'], true) ? $direction : 'in',
+            'ports' => ['source' => $srcPorts, 'dest' => $dstPorts],
             'source_ip' => $srcIp,
-            'dest_ip'   => $dstIp,
+            'dest_ip' => $dstIp,
         ];
     }
 
-    // Plain IP or CIDR
-    if (looksLikeIpOrCidr($line)) {
-        // split ip/cidr
-        $ip = $line;
-        $cidr = null;
-        if (str_contains($line, '/')) {
-            [$ip, $mask] = explode('/', $line, 2);
-            $ip = trim($ip);
-            $cidr = (string)intval($mask);
-        }
-        if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+    $parsed = parseIpOrCidr($line);
+
+    if ($parsed === null) {
+        return null;
+    }
+
+    return [
+        'type' => $parsed['cidr'] !== null ? 'cidr' : 'ip',
+        'family' => $parsed['family'],
+        'ip' => $parsed['ip'],
+        'cidr' => $parsed['cidr'],
+    ];
+}
+
+function parseIpOrCidr(string $value): ?array
+{
+    $value = trim($value);
+
+    if ($value === '') {
+        return null;
+    }
+
+    $cidr = null;
+    $ip = $value;
+
+    if (str_contains($value, '/')) {
+        [$ip, $mask] = explode('/', $value, 2);
+        $ip = trim($ip);
+        $mask = trim($mask);
+
+        if ($mask === '' || !ctype_digit($mask)) {
             return null;
         }
-        return [
-            'type' => ($cidr !== null ? 'cidr' : 'ip'),
-            'ip'   => $ip,
-            'cidr' => $cidr,
-        ];
+
+        $cidr = (int) $mask;
     }
 
-    return null;
+    $ip = trim($ip);
+
+    if (str_starts_with($ip, '[') && str_ends_with($ip, ']')) {
+        $ip = substr($ip, 1, -1);
+    }
+
+    $packed = @inet_pton($ip);
+
+    if ($packed === false) {
+        return null;
+    }
+
+    $isMappedIpv4 = isIpv4MappedIpv6($packed);
+
+    if ($isMappedIpv4) {
+        $ip = inet_ntop(substr($packed, 12));
+        $family = 'ipv4';
+        $maxMask = 32;
+
+        if ($cidr !== null) {
+            if ($cidr < 96 || $cidr > 128) {
+                return null;
+            }
+
+            $cidr -= 96;
+        }
+    } else {
+        $ip = inet_ntop($packed);
+        $family = strlen($packed) === 4 ? 'ipv4' : 'ipv6';
+        $maxMask = $family === 'ipv4' ? 32 : 128;
+    }
+
+    if ($ip === false) {
+        return null;
+    }
+
+    if ($cidr !== null && ($cidr < 0 || $cidr > $maxMask)) {
+        return null;
+    }
+
+    return [
+        'ip' => $ip,
+        'cidr' => $cidr !== null ? (string) $cidr : null,
+        'family' => $family,
+    ];
 }
 
-function looksLikeIpOrCidr(string $val): bool
+function canonicalIp(string $ip): ?string
 {
-    if (str_contains($val, '/')) {
-        [$ip, $mask] = explode('/', $val, 2);
-        return (bool)filter_var($ip, FILTER_VALIDATE_IP) && ctype_digit($mask);
+    $parsed = parseIpOrCidr($ip);
+
+    if ($parsed === null || $parsed['cidr'] !== null) {
+        return null;
     }
-    return (bool)filter_var($val, FILTER_VALIDATE_IP);
+
+    return $parsed['ip'];
 }
 
-function parsePortList(string $val): array
+function formatIpOrCidr(array $parsed): string
+{
+    return $parsed['cidr'] === null
+        ? $parsed['ip']
+        : $parsed['ip'] . '/' . $parsed['cidr'];
+}
+
+function isIpv4MappedIpv6(string $packed): bool
+{
+    return strlen($packed) === 16
+        && substr($packed, 0, 10) === str_repeat("\x00", 10)
+        && substr($packed, 10, 2) === "\xff\xff";
+}
+
+function looksLikeIpOrCidr(string $value): bool
+{
+    return parseIpOrCidr($value) !== null;
+}
+
+function parsePortList(string $value): array
 {
     $out = [];
-    foreach (explode(',', $val) as $p) {
-        $p = trim($p);
-        if ($p === '') { continue; }
-        // keep ranges as raw strings (e.g., "1000:2000"), normalize digits
-        if (preg_match('/^\d+(:\d+)?$/', $p)) {
-            $out[] = $p;
+
+    foreach (explode(',', $value) as $port) {
+        $port = trim($port);
+
+        if ($port === '') {
+            continue;
+        }
+
+        if (preg_match('/^\d+(:\d+)?$/', $port) === 1) {
+            $out[] = $port;
         }
     }
+
     return $out;
 }
 
 function ipInCidr(string $ip, string $cidr): bool
 {
-    [$subnet, $maskBits] = explode('/', $cidr, 2);
-    $maskBits = (int)$maskBits;
-    $ipBin = @inet_pton($ip);
-    $subnetBin = @inet_pton($subnet);
+    $client = parseIpOrCidr($ip);
+    $range = parseIpOrCidr($cidr);
+
+    if ($client === null || $range === null || $range['cidr'] === null) {
+        return false;
+    }
+
+    if ($client['family'] !== $range['family']) {
+        return false;
+    }
+
+    $ipBin = @inet_pton($client['ip']);
+    $subnetBin = @inet_pton($range['ip']);
+
     if ($ipBin === false || $subnetBin === false) {
         return false;
     }
-    $len = strlen($ipBin);
-    if ($len !== strlen($subnetBin)) {
-        return false; // v4 vs v6 mismatch
+
+    if (strlen($ipBin) !== strlen($subnetBin)) {
+        return false;
     }
+
+    $maskBits = (int) $range['cidr'];
     $bytes = intdiv($maskBits, 8);
     $remainder = $maskBits % 8;
 
     if ($bytes > 0 && substr($ipBin, 0, $bytes) !== substr($subnetBin, 0, $bytes)) {
         return false;
     }
+
     if ($remainder === 0) {
         return true;
     }
-    $mask = chr(0xFF << (8 - $remainder) & 0xFF);
-    return (ord($ipBin[$bytes]) & ord($mask)) === (ord($subnetBin[$bytes]) & ord($mask));
+
+    if (!isset($ipBin[$bytes], $subnetBin[$bytes])) {
+        return false;
+    }
+
+    $mask = 0xff << (8 - $remainder) & 0xff;
+
+    return (ord($ipBin[$bytes]) & $mask) === (ord($subnetBin[$bytes]) & $mask);
 }
