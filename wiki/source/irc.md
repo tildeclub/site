@@ -12,6 +12,9 @@ category: tutorials
 Our main channel is on the [Newnet IRC Network](https://newnet.net).
 The official channel for ~club is `#club`. Stop by and say hello!
 
+Wondering why our main channel isn't on tilde.chat anymore? See
+[why we moved to NewNet](irc-network-change.html).
+
 > **New!** An *official secondary* channel is now open on the Zoite IRC
 > Network in case Newnet ever has an outage (or if you just feel like
 > hanging out elsewhere). Connect to **irc.zoite.net** on port **6670 SSL**

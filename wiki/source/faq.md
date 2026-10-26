@@ -33,6 +33,14 @@ Medium](https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-
 and you can follow along with his thinking [on his tilde
 blog](http://tilde.club/~ford/).
 
+Why is the main #club IRC channel on NewNet instead of tilde.chat?
+---------------------------------------------------------------------
+
+Our main IRC channel moved to NewNet for a couple of reasons, including
+NewNet's personal history with deepend and some differences in how IRC
+networks should be run. Read [why we moved to NewNet](irc-network-change.html)
+for the full explanation.
+
 I\'m on Tilde, now what?
 ------------------------
 
